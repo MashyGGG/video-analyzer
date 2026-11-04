@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-11-04T06:19:22.137347+00:00",
+  "duration_seconds": 50.994,
+  "cwd": "<workspace>\\frontend",
+  "argv": [
+    "npm.cmd",
+    "run",
+    "lint"
+  ],
+  "exit_code": 1,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "\n> video-analyzer-frontend@0.1.0 lint\n> eslint . --max-warnings=0\n\n\n<workspace>\\frontend\\app\\page.tsx\n  5:13  error  Do not use an `<a>` element to navigate to `/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages\n\n✖ 1 problem (1 error, 0 warnings)\n\n",
+  "stderr": ""
+}

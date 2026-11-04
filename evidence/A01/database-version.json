@@ -1,0 +1,19 @@
+{
+  "started_at_utc": "2026-11-04T06:28:02.136180+00:00",
+  "duration_seconds": 3.534,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "compose",
+    "exec",
+    "-T",
+    "postgres",
+    "postgres",
+    "--version"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "postgres (PostgreSQL) 17.11\n",
+  "stderr": ""
+}

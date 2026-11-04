@@ -1,0 +1,20 @@
+{
+  "created_at_utc": "2026-11-04T06:36:03.774548+00:00",
+  "scope": "Artifact integrity, sanitized tracked files, and evidence consistency; not extra product/model acceptance",
+  "checks": {
+    "no_credentials": true,
+    "no_private_assets": true,
+    "license_notice_hashes": true,
+    "all_positive_commands_exit_zero": true,
+    "pytest_21_passed": true,
+    "real_cpu_acceptance_25_0_0": true,
+    "gpu_blocked_truthful": true,
+    "worker_failure_truthful": true,
+    "historical_a00_evidence_unchanged": true
+  },
+  "passed": 9,
+  "failed": 0,
+  "credential_findings": [],
+  "forbidden_files": [],
+  "notice_hash_errors": []
+}

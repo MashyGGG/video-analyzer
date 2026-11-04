@@ -1,0 +1,163 @@
+[
+  {
+    "ecosystem": "pypi",
+    "name": "fastapi",
+    "version": "0.162.0",
+    "license": "MIT",
+    "source": "https://pypi.org/pypi/fastapi/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "uvicorn",
+    "version": "0.54.0",
+    "license": "BSD-3-Clause",
+    "source": "https://pypi.org/pypi/uvicorn/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "sqlalchemy",
+    "version": "2.1.8",
+    "license": "MIT",
+    "source": "https://pypi.org/pypi/sqlalchemy/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "alembic",
+    "version": "1.20.1",
+    "license": "MIT",
+    "source": "https://pypi.org/pypi/alembic/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "psycopg",
+    "version": "3.3.7",
+    "license": "LGPL-3.0-only",
+    "source": "https://pypi.org/pypi/psycopg/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "psycopg-binary",
+    "version": "3.3.7",
+    "license": "LGPL-3.0-only",
+    "source": "https://pypi.org/pypi/psycopg-binary/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "redis",
+    "version": "8.1.0",
+    "license": "MIT",
+    "source": "https://pypi.org/pypi/redis/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "celery",
+    "version": "5.6.3",
+    "license": "BSD-3-Clause",
+    "source": "https://pypi.org/pypi/celery/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "pydantic-settings",
+    "version": "2.16.2",
+    "license": "MIT",
+    "source": "https://pypi.org/pypi/pydantic-settings/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "pytest",
+    "version": "9.2.0",
+    "license": "MIT",
+    "source": "https://pypi.org/pypi/pytest/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "httpx",
+    "version": "0.28.1",
+    "license": "BSD-3-Clause",
+    "source": "https://pypi.org/pypi/httpx/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "ruff",
+    "version": "0.17.3",
+    "license": "MIT",
+    "source": "https://pypi.org/pypi/ruff/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "mypy",
+    "version": "2.4.1",
+    "license": "MIT",
+    "source": "https://pypi.org/pypi/mypy/json"
+  },
+  {
+    "ecosystem": "pypi",
+    "name": "pyyaml",
+    "version": "6.0.3",
+    "license": "MIT",
+    "source": "https://pypi.org/pypi/pyyaml/json"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "next",
+    "version": "16.4.5",
+    "license": "MIT",
+    "source": "https://registry.npmjs.org/next/latest"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "react",
+    "version": "19.3.1",
+    "license": "MIT",
+    "source": "https://registry.npmjs.org/react/latest"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "react-dom",
+    "version": "19.3.1",
+    "license": "MIT",
+    "source": "https://registry.npmjs.org/react-dom/latest"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "typescript",
+    "version": "7.0.2",
+    "license": "Apache-2.0",
+    "source": "https://registry.npmjs.org/typescript/latest"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint",
+    "version": "10.14.0",
+    "license": "MIT",
+    "source": "https://registry.npmjs.org/eslint/latest"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "eslint-config-next",
+    "version": "16.4.5",
+    "license": "MIT",
+    "source": "https://registry.npmjs.org/eslint-config-next/latest"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "version": "26.6.6",
+    "license": "MIT",
+    "source": "https://registry.npmjs.org/@types%2fnode/latest"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@types/react",
+    "version": "19.3.0",
+    "license": "MIT",
+    "source": "https://registry.npmjs.org/@types%2freact/latest"
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@types/react-dom",
+    "version": "19.3.0",
+    "license": "MIT",
+    "source": "https://registry.npmjs.org/@types%2freact-dom/latest"
+  }
+]

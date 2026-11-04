@@ -1,0 +1,16 @@
+{
+  "started_at_utc": "2026-11-04T06:17:22.279780+00:00",
+  "duration_seconds": 31.461,
+  "cwd": "<workspace>\\backend",
+  "argv": [
+    "uv",
+    "run",
+    "--frozen",
+    "mypy"
+  ],
+  "exit_code": 1,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "app\\infra_probe.py:82: error: Value of type \"tuple[Any, ...] | None\" is not indexable  [index]\napp\\infra_probe.py:85: error: Value of type \"tuple[Any, ...] | None\" is not indexable  [index]\napp\\infra_probe.py:88: error: Value of type \"tuple[Any, ...] | None\" is not indexable  [index]\napp\\infra_probe.py:91: error: Value of type \"tuple[Any, ...] | None\" is not indexable  [index]\napp\\infra_probe.py:119: error: Incompatible types in assignment (expression has type \"dict[str, str | bool]\", variable has type \"dict[str, bool]\")  [assignment]\napp\\main.py:21: error: Function is missing a return type annotation  [no-untyped-def]\nFound 6 errors in 2 files (checked 10 source files)\n",
+  "stderr": ""
+}

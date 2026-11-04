@@ -1,0 +1,16 @@
+{
+  "started_at_utc": "2026-11-04T06:34:15.189679+00:00",
+  "duration_seconds": 6.362,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "compose",
+    "stop",
+    "worker"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": " Container video-analyzer-worker-1 Stopping \n Container video-analyzer-worker-1 Stopped \n"
+}

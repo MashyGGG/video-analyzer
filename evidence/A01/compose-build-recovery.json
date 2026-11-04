@@ -1,0 +1,18 @@
+{
+  "started_at_utc": "2026-11-04T06:27:13.369723+00:00",
+  "duration_seconds": 13.945,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "compose",
+    "--progress",
+    "plain",
+    "build",
+    "api"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "#1 [internal] load local bake definitions\n#1 reading from stdin 996B done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 831B 0.1s done\n#2 DONE 0.1s\n\n#3 [internal] load metadata for docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2\n#3 ...\n\n#4 [auth] library/python:pull token for registry-1.docker.io\n#4 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2\n#3 DONE 7.3s\n\n#5 [internal] load .dockerignore\n#5 transferring context: 108B 0.0s done\n#5 DONE 0.1s\n\n#6 [internal] load build context\n#6 transferring context: 5.12kB 0.1s done\n#6 DONE 0.1s\n\n#7 [1/7] FROM docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2\n#7 resolve docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2\n#7 resolve docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2 0.1s done\n#7 DONE 0.1s\n\n#8 [2/7] WORKDIR /app\n#8 CACHED\n\n#9 [3/7] COPY requirements.lock ./\n#9 CACHED\n\n#10 [4/7] RUN pip install --no-cache-dir --require-hashes -r requirements.lock     && groupadd --gid 10001 analyzer     && useradd --uid 10001 --gid 10001 --no-create-home analyzer     && mkdir /data && chown 10001:10001 /data\n#10 CACHED\n\n#11 [5/7] COPY --chown=10001:10001 app ./app\n#11 DONE 0.3s\n\n#12 [6/7] COPY --chown=10001:10001 migrations ./migrations\n#12 DONE 0.2s\n\n#13 [7/7] COPY --chown=10001:10001 alembic.ini ./\n#13 DONE 0.2s\n\n#14 exporting to image\n#14 exporting layers\n#14 exporting layers 0.5s done\n#14 exporting manifest sha256:3d39d0157ddcae4c40ca4a59a0f9294890f414125362f696bf043d8e7f37a249 0.1s done\n#14 exporting config sha256:6e58d6070a3b43d003c6d53336e41417d986afad993811cec15b0c618b4d423b 0.0s done\n#14 exporting attestation manifest sha256:c34de17d3599095de2bbff62213d77531bdf0eda48718a401f23ffc20e98a08d\n#14 exporting attestation manifest sha256:c34de17d3599095de2bbff62213d77531bdf0eda48718a401f23ffc20e98a08d 0.1s done\n#14 exporting manifest list sha256:1acbad7c548043c1e75aae34ef5073599641d825345d172335fde024a81bdb54 0.1s done\n#14 naming to docker.io/library/video-analyzer-backend:0.1.0\n#14 naming to docker.io/library/video-analyzer-backend:0.1.0 done\n#14 unpacking to docker.io/library/video-analyzer-backend:0.1.0\n#14 unpacking to docker.io/library/video-analyzer-backend:0.1.0 0.3s done\n#14 DONE 1.3s\n\n#15 resolving provenance for metadata file\n#15 DONE 0.1s\n",
+  "stderr": " Image video-analyzer-backend:0.1.0 Building \n Image video-analyzer-backend:0.1.0 Built \n"
+}

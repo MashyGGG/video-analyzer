@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-11-04T06:16:23.704256+00:00",
+  "duration_seconds": 0.005,
+  "cwd": "<workspace>\\backend",
+  "argv": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "mypy"
+  ],
+  "exit_code": 127,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": "[WinError 2] The system cannot find the file specified"
+}

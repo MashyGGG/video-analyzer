@@ -1,0 +1,19 @@
+{
+  "started_at_utc": "2026-11-04T06:30:20.253188+00:00",
+  "duration_seconds": 0.677,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "compose",
+    "exec",
+    "-T",
+    "frontend",
+    "node",
+    "--version"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "v22.23.1\n",
+  "stderr": ""
+}

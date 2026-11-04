@@ -1,0 +1,19 @@
+{
+  "started_at_utc": "2026-11-04T06:27:04.553212+00:00",
+  "duration_seconds": 5.968,
+  "cwd": "<workspace>",
+  "argv": [
+    "uv",
+    "run",
+    "--project",
+    "backend",
+    "--frozen",
+    "python",
+    "scripts/collect_a01_dependencies.py"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\"entries\": 443, \"unknown\": [], \"notice_files\": 65}\n",
+  "stderr": ""
+}

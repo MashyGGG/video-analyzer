@@ -1,0 +1,21 @@
+{
+  "started_at_utc": "2026-11-04T06:34:29.492761+00:00",
+  "duration_seconds": 21.35,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "compose",
+    "exec",
+    "-T",
+    "api",
+    "python",
+    "-m",
+    "app.infra_probe",
+    "queue"
+  ],
+  "exit_code": 1,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/celery/backends/asynchronous.py\", line 397, in _wait_for_pending\n    for _ in self.drain_events_until(\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/celery/backends/asynchronous.py\", line 86, in drain_events_until\n    raise socket.timeout()\nTimeoutError\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/app/app/infra_probe.py\", line 130, in <module>\n    main()\n  File \"/app/app/infra_probe.py\", line 117, in main\n    payload = result.get(timeout=15)\n              ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/celery/result.py\", line 253, in get\n    return self.backend.wait_for_pending(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/celery/backends/asynchronous.py\", line 298, in wait_for_pending\n    for _ in self._wait_for_pending(result, **kwargs):\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/celery/backends/asynchronous.py\", line 403, in _wait_for_pending\n    raise TimeoutError('The operation timed out.')\ncelery.exceptions.TimeoutError: The operation timed out.\n"
+}

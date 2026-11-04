@@ -1,0 +1,19 @@
+{
+  "started_at_utc": "2026-11-04T06:28:07.157509+00:00",
+  "duration_seconds": 1.433,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "compose",
+    "exec",
+    "-T",
+    "redis",
+    "redis-server",
+    "--version"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "Redis server v=7.2.13 sha=00000000:0 malloc=jemalloc-5.3.0 bits=64 build=c6954384106b53a7\n",
+  "stderr": ""
+}

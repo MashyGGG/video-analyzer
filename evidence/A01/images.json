@@ -1,0 +1,19 @@
+{
+  "started_at_utc": "2026-11-04T06:28:10.288280+00:00",
+  "duration_seconds": 1.056,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "image",
+    "inspect",
+    "video-analyzer-backend:0.1.0",
+    "video-analyzer-frontend:0.1.0",
+    "--format",
+    "{{json .Id}} {{json .RepoDigests}}"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "\"sha256:1acbad7c548043c1e75aae34ef5073599641d825345d172335fde024a81bdb54\" [\"video-analyzer-backend@sha256:1acbad7c548043c1e75aae34ef5073599641d825345d172335fde024a81bdb54\"]\n\"sha256:bd283197807cb2ac3afeb73c48077a8971866bcaf26deb8ca9627ba4b2141086\" [\"video-analyzer-frontend@sha256:bd283197807cb2ac3afeb73c48077a8971866bcaf26deb8ca9627ba4b2141086\"]\n",
+  "stderr": ""
+}

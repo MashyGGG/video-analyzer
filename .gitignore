@@ -12,3 +12,13 @@ __pycache__/
 *.key
 cookies*.txt
 model-weights/
+
+# A01 local runtime, builds and quality-tool caches
+.secrets/
+node_modules/
+.next/
+.ruff_cache/
+.mypy_cache/
+*.tsbuildinfo
+.coverage
+htmlcov/

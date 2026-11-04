@@ -1,0 +1,19 @@
+{
+  "started_at_utc": "2026-11-04T06:19:22.958337+00:00",
+  "duration_seconds": 7.68,
+  "cwd": "<workspace>",
+  "argv": [
+    "uv",
+    "run",
+    "--project",
+    "backend",
+    "--frozen",
+    "python",
+    "scripts/collect_a01_dependencies.py"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\"entries\": 444, \"unknown\": [\"video-analyzer-backend\"], \"notice_files\": 65}\n",
+  "stderr": ""
+}

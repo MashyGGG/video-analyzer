@@ -1,0 +1,264 @@
+[
+  {
+    "file": "evidence/A01/licenses/alembic-1.20.1.dist-info/licenses/LICENSE",
+    "sha256": "6e68d94a03a0e3e327ddf3e86d1ebedc14eece3922022618fc246a36296fd0cc"
+  },
+  {
+    "file": "evidence/A01/licenses/amqp-5.4.2.dist-info/licenses/LICENSE",
+    "sha256": "f5ef5f1282eae1931c74645f8719b6c69b3d6a2cf277bfda249a8270cd473af3"
+  },
+  {
+    "file": "evidence/A01/licenses/annotated_doc-0.0.5.dist-info/licenses/LICENSE",
+    "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf"
+  },
+  {
+    "file": "evidence/A01/licenses/annotated_types-0.8.0.dist-info/licenses/LICENSE",
+    "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+  },
+  {
+    "file": "evidence/A01/licenses/anyio-4.16.0.dist-info/licenses/LICENSE",
+    "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0"
+  },
+  {
+    "file": "evidence/A01/licenses/ast_serialize-0.13.1.dist-info/licenses/LICENSE",
+    "sha256": "91e1749165651f2ad405f1533a921fc8d5cb0de2fd88a4b82090a8b571b5598d"
+  },
+  {
+    "file": "evidence/A01/licenses/ast_serialize-0.13.1.dist-info/licenses/crates/LICENSE",
+    "sha256": "f798046f335b4c84dc851224aeeb8a96b6a1eb70f02f058e860bb00d9d7551cc"
+  },
+  {
+    "file": "evidence/A01/licenses/billiard-4.3.2.dist-info/licenses/LICENSE.txt",
+    "sha256": "6632e59acabdbbbec262837d44724a065318949f002efd0602d642711ae3a457"
+  },
+  {
+    "file": "evidence/A01/licenses/celery-5.6.3.dist-info/licenses/LICENSE",
+    "sha256": "c358cdf77f28bbab50d4a754e123118339c15230349e82bf66489cece3ac093a"
+  },
+  {
+    "file": "evidence/A01/licenses/certifi-2026.10.23.dist-info/licenses/LICENSE",
+    "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+  },
+  {
+    "file": "evidence/A01/licenses/click-8.5.0.dist-info/licenses/LICENSE.txt",
+    "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+  },
+  {
+    "file": "evidence/A01/licenses/click_didyoumean-0.3.1.dist-info/LICENSE",
+    "sha256": "efc74f255dd6fd4289363b1bfe71cd0ed70b2926c8258d6152204e6a89041c0a"
+  },
+  {
+    "file": "evidence/A01/licenses/click_plugins-1.1.1.2.dist-info/licenses/AUTHORS.txt",
+    "sha256": "154843f706715f9fbe77d292ee1501fb09c78324baee97675af00393c96b2de1"
+  },
+  {
+    "file": "evidence/A01/licenses/click_plugins-1.1.1.2.dist-info/licenses/LICENSE.txt",
+    "sha256": "fa1986d06c7d3ba7763524604dbab39faf5b1a89c7812a8d5d932e7dd70036d2"
+  },
+  {
+    "file": "evidence/A01/licenses/click_repl-0.4.1.dist-info/licenses/LICENSE",
+    "sha256": "c39a97224173e617907a62d7568484bd83e05a5a655ea942407dc35a321eb431"
+  },
+  {
+    "file": "evidence/A01/licenses/colorama-0.4.6.dist-info/licenses/LICENSE.txt",
+    "sha256": "cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318"
+  },
+  {
+    "file": "evidence/A01/licenses/fastapi-0.162.0.dist-info/licenses/LICENSE",
+    "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e"
+  },
+  {
+    "file": "evidence/A01/licenses/h11-0.16.0.dist-info/licenses/LICENSE.txt",
+    "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361"
+  },
+  {
+    "file": "evidence/A01/licenses/httpcore-1.0.9.dist-info/licenses/LICENSE.md",
+    "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5"
+  },
+  {
+    "file": "evidence/A01/licenses/httpx-0.28.1.dist-info/licenses/LICENSE.md",
+    "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d"
+  },
+  {
+    "file": "evidence/A01/licenses/idna-3.20.dist-info/licenses/LICENSE.md",
+    "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+  },
+  {
+    "file": "evidence/A01/licenses/iniconfig-2.3.1.dist-info/licenses/LICENSE",
+    "sha256": "3409fa91f7ace557894632676656e32264fe5ef7581535725dc9a23774551bd4"
+  },
+  {
+    "file": "evidence/A01/licenses/kombu-5.7.0.dist-info/licenses/LICENSE",
+    "sha256": "72216de09e6340d2c1aa67f833c3b6aeeee2e6922721366699811b632640fd3b"
+  },
+  {
+    "file": "evidence/A01/licenses/librt-0.16.0.dist-info/licenses/LICENSE",
+    "sha256": "81b7ac7e5dc9410dd4aa4c8f8c5884b43cb821137904dc247b381132389b6aa8"
+  },
+  {
+    "file": "evidence/A01/licenses/mako-1.4.3.dist-info/licenses/LICENSE",
+    "sha256": "8c1d171bc5d341ad9cd33d5e2c39b96a82c7bd49b3ae89a470c37e5822232054"
+  },
+  {
+    "file": "evidence/A01/licenses/markupsafe-3.0.4.dist-info/licenses/LICENSE.txt",
+    "sha256": "4631ec0db5fd90a547e336817264c6798214338146f8ac94b4a57f96ee8c9ec4"
+  },
+  {
+    "file": "evidence/A01/licenses/mypy-2.4.1.dist-info/licenses/LICENSE",
+    "sha256": "1cdee80ea9363fbe69582df40fa64e1853d7647fb4978c2b376f5854d88142be"
+  },
+  {
+    "file": "evidence/A01/licenses/mypy-2.4.1.dist-info/licenses/mypy/typeshed/LICENSE",
+    "sha256": "13c71e0962836d8850762bda0f6234ff213034871fa66b6c42962549d73517a4"
+  },
+  {
+    "file": "evidence/A01/licenses/mypy_extensions-1.2.0.dist-info/licenses/LICENSE",
+    "sha256": "a50450da1d53cd777b80ced77c58ff96abe0ccd879706bd142c3ec20e245f0b4"
+  },
+  {
+    "file": "evidence/A01/licenses/opentelemetry_api-1.45.2.dist-info/licenses/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "file": "evidence/A01/licenses/packaging-26.3.dist-info/licenses/LICENSE",
+    "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+  },
+  {
+    "file": "evidence/A01/licenses/packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+  },
+  {
+    "file": "evidence/A01/licenses/packaging-26.3.dist-info/licenses/LICENSE.BSD",
+    "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+  },
+  {
+    "file": "evidence/A01/licenses/pathspec-1.1.1.dist-info/licenses/LICENSE",
+    "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+  },
+  {
+    "file": "evidence/A01/licenses/pluggy-1.7.0.dist-info/licenses/LICENSE",
+    "sha256": "d6b65e6c213a5d0b577911d34d6e5949b9f59d76c238c5071a2f3fc16cfb2606"
+  },
+  {
+    "file": "evidence/A01/licenses/prompt_toolkit-3.0.53.dist-info/licenses/AUTHORS.rst",
+    "sha256": "d3dc62c6bc8436658495ab89aea37511e7fa9391d282657239c9cfb80dbd42e5"
+  },
+  {
+    "file": "evidence/A01/licenses/prompt_toolkit-3.0.53.dist-info/licenses/LICENSE",
+    "sha256": "303574d9bdd85c757d6025017942bf17baeedf2778f62bd7f425d07d880f4c4a"
+  },
+  {
+    "file": "evidence/A01/licenses/psycopg-3.3.7.dist-info/licenses/LICENSE.txt",
+    "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+  },
+  {
+    "file": "evidence/A01/licenses/psycopg_binary-3.3.7.dist-info/licenses/LICENSE.txt",
+    "sha256": "7d3a95e5e06978064ed3f8e2b7c8f845e7fd8a405294727cc708f94cb83b8059"
+  },
+  {
+    "file": "evidence/A01/licenses/pydantic-2.14.2.dist-info/licenses/LICENSE",
+    "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+  },
+  {
+    "file": "evidence/A01/licenses/pydantic_core-2.50.2.dist-info/licenses/LICENSE",
+    "sha256": "fbe7f615f18d135c07000e5a86325db27f42c7729699ef166ac1f7a3f4586bf4"
+  },
+  {
+    "file": "evidence/A01/licenses/pydantic_settings-2.16.2.dist-info/licenses/LICENSE",
+    "sha256": "eb355a753e020346d33d83bf9769135b89fc610568ac531a01c295bcee7fd998"
+  },
+  {
+    "file": "evidence/A01/licenses/pygments-2.21.0.dist-info/licenses/AUTHORS",
+    "sha256": "71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f"
+  },
+  {
+    "file": "evidence/A01/licenses/pygments-2.21.0.dist-info/licenses/LICENSE",
+    "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+  },
+  {
+    "file": "evidence/A01/licenses/pytest-9.2.0.dist-info/licenses/LICENSE",
+    "sha256": "ca836a5f9ecca3b2f350230faa20a48fb8b145653b5568d784862df864706b9b"
+  },
+  {
+    "file": "evidence/A01/licenses/python_dateutil-4.0.0.dist-info/licenses/AUTHORS.md",
+    "sha256": "56004c45a95e9ee5582ea60f9a7ee42179c8594c7b9c245bbfb4a3445b4af640"
+  },
+  {
+    "file": "evidence/A01/licenses/python_dateutil-4.0.0.dist-info/licenses/LICENSE",
+    "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e"
+  },
+  {
+    "file": "evidence/A01/licenses/python_dotenv-1.2.4.dist-info/licenses/LICENSE",
+    "sha256": "80619b7049f08c81683ad0e01f08f257a840652dd71ee83146d36658c7d2c2b9"
+  },
+  {
+    "file": "evidence/A01/licenses/pyyaml-6.0.3.dist-info/licenses/LICENSE",
+    "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4"
+  },
+  {
+    "file": "evidence/A01/licenses/redis-8.1.0.dist-info/licenses/LICENSE",
+    "sha256": "a57b250a5bf03d7afe55b74063313f2adb7b00d546c0ab149a89398333fe3cc8"
+  },
+  {
+    "file": "evidence/A01/licenses/ruff-0.17.3.dist-info/licenses/LICENSE",
+    "sha256": "2597d854122b77ddc71971564ca2350a37608575ce324adc5650a2b2051c8f18"
+  },
+  {
+    "file": "evidence/A01/licenses/sqlalchemy-2.1.8.dist-info/licenses/AUTHORS",
+    "sha256": "11c9de6af24a1ce9db33019364c1c2441509d7dda13dc0949f1a4b83621b2195"
+  },
+  {
+    "file": "evidence/A01/licenses/sqlalchemy-2.1.8.dist-info/licenses/LICENSE",
+    "sha256": "9bb754071e711cf75728b9051b170bfb8f9e3b879c08386c96a36989c42cd5f1"
+  },
+  {
+    "file": "evidence/A01/licenses/starlette-1.10.0.dist-info/licenses/LICENSE.md",
+    "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf"
+  },
+  {
+    "file": "evidence/A01/licenses/types_pyyaml-6.0.12.20261103.dist-info/licenses/LICENSE",
+    "sha256": "295f8538c94ae5c3043301cf7cff1c852dab6a786a8ddee471e061b40d5ecabe"
+  },
+  {
+    "file": "evidence/A01/licenses/typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+    "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+  },
+  {
+    "file": "evidence/A01/licenses/typing_inspection-0.4.4.dist-info/licenses/LICENSE",
+    "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+  },
+  {
+    "file": "evidence/A01/licenses/tzdata-2026.6.dist-info/licenses/LICENSE",
+    "sha256": "df58f69ea88683035d720b5375bcef0cf5aeaa98a1d098d572e0992c378deb46"
+  },
+  {
+    "file": "evidence/A01/licenses/tzdata-2026.6.dist-info/licenses/licenses/LICENSE_APACHE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "file": "evidence/A01/licenses/tzlocal-5.4.5.dist-info/licenses/LICENSE.txt",
+    "sha256": "d99ab209aeb16aad2c25c90ffd83c1a981e290ffff76a420a2ab03e03f041b8c"
+  },
+  {
+    "file": "evidence/A01/licenses/uvicorn-0.54.0.dist-info/licenses/LICENSE.md",
+    "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371"
+  },
+  {
+    "file": "evidence/A01/licenses/vine-5.1.0.dist-info/LICENSE",
+    "sha256": "177f62f5352b9321f802cead0c2247663d37895304f9c434698446be90c5aaf8"
+  },
+  {
+    "file": "evidence/A01/licenses/wcwidth-0.9.4.dist-info/licenses/LICENSE",
+    "sha256": "dff08668b8cfca00ec90011eb318e450c3719fcd40893bf375781a6beef7143a"
+  },
+  {
+    "file": "evidence/A01/licenses/redis-7.2.13.txt",
+    "sha256": "97f0a15b7bbae580d2609dad2e11f1956ae167be296ab60f4691ab9c30ee9828",
+    "source": "https://raw.githubusercontent.com/redis/redis/7.2.13/COPYING"
+  },
+  {
+    "file": "evidence/A01/licenses/postgres-17.11.txt",
+    "sha256": "3d6af92ff8a4c2cdf69afb1cf44edea727922f5cd0cf8b5f72b11cdecac8fdfd",
+    "source": "https://raw.githubusercontent.com/postgres/postgres/REL_17_11/COPYRIGHT"
+  }
+]

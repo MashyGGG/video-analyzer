@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-11-04T06:17:55.590642+00:00",
+  "duration_seconds": 0.444,
+  "cwd": "<workspace>",
+  "argv": [
+    "uv",
+    "run",
+    "--project",
+    "backend",
+    "--frozen",
+    "ruff",
+    "check",
+    "--config",
+    "backend/pyproject.toml",
+    "backend/app",
+    "backend/migrations",
+    "backend/tests",
+    "scripts/doctor.py",
+    "scripts/init_local.py"
+  ],
+  "exit_code": 1,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "I001 [*] Import block is un-sorted or un-formatted\n --> backend\\migrations\\env.py:1:1\n  |\n1 | / from alembic import context\n2 | | from sqlalchemy import create_engine, pool\n3 | |\n4 | | from app.config import Settings\n  | |_______________________________^\nhelp: Organize imports\n  |\n1 | from alembic import context\n  - from sqlalchemy import create_engine, pool\n  -\n2 | from app.config import Settings\n3 + from sqlalchemy import create_engine, pool\n4 |\n  |\n\nI001 [*] Import block is un-sorted or un-formatted\n --> backend\\tests\\test_health.py:1:1\n  |\n1 | / import pytest\n2 | | from fastapi.testclient import TestClient\n3 | |\n4 | | from app.main import create_app\n  | |_______________________________^\nhelp: Organize imports\n  |\n1 | import pytest\n  - from fastapi.testclient import TestClient\n  -\n2 | from app.main import create_app\n3 + from fastapi.testclient import TestClient\n4 |\n  |\n\nI001 [*] Import block is un-sorted or un-formatted\n --> backend\\tests\\test_settings.py:1:1\n  |\n1 | / from pathlib import Path\n2 | |\n3 | | import pytest\n4 | |\n5 | | from app.config import Settings, read_secret\n  | |____________________________________________^\nhelp: Organize imports\n  |\n3 | import pytest\n  -\n4 | from app.config import Settings, read_secret\n  |\n\nFound 3 errors.\n[*] 3 fixable with `--fix`.\n",
+  "stderr": ""
+}

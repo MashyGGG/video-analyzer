@@ -1,0 +1,14 @@
+{
+  "started_at_utc": "2026-11-04T06:27:54.987291+00:00",
+  "duration_seconds": 134.289,
+  "cwd": "<workspace>",
+  "argv": [
+    "python",
+    "scripts/acceptance_a01.py"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\n  \"started_at_utc\": \"2026-11-04T06:27:56.777781+00:00\",\n  \"scope\": \"A01 real CPU infrastructure; not model/platform/release acceptance\",\n  \"passed\": 25,\n  \"failed\": 0,\n  \"skipped\": 0,\n  \"checks\": [\n    {\n      \"name\": \"no_cloud_model_keys\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"data_ports_private\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"ready_without_model\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"frontend_page\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"frontend_live\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"frontend_api_proxy\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"real_celery_roundtrip\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"migration_replay\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"persistent_markers_created\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"database_identity_persisted\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"redis_data_persisted\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"work_files_persisted\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"postgres_failure_live_200\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"postgres_failure_ready_503\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"postgres_failure_proxy_503\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"postgres_recovered\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"redis_failure_live_200\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"redis_failure_ready_503\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"redis_failure_proxy_503\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"redis_recovered\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"queue_after_recovery\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"frontend_up_when_api_down\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"frontend_reports_api_down\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"application_non_root\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"no_local_secrets_in_logs\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,14 @@
+{
+  "started_at_utc": "2026-11-04T06:23:57.035747+00:00",
+  "duration_seconds": 127.5,
+  "cwd": "<workspace>",
+  "argv": [
+    "python",
+    "scripts/acceptance_a01.py"
+  ],
+  "exit_code": 1,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\n  \"started_at_utc\": \"2026-11-04T06:23:59.823293+00:00\",\n  \"scope\": \"A01 real CPU infrastructure; not model/platform/release acceptance\",\n  \"passed\": 17,\n  \"failed\": 1,\n  \"skipped\": 0,\n  \"checks\": [\n    {\n      \"name\": \"no_cloud_model_keys\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"data_ports_private\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"ready_without_model\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"frontend_page\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"frontend_live\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"frontend_api_proxy\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"real_celery_roundtrip\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"migration_replay\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"persistent_markers_created\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"database_identity_persisted\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"redis_data_persisted\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"work_files_persisted\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"postgres_failure_live_200\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"postgres_failure_ready_503\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"postgres_failure_proxy_503\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"postgres_recovered\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"redis_failure_live_200\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"TimeoutError\",\n      \"status\": \"FAIL\",\n      \"detail\": \"timed out\"\n    }\n  ]\n}\n",
+  "stderr": ""
+}

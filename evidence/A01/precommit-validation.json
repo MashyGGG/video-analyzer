@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "no_forbidden_files": true,
+    "no_credential_findings": true,
+    "index_matches_worktree": true,
+    "notice_hashes_match_index": true,
+    "real_acceptance_25_0_0": true
+  },
+  "total_tracked_files": 271,
+  "changed_files": 165,
+  "forbidden_files": [],
+  "credential_findings": [],
+  "index_mismatches": [],
+  "notice_hash_errors": [],
+  "passed": 5,
+  "failed": 0,
+  "note": "Final check after preserving captured evidence bytes and normalizing tsconfig to LF; credentials scan includes all tracked documents and known local temporary secrets."
+}

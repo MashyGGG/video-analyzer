@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "no_forbidden_files": true,
+    "no_credential_findings": true,
+    "index_matches_worktree": false,
+    "notice_hashes_match_index": true,
+    "real_acceptance_25_0_0": true
+  },
+  "total_tracked_files": 271,
+  "changed_files": 165,
+  "forbidden_files": [],
+  "credential_findings": [],
+  "index_mismatches": [
+    "frontend/tsconfig.json"
+  ],
+  "notice_hash_errors": [],
+  "passed": 4,
+  "failed": 1
+}

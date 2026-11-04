@@ -1,0 +1,19 @@
+{
+  "started_at_utc": "2026-11-04T06:23:28.649745+00:00",
+  "duration_seconds": 26.715,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "compose",
+    "up",
+    "-d",
+    "--wait",
+    "--wait-timeout",
+    "120"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": " Container video-analyzer-postgres-1 Running \n Container video-analyzer-redis-1 Running \n Container video-analyzer-worker-1 Running \n Network video-analyzer_ingress Creating \n Network video-analyzer_ingress Creating \n Network video-analyzer_ingress Created \n Network video-analyzer_ingress Created \n Container video-analyzer-api-1 Recreate \n Container video-analyzer-api-1 Recreated \n Container video-analyzer-frontend-1 Recreate \n Container video-analyzer-frontend-1 Recreated \n Container video-analyzer-postgres-1 Waiting \n Container video-analyzer-postgres-1 Healthy \n Container video-analyzer-migrate-1 Starting \n Container video-analyzer-migrate-1 Started \n Container video-analyzer-migrate-1 Waiting \n Container video-analyzer-migrate-1 Waiting \n Container video-analyzer-redis-1 Waiting \n Container video-analyzer-redis-1 Waiting \n Container video-analyzer-redis-1 Healthy \n Container video-analyzer-redis-1 Healthy \n Container video-analyzer-migrate-1 Exited \n Container video-analyzer-migrate-1 Exited \n Container video-analyzer-api-1 Starting \n Container video-analyzer-api-1 Started \n Container video-analyzer-api-1 Waiting \n Container video-analyzer-api-1 Healthy \n Container video-analyzer-frontend-1 Starting \n Container video-analyzer-frontend-1 Started \n Container video-analyzer-postgres-1 Waiting \n Container video-analyzer-redis-1 Waiting \n Container video-analyzer-migrate-1 Waiting \n Container video-analyzer-api-1 Waiting \n Container video-analyzer-worker-1 Waiting \n Container video-analyzer-frontend-1 Waiting \n Container video-analyzer-worker-1 Healthy \n Container video-analyzer-api-1 Healthy \n Container video-analyzer-postgres-1 Healthy \n Container video-analyzer-migrate-1 Exited \n Container video-analyzer-redis-1 Healthy \n Container video-analyzer-frontend-1 Healthy \n"
+}

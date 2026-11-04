@@ -1,0 +1,18 @@
+{
+  "started_at_utc": "2026-11-04T06:26:53.850751+00:00",
+  "duration_seconds": 0.281,
+  "cwd": "<workspace>",
+  "argv": [
+    "uv",
+    "lock",
+    "--project",
+    "backend",
+    "--check",
+    "--offline"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": "Resolved 54 packages in 44ms\n"
+}

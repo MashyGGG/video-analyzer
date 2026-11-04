@@ -1,0 +1,23 @@
+{
+  "started_at_utc": "2026-11-04T06:21:36.432154+00:00",
+  "duration_seconds": 13.442,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "compose",
+    "-f",
+    "compose.yaml",
+    "-f",
+    "compose.gpu.yaml",
+    "--profile",
+    "gpu-check",
+    "run",
+    "--rm",
+    "gpu-check"
+  ],
+  "exit_code": 1,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": " Image python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2 Pulling \n Image python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2 Pulled \n Container video-analyzer-gpu-check-run-559c3fda77a6 Creating \n Container video-analyzer-gpu-check-run-559c3fda77a6 Created \nError response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error running prestart hook #0: exit status 1, stdout: , stderr: Auto-detected mode as 'legacy'\nnvidia-container-cli: initialization error: WSL environment detected but no adapters were found\n"
+}

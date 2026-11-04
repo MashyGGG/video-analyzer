@@ -1,0 +1,16 @@
+{
+  "started_at_utc": "2026-11-04T06:28:52.145616+00:00",
+  "duration_seconds": 3.447,
+  "cwd": "<workspace>",
+  "argv": [
+    "powershell.exe",
+    "-NoProfile",
+    "-Command",
+    "Get-CimInstance Win32_ComputerSystem | Select-Object TotalPhysicalMemory; Get-CimInstance Win32_Processor | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors; Get-CimInstance Win32_VideoController | Select-Object Name"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "\nTotalPhysicalMemory\n-------------------\n        31989297152\n                   \n                   \n\n\n",
+  "stderr": ""
+}

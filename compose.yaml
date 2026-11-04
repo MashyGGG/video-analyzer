@@ -1,0 +1,145 @@
+name: ${COMPOSE_PROJECT_NAME:-video-analyzer}
+
+x-app: &app
+  image: video-analyzer-backend:0.1.0
+  build: ./backend
+  init: true
+  user: "10001:10001"
+  read_only: true
+  tmpfs: ["/tmp:size=64m,mode=1777"]
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  networks: [backend]
+  pids_limit: 128
+  mem_limit: 512m
+  cpus: 1.0
+  secrets: [postgres_password, redis_password]
+  logging: &logging
+    driver: json-file
+    options: {max-size: "10m", max-file: "3"}
+
+services:
+  postgres:
+    image: postgres:17.11-alpine@sha256:266d3c257594e195b309ae9d1805e54c788f1d7b375f56bf6c367aac6c917e7b
+    environment:
+      POSTGRES_DB: video_analyzer
+      POSTGRES_USER: video_analyzer
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+      POSTGRES_INITDB_ARGS: --auth-host=scram-sha-256
+    secrets: [postgres_password]
+    volumes: [postgres_data:/var/lib/postgresql/data]
+    networks: [backend]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U video_analyzer -d video_analyzer"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 128
+    security_opt: [no-new-privileges:true]
+    logging: *logging
+
+  redis:
+    image: redis:7.2.13-alpine@sha256:9907ac0c435717b4d95697cb4d0ce77d100b1d21269a01a0ce66f27335184c38
+    user: redis
+    read_only: true
+    tmpfs: ["/tmp:size=16m,mode=1777"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    entrypoint: [/bin/sh, /opt/start.sh]
+    secrets: [redis_password]
+    volumes:
+      - redis_data:/data
+      - ./infra/redis/start.sh:/opt/start.sh:ro
+    networks: [backend]
+    healthcheck:
+      test: [CMD-SHELL, 'REDISCLI_AUTH="$$(cat /run/secrets/redis_password)" redis-cli ping | grep -qx PONG']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+    mem_limit: 256m
+    cpus: 0.5
+    pids_limit: 64
+    logging: *logging
+
+  migrate:
+    <<: *app
+    command: [alembic, upgrade, head]
+    depends_on:
+      postgres: {condition: service_healthy}
+    restart: "no"
+
+  api:
+    <<: *app
+    networks: [backend, ingress]
+    ports: ["127.0.0.1:${VA_API_PORT:-8000}:8000"]
+    volumes: [work_data:/data]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health/ready', timeout=6)"]
+      interval: 10s
+      timeout: 8s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+
+  worker:
+    <<: *app
+    command: [celery, -A, app.tasks.worker:celery_app, worker, --loglevel=WARNING, --concurrency=1, --hostname=infra@worker]
+    volumes: [work_data:/data]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, celery, -A, app.tasks.worker:celery_app, inspect, ping, --destination=infra@worker, --timeout=3]
+      interval: 15s
+      timeout: 8s
+      retries: 5
+      start_period: 15s
+    restart: unless-stopped
+
+  frontend:
+    image: video-analyzer-frontend:0.1.0
+    build: ./frontend
+    init: true
+    user: "10001:10001"
+    environment:
+      API_INTERNAL_URL: http://api:8000
+      NEXT_TELEMETRY_DISABLED: "1"
+      HOSTNAME: 0.0.0.0
+      PORT: "3000"
+    ports: ["127.0.0.1:${VA_WEB_PORT:-3000}:3000"]
+    networks: [ingress]
+    read_only: true
+    tmpfs: ["/tmp:size=64m,mode=1777"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 128
+    depends_on:
+      api: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3000/health/live').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    logging: *logging
+
+networks:
+  backend: {internal: true}
+  ingress:
+    driver: bridge
+volumes:
+  postgres_data:
+  redis_data:
+  work_data:
+secrets:
+  postgres_password: {file: ./.secrets/postgres_password}
+  redis_password: {file: ./.secrets/redis_password}

@@ -1,0 +1,16 @@
+{
+  "started_at_utc": "2026-11-04T06:29:50.930542+00:00",
+  "duration_seconds": 2.385,
+  "cwd": "<workspace>",
+  "argv": [
+    "powershell.exe",
+    "-NoProfile",
+    "-Command",
+    "[pscustomobject]@{memory_bytes=(Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory; cpu=(Get-CimInstance Win32_Processor | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors); gpu=(Get-CimInstance Win32_VideoController | Select-Object Name)} | ConvertTo-Json -Depth 4"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\n    \"memory_bytes\":  31989297152,\n    \"cpu\":  {\n                \"Name\":  \"AMD Ryzen AI 9 365 w/ Radeon 880M              \",\n                \"NumberOfCores\":  10,\n                \"NumberOfLogicalProcessors\":  20\n            },\n    \"gpu\":  {\n                \"Name\":  \"AMD Radeon(TM) 880M Graphics\"\n            }\n}\n",
+  "stderr": ""
+}

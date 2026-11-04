@@ -1,0 +1,20 @@
+{
+  "started_at_utc": "2026-11-04T06:27:55.758138+00:00",
+  "duration_seconds": 4.719,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "compose",
+    "exec",
+    "-T",
+    "api",
+    "python",
+    "-c",
+    "import platform,importlib.metadata as m,json; print(json.dumps({'python':platform.python_version(),'platform':platform.platform(),'dependencies':{d.metadata['Name']:d.version for d in m.distributions()}}))"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\"python\": \"3.12.13\", \"platform\": \"Linux-6.18.33.1-microsoft-standard-WSL2-x86_64-with-glibc2.36\", \"dependencies\": {\"pip\": \"25.0.1\", \"click-plugins\": \"1.1.1.2\", \"psycopg-binary\": \"3.3.7\", \"python-dateutil\": \"4.0.0\", \"typing-inspection\": \"0.4.4\", \"fastapi\": \"0.162.0\", \"redis\": \"8.1.0\", \"Mako\": \"1.4.3\", \"h11\": \"0.16.0\", \"kombu\": \"5.7.0\", \"amqp\": \"5.4.2\", \"tzdata\": \"2026.6\", \"starlette\": \"1.10.0\", \"click-repl\": \"0.4.1\", \"idna\": \"3.20\", \"vine\": \"5.1.0\", \"SQLAlchemy\": \"2.1.8\", \"python-dotenv\": \"1.2.4\", \"anyio\": \"4.16.0\", \"tzlocal\": \"5.4.5\", \"psycopg\": \"3.3.7\", \"wcwidth\": \"0.9.4\", \"MarkupSafe\": \"3.0.4\", \"pydantic_core\": \"2.50.2\", \"typing_extensions\": \"4.16.0\", \"pydantic\": \"2.14.2\", \"billiard\": \"4.3.2\", \"prompt_toolkit\": \"3.0.53\", \"alembic\": \"1.20.1\", \"uvicorn\": \"0.54.0\", \"pydantic-settings\": \"2.16.2\", \"annotated-types\": \"0.8.0\", \"packaging\": \"26.3\", \"click\": \"8.5.0\", \"click-didyoumean\": \"0.3.1\", \"celery\": \"5.6.3\", \"opentelemetry-api\": \"1.45.2\", \"annotated-doc\": \"0.0.5\"}}\n",
+  "stderr": ""
+}

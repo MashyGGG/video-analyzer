@@ -1,0 +1,444 @@
+﻿ecosystem,name,version,license,evidence,scope
+pypi,alembic,1.20.1,MIT,installed METADATA alembic==1.20.1,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,amqp,5.4.2,BSD,installed METADATA amqp==5.4.2,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,annotated-doc,0.0.5,MIT,installed METADATA annotated-doc==0.0.5,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,annotated-types,0.8.0,MIT,installed METADATA annotated-types==0.8.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,anyio,4.16.0,MIT,installed METADATA anyio==4.16.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,ast-serialize,0.13.1,MIT,installed METADATA ast-serialize==0.13.1,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,billiard,4.3.2,BSD,installed METADATA billiard==4.3.2,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,celery,5.6.3,BSD-3-Clause,installed METADATA celery==5.6.3,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,certifi,2026.10.23,MPL-2.0,installed METADATA certifi==2026.10.23,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,click,8.5.0,BSD-3-Clause,installed METADATA click==8.5.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,click-didyoumean,0.3.1,MIT,installed METADATA click-didyoumean==0.3.1,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,click-plugins,1.1.1.2,New BSD,installed METADATA click-plugins==1.1.1.2,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,click-repl,0.4.1,MIT,installed METADATA click-repl==0.4.1,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,colorama,0.4.6,OSI Approved :: BSD License,installed METADATA colorama==0.4.6,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,fastapi,0.162.0,MIT,installed METADATA fastapi==0.162.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,h11,0.16.0,MIT,installed METADATA h11==0.16.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,httpcore,1.0.9,BSD-3-Clause,installed METADATA httpcore==1.0.9,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,httpx,0.28.1,BSD-3-Clause,installed METADATA httpx==0.28.1,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,idna,3.20,BSD-3-Clause,installed METADATA idna==3.20,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,iniconfig,2.3.1,MIT,installed METADATA iniconfig==2.3.1,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,kombu,5.7.0,BSD-3-Clause,installed METADATA kombu==5.7.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,librt,0.16.0,MIT,installed METADATA librt==0.16.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,mako,1.4.3,MIT,installed METADATA mako==1.4.3,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,markupsafe,3.0.4,BSD-3-Clause,installed METADATA markupsafe==3.0.4,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,mypy,2.4.1,MIT,installed METADATA mypy==2.4.1,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,mypy-extensions,1.2.0,MIT,installed METADATA mypy-extensions==1.2.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,opentelemetry-api,1.45.2,Apache-2.0,installed METADATA opentelemetry-api==1.45.2,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,packaging,26.3,Apache-2.0 OR BSD-2-Clause,installed METADATA packaging==26.3,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,pathspec,1.1.1,OSI Approved :: Mozilla Public License 2.0 (MPL 2.0),installed METADATA pathspec==1.1.1,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,pluggy,1.7.0,MIT,installed METADATA pluggy==1.7.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,prompt-toolkit,3.0.53,OSI Approved :: BSD License,installed METADATA prompt-toolkit==3.0.53,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,psycopg,3.3.7,LGPL-3.0-only,installed METADATA psycopg==3.3.7,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,psycopg-binary,3.3.7,LGPL-3.0-only,installed METADATA psycopg-binary==3.3.7,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,pydantic,2.14.2,MIT,installed METADATA pydantic==2.14.2,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,pydantic-core,2.50.2,MIT,installed METADATA pydantic-core==2.50.2,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,pydantic-settings,2.16.2,MIT,installed METADATA pydantic-settings==2.16.2,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,pygments,2.21.0,BSD-2-Clause,installed METADATA pygments==2.21.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,pytest,9.2.0,MIT,installed METADATA pytest==9.2.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,python-dateutil,4.0.0,BSD-3-Clause,installed METADATA python-dateutil==4.0.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,python-dotenv,1.2.4,BSD-3-Clause,installed METADATA python-dotenv==1.2.4,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,pyyaml,6.0.3,MIT,installed METADATA pyyaml==6.0.3,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,redis,8.1.0,MIT,installed METADATA redis==8.1.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,ruff,0.17.3,MIT,installed METADATA ruff==0.17.3,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,sqlalchemy,2.1.8,MIT,installed METADATA sqlalchemy==2.1.8,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,starlette,1.10.0,BSD-3-Clause,installed METADATA starlette==1.10.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,types-pyyaml,6.0.12.20261103,Apache-2.0,installed METADATA types-pyyaml==6.0.12.20261103,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,typing-extensions,4.16.0,PSF-2.0,installed METADATA typing-extensions==4.16.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,typing-inspection,0.4.4,MIT,installed METADATA typing-inspection==0.4.4,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,tzdata,2026.6,Apache-2.0,installed METADATA tzdata==2026.6,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,tzlocal,5.4.5,MIT,installed METADATA tzlocal==5.4.5,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,uvicorn,0.54.0,BSD-3-Clause,installed METADATA uvicorn==0.54.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,vine,5.1.0,BSD,installed METADATA vine==5.1.0,"uv.lock, runtime + dev + conditional platform alternatives"
+pypi,wcwidth,0.9.4,OSI Approved :: MIT License,installed METADATA wcwidth==0.9.4,"uv.lock, runtime + dev + conditional platform alternatives"
+npm,@babel/code-frame,7.29.7,MIT,frontend/package-lock.json:node_modules/@babel/code-frame,runtime + dev + optional platform alternatives
+npm,@babel/compat-data,7.29.7,MIT,frontend/package-lock.json:node_modules/@babel/compat-data,runtime + dev + optional platform alternatives
+npm,@babel/core,7.29.7,MIT,frontend/package-lock.json:node_modules/@babel/core,runtime + dev + optional platform alternatives
+npm,@babel/generator,7.29.12,MIT,frontend/package-lock.json:node_modules/@babel/generator,runtime + dev + optional platform alternatives
+npm,@babel/helper-compilation-targets,7.29.7,MIT,frontend/package-lock.json:node_modules/@babel/helper-compilation-targets,runtime + dev + optional platform alternatives
+npm,@babel/helper-globals,7.29.7,MIT,frontend/package-lock.json:node_modules/@babel/helper-globals,runtime + dev + optional platform alternatives
+npm,@babel/helper-module-imports,7.29.7,MIT,frontend/package-lock.json:node_modules/@babel/helper-module-imports,runtime + dev + optional platform alternatives
+npm,@babel/helper-module-transforms,7.29.7,MIT,frontend/package-lock.json:node_modules/@babel/helper-module-transforms,runtime + dev + optional platform alternatives
+npm,@babel/helper-string-parser,7.29.11,MIT,frontend/package-lock.json:node_modules/@babel/helper-string-parser,runtime + dev + optional platform alternatives
+npm,@babel/helper-validator-identifier,7.29.7,MIT,frontend/package-lock.json:node_modules/@babel/helper-validator-identifier,runtime + dev + optional platform alternatives
+npm,@babel/helper-validator-option,7.29.7,MIT,frontend/package-lock.json:node_modules/@babel/helper-validator-option,runtime + dev + optional platform alternatives
+npm,@babel/helpers,7.29.10,MIT,frontend/package-lock.json:node_modules/@babel/helpers,runtime + dev + optional platform alternatives
+npm,@babel/parser,7.29.12,MIT,frontend/package-lock.json:node_modules/@babel/parser,runtime + dev + optional platform alternatives
+npm,@babel/template,7.29.7,MIT,frontend/package-lock.json:node_modules/@babel/template,runtime + dev + optional platform alternatives
+npm,@babel/traverse,7.29.12,MIT,frontend/package-lock.json:node_modules/@babel/traverse,runtime + dev + optional platform alternatives
+npm,@babel/types,7.29.11,MIT,frontend/package-lock.json:node_modules/@babel/types,runtime + dev + optional platform alternatives
+npm,@cacheable/memory,2.2.0,MIT,frontend/package-lock.json:node_modules/@cacheable/memory,runtime + dev + optional platform alternatives
+npm,@cacheable/utils,2.5.0,MIT,frontend/package-lock.json:node_modules/@cacheable/utils,runtime + dev + optional platform alternatives
+npm,@emnapi/runtime,1.11.3,MIT,frontend/package-lock.json:node_modules/@emnapi/runtime,runtime + dev + optional platform alternatives
+npm,@eslint-community/eslint-utils,4.10.1,MIT,frontend/package-lock.json:node_modules/@eslint-community/eslint-utils,runtime + dev + optional platform alternatives
+npm,eslint-visitor-keys,3.4.3,Apache-2.0,frontend/package-lock.json:node_modules/@eslint-community/eslint-utils/node_modules/eslint-visitor-keys,runtime + dev + optional platform alternatives
+npm,@eslint-community/regexpp,4.12.2,MIT,frontend/package-lock.json:node_modules/@eslint-community/regexpp,runtime + dev + optional platform alternatives
+npm,@eslint/config-array,0.23.5,Apache-2.0,frontend/package-lock.json:node_modules/@eslint/config-array,runtime + dev + optional platform alternatives
+npm,@eslint/config-helpers,0.7.0,Apache-2.0,frontend/package-lock.json:node_modules/@eslint/config-helpers,runtime + dev + optional platform alternatives
+npm,@eslint/core,1.2.1,Apache-2.0,frontend/package-lock.json:node_modules/@eslint/core,runtime + dev + optional platform alternatives
+npm,@eslint/object-schema,3.0.5,Apache-2.0,frontend/package-lock.json:node_modules/@eslint/object-schema,runtime + dev + optional platform alternatives
+npm,@eslint/plugin-kit,0.7.3,Apache-2.0,frontend/package-lock.json:node_modules/@eslint/plugin-kit,runtime + dev + optional platform alternatives
+npm,@humanfs/core,0.19.2,Apache-2.0,frontend/package-lock.json:node_modules/@humanfs/core,runtime + dev + optional platform alternatives
+npm,@humanfs/node,0.16.8,Apache-2.0,frontend/package-lock.json:node_modules/@humanfs/node,runtime + dev + optional platform alternatives
+npm,@humanfs/types,0.15.0,Apache-2.0,frontend/package-lock.json:node_modules/@humanfs/types,runtime + dev + optional platform alternatives
+npm,@humanwhocodes/module-importer,1.0.1,Apache-2.0,frontend/package-lock.json:node_modules/@humanwhocodes/module-importer,runtime + dev + optional platform alternatives
+npm,@humanwhocodes/retry,0.4.3,Apache-2.0,frontend/package-lock.json:node_modules/@humanwhocodes/retry,runtime + dev + optional platform alternatives
+npm,@img/colour,1.1.0,MIT,frontend/package-lock.json:node_modules/@img/colour,runtime + dev + optional platform alternatives
+npm,@img/sharp-darwin-arm64,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/@img/sharp-darwin-arm64,runtime + dev + optional platform alternatives
+npm,@img/sharp-darwin-x64,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/@img/sharp-darwin-x64,runtime + dev + optional platform alternatives
+npm,@img/sharp-freebsd-wasm32,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/@img/sharp-freebsd-wasm32,runtime + dev + optional platform alternatives
+npm,@img/sharp-libvips-darwin-arm64,1.3.4,LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-libvips-darwin-arm64,runtime + dev + optional platform alternatives
+npm,@img/sharp-libvips-darwin-x64,1.3.4,LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-libvips-darwin-x64,runtime + dev + optional platform alternatives
+npm,@img/sharp-libvips-linux-arm,1.3.4,LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-libvips-linux-arm,runtime + dev + optional platform alternatives
+npm,@img/sharp-libvips-linux-arm64,1.3.4,LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-libvips-linux-arm64,runtime + dev + optional platform alternatives
+npm,@img/sharp-libvips-linux-ppc64,1.3.4,LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-libvips-linux-ppc64,runtime + dev + optional platform alternatives
+npm,@img/sharp-libvips-linux-riscv64,1.3.4,LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-libvips-linux-riscv64,runtime + dev + optional platform alternatives
+npm,@img/sharp-libvips-linux-s390x,1.3.4,LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-libvips-linux-s390x,runtime + dev + optional platform alternatives
+npm,@img/sharp-libvips-linux-x64,1.3.4,LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-libvips-linux-x64,runtime + dev + optional platform alternatives
+npm,@img/sharp-libvips-linuxmusl-arm64,1.3.4,LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-libvips-linuxmusl-arm64,runtime + dev + optional platform alternatives
+npm,@img/sharp-libvips-linuxmusl-x64,1.3.4,LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-libvips-linuxmusl-x64,runtime + dev + optional platform alternatives
+npm,@img/sharp-linux-arm,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/@img/sharp-linux-arm,runtime + dev + optional platform alternatives
+npm,@img/sharp-linux-arm64,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/@img/sharp-linux-arm64,runtime + dev + optional platform alternatives
+npm,@img/sharp-linux-ppc64,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/@img/sharp-linux-ppc64,runtime + dev + optional platform alternatives
+npm,@img/sharp-linux-riscv64,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/@img/sharp-linux-riscv64,runtime + dev + optional platform alternatives
+npm,@img/sharp-linux-s390x,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/@img/sharp-linux-s390x,runtime + dev + optional platform alternatives
+npm,@img/sharp-linux-x64,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/@img/sharp-linux-x64,runtime + dev + optional platform alternatives
+npm,@img/sharp-linuxmusl-arm64,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/@img/sharp-linuxmusl-arm64,runtime + dev + optional platform alternatives
+npm,@img/sharp-linuxmusl-x64,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/@img/sharp-linuxmusl-x64,runtime + dev + optional platform alternatives
+npm,@img/sharp-wasm32,0.35.5,Apache-2.0 AND LGPL-3.0-or-later AND MIT,frontend/package-lock.json:node_modules/@img/sharp-wasm32,runtime + dev + optional platform alternatives
+npm,@img/sharp-webcontainers-wasm32,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/@img/sharp-webcontainers-wasm32,runtime + dev + optional platform alternatives
+npm,@img/sharp-win32-arm64,0.35.5,Apache-2.0 AND LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-win32-arm64,runtime + dev + optional platform alternatives
+npm,@img/sharp-win32-ia32,0.35.5,Apache-2.0 AND LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-win32-ia32,runtime + dev + optional platform alternatives
+npm,@img/sharp-win32-x64,0.35.5,Apache-2.0 AND LGPL-3.0-or-later,frontend/package-lock.json:node_modules/@img/sharp-win32-x64,runtime + dev + optional platform alternatives
+npm,@jridgewell/gen-mapping,0.3.13,MIT,frontend/package-lock.json:node_modules/@jridgewell/gen-mapping,runtime + dev + optional platform alternatives
+npm,@jridgewell/remapping,2.3.5,MIT,frontend/package-lock.json:node_modules/@jridgewell/remapping,runtime + dev + optional platform alternatives
+npm,@jridgewell/resolve-uri,3.1.2,MIT,frontend/package-lock.json:node_modules/@jridgewell/resolve-uri,runtime + dev + optional platform alternatives
+npm,@jridgewell/sourcemap-codec,1.6.0,MIT,frontend/package-lock.json:node_modules/@jridgewell/sourcemap-codec,runtime + dev + optional platform alternatives
+npm,@jridgewell/trace-mapping,0.3.31,MIT,frontend/package-lock.json:node_modules/@jridgewell/trace-mapping,runtime + dev + optional platform alternatives
+npm,@keyv/bigmap,1.3.1,MIT,frontend/package-lock.json:node_modules/@keyv/bigmap,runtime + dev + optional platform alternatives
+npm,@keyv/serialize,1.1.1,MIT,frontend/package-lock.json:node_modules/@keyv/serialize,runtime + dev + optional platform alternatives
+npm,@next/env,16.4.5,MIT,frontend/package-lock.json:node_modules/@next/env,runtime + dev + optional platform alternatives
+npm,@next/eslint-plugin-next,16.4.5,MIT,frontend/package-lock.json:node_modules/@next/eslint-plugin-next,runtime + dev + optional platform alternatives
+npm,@eslint-community/eslint-utils,4.9.1,MIT,frontend/package-lock.json:node_modules/@next/eslint-plugin-next/node_modules/@eslint-community/eslint-utils,runtime + dev + optional platform alternatives
+npm,eslint-visitor-keys,3.4.3,Apache-2.0,frontend/package-lock.json:node_modules/@next/eslint-plugin-next/node_modules/eslint-visitor-keys,runtime + dev + optional platform alternatives
+npm,@next/swc-darwin-arm64,16.4.5,MIT,frontend/package-lock.json:node_modules/@next/swc-darwin-arm64,runtime + dev + optional platform alternatives
+npm,@next/swc-darwin-x64,16.4.5,MIT,frontend/package-lock.json:node_modules/@next/swc-darwin-x64,runtime + dev + optional platform alternatives
+npm,@next/swc-linux-arm64-gnu,16.4.5,MIT,frontend/package-lock.json:node_modules/@next/swc-linux-arm64-gnu,runtime + dev + optional platform alternatives
+npm,@next/swc-linux-arm64-musl,16.4.5,MIT,frontend/package-lock.json:node_modules/@next/swc-linux-arm64-musl,runtime + dev + optional platform alternatives
+npm,@next/swc-linux-x64-gnu,16.4.5,MIT,frontend/package-lock.json:node_modules/@next/swc-linux-x64-gnu,runtime + dev + optional platform alternatives
+npm,@next/swc-linux-x64-musl,16.4.5,MIT,frontend/package-lock.json:node_modules/@next/swc-linux-x64-musl,runtime + dev + optional platform alternatives
+npm,@next/swc-win32-arm64-msvc,16.4.5,MIT,frontend/package-lock.json:node_modules/@next/swc-win32-arm64-msvc,runtime + dev + optional platform alternatives
+npm,@next/swc-win32-x64-msvc,16.4.5,MIT,frontend/package-lock.json:node_modules/@next/swc-win32-x64-msvc,runtime + dev + optional platform alternatives
+npm,@nodelib/fs.scandir,2.1.5,MIT,frontend/package-lock.json:node_modules/@nodelib/fs.scandir,runtime + dev + optional platform alternatives
+npm,@nodelib/fs.stat,2.0.5,MIT,frontend/package-lock.json:node_modules/@nodelib/fs.stat,runtime + dev + optional platform alternatives
+npm,@nodelib/fs.walk,1.2.8,MIT,frontend/package-lock.json:node_modules/@nodelib/fs.walk,runtime + dev + optional platform alternatives
+npm,@nolyfill/is-core-module,1.0.39,MIT,frontend/package-lock.json:node_modules/@nolyfill/is-core-module,runtime + dev + optional platform alternatives
+npm,@rtsao/scc,1.1.0,MIT,frontend/package-lock.json:node_modules/@rtsao/scc,runtime + dev + optional platform alternatives
+npm,@swc/helpers,0.5.23,Apache-2.0,frontend/package-lock.json:node_modules/@swc/helpers,runtime + dev + optional platform alternatives
+npm,@types/esrecurse,4.3.1,MIT,frontend/package-lock.json:node_modules/@types/esrecurse,runtime + dev + optional platform alternatives
+npm,@types/estree,1.0.10,MIT,frontend/package-lock.json:node_modules/@types/estree,runtime + dev + optional platform alternatives
+npm,@types/json-schema,7.0.15,MIT,frontend/package-lock.json:node_modules/@types/json-schema,runtime + dev + optional platform alternatives
+npm,@types/json5,0.0.29,MIT,frontend/package-lock.json:node_modules/@types/json5,runtime + dev + optional platform alternatives
+npm,@types/node,22.19.0,MIT,frontend/package-lock.json:node_modules/@types/node,runtime + dev + optional platform alternatives
+npm,@types/react,19.3.0,MIT,frontend/package-lock.json:node_modules/@types/react,runtime + dev + optional platform alternatives
+npm,@types/react-dom,19.3.0,MIT,frontend/package-lock.json:node_modules/@types/react-dom,runtime + dev + optional platform alternatives
+npm,@typescript-eslint/eslint-plugin,8.72.1,MIT,frontend/package-lock.json:node_modules/@typescript-eslint/eslint-plugin,runtime + dev + optional platform alternatives
+npm,ignore,7.0.14,MIT,frontend/package-lock.json:node_modules/@typescript-eslint/eslint-plugin/node_modules/ignore,runtime + dev + optional platform alternatives
+npm,@typescript-eslint/parser,8.72.1,MIT,frontend/package-lock.json:node_modules/@typescript-eslint/parser,runtime + dev + optional platform alternatives
+npm,@typescript-eslint/project-service,8.72.1,MIT,frontend/package-lock.json:node_modules/@typescript-eslint/project-service,runtime + dev + optional platform alternatives
+npm,@typescript-eslint/scope-manager,8.72.1,MIT,frontend/package-lock.json:node_modules/@typescript-eslint/scope-manager,runtime + dev + optional platform alternatives
+npm,@typescript-eslint/tsconfig-utils,8.72.1,MIT,frontend/package-lock.json:node_modules/@typescript-eslint/tsconfig-utils,runtime + dev + optional platform alternatives
+npm,@typescript-eslint/type-utils,8.72.1,MIT,frontend/package-lock.json:node_modules/@typescript-eslint/type-utils,runtime + dev + optional platform alternatives
+npm,@typescript-eslint/types,8.72.1,MIT,frontend/package-lock.json:node_modules/@typescript-eslint/types,runtime + dev + optional platform alternatives
+npm,@typescript-eslint/typescript-estree,8.72.1,MIT,frontend/package-lock.json:node_modules/@typescript-eslint/typescript-estree,runtime + dev + optional platform alternatives
+npm,semver,7.8.6,ISC,frontend/package-lock.json:node_modules/@typescript-eslint/typescript-estree/node_modules/semver,runtime + dev + optional platform alternatives
+npm,@typescript-eslint/utils,8.72.1,MIT,frontend/package-lock.json:node_modules/@typescript-eslint/utils,runtime + dev + optional platform alternatives
+npm,@typescript-eslint/visitor-keys,8.72.1,MIT,frontend/package-lock.json:node_modules/@typescript-eslint/visitor-keys,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-android-arm-eabi,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-android-arm-eabi,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-android-arm64,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-android-arm64,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-darwin-arm64,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-darwin-arm64,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-darwin-x64,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-darwin-x64,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-freebsd-x64,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-freebsd-x64,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-linux-arm-gnueabihf,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-linux-arm-gnueabihf,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-linux-arm-musleabihf,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-linux-arm-musleabihf,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-linux-arm64-gnu,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-linux-arm64-gnu,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-linux-arm64-musl,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-linux-arm64-musl,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-linux-loong64-gnu,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-linux-loong64-gnu,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-linux-loong64-musl,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-linux-loong64-musl,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-linux-ppc64-gnu,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-linux-ppc64-gnu,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-linux-riscv64-gnu,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-linux-riscv64-gnu,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-linux-riscv64-musl,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-linux-riscv64-musl,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-linux-s390x-gnu,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-linux-s390x-gnu,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-linux-x64-gnu,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-linux-x64-gnu,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-linux-x64-musl,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-linux-x64-musl,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-openharmony-arm64,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-openharmony-arm64,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-win32-arm64-msvc,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-win32-arm64-msvc,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-win32-ia32-msvc,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-win32-ia32-msvc,runtime + dev + optional platform alternatives
+npm,@unrs/resolver-binding-win32-x64-msvc,1.13.0,MIT,frontend/package-lock.json:node_modules/@unrs/resolver-binding-win32-x64-msvc,runtime + dev + optional platform alternatives
+npm,acorn,8.19.0,MIT,frontend/package-lock.json:node_modules/acorn,runtime + dev + optional platform alternatives
+npm,acorn-jsx,5.3.2,MIT,frontend/package-lock.json:node_modules/acorn-jsx,runtime + dev + optional platform alternatives
+npm,ajv,6.15.0,MIT,frontend/package-lock.json:node_modules/ajv,runtime + dev + optional platform alternatives
+npm,aria-query,5.3.2,Apache-2.0,frontend/package-lock.json:node_modules/aria-query,runtime + dev + optional platform alternatives
+npm,array-buffer-byte-length,1.0.2,MIT,frontend/package-lock.json:node_modules/array-buffer-byte-length,runtime + dev + optional platform alternatives
+npm,array-includes,3.2.0,MIT,frontend/package-lock.json:node_modules/array-includes,runtime + dev + optional platform alternatives
+npm,array.prototype.findlast,1.2.5,MIT,frontend/package-lock.json:node_modules/array.prototype.findlast,runtime + dev + optional platform alternatives
+npm,array.prototype.findlastindex,1.2.6,MIT,frontend/package-lock.json:node_modules/array.prototype.findlastindex,runtime + dev + optional platform alternatives
+npm,array.prototype.flat,1.3.3,MIT,frontend/package-lock.json:node_modules/array.prototype.flat,runtime + dev + optional platform alternatives
+npm,array.prototype.flatmap,1.3.3,MIT,frontend/package-lock.json:node_modules/array.prototype.flatmap,runtime + dev + optional platform alternatives
+npm,array.prototype.tosorted,1.1.4,MIT,frontend/package-lock.json:node_modules/array.prototype.tosorted,runtime + dev + optional platform alternatives
+npm,arraybuffer.prototype.slice,1.0.4,MIT,frontend/package-lock.json:node_modules/arraybuffer.prototype.slice,runtime + dev + optional platform alternatives
+npm,ast-types-flow,0.0.8,MIT,frontend/package-lock.json:node_modules/ast-types-flow,runtime + dev + optional platform alternatives
+npm,async-function,1.0.0,MIT,frontend/package-lock.json:node_modules/async-function,runtime + dev + optional platform alternatives
+npm,available-typed-arrays,1.0.7,MIT,frontend/package-lock.json:node_modules/available-typed-arrays,runtime + dev + optional platform alternatives
+npm,axe-core,4.14.0,MPL-2.0,frontend/package-lock.json:node_modules/axe-core,runtime + dev + optional platform alternatives
+npm,axobject-query,4.1.0,Apache-2.0,frontend/package-lock.json:node_modules/axobject-query,runtime + dev + optional platform alternatives
+npm,balanced-match,4.0.4,MIT,frontend/package-lock.json:node_modules/balanced-match,runtime + dev + optional platform alternatives
+npm,baseline-browser-mapping,2.11.35,Apache-2.0,frontend/package-lock.json:node_modules/baseline-browser-mapping,runtime + dev + optional platform alternatives
+npm,brace-expansion,5.0.12,MIT,frontend/package-lock.json:node_modules/brace-expansion,runtime + dev + optional platform alternatives
+npm,braces,3.0.3,MIT,frontend/package-lock.json:node_modules/braces,runtime + dev + optional platform alternatives
+npm,browserslist,4.29.5,MIT,frontend/package-lock.json:node_modules/browserslist,runtime + dev + optional platform alternatives
+npm,cacheable,2.5.0,MIT,frontend/package-lock.json:node_modules/cacheable,runtime + dev + optional platform alternatives
+npm,call-bind,1.0.9,MIT,frontend/package-lock.json:node_modules/call-bind,runtime + dev + optional platform alternatives
+npm,call-bind-apply-helpers,1.0.2,MIT,frontend/package-lock.json:node_modules/call-bind-apply-helpers,runtime + dev + optional platform alternatives
+npm,call-bound,1.0.4,MIT,frontend/package-lock.json:node_modules/call-bound,runtime + dev + optional platform alternatives
+npm,caniuse-lite,1.0.30001820,CC-BY-4.0,frontend/package-lock.json:node_modules/caniuse-lite,runtime + dev + optional platform alternatives
+npm,client-only,0.0.1,MIT,frontend/package-lock.json:node_modules/client-only,runtime + dev + optional platform alternatives
+npm,concat-map,0.0.1,MIT,frontend/package-lock.json:node_modules/concat-map,runtime + dev + optional platform alternatives
+npm,convert-source-map,2.0.0,MIT,frontend/package-lock.json:node_modules/convert-source-map,runtime + dev + optional platform alternatives
+npm,cross-spawn,7.0.6,MIT,frontend/package-lock.json:node_modules/cross-spawn,runtime + dev + optional platform alternatives
+npm,csstype,3.2.3,MIT,frontend/package-lock.json:node_modules/csstype,runtime + dev + optional platform alternatives
+npm,damerau-levenshtein,1.0.8,BSD-2-Clause,frontend/package-lock.json:node_modules/damerau-levenshtein,runtime + dev + optional platform alternatives
+npm,data-view-buffer,1.0.2,MIT,frontend/package-lock.json:node_modules/data-view-buffer,runtime + dev + optional platform alternatives
+npm,data-view-byte-length,1.0.2,MIT,frontend/package-lock.json:node_modules/data-view-byte-length,runtime + dev + optional platform alternatives
+npm,data-view-byte-offset,1.0.1,MIT,frontend/package-lock.json:node_modules/data-view-byte-offset,runtime + dev + optional platform alternatives
+npm,debug,4.4.3,MIT,frontend/package-lock.json:node_modules/debug,runtime + dev + optional platform alternatives
+npm,deep-is,0.1.4,MIT,frontend/package-lock.json:node_modules/deep-is,runtime + dev + optional platform alternatives
+npm,define-data-property,1.1.4,MIT,frontend/package-lock.json:node_modules/define-data-property,runtime + dev + optional platform alternatives
+npm,define-properties,1.2.1,MIT,frontend/package-lock.json:node_modules/define-properties,runtime + dev + optional platform alternatives
+npm,detect-libc,2.1.2,Apache-2.0,frontend/package-lock.json:node_modules/detect-libc,runtime + dev + optional platform alternatives
+npm,doctrine,2.1.0,Apache-2.0,frontend/package-lock.json:node_modules/doctrine,runtime + dev + optional platform alternatives
+npm,dunder-proto,1.0.1,MIT,frontend/package-lock.json:node_modules/dunder-proto,runtime + dev + optional platform alternatives
+npm,electron-to-chromium,1.5.475,ISC,frontend/package-lock.json:node_modules/electron-to-chromium,runtime + dev + optional platform alternatives
+npm,emoji-regex,9.2.2,MIT,frontend/package-lock.json:node_modules/emoji-regex,runtime + dev + optional platform alternatives
+npm,es-abstract,1.24.2,MIT,frontend/package-lock.json:node_modules/es-abstract,runtime + dev + optional platform alternatives
+npm,es-abstract-get,1.0.0,MIT,frontend/package-lock.json:node_modules/es-abstract-get,runtime + dev + optional platform alternatives
+npm,es-define-property,1.0.1,MIT,frontend/package-lock.json:node_modules/es-define-property,runtime + dev + optional platform alternatives
+npm,es-errors,1.3.0,MIT,frontend/package-lock.json:node_modules/es-errors,runtime + dev + optional platform alternatives
+npm,es-iterator-helpers,1.4.0,MIT,frontend/package-lock.json:node_modules/es-iterator-helpers,runtime + dev + optional platform alternatives
+npm,es-object-atoms,1.1.2,MIT,frontend/package-lock.json:node_modules/es-object-atoms,runtime + dev + optional platform alternatives
+npm,es-set-tostringtag,2.1.0,MIT,frontend/package-lock.json:node_modules/es-set-tostringtag,runtime + dev + optional platform alternatives
+npm,es-shim-unscopables,1.1.0,MIT,frontend/package-lock.json:node_modules/es-shim-unscopables,runtime + dev + optional platform alternatives
+npm,es-to-primitive,1.3.4,MIT,frontend/package-lock.json:node_modules/es-to-primitive,runtime + dev + optional platform alternatives
+npm,escalade,3.2.0,MIT,frontend/package-lock.json:node_modules/escalade,runtime + dev + optional platform alternatives
+npm,escape-string-regexp,4.0.0,MIT,frontend/package-lock.json:node_modules/escape-string-regexp,runtime + dev + optional platform alternatives
+npm,eslint,10.14.0,MIT,frontend/package-lock.json:node_modules/eslint,runtime + dev + optional platform alternatives
+npm,eslint-config-next,16.4.5,MIT,frontend/package-lock.json:node_modules/eslint-config-next,runtime + dev + optional platform alternatives
+npm,balanced-match,1.0.2,MIT,frontend/package-lock.json:node_modules/eslint-config-next/node_modules/balanced-match,runtime + dev + optional platform alternatives
+npm,brace-expansion,1.1.21,MIT,frontend/package-lock.json:node_modules/eslint-config-next/node_modules/brace-expansion,runtime + dev + optional platform alternatives
+npm,eslint-import-resolver-typescript,3.10.1,ISC,frontend/package-lock.json:node_modules/eslint-config-next/node_modules/eslint-import-resolver-typescript,runtime + dev + optional platform alternatives
+npm,eslint-plugin-import,2.32.0,MIT,frontend/package-lock.json:node_modules/eslint-config-next/node_modules/eslint-plugin-import,runtime + dev + optional platform alternatives
+npm,debug,3.2.7,MIT,frontend/package-lock.json:node_modules/eslint-config-next/node_modules/eslint-plugin-import/node_modules/debug,runtime + dev + optional platform alternatives
+npm,eslint-plugin-jsx-a11y,6.10.2,MIT,frontend/package-lock.json:node_modules/eslint-config-next/node_modules/eslint-plugin-jsx-a11y,runtime + dev + optional platform alternatives
+npm,eslint-plugin-react,7.37.5,MIT,frontend/package-lock.json:node_modules/eslint-config-next/node_modules/eslint-plugin-react,runtime + dev + optional platform alternatives
+npm,globals,16.4.0,MIT,frontend/package-lock.json:node_modules/eslint-config-next/node_modules/globals,runtime + dev + optional platform alternatives
+npm,minimatch,3.1.5,ISC,frontend/package-lock.json:node_modules/eslint-config-next/node_modules/minimatch,runtime + dev + optional platform alternatives
+npm,eslint-import-resolver-node,0.3.10,MIT,frontend/package-lock.json:node_modules/eslint-import-resolver-node,runtime + dev + optional platform alternatives
+npm,debug,3.2.7,MIT,frontend/package-lock.json:node_modules/eslint-import-resolver-node/node_modules/debug,runtime + dev + optional platform alternatives
+npm,eslint-module-utils,2.14.0,MIT,frontend/package-lock.json:node_modules/eslint-module-utils,runtime + dev + optional platform alternatives
+npm,debug,3.2.7,MIT,frontend/package-lock.json:node_modules/eslint-module-utils/node_modules/debug,runtime + dev + optional platform alternatives
+npm,eslint-plugin-react-hooks,7.1.1,MIT,frontend/package-lock.json:node_modules/eslint-plugin-react-hooks,runtime + dev + optional platform alternatives
+npm,eslint-scope,9.1.2,BSD-2-Clause,frontend/package-lock.json:node_modules/eslint-scope,runtime + dev + optional platform alternatives
+npm,eslint-visitor-keys,5.0.1,Apache-2.0,frontend/package-lock.json:node_modules/eslint-visitor-keys,runtime + dev + optional platform alternatives
+npm,espree,11.2.0,BSD-2-Clause,frontend/package-lock.json:node_modules/espree,runtime + dev + optional platform alternatives
+npm,esquery,1.7.0,BSD-3-Clause,frontend/package-lock.json:node_modules/esquery,runtime + dev + optional platform alternatives
+npm,esrecurse,4.3.0,BSD-2-Clause,frontend/package-lock.json:node_modules/esrecurse,runtime + dev + optional platform alternatives
+npm,estraverse,5.3.0,BSD-2-Clause,frontend/package-lock.json:node_modules/estraverse,runtime + dev + optional platform alternatives
+npm,esutils,2.0.3,BSD-2-Clause,frontend/package-lock.json:node_modules/esutils,runtime + dev + optional platform alternatives
+npm,fast-deep-equal,3.1.3,MIT,frontend/package-lock.json:node_modules/fast-deep-equal,runtime + dev + optional platform alternatives
+npm,fast-glob,3.3.1,MIT,frontend/package-lock.json:node_modules/fast-glob,runtime + dev + optional platform alternatives
+npm,glob-parent,5.1.2,ISC,frontend/package-lock.json:node_modules/fast-glob/node_modules/glob-parent,runtime + dev + optional platform alternatives
+npm,fast-json-stable-stringify,2.1.0,MIT,frontend/package-lock.json:node_modules/fast-json-stable-stringify,runtime + dev + optional platform alternatives
+npm,fast-levenshtein,2.0.6,MIT,frontend/package-lock.json:node_modules/fast-levenshtein,runtime + dev + optional platform alternatives
+npm,fastq,1.20.3,ISC,frontend/package-lock.json:node_modules/fastq,runtime + dev + optional platform alternatives
+npm,file-entry-cache,11.1.5,MIT,frontend/package-lock.json:node_modules/file-entry-cache,runtime + dev + optional platform alternatives
+npm,fill-range,7.1.1,MIT,frontend/package-lock.json:node_modules/fill-range,runtime + dev + optional platform alternatives
+npm,find-up,5.0.0,MIT,frontend/package-lock.json:node_modules/find-up,runtime + dev + optional platform alternatives
+npm,flat-cache,6.1.23,MIT,frontend/package-lock.json:node_modules/flat-cache,runtime + dev + optional platform alternatives
+npm,flatted,3.4.4,ISC,frontend/package-lock.json:node_modules/flatted,runtime + dev + optional platform alternatives
+npm,for-each,0.3.5,MIT,frontend/package-lock.json:node_modules/for-each,runtime + dev + optional platform alternatives
+npm,function-bind,1.1.2,MIT,frontend/package-lock.json:node_modules/function-bind,runtime + dev + optional platform alternatives
+npm,function.prototype.name,1.2.0,MIT,frontend/package-lock.json:node_modules/function.prototype.name,runtime + dev + optional platform alternatives
+npm,functions-have-names,1.2.3,MIT,frontend/package-lock.json:node_modules/functions-have-names,runtime + dev + optional platform alternatives
+npm,generator-function,2.0.1,MIT,frontend/package-lock.json:node_modules/generator-function,runtime + dev + optional platform alternatives
+npm,gensync,1.0.0-beta.2,MIT,frontend/package-lock.json:node_modules/gensync,runtime + dev + optional platform alternatives
+npm,get-intrinsic,1.3.0,MIT,frontend/package-lock.json:node_modules/get-intrinsic,runtime + dev + optional platform alternatives
+npm,get-proto,1.0.1,MIT,frontend/package-lock.json:node_modules/get-proto,runtime + dev + optional platform alternatives
+npm,get-symbol-description,1.1.0,MIT,frontend/package-lock.json:node_modules/get-symbol-description,runtime + dev + optional platform alternatives
+npm,get-tsconfig,4.14.3,MIT,frontend/package-lock.json:node_modules/get-tsconfig,runtime + dev + optional platform alternatives
+npm,glob-parent,6.0.2,ISC,frontend/package-lock.json:node_modules/glob-parent,runtime + dev + optional platform alternatives
+npm,globalthis,1.0.4,MIT,frontend/package-lock.json:node_modules/globalthis,runtime + dev + optional platform alternatives
+npm,gopd,1.2.0,MIT,frontend/package-lock.json:node_modules/gopd,runtime + dev + optional platform alternatives
+npm,has-bigints,1.1.0,MIT,frontend/package-lock.json:node_modules/has-bigints,runtime + dev + optional platform alternatives
+npm,has-property-descriptors,1.0.2,MIT,frontend/package-lock.json:node_modules/has-property-descriptors,runtime + dev + optional platform alternatives
+npm,has-proto,1.2.0,MIT,frontend/package-lock.json:node_modules/has-proto,runtime + dev + optional platform alternatives
+npm,has-symbols,1.1.0,MIT,frontend/package-lock.json:node_modules/has-symbols,runtime + dev + optional platform alternatives
+npm,has-tostringtag,1.0.2,MIT,frontend/package-lock.json:node_modules/has-tostringtag,runtime + dev + optional platform alternatives
+npm,hashery,1.5.1,MIT,frontend/package-lock.json:node_modules/hashery,runtime + dev + optional platform alternatives
+npm,hasown,2.0.4,MIT,frontend/package-lock.json:node_modules/hasown,runtime + dev + optional platform alternatives
+npm,hermes-estree,0.25.1,MIT,frontend/package-lock.json:node_modules/hermes-estree,runtime + dev + optional platform alternatives
+npm,hermes-parser,0.25.1,MIT,frontend/package-lock.json:node_modules/hermes-parser,runtime + dev + optional platform alternatives
+npm,hookified,1.15.1,MIT,frontend/package-lock.json:node_modules/hookified,runtime + dev + optional platform alternatives
+npm,ignore,5.3.2,MIT,frontend/package-lock.json:node_modules/ignore,runtime + dev + optional platform alternatives
+npm,imurmurhash,0.1.4,MIT,frontend/package-lock.json:node_modules/imurmurhash,runtime + dev + optional platform alternatives
+npm,internal-slot,1.1.0,MIT,frontend/package-lock.json:node_modules/internal-slot,runtime + dev + optional platform alternatives
+npm,is-array-buffer,3.0.5,MIT,frontend/package-lock.json:node_modules/is-array-buffer,runtime + dev + optional platform alternatives
+npm,is-async-function,2.1.1,MIT,frontend/package-lock.json:node_modules/is-async-function,runtime + dev + optional platform alternatives
+npm,is-bigint,1.1.0,MIT,frontend/package-lock.json:node_modules/is-bigint,runtime + dev + optional platform alternatives
+npm,is-boolean-object,1.2.2,MIT,frontend/package-lock.json:node_modules/is-boolean-object,runtime + dev + optional platform alternatives
+npm,is-bun-module,2.0.0,MIT,frontend/package-lock.json:node_modules/is-bun-module,runtime + dev + optional platform alternatives
+npm,semver,7.8.6,ISC,frontend/package-lock.json:node_modules/is-bun-module/node_modules/semver,runtime + dev + optional platform alternatives
+npm,is-callable,1.2.7,MIT,frontend/package-lock.json:node_modules/is-callable,runtime + dev + optional platform alternatives
+npm,is-core-module,2.18.0,MIT,frontend/package-lock.json:node_modules/is-core-module,runtime + dev + optional platform alternatives
+npm,is-data-view,1.0.2,MIT,frontend/package-lock.json:node_modules/is-data-view,runtime + dev + optional platform alternatives
+npm,is-date-object,1.1.0,MIT,frontend/package-lock.json:node_modules/is-date-object,runtime + dev + optional platform alternatives
+npm,is-document.all,1.0.0,MIT,frontend/package-lock.json:node_modules/is-document.all,runtime + dev + optional platform alternatives
+npm,is-extglob,2.1.1,MIT,frontend/package-lock.json:node_modules/is-extglob,runtime + dev + optional platform alternatives
+npm,is-finalizationregistry,1.1.1,MIT,frontend/package-lock.json:node_modules/is-finalizationregistry,runtime + dev + optional platform alternatives
+npm,is-generator-function,1.1.2,MIT,frontend/package-lock.json:node_modules/is-generator-function,runtime + dev + optional platform alternatives
+npm,is-glob,4.0.3,MIT,frontend/package-lock.json:node_modules/is-glob,runtime + dev + optional platform alternatives
+npm,is-map,2.0.3,MIT,frontend/package-lock.json:node_modules/is-map,runtime + dev + optional platform alternatives
+npm,is-negative-zero,2.0.3,MIT,frontend/package-lock.json:node_modules/is-negative-zero,runtime + dev + optional platform alternatives
+npm,is-number,7.0.0,MIT,frontend/package-lock.json:node_modules/is-number,runtime + dev + optional platform alternatives
+npm,is-number-object,1.1.1,MIT,frontend/package-lock.json:node_modules/is-number-object,runtime + dev + optional platform alternatives
+npm,is-regex,1.2.1,MIT,frontend/package-lock.json:node_modules/is-regex,runtime + dev + optional platform alternatives
+npm,is-set,2.0.3,MIT,frontend/package-lock.json:node_modules/is-set,runtime + dev + optional platform alternatives
+npm,is-shared-array-buffer,1.0.4,MIT,frontend/package-lock.json:node_modules/is-shared-array-buffer,runtime + dev + optional platform alternatives
+npm,is-string,1.1.1,MIT,frontend/package-lock.json:node_modules/is-string,runtime + dev + optional platform alternatives
+npm,is-symbol,1.1.1,MIT,frontend/package-lock.json:node_modules/is-symbol,runtime + dev + optional platform alternatives
+npm,is-typed-array,1.1.15,MIT,frontend/package-lock.json:node_modules/is-typed-array,runtime + dev + optional platform alternatives
+npm,is-weakmap,2.0.2,MIT,frontend/package-lock.json:node_modules/is-weakmap,runtime + dev + optional platform alternatives
+npm,is-weakref,1.1.1,MIT,frontend/package-lock.json:node_modules/is-weakref,runtime + dev + optional platform alternatives
+npm,is-weakset,2.0.4,MIT,frontend/package-lock.json:node_modules/is-weakset,runtime + dev + optional platform alternatives
+npm,isarray,2.0.5,MIT,frontend/package-lock.json:node_modules/isarray,runtime + dev + optional platform alternatives
+npm,isexe,2.0.0,ISC,frontend/package-lock.json:node_modules/isexe,runtime + dev + optional platform alternatives
+npm,iterator.prototype,1.1.5,MIT,frontend/package-lock.json:node_modules/iterator.prototype,runtime + dev + optional platform alternatives
+npm,js-tokens,4.0.0,MIT,frontend/package-lock.json:node_modules/js-tokens,runtime + dev + optional platform alternatives
+npm,jsesc,3.1.0,MIT,frontend/package-lock.json:node_modules/jsesc,runtime + dev + optional platform alternatives
+npm,json-schema-traverse,0.4.1,MIT,frontend/package-lock.json:node_modules/json-schema-traverse,runtime + dev + optional platform alternatives
+npm,json-stable-stringify-without-jsonify,1.0.1,MIT,frontend/package-lock.json:node_modules/json-stable-stringify-without-jsonify,runtime + dev + optional platform alternatives
+npm,json5,2.2.3,MIT,frontend/package-lock.json:node_modules/json5,runtime + dev + optional platform alternatives
+npm,jsx-ast-utils,3.3.5,MIT,frontend/package-lock.json:node_modules/jsx-ast-utils,runtime + dev + optional platform alternatives
+npm,keyv,5.6.0,MIT,frontend/package-lock.json:node_modules/keyv,runtime + dev + optional platform alternatives
+npm,language-subtag-registry,0.3.23,CC0-1.0,frontend/package-lock.json:node_modules/language-subtag-registry,runtime + dev + optional platform alternatives
+npm,language-tags,1.0.9,MIT,frontend/package-lock.json:node_modules/language-tags,runtime + dev + optional platform alternatives
+npm,levn,0.4.1,MIT,frontend/package-lock.json:node_modules/levn,runtime + dev + optional platform alternatives
+npm,locate-path,6.0.0,MIT,frontend/package-lock.json:node_modules/locate-path,runtime + dev + optional platform alternatives
+npm,loose-envify,1.4.0,MIT,frontend/package-lock.json:node_modules/loose-envify,runtime + dev + optional platform alternatives
+npm,lru-cache,5.1.1,ISC,frontend/package-lock.json:node_modules/lru-cache,runtime + dev + optional platform alternatives
+npm,math-intrinsics,1.1.0,MIT,frontend/package-lock.json:node_modules/math-intrinsics,runtime + dev + optional platform alternatives
+npm,merge2,1.4.1,MIT,frontend/package-lock.json:node_modules/merge2,runtime + dev + optional platform alternatives
+npm,micromatch,4.0.8,MIT,frontend/package-lock.json:node_modules/micromatch,runtime + dev + optional platform alternatives
+npm,minimatch,10.2.6,BlueOak-1.0.0,frontend/package-lock.json:node_modules/minimatch,runtime + dev + optional platform alternatives
+npm,minimist,1.2.8,MIT,frontend/package-lock.json:node_modules/minimist,runtime + dev + optional platform alternatives
+npm,ms,2.1.3,MIT,frontend/package-lock.json:node_modules/ms,runtime + dev + optional platform alternatives
+npm,nanoid,3.3.20,MIT,frontend/package-lock.json:node_modules/nanoid,runtime + dev + optional platform alternatives
+npm,napi-postinstall,0.3.8,MIT,frontend/package-lock.json:node_modules/napi-postinstall,runtime + dev + optional platform alternatives
+npm,natural-compare,1.4.0,MIT,frontend/package-lock.json:node_modules/natural-compare,runtime + dev + optional platform alternatives
+npm,next,16.4.5,MIT,frontend/package-lock.json:node_modules/next,runtime + dev + optional platform alternatives
+npm,node-exports-info,1.6.2,MIT,frontend/package-lock.json:node_modules/node-exports-info,runtime + dev + optional platform alternatives
+npm,node-releases,2.0.63,MIT,frontend/package-lock.json:node_modules/node-releases,runtime + dev + optional platform alternatives
+npm,object-assign,4.1.1,MIT,frontend/package-lock.json:node_modules/object-assign,runtime + dev + optional platform alternatives
+npm,object-inspect,1.13.4,MIT,frontend/package-lock.json:node_modules/object-inspect,runtime + dev + optional platform alternatives
+npm,object-keys,1.1.1,MIT,frontend/package-lock.json:node_modules/object-keys,runtime + dev + optional platform alternatives
+npm,object.assign,4.1.7,MIT,frontend/package-lock.json:node_modules/object.assign,runtime + dev + optional platform alternatives
+npm,object.entries,1.1.9,MIT,frontend/package-lock.json:node_modules/object.entries,runtime + dev + optional platform alternatives
+npm,object.fromentries,2.0.8,MIT,frontend/package-lock.json:node_modules/object.fromentries,runtime + dev + optional platform alternatives
+npm,object.groupby,1.0.3,MIT,frontend/package-lock.json:node_modules/object.groupby,runtime + dev + optional platform alternatives
+npm,object.values,1.2.1,MIT,frontend/package-lock.json:node_modules/object.values,runtime + dev + optional platform alternatives
+npm,optionator,0.9.4,MIT,frontend/package-lock.json:node_modules/optionator,runtime + dev + optional platform alternatives
+npm,own-keys,1.0.2,MIT,frontend/package-lock.json:node_modules/own-keys,runtime + dev + optional platform alternatives
+npm,p-limit,3.1.0,MIT,frontend/package-lock.json:node_modules/p-limit,runtime + dev + optional platform alternatives
+npm,p-locate,5.0.0,MIT,frontend/package-lock.json:node_modules/p-locate,runtime + dev + optional platform alternatives
+npm,path-exists,4.0.0,MIT,frontend/package-lock.json:node_modules/path-exists,runtime + dev + optional platform alternatives
+npm,path-key,3.1.1,MIT,frontend/package-lock.json:node_modules/path-key,runtime + dev + optional platform alternatives
+npm,path-parse,1.0.7,MIT,frontend/package-lock.json:node_modules/path-parse,runtime + dev + optional platform alternatives
+npm,picocolors,1.1.1,ISC,frontend/package-lock.json:node_modules/picocolors,runtime + dev + optional platform alternatives
+npm,picomatch,2.3.2,MIT,frontend/package-lock.json:node_modules/picomatch,runtime + dev + optional platform alternatives
+npm,possible-typed-array-names,1.1.0,MIT,frontend/package-lock.json:node_modules/possible-typed-array-names,runtime + dev + optional platform alternatives
+npm,postcss,8.5.23,MIT,frontend/package-lock.json:node_modules/postcss,runtime + dev + optional platform alternatives
+npm,prelude-ls,1.2.1,MIT,frontend/package-lock.json:node_modules/prelude-ls,runtime + dev + optional platform alternatives
+npm,prop-types,15.8.1,MIT,frontend/package-lock.json:node_modules/prop-types,runtime + dev + optional platform alternatives
+npm,punycode,2.3.1,MIT,frontend/package-lock.json:node_modules/punycode,runtime + dev + optional platform alternatives
+npm,qified,0.10.1,MIT,frontend/package-lock.json:node_modules/qified,runtime + dev + optional platform alternatives
+npm,hookified,2.2.0,MIT,frontend/package-lock.json:node_modules/qified/node_modules/hookified,runtime + dev + optional platform alternatives
+npm,queue-microtask,1.2.3,MIT,frontend/package-lock.json:node_modules/queue-microtask,runtime + dev + optional platform alternatives
+npm,react,19.3.1,MIT,frontend/package-lock.json:node_modules/react,runtime + dev + optional platform alternatives
+npm,react-dom,19.3.1,MIT,frontend/package-lock.json:node_modules/react-dom,runtime + dev + optional platform alternatives
+npm,react-is,16.13.1,MIT,frontend/package-lock.json:node_modules/react-is,runtime + dev + optional platform alternatives
+npm,reflect.getprototypeof,1.0.10,MIT,frontend/package-lock.json:node_modules/reflect.getprototypeof,runtime + dev + optional platform alternatives
+npm,regexp.prototype.flags,1.5.4,MIT,frontend/package-lock.json:node_modules/regexp.prototype.flags,runtime + dev + optional platform alternatives
+npm,resolve,2.0.0-next.7,MIT,frontend/package-lock.json:node_modules/resolve,runtime + dev + optional platform alternatives
+npm,resolve-pkg-maps,1.0.0,MIT,frontend/package-lock.json:node_modules/resolve-pkg-maps,runtime + dev + optional platform alternatives
+npm,reusify,1.1.0,MIT,frontend/package-lock.json:node_modules/reusify,runtime + dev + optional platform alternatives
+npm,run-parallel,1.2.0,MIT,frontend/package-lock.json:node_modules/run-parallel,runtime + dev + optional platform alternatives
+npm,safe-array-concat,1.1.4,MIT,frontend/package-lock.json:node_modules/safe-array-concat,runtime + dev + optional platform alternatives
+npm,safe-push-apply,1.0.0,MIT,frontend/package-lock.json:node_modules/safe-push-apply,runtime + dev + optional platform alternatives
+npm,safe-regex-test,1.1.0,MIT,frontend/package-lock.json:node_modules/safe-regex-test,runtime + dev + optional platform alternatives
+npm,scheduler,0.28.0,MIT,frontend/package-lock.json:node_modules/scheduler,runtime + dev + optional platform alternatives
+npm,semver,6.3.2,ISC,frontend/package-lock.json:node_modules/semver,runtime + dev + optional platform alternatives
+npm,set-function-length,1.2.2,MIT,frontend/package-lock.json:node_modules/set-function-length,runtime + dev + optional platform alternatives
+npm,set-function-name,2.0.2,MIT,frontend/package-lock.json:node_modules/set-function-name,runtime + dev + optional platform alternatives
+npm,set-proto,1.0.0,MIT,frontend/package-lock.json:node_modules/set-proto,runtime + dev + optional platform alternatives
+npm,sharp,0.35.5,Apache-2.0,frontend/package-lock.json:node_modules/sharp,runtime + dev + optional platform alternatives
+npm,semver,7.8.6,ISC,frontend/package-lock.json:node_modules/sharp/node_modules/semver,runtime + dev + optional platform alternatives
+npm,shebang-command,2.0.0,MIT,frontend/package-lock.json:node_modules/shebang-command,runtime + dev + optional platform alternatives
+npm,shebang-regex,3.0.0,MIT,frontend/package-lock.json:node_modules/shebang-regex,runtime + dev + optional platform alternatives
+npm,side-channel,1.1.1,MIT,frontend/package-lock.json:node_modules/side-channel,runtime + dev + optional platform alternatives
+npm,side-channel-list,1.0.1,MIT,frontend/package-lock.json:node_modules/side-channel-list,runtime + dev + optional platform alternatives
+npm,side-channel-map,1.0.1,MIT,frontend/package-lock.json:node_modules/side-channel-map,runtime + dev + optional platform alternatives
+npm,side-channel-weakmap,1.0.2,MIT,frontend/package-lock.json:node_modules/side-channel-weakmap,runtime + dev + optional platform alternatives
+npm,source-map-js,1.2.2,BSD-3-Clause,frontend/package-lock.json:node_modules/source-map-js,runtime + dev + optional platform alternatives
+npm,stable-hash,0.0.5,MIT,frontend/package-lock.json:node_modules/stable-hash,runtime + dev + optional platform alternatives
+npm,stop-iteration-iterator,1.1.0,MIT,frontend/package-lock.json:node_modules/stop-iteration-iterator,runtime + dev + optional platform alternatives
+npm,string.prototype.includes,2.0.1,MIT,frontend/package-lock.json:node_modules/string.prototype.includes,runtime + dev + optional platform alternatives
+npm,string.prototype.matchall,4.1.0,MIT,frontend/package-lock.json:node_modules/string.prototype.matchall,runtime + dev + optional platform alternatives
+npm,string.prototype.repeat,1.0.0,MIT,frontend/package-lock.json:node_modules/string.prototype.repeat,runtime + dev + optional platform alternatives
+npm,string.prototype.trim,1.2.11,MIT,frontend/package-lock.json:node_modules/string.prototype.trim,runtime + dev + optional platform alternatives
+npm,string.prototype.trimend,1.0.10,MIT,frontend/package-lock.json:node_modules/string.prototype.trimend,runtime + dev + optional platform alternatives
+npm,string.prototype.trimstart,1.0.8,MIT,frontend/package-lock.json:node_modules/string.prototype.trimstart,runtime + dev + optional platform alternatives
+npm,strip-bom,3.0.0,MIT,frontend/package-lock.json:node_modules/strip-bom,runtime + dev + optional platform alternatives
+npm,styled-jsx,5.1.6,MIT,frontend/package-lock.json:node_modules/styled-jsx,runtime + dev + optional platform alternatives
+npm,supports-preserve-symlinks-flag,1.0.0,MIT,frontend/package-lock.json:node_modules/supports-preserve-symlinks-flag,runtime + dev + optional platform alternatives
+npm,tinyglobby,0.2.17,MIT,frontend/package-lock.json:node_modules/tinyglobby,runtime + dev + optional platform alternatives
+npm,fdir,6.5.0,MIT,frontend/package-lock.json:node_modules/tinyglobby/node_modules/fdir,runtime + dev + optional platform alternatives
+npm,picomatch,4.0.7,MIT,frontend/package-lock.json:node_modules/tinyglobby/node_modules/picomatch,runtime + dev + optional platform alternatives
+npm,to-regex-range,5.0.1,MIT,frontend/package-lock.json:node_modules/to-regex-range,runtime + dev + optional platform alternatives
+npm,ts-api-utils,2.5.0,MIT,frontend/package-lock.json:node_modules/ts-api-utils,runtime + dev + optional platform alternatives
+npm,tsconfig-paths,3.15.0,MIT,frontend/package-lock.json:node_modules/tsconfig-paths,runtime + dev + optional platform alternatives
+npm,json5,1.0.2,MIT,frontend/package-lock.json:node_modules/tsconfig-paths/node_modules/json5,runtime + dev + optional platform alternatives
+npm,tslib,2.9.1,0BSD,frontend/package-lock.json:node_modules/tslib,runtime + dev + optional platform alternatives
+npm,type-check,0.4.0,MIT,frontend/package-lock.json:node_modules/type-check,runtime + dev + optional platform alternatives
+npm,typed-array-buffer,1.0.3,MIT,frontend/package-lock.json:node_modules/typed-array-buffer,runtime + dev + optional platform alternatives
+npm,typed-array-byte-length,1.0.3,MIT,frontend/package-lock.json:node_modules/typed-array-byte-length,runtime + dev + optional platform alternatives
+npm,typed-array-byte-offset,1.0.5,MIT,frontend/package-lock.json:node_modules/typed-array-byte-offset,runtime + dev + optional platform alternatives
+npm,typed-array-length,1.0.8,MIT,frontend/package-lock.json:node_modules/typed-array-length,runtime + dev + optional platform alternatives
+npm,typescript,5.9.3,Apache-2.0,frontend/package-lock.json:node_modules/typescript,runtime + dev + optional platform alternatives
+npm,typescript-eslint,8.72.1,MIT,frontend/package-lock.json:node_modules/typescript-eslint,runtime + dev + optional platform alternatives
+npm,unbox-primitive,1.1.0,MIT,frontend/package-lock.json:node_modules/unbox-primitive,runtime + dev + optional platform alternatives
+npm,undici-types,6.21.0,MIT,frontend/package-lock.json:node_modules/undici-types,runtime + dev + optional platform alternatives
+npm,unrs-resolver,1.13.0,MIT,frontend/package-lock.json:node_modules/unrs-resolver,runtime + dev + optional platform alternatives
+npm,update-browserslist-db,1.3.4,MIT,frontend/package-lock.json:node_modules/update-browserslist-db,runtime + dev + optional platform alternatives
+npm,uri-js,4.4.1,BSD-2-Clause,frontend/package-lock.json:node_modules/uri-js,runtime + dev + optional platform alternatives
+npm,which,2.0.2,ISC,frontend/package-lock.json:node_modules/which,runtime + dev + optional platform alternatives
+npm,which-boxed-primitive,1.1.1,MIT,frontend/package-lock.json:node_modules/which-boxed-primitive,runtime + dev + optional platform alternatives
+npm,which-builtin-type,1.2.1,MIT,frontend/package-lock.json:node_modules/which-builtin-type,runtime + dev + optional platform alternatives
+npm,which-collection,1.0.2,MIT,frontend/package-lock.json:node_modules/which-collection,runtime + dev + optional platform alternatives
+npm,which-typed-array,1.1.24,MIT,frontend/package-lock.json:node_modules/which-typed-array,runtime + dev + optional platform alternatives
+npm,word-wrap,1.2.5,MIT,frontend/package-lock.json:node_modules/word-wrap,runtime + dev + optional platform alternatives
+npm,yallist,3.1.1,ISC,frontend/package-lock.json:node_modules/yallist,runtime + dev + optional platform alternatives
+npm,yocto-queue,0.1.0,MIT,frontend/package-lock.json:node_modules/yocto-queue,runtime + dev + optional platform alternatives
+npm,zod,4.6.7,MIT,frontend/package-lock.json:node_modules/zod,runtime + dev + optional platform alternatives
+npm,zod-validation-error,4.0.2,MIT,frontend/package-lock.json:node_modules/zod-validation-error,runtime + dev + optional platform alternatives
+server,redis-7.2.13,7.2.13,BSD-3-Clause,evidence/A01/licenses/redis-7.2.13.txt,server source; not a complete container OS SBOM
+server,postgres-17.11,17.11,PostgreSQL,evidence/A01/licenses/postgres-17.11.txt,server source; not a complete container OS SBOM
