@@ -1,0 +1,10 @@
+{
+  "command": "python .artifacts/a02-platform-acceptance.py",
+  "exit_code": 1,
+  "error": "UnicodeEncodeError in final console print under Windows cp1252",
+  "after_result_file_saved_and_containers_cleaned": true,
+  "fix": "ASCII-escaped final console JSON; cp1252 encoding regression verified without network retry",
+  "evidence_validation_command": "python -X utf8 .artifacts/check-a02-platform-evidence.py",
+  "evidence_validation_exit_code": 0,
+  "new_platform_requests_during_validation": 0
+}
