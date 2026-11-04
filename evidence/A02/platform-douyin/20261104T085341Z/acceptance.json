@@ -1,98 +1,7 @@
 {
   "started_at": "2026-11-04T08:53:41.064961+00:00",
   "baseline": "0f160d729c1d6f9752a18dca2c08f6a966a8c7b9",
-  "authorization": "User explicitly confirmed download/processing rights in this conversation on 2026-11-04",
-  "source": {
-    "platform": "douyin",
-    "host": "v.douyin.com",
-    "url_sha256": "6cce9df34e29343a9910e1200aef03441633815bfbf64fc1dfff0c3bff0abaf4"
-  },
   "scope": "Real authorized platform acquisition; no mock, cookies or bypass",
-  "commands": [
-    {
-      "argv": [
-        "docker",
-        "compose",
-        "-p",
-        "video-analyzer-a02-platform",
-        "ps",
-        "--all",
-        "--format",
-        "json"
-      ],
-      "exit_code": 0
-    },
-    {
-      "argv": [
-        "docker",
-        "compose",
-        "-p",
-        "video-analyzer-a02-platform",
-        "up",
-        "-d",
-        "--wait",
-        "--wait-timeout",
-        "150"
-      ],
-      "exit_code": 0
-    },
-    {
-      "argv": [
-        "docker",
-        "compose",
-        "-p",
-        "video-analyzer-a02-platform",
-        "exec",
-        "-T",
-        "api",
-        "python",
-        "-c",
-        "import json; from app.services.sources.security import extract; print(json.dumps(extract('https://v.douyin.com/<redacted>/')))"
-      ],
-      "exit_code": 0
-    },
-    {
-      "argv": [
-        "docker",
-        "compose",
-        "-p",
-        "video-analyzer-a02-platform",
-        "exec",
-        "-T",
-        "worker-download",
-        "python",
-        "-c",
-        "import json,yt_dlp.version,sys; print(json.dumps({'yt_dlp':yt_dlp.version.__version__,'python':sys.version.split()[0]}))"
-      ],
-      "exit_code": 0
-    },
-    {
-      "argv": [
-        "docker",
-        "compose",
-        "-p",
-        "video-analyzer-a02-platform",
-        "exec",
-        "-T",
-        "worker-media",
-        "python",
-        "-c",
-        "import json,pathlib,hashlib; p=pathlib.Path('/data/original/3680ff63-28df-402c-8770-78e58ab68ec6/source.mp4'); print(json.dumps({'cache_exists':p.is_file(),'cache_sha256':hashlib.sha256(p.read_bytes()).hexdigest() if p.is_file() else None,'staging_exists':pathlib.Path('/data/staging/3680ff63-28df-402c-8770-78e58ab68ec6').exists()}))"
-      ],
-      "exit_code": 0
-    },
-    {
-      "argv": [
-        "docker",
-        "compose",
-        "-p",
-        "video-analyzer-a02-platform",
-        "down",
-        "--remove-orphans"
-      ],
-      "exit_code": 0
-    }
-  ],
   "transitions": [
     {
       "at": "2026-11-04T08:55:03.199829+00:00",
@@ -164,26 +73,6 @@
     "yt_dlp": "2026.10.26",
     "python": "3.12.13"
   },
-  "job_id": "3680ff63-28df-402c-8770-78e58ab68ec6",
-  "result": {
-    "schema_version": "1.0.0",
-    "source_id": "3680ff63-28df-402c-8770-78e58ab68ec6",
-    "asset_id": "3680ff63-28df-402c-8770-78e58ab68ec6",
-    "job_id": "3680ff63-28df-402c-8770-78e58ab68ec6",
-    "platform": "douyin",
-    "state": "FAILED_PERMANENT",
-    "attempts": 1,
-    "error": {
-      "code": "SOURCE_ACCESS_DENIED",
-      "message": "采集未完成，请上传获授权的 MP4/MOV 文件。",
-      "retryable": false,
-      "details": {
-        "fallback": "upload"
-      }
-    },
-    "validation": {},
-    "fallback": "upload"
-  },
   "storage": {
     "cache_exists": false,
     "cache_sha256": null,
@@ -206,5 +95,22 @@
     "passed": 9,
     "failed": 0,
     "skipped": 0
-  }
+  },
+  "result": {
+    "schema_version": "1.0.0",
+    "platform": "douyin",
+    "state": "FAILED_PERMANENT",
+    "attempts": 1,
+    "error": {
+      "code": "SOURCE_ACCESS_DENIED",
+      "message": "采集未完成，请上传获授权的 MP4/MOV 文件。",
+      "retryable": false,
+      "details": {
+        "fallback": "upload"
+      }
+    },
+    "validation": {},
+    "fallback": "upload"
+  },
+  "privacy": "User requested deletion of supplied URL and associated identifiers; only generic acceptance findings retained."
 }
