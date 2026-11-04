@@ -8,7 +8,7 @@
 - migrate 非零：检查本地 secret 与卷是否匹配，再查看 migrate 日志。禁止用 stamp/head、手工建表或 `create_all` 掩盖迁移失败。
 - 页面可打开但部分状态不可用：检查 API ready 与前端 `/api/health`；停止 API 时前端自身 live 仍可用。
 - 只有内部端口、主机无法访问：Engine 29 对仅内部网络的发布端口未实际映射。本项目将 API/前端接入 ingress bridge；不要为了修复网页而将数据库/Worker 接入公网网络。以真实 HTTP 和 `docker port` 验证，不只看 Compose config。
-- 端口占用：在 `.env` 修改 VA_WEB_PORT / VA_API_PORT，doctor/验收脚本使用对应的 `--web-port` / `--api-port`。
+- 前端默认本机/容器端口 3100，API 8000。端口占用：在 `.env` 修改 VA_WEB_PORT / VA_API_PORT，doctor/验收脚本使用对应的 `--web-port` / `--api-port`。VA_WEB_PORT 只覆盖主机发布端口，前端容器仍监听 3100。
 
 API/前端 ingress 具有普通 bridge 出站能力，本阶段没有声称它们被防火墙阻断外网；应用不配置模型 URL/Key。backend 网络的 Worker/数据层保持 internal。A08/A09 必须对最终模型/媒体容器另做网络和抓包验证。
 

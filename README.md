@@ -14,7 +14,7 @@ python3 scripts/doctor.py --services
 
 PowerShell 使用 `python` 替换 `python3`；无需修改命令中的 Compose 参数。Bash 也可运行 `bash scripts/doctor.sh --services`。可选复制 `.env.example` 为 `.env` 修改端口，默认无须创建 `.env`。不要将 .env/密钥/素材放进 Git。
 
-- 页面：<http://127.0.0.1:3000>
+- 页面：<http://127.0.0.1:3100>（npm dev/start 与 Docker Compose 的默认前端端口）
 - OpenAPI：<http://127.0.0.1:8000/docs>
 - 存活：`GET /api/v1/health/live`，独立于数据层。
 - 就绪：`GET /api/v1/health/ready`，真实检查 PostgreSQL、迁移版本和 Redis。就绪为 200，不就绪为 503；`models: not_configured` 不影响 A01。
@@ -68,7 +68,7 @@ python3 scripts/verify_a01_e2e.py
 
 `verify` 顺序执行 lint、TypeScript、生产构建、Chromium 桌面/移动视口 E2E 和 Next 健康代理合同测试。使用独立的 17800/17801 端口，并拒绝复用未知服务。Ubuntu 首次安装浏览器可用 `npx playwright install --with-deps chromium`。测试输出位于被忽略的 `.artifacts/playwright/`，HTML 报告可用 `npx playwright show-report ../.artifacts/playwright/functional-report`（frontend 目录）。失败保留截图与 trace；重跑会替换原始报告，重要失败请先保存并脱敏。
 
-`verify_a01_e2e.py` 创建独立 `video-analyzer-e2e` Compose 项目，使用 17810/17811 端口、独立命名卷，执行原有 25 项基础设施验收和真实浏览器故障恢复测试。会停止本次测试实例的服务；不会停止日常 3000/8000 实例。结束后清理测试容器/网络，保留卷；逐次证据保存在 `evidence/A01-e2e/runs/<UTC时间>/`，已有项目容器时拒绝抢占。证据/截图要在提交前检查，不提交 Cookie、客户素材或模型权重。
+`verify_a01_e2e.py` 创建独立 `video-analyzer-e2e` Compose 项目，使用 17810/17811 端口、独立命名卷，执行原有 25 项基础设施验收和真实浏览器故障恢复测试。会停止本次测试实例的服务；不会停止日常 3100/8000 实例。结束后清理测试容器/网络，保留卷；逐次证据保存在 `evidence/A01-e2e/runs/<UTC时间>/`，已有项目容器时拒绝抢占。证据/截图要在提交前检查，不提交 Cookie、客户素材或模型权重。
 
 GitHub Actions 的 `Frontend and A01 E2E` 在 push/PR 时运行相同门禁。未配置远端分支保护时，workflow 本身不能阻止有直接写权限的人跳过本地测试；应将 `frontend-e2e` 设置为 required check。CI 是否实际通过以对应 run 为准。场景覆盖及本次复验集中记录在 [A01 E2E 验收报告](docs/audit/A01-e2e-acceptance.md)，不宣称 100% 代码行覆盖率或真实模型通过。
 

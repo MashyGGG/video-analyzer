@@ -1,0 +1,23 @@
+{
+  "started_at_utc": "2026-11-04T07:18:18.617655+00:00",
+  "duration_seconds": 0.377,
+  "cwd": "<workspace>",
+  "argv": [
+    "uv",
+    "run",
+    "--project",
+    "backend",
+    "--frozen",
+    "ruff",
+    "check",
+    "--config",
+    "backend/pyproject.toml",
+    "scripts/doctor.py",
+    "scripts/acceptance_a01.py"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "All checks passed!\n",
+  "stderr": ""
+}

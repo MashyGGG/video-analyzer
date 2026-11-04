@@ -7,13 +7,19 @@ const exec = promisify(execFile);
 const root = path.resolve(__dirname, "../../..");
 const api = "http://127.0.0.1:17811";
 async function compose(...args: string[]) {
-  await exec("docker", ["compose", "-p", "video-analyzer-e2e", ...args], { cwd: root, timeout: 40_000 });
+  return await exec("docker", ["compose", "-p", "video-analyzer-e2e", ...args], { cwd: root, timeout: 40_000 });
 }
 
 test.beforeEach(async ({ page, request }) => {
   await expect.poll(async () => (await request.get(`${api}/api/v1/health/ready`)).status()).toBe(200);
   await page.clock.install({ time: new Date("2026-11-04T00:00:00Z") });
   await page.clock.pauseAt(new Date("2026-11-04T00:00:01Z"));
+});
+
+test("published port override reaches the frontend listening on 3100", async ({ request }) => {
+  const { stdout } = await compose("port", "frontend", "3100");
+  expect(stdout.trim()).toBe("127.0.0.1:17810");
+  expect((await request.get("/health/live")).status()).toBe(200);
 });
 
 test("real browser -> Next -> FastAPI -> database/Redis, models remain unavailable", async ({ page }, testInfo) => {

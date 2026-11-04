@@ -1,0 +1,18 @@
+{
+  "scope": "Port change deliverable integrity and evidence consistency",
+  "checks": {
+    "no_credentials": true,
+    "no_forbidden_assets": true,
+    "frontend_42_passed": true,
+    "real_browser_5_0_0": true,
+    "infrastructure_25_0_0": true,
+    "isolated_run_PASS": true,
+    "defaults_3100": true,
+    "live_3100_browser": true,
+    "no_historical_evidence_changed": true
+  },
+  "passed": 9,
+  "failed": 0,
+  "credential_findings": [],
+  "forbidden_files": []
+}

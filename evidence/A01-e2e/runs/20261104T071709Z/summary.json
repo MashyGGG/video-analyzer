@@ -1,0 +1,12 @@
+{
+  "scope": "A01 real CPU infrastructure and browser acceptance; no health mocks, media or models",
+  "compose_project": "video-analyzer-e2e",
+  "started_at_utc": "2026-11-04T07:17:09.420812+00:00",
+  "status": "PASS",
+  "browser_counts": {
+    "expected": 5,
+    "unexpected": 0,
+    "flaky": 0,
+    "skipped": 0
+  }
+}

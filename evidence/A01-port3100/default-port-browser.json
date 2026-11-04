@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-11-04T07:23:41.791008+00:00",
+  "duration_seconds": 3.469,
+  "cwd": "<workspace>\\frontend",
+  "argv": [
+    "node",
+    "-e",
+    "const {chromium,expect}=require(\"@playwright/test\"); (async()=>{const b=await chromium.launch(); try {const p=await b.newPage(); const r=await p.goto(\"http://127.0.0.1:3100\"); await expect(p.getByRole(\"heading\",{name:\"基础服务已就绪\"})).toBeVisible(); console.log(JSON.stringify({url:p.url(),status:r.status(),ready:true}));}finally{await b.close()}})().catch(e=>{console.error(e);process.exit(1)})"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\"url\":\"http://127.0.0.1:3100/\",\"status\":200,\"ready\":true}\n",
+  "stderr": ""
+}

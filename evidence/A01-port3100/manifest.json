@@ -1,0 +1,126 @@
+{
+  "created_at_utc": "2026-11-04T07:26:42.301338+00:00",
+  "scope": "A01 frontend default port 3100 update and sanitized CPU/browser evidence",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "89b08ee0a7dbe4fc989f2958a2c4555b8a591e2a0f5cc4c7ef0f8e8bd79ea657",
+      "bytes": 313
+    },
+    {
+      "path": "README.md",
+      "sha256": "16009700f1616af95dc35c9d45355ad8045b9b25fdab9d56c1139ac853767560",
+      "bytes": 6966
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "bbbd20fb8e8a5ec4e3f646026c67dda410fbc24f48232ce1cb19422da783ed91",
+      "bytes": 4164
+    },
+    {
+      "path": "docs/audit/A01-port3100.md",
+      "sha256": "de71f3cd873f4a4375c928d0b46564142ec16b6fb00bcdbf2c65bef60fde3690",
+      "bytes": 2642
+    },
+    {
+      "path": "docs/plans/A01-port3100.md",
+      "sha256": "53a5eb5b9cc093d44e97701725b5d380fae173e837f5c6fe16e5ac503231dfa7",
+      "bytes": 1122
+    },
+    {
+      "path": "docs/runbooks/A01-infrastructure.md",
+      "sha256": "f1726265020596a99cb219d21be09e4d600f8967e3a2ee24102988e69407d726",
+      "bytes": 4126
+    },
+    {
+      "path": "evidence/A01-e2e/runs/20261104T071709Z/commands.json",
+      "sha256": "186d4744ad78ceafafd618742522a109c977be77a55f006799868ba62574e16d",
+      "bytes": 55599
+    },
+    {
+      "path": "evidence/A01-e2e/runs/20261104T071709Z/infrastructure/acceptance.json",
+      "sha256": "afa9506bcf776d267b46e7a41c6d1668934087b030a43d236bea1cd1c1178433",
+      "bytes": 39912
+    },
+    {
+      "path": "evidence/A01-e2e/runs/20261104T071709Z/playwright.json",
+      "sha256": "860d80d45189adfe482dace5408c006a7ac94c5d1b43d0d704c820e0b3a6bb45",
+      "bytes": 340843
+    },
+    {
+      "path": "evidence/A01-e2e/runs/20261104T071709Z/services.log",
+      "sha256": "05d75abee29373916d373e9dd8b4e808690453845bf8dcab2cf077f01d3f19c0",
+      "bytes": 19138
+    },
+    {
+      "path": "evidence/A01-e2e/runs/20261104T071709Z/summary.json",
+      "sha256": "2c087b4c230027964552356ca05dacf5ac4226fd7f245157a8a9ffab1216df55",
+      "bytes": 321
+    },
+    {
+      "path": "evidence/A01-port3100/backend-tests.json",
+      "sha256": "d4fab9056486de0f641fb9ffcbbcf3cccf68c7e156640b9020a45fcc58e37ad4",
+      "bytes": 901
+    },
+    {
+      "path": "evidence/A01-port3100/compose-default-ports.json",
+      "sha256": "4a2e019d50bd2b11d836b6cf975ee517eb26335eb2210315beb13d485bfd7874",
+      "bytes": 12815
+    },
+    {
+      "path": "evidence/A01-port3100/default-port-browser.json",
+      "sha256": "216e963b87b286bd58bf1af4635747b74205715031161c1be8b7bff98d94c222",
+      "bytes": 767
+    },
+    {
+      "path": "evidence/A01-port3100/final-validation.json",
+      "sha256": "89ebf4f3bdc3787cdfa50246d53e45fe7074cd52b184ec9f81400ec0cf9b5ea8",
+      "bytes": 471
+    },
+    {
+      "path": "evidence/A01-port3100/frontend-verify.json",
+      "sha256": "769d40df75d290c56b0b61b5b25c833b3023aa85d93561222d69a2b5ac0c5e19",
+      "bytes": 8006
+    },
+    {
+      "path": "evidence/A01-port3100/local-doctor.json",
+      "sha256": "b780c4703040d65508f4a7a8fb54485a891d905426ab997d847cb756c2092961",
+      "bytes": 1538
+    },
+    {
+      "path": "evidence/A01-port3100/local-up.json",
+      "sha256": "a0bb5f36a66bd450f04133cace95576b9214cd04dbcdd28f73387260f9317ffa",
+      "bytes": 699
+    },
+    {
+      "path": "evidence/A01-port3100/ruff.json",
+      "sha256": "fb9fb99f6c4423f284bdb9b460da145c9358f03898266482f548b86a29f1e739",
+      "bytes": 472
+    },
+    {
+      "path": "frontend/Dockerfile",
+      "sha256": "9ed55f39ea6e94b2d247d9685f18a1f493493ae00f9a862439749c9301d1c9eb",
+      "bytes": 655
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "c093867db68fe6ab164628f65644f567a3983ed7adc7efc56b6b17e981e16e96",
+      "bytes": 914
+    },
+    {
+      "path": "frontend/tests/infra/compose.spec.ts",
+      "sha256": "fd972c55be91805120a98367ba17a772b6afb38505c3692c868a88aee342cb5a",
+      "bytes": 3509
+    },
+    {
+      "path": "scripts/acceptance_a01.py",
+      "sha256": "ea9e79dbdcee2e96df7184533cb718e052d6fd8fd75129da4a5e11ccdb4f4c76",
+      "bytes": 7465
+    },
+    {
+      "path": "scripts/doctor.py",
+      "sha256": "f9b1699966ac9f0bd4de70a64243550ed803330956f84d6345bcd51f1b16c207",
+      "bytes": 5099
+    }
+  ]
+}

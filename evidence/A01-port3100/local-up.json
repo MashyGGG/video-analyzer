@@ -1,0 +1,23 @@
+{
+  "started_at_utc": "2026-11-04T07:23:22.306322+00:00",
+  "duration_seconds": 13.237,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "compose",
+    "-p",
+    "video-analyzer",
+    "up",
+    "-d",
+    "--no-deps",
+    "--wait",
+    "--wait-timeout",
+    "60",
+    "frontend"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": " Container video-analyzer-frontend-1 Creating \n Container video-analyzer-frontend-1 Created \n Container video-analyzer-frontend-1 Starting \n Container video-analyzer-frontend-1 Started \n Container video-analyzer-frontend-1 Waiting \n Container video-analyzer-frontend-1 Healthy \n"
+}

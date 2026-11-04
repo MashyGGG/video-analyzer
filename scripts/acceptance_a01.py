@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--api-port", type=int, default=8000)
-    parser.add_argument("--web-port", type=int, default=3000)
+    parser.add_argument("--web-port", type=int, default=3100)
     parser.add_argument("--compose-project", default=None)
     parser.add_argument("--output-dir", type=Path, default=ROOT / "evidence/A01")
     args = parser.parse_args()

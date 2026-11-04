@@ -32,7 +32,7 @@ def main() -> int:
     parser.add_argument("--require-gpu", action="store_true")
     parser.add_argument("--services", action="store_true")
     parser.add_argument("--api-port", type=int, default=8000)
-    parser.add_argument("--web-port", type=int, default=3000)
+    parser.add_argument("--web-port", type=int, default=3100)
     parser.add_argument("--compose-project", default=None)
     args = parser.parse_args()
     compose = ["docker", "compose"] + (["-p", args.compose_project] if args.compose_project else [])
