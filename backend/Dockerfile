@@ -1,6 +1,9 @@
 FROM python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2
 ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PIP_DISABLE_PIP_VERSION_CHECK=1
 WORKDIR /app
+RUN apt-get -o Acquire::http::Timeout=30 -o Acquire::Retries=2 update \
+    && apt-get install -y --no-install-recommends ffmpeg=7:5.1.9-0+deb12u1 \
+    && rm -rf /var/lib/apt/lists/*
 # A hash-locked export, including transitive Linux/Windows alternatives; pip selects this platform.
 COPY requirements.lock ./
 RUN pip install --no-cache-dir --require-hashes -r requirements.lock \

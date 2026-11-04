@@ -54,13 +54,16 @@ def main() -> int:
     code, output = command([*compose, "config", "--format", "json"])
     try:
         config = json.loads(output) if code == 0 else {}
-        valid = len(config["services"]) == 6
+        valid = set(config["services"]) == {
+            "postgres", "redis", "migrate", "api", "worker", "frontend",
+            "worker-download", "worker-media", "egress",
+        } and config["networks"]["backend"]["internal"] is True
     except (KeyError, ValueError):
         valid = False
     add(
         "compose_config",
         "PASS" if valid else "FAIL",
-        "6 base services" if valid else "Invalid configuration",
+        "9 A01/A02 services" if valid else "Invalid configuration",
     )
     try:
         import init_local

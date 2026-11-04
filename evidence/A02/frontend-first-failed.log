@@ -1,0 +1,1021 @@
+
+> video-analyzer-frontend@0.1.0 verify
+> npm run lint && npm run typecheck && npm run build && npm run test:e2e
+
+
+> video-analyzer-frontend@0.1.0 lint
+> eslint . --max-warnings=0
+
+
+> video-analyzer-frontend@0.1.0 typecheck
+> tsc --noEmit
+
+
+> video-analyzer-frontend@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.4.5 (webpack)
+✓ Running next.config.ts took 1789ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 13.9s
+  Running TypeScript ...
+  Finished TypeScript in 13.4s ...
+  Collecting page data using 8 workers ...
+  Generating static pages using 8 workers (0/5) ...
+  Generating static pages using 8 workers (1/5)
+  Generating static pages using 8 workers (2/5)
+  Generating static pages using 8 workers (3/5)
+✓ Generating static pages using 8 workers (5/5) in 1952ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/acquisition/[...path]
+├ ƒ /api/health
+├ ƒ /health/live
+└ ○ /import
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+> video-analyzer-frontend@0.1.0 test:e2e
+> playwright test
+
+[WebServer] (node:46744) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:57760) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 71 tests using 1 worker
+
+(node:54112) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:7:5 › authorized upload, polling, persistence and responsive form (2.0s)
+  x   2 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_AUTH_REQUIRED provides upload fallback (1.2s)
+(node:51636) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   3 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_EXPIRED provides upload fallback (1.1s)
+(node:19084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   4 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_RATE_LIMITED provides upload fallback (906ms)
+(node:61036) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   5 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_TIMEOUT provides upload fallback (1.3s)
+(node:60244) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   6 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_INVALID provides upload fallback (1.2s)
+(node:40832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   7 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_TOO_LARGE provides upload fallback (1.2s)
+(node:52532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   8 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:42:7 › network fails safely without private body (1.0s)
+(node:57788) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   9 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:42:7 › invalid contract fails safely without private body (1.1s)
+(node:50200) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  10 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:42:7 › upload rejected fails safely without private body (989ms)
+(node:48320) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  11 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:54:5 › poll timeout recovers and ignores late response (1.2s)
+(node:13020) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 12 [chromium-desktop] › tests\e2e\status.ui.spec.ts:3:5 › loading never claims healthy before first response (718ms)
+  ok 13 [chromium-desktop] › tests\e2e\status.ui.spec.ts:14:5 › healthy dashboard, navigation, refresh and responsive layout (1.3s)
+  ok 14 [chromium-desktop] › tests\e2e\status.ui.spec.ts:31:7 › database failure keeps reachable API accurate (633ms)
+  ok 15 [chromium-desktop] › tests\e2e\status.ui.spec.ts:31:7 › redis failure keeps reachable API accurate (629ms)
+  ok 16 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: null (666ms)
+  ok 17 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: missing fields (728ms)
+  ok 18 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: wrong boolean (693ms)
+  ok 19 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: contradictory dependencies (751ms)
+  ok 20 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: unknown state (653ms)
+  ok 21 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: HTTP error disguised as ready (686ms)
+  ok 22 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: API down disguised as ready (809ms)
+  ok 23 [chromium-desktop] › tests\e2e\status.ui.spec.ts:58:7 › network failure does not crash or expose response body (660ms)
+  ok 24 [chromium-desktop] › tests\e2e\status.ui.spec.ts:58:7 › invalid JSON failure does not crash or expose response body (604ms)
+  ok 25 [chromium-desktop] › tests\e2e\status.ui.spec.ts:66:5 › polls after 15 seconds and recovers without reload (698ms)
+  ok 26 [chromium-desktop] › tests\e2e\status.ui.spec.ts:80:5 › hung request times out, late response cannot restore stale green, next poll recovers (799ms)
+(node:42920) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 27 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:7:5 › authorized upload, polling, persistence and responsive form (1.2s)
+  x  28 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_AUTH_REQUIRED provides upload fallback (762ms)
+(node:22548) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  29 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_EXPIRED provides upload fallback (817ms)
+(node:19112) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  30 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_RATE_LIMITED provides upload fallback (1.3s)
+(node:26184) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  31 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_TIMEOUT provides upload fallback (1.7s)
+(node:39976) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  32 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_INVALID provides upload fallback (1.3s)
+(node:55940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  33 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_TOO_LARGE provides upload fallback (1.7s)
+(node:49572) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  34 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:42:7 › network fails safely without private body (1.4s)
+(node:37780) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  35 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:42:7 › invalid contract fails safely without private body (1.4s)
+(node:4232) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  36 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:42:7 › upload rejected fails safely without private body (1.4s)
+(node:60284) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  37 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:54:5 › poll timeout recovers and ignores late response (1.7s)
+(node:29304) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 38 [chromium-mobile] › tests\e2e\status.ui.spec.ts:3:5 › loading never claims healthy before first response (903ms)
+  ok 39 [chromium-mobile] › tests\e2e\status.ui.spec.ts:14:5 › healthy dashboard, navigation, refresh and responsive layout (1.4s)
+  ok 40 [chromium-mobile] › tests\e2e\status.ui.spec.ts:31:7 › database failure keeps reachable API accurate (703ms)
+  ok 41 [chromium-mobile] › tests\e2e\status.ui.spec.ts:31:7 › redis failure keeps reachable API accurate (853ms)
+  ok 42 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: null (836ms)
+  ok 43 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: missing fields (859ms)
+  ok 44 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: wrong boolean (826ms)
+  ok 45 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: contradictory dependencies (815ms)
+  ok 46 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: unknown state (795ms)
+  ok 47 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: HTTP error disguised as ready (970ms)
+  ok 48 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: API down disguised as ready (875ms)
+  ok 49 [chromium-mobile] › tests\e2e\status.ui.spec.ts:58:7 › network failure does not crash or expose response body (1.0s)
+  ok 50 [chromium-mobile] › tests\e2e\status.ui.spec.ts:58:7 › invalid JSON failure does not crash or expose response body (963ms)
+  ok 51 [chromium-mobile] › tests\e2e\status.ui.spec.ts:66:5 › polls after 15 seconds and recovers without reload (787ms)
+  ok 52 [chromium-mobile] › tests\e2e\status.ui.spec.ts:80:5 › hung request times out, late response cannot restore stale green, next poll recovers (1.1s)
+(node:61416) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  53 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:6:5 › acquisition proxy handles valid contract and scopes session (210ms)
+(node:56556) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 54 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:19:7 › acquisition proxy rejects null (187ms)
+  ok 55 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:19:7 › acquisition proxy rejects false success (74ms)
+  ok 56 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:19:7 › acquisition proxy rejects private error (64ms)
+  ok 57 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:19:7 › acquisition proxy rejects disconnect (64ms)
+  ok 58 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:19:7 › acquisition proxy rejects timeout (8.1s)
+  x  59 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:27:5 › acquisition proxy refuses cross-site, arbitrary route and size (460ms)
+(node:19728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 60 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:6:5 › proxy forwards real-shaped upstream ready and live is independent (197ms)
+  ok 61 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:14:5 › proxy preserves valid 503 with API reachable (51ms)
+  ok 62 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects null without exposing upstream data (47ms)
+  ok 63 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects malformed JSON without exposing upstream data (40ms)
+  ok 64 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects unknown status without exposing upstream data (33ms)
+  ok 65 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects missing contract fields without exposing upstream data (37ms)
+  ok 66 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects contradictory ready without exposing upstream data (39ms)
+  ok 67 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects HTTP 500 with ready body without exposing upstream data (51ms)
+  ok 68 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects HTTP 200 with unavailable body without exposing upstream data (57ms)
+  ok 69 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects wrong boolean without exposing upstream data (33ms)
+  ok 70 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects connection reset without exposing upstream data (35ms)
+  ok 71 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects upstream timeout without exposing upstream data (6.0s)
+
+
+  1) [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_AUTH_REQUIRED provides upload fallback
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "SOURCE_AUTH_REQUIRED"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">SOURCE_AUTH_REQUIRED · 请上传获授权的本地 MP4/MOV 文件。</p> aka getByText('SOURCE_AUTH_REQUIRED')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      33 |     await page.getByLabel("分享文本").fill("授权分享 https://v.douyin.com/abc/");
+      34 |     await page.getByRole("button", { name: "提交链接" }).click();
+    > 35 |     await expect(page.getByRole("alert")).toContainText(code);
+         |                                           ^
+      36 |     await expect(page.getByRole("alert")).toContainText("请上传");
+      37 |     await expect(page.getByLabel("选择视频")).toBeVisible();
+      38 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:35:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a9e0e-ED-provides-upload-fallback-chromium-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a9e0e-ED-provides-upload-fallback-chromium-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a9e0e-ED-provides-upload-fallback-chromium-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a9e0e-ED-provides-upload-fallback-chromium-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_EXPIRED provides upload fallback
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "SOURCE_EXPIRED"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">SOURCE_EXPIRED · 请上传获授权的本地 MP4/MOV 文件。</p> aka getByText('SOURCE_EXPIRED · 请上传获授权的本地')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+        - locator resolved to <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div>
+        - unexpected value ""
+
+
+      33 |     await page.getByLabel("分享文本").fill("授权分享 https://v.douyin.com/abc/");
+      34 |     await page.getByRole("button", { name: "提交链接" }).click();
+    > 35 |     await expect(page.getByRole("alert")).toContainText(code);
+         |                                           ^
+      36 |     await expect(page.getByRole("alert")).toContainText("请上传");
+      37 |     await expect(page.getByLabel("选择视频")).toBeVisible();
+      38 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:35:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-3445b-ED-provides-upload-fallback-chromium-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-3445b-ED-provides-upload-fallback-chromium-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-3445b-ED-provides-upload-fallback-chromium-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-3445b-ED-provides-upload-fallback-chromium-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_RATE_LIMITED provides upload fallback
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "SOURCE_RATE_LIMITED"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">SOURCE_RATE_LIMITED · 请上传获授权的本地 MP4/MOV 文件。</p> aka getByText('SOURCE_RATE_LIMITED')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      33 |     await page.getByLabel("分享文本").fill("授权分享 https://v.douyin.com/abc/");
+      34 |     await page.getByRole("button", { name: "提交链接" }).click();
+    > 35 |     await expect(page.getByRole("alert")).toContainText(code);
+         |                                           ^
+      36 |     await expect(page.getByRole("alert")).toContainText("请上传");
+      37 |     await expect(page.getByLabel("选择视频")).toBeVisible();
+      38 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:35:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a5bd1-ED-provides-upload-fallback-chromium-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a5bd1-ED-provides-upload-fallback-chromium-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a5bd1-ED-provides-upload-fallback-chromium-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a5bd1-ED-provides-upload-fallback-chromium-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_TIMEOUT provides upload fallback
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "SOURCE_TIMEOUT"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">SOURCE_TIMEOUT · 请上传获授权的本地 MP4/MOV 文件。</p> aka getByText('SOURCE_TIMEOUT · 请上传获授权的本地')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+        - locator resolved to <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div>
+        - unexpected value ""
+
+
+      33 |     await page.getByLabel("分享文本").fill("授权分享 https://v.douyin.com/abc/");
+      34 |     await page.getByRole("button", { name: "提交链接" }).click();
+    > 35 |     await expect(page.getByRole("alert")).toContainText(code);
+         |                                           ^
+      36 |     await expect(page.getByRole("alert")).toContainText("请上传");
+      37 |     await expect(page.getByLabel("选择视频")).toBeVisible();
+      38 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:35:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-2b57e-UT-provides-upload-fallback-chromium-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-2b57e-UT-provides-upload-fallback-chromium-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-2b57e-UT-provides-upload-fallback-chromium-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-2b57e-UT-provides-upload-fallback-chromium-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_INVALID provides upload fallback
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "MEDIA_INVALID"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">MEDIA_INVALID · 请上传获授权的本地 MP4/MOV 文件。</p> aka getByText('MEDIA_INVALID · 请上传获授权的本地 MP4')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      33 |     await page.getByLabel("分享文本").fill("授权分享 https://v.douyin.com/abc/");
+      34 |     await page.getByRole("button", { name: "提交链接" }).click();
+    > 35 |     await expect(page.getByRole("alert")).toContainText(code);
+         |                                           ^
+      36 |     await expect(page.getByRole("alert")).toContainText("请上传");
+      37 |     await expect(page.getByLabel("选择视频")).toBeVisible();
+      38 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:35:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-e8196-ID-provides-upload-fallback-chromium-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-e8196-ID-provides-upload-fallback-chromium-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-e8196-ID-provides-upload-fallback-chromium-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-e8196-ID-provides-upload-fallback-chromium-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_TOO_LARGE provides upload fallback
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "MEDIA_TOO_LARGE"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">MEDIA_TOO_LARGE · 请上传获授权的本地 MP4/MOV 文件。</p> aka getByText('MEDIA_TOO_LARGE · 请上传获授权的本地')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      33 |     await page.getByLabel("分享文本").fill("授权分享 https://v.douyin.com/abc/");
+      34 |     await page.getByRole("button", { name: "提交链接" }).click();
+    > 35 |     await expect(page.getByRole("alert")).toContainText(code);
+         |                                           ^
+      36 |     await expect(page.getByRole("alert")).toContainText("请上传");
+      37 |     await expect(page.getByLabel("选择视频")).toBeVisible();
+      38 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:35:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-0f581-GE-provides-upload-fallback-chromium-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-0f581-GE-provides-upload-fallback-chromium-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-0f581-GE-provides-upload-fallback-chromium-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-0f581-GE-provides-upload-fallback-chromium-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:42:7 › network fails safely without private body
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "上传"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">Failed to fetch 请尝试上传获授权的本地 MP4/MOV 文件。</p> aka getByText('Failed to fetch 请尝试上传获授权的本地')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      46 |     await page.getByLabel("选择视频").setInputFiles({ name: "bad.mov", mimeType: "video/quicktime", buffer: Buffer.from("bad") });
+      47 |     await page.getByRole("button", { name: "上传视频" }).click();
+    > 48 |     await expect(page.getByRole("alert")).toContainText("上传");
+         |                                           ^
+      49 |     await expect(page.getByText("视频已校验并保存在本机。")).toHaveCount(0);
+      50 |     await expect(page.getByText("private-secret")).toHaveCount(0);
+      51 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:48:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-network-fails-safely-without-private-body-chromium-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-network-fails-safely-without-private-body-chromium-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-network-fails-safely-without-private-body-chromium-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-network-fails-safely-without-private-body-chromium-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:42:7 › invalid contract fails safely without private body
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "上传"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">采集服务暂不可用 请尝试上传获授权的本地 MP4/MOV 文件。</p> aka getByText('采集服务暂不可用 请尝试上传获授权的本地 MP4/MOV')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      46 |     await page.getByLabel("选择视频").setInputFiles({ name: "bad.mov", mimeType: "video/quicktime", buffer: Buffer.from("bad") });
+      47 |     await page.getByRole("button", { name: "上传视频" }).click();
+    > 48 |     await expect(page.getByRole("alert")).toContainText("上传");
+         |                                           ^
+      49 |     await expect(page.getByText("视频已校验并保存在本机。")).toHaveCount(0);
+      50 |     await expect(page.getByText("private-secret")).toHaveCount(0);
+      51 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:48:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-invalid-con-d1c3c-safely-without-private-body-chromium-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-invalid-con-d1c3c-safely-without-private-body-chromium-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-invalid-con-d1c3c-safely-without-private-body-chromium-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-invalid-con-d1c3c-safely-without-private-body-chromium-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:42:7 › upload rejected fails safely without private body
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "上传"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">MEDIA_INVALID 请尝试上传获授权的本地 MP4/MOV 文件。</p> aka getByText('MEDIA_INVALID 请尝试上传获授权的本地 MP4')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      46 |     await page.getByLabel("选择视频").setInputFiles({ name: "bad.mov", mimeType: "video/quicktime", buffer: Buffer.from("bad") });
+      47 |     await page.getByRole("button", { name: "上传视频" }).click();
+    > 48 |     await expect(page.getByRole("alert")).toContainText("上传");
+         |                                           ^
+      49 |     await expect(page.getByText("视频已校验并保存在本机。")).toHaveCount(0);
+      50 |     await expect(page.getByText("private-secret")).toHaveCount(0);
+      51 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:48:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-upload-reje-a183a-safely-without-private-body-chromium-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-upload-reje-a183a-safely-without-private-body-chromium-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-upload-reje-a183a-safely-without-private-body-chromium-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-upload-reje-a183a-safely-without-private-body-chromium-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:54:5 › poll timeout recovers and ignores late response
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "状态查询失败"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">状态查询失败，请重新提交或上传本地文件。 请尝试上传获授权的本地 MP4/MOV 文件。</p> aka getByText('状态查询失败，请重新提交或上传本地文件。 请尝试上传获授权的本地 MP4/MOV 文件。')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      71 |   await expect.poll(() => calls).toBe(1);
+      72 |   await page.clock.runFor(10_001);
+    > 73 |   await expect(page.getByRole("alert")).toContainText("状态查询失败");
+         |                                         ^
+      74 |   release();
+      75 |   await expect(page.getByText("视频已校验并保存在本机。")).toHaveCount(0);
+      76 |   await page.clock.runFor(2001);
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:73:41
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-poll-timeou-a7e70-s-and-ignores-late-response-chromium-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-poll-timeou-a7e70-s-and-ignores-late-response-chromium-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-poll-timeou-a7e70-s-and-ignores-late-response-chromium-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-poll-timeou-a7e70-s-and-ignores-late-response-chromium-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_AUTH_REQUIRED provides upload fallback
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "SOURCE_AUTH_REQUIRED"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">SOURCE_AUTH_REQUIRED · 请上传获授权的本地 MP4/MOV 文件。</p> aka getByText('SOURCE_AUTH_REQUIRED')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      33 |     await page.getByLabel("分享文本").fill("授权分享 https://v.douyin.com/abc/");
+      34 |     await page.getByRole("button", { name: "提交链接" }).click();
+    > 35 |     await expect(page.getByRole("alert")).toContainText(code);
+         |                                           ^
+      36 |     await expect(page.getByRole("alert")).toContainText("请上传");
+      37 |     await expect(page.getByLabel("选择视频")).toBeVisible();
+      38 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:35:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a9e0e-ED-provides-upload-fallback-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a9e0e-ED-provides-upload-fallback-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a9e0e-ED-provides-upload-fallback-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a9e0e-ED-provides-upload-fallback-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12) [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_EXPIRED provides upload fallback
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "SOURCE_EXPIRED"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">SOURCE_EXPIRED · 请上传获授权的本地 MP4/MOV 文件。</p> aka getByText('SOURCE_EXPIRED · 请上传获授权的本地')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+        - locator resolved to <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div>
+        - unexpected value ""
+
+
+      33 |     await page.getByLabel("分享文本").fill("授权分享 https://v.douyin.com/abc/");
+      34 |     await page.getByRole("button", { name: "提交链接" }).click();
+    > 35 |     await expect(page.getByRole("alert")).toContainText(code);
+         |                                           ^
+      36 |     await expect(page.getByRole("alert")).toContainText("请上传");
+      37 |     await expect(page.getByLabel("选择视频")).toBeVisible();
+      38 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:35:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-3445b-ED-provides-upload-fallback-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-3445b-ED-provides-upload-fallback-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-3445b-ED-provides-upload-fallback-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-3445b-ED-provides-upload-fallback-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  13) [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_RATE_LIMITED provides upload fallback
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "SOURCE_RATE_LIMITED"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">SOURCE_RATE_LIMITED · 请上传获授权的本地 MP4/MOV 文件。</p> aka getByText('SOURCE_RATE_LIMITED')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      33 |     await page.getByLabel("分享文本").fill("授权分享 https://v.douyin.com/abc/");
+      34 |     await page.getByRole("button", { name: "提交链接" }).click();
+    > 35 |     await expect(page.getByRole("alert")).toContainText(code);
+         |                                           ^
+      36 |     await expect(page.getByRole("alert")).toContainText("请上传");
+      37 |     await expect(page.getByLabel("选择视频")).toBeVisible();
+      38 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:35:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a5bd1-ED-provides-upload-fallback-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a5bd1-ED-provides-upload-fallback-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a5bd1-ED-provides-upload-fallback-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-a5bd1-ED-provides-upload-fallback-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  14) [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_TIMEOUT provides upload fallback
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "SOURCE_TIMEOUT"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">SOURCE_TIMEOUT · 请上传获授权的本地 MP4/MOV 文件。</p> aka getByText('SOURCE_TIMEOUT · 请上传获授权的本地')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      33 |     await page.getByLabel("分享文本").fill("授权分享 https://v.douyin.com/abc/");
+      34 |     await page.getByRole("button", { name: "提交链接" }).click();
+    > 35 |     await expect(page.getByRole("alert")).toContainText(code);
+         |                                           ^
+      36 |     await expect(page.getByRole("alert")).toContainText("请上传");
+      37 |     await expect(page.getByLabel("选择视频")).toBeVisible();
+      38 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:35:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-2b57e-UT-provides-upload-fallback-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-2b57e-UT-provides-upload-fallback-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-2b57e-UT-provides-upload-fallback-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-S-2b57e-UT-provides-upload-fallback-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  15) [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_INVALID provides upload fallback
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "MEDIA_INVALID"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">MEDIA_INVALID · 请上传获授权的本地 MP4/MOV 文件。</p> aka getByText('MEDIA_INVALID · 请上传获授权的本地 MP4')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      33 |     await page.getByLabel("分享文本").fill("授权分享 https://v.douyin.com/abc/");
+      34 |     await page.getByRole("button", { name: "提交链接" }).click();
+    > 35 |     await expect(page.getByRole("alert", { name: "采集错误" })).toContainText(code);
+         |                                           ^
+      36 |     await expect(page.getByRole("alert", { name: "采集错误" })).toContainText("请上传");
+      37 |     await expect(page.getByLabel("选择视频")).toBeVisible();
+      38 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:35:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-e8196-ID-provides-upload-fallback-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-e8196-ID-provides-upload-fallback-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-e8196-ID-provides-upload-fallback-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-e8196-ID-provides-upload-fallback-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  16) [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_TOO_LARGE provides upload fallback
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "MEDIA_TOO_LARGE"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">MEDIA_TOO_LARGE · 请上传获授权的本地 MP4/MOV 文件。</p> aka getByText('MEDIA_TOO_LARGE · 请上传获授权的本地')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+        - locator resolved to <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div>
+        - unexpected value ""
+
+
+      33 |     await page.getByLabel("分享文本").fill("授权分享 https://v.douyin.com/abc/");
+      34 |     await page.getByRole("button", { name: "提交链接" }).click();
+    > 35 |     await expect(page.getByRole("alert", { name: "采集错误" })).toContainText(code);
+         |                                           ^
+      36 |     await expect(page.getByRole("alert", { name: "采集错误" })).toContainText("请上传");
+      37 |     await expect(page.getByLabel("选择视频")).toBeVisible();
+      38 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:35:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-0f581-GE-provides-upload-fallback-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-0f581-GE-provides-upload-fallback-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-0f581-GE-provides-upload-fallback-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-link-task-M-0f581-GE-provides-upload-fallback-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  17) [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:42:7 › network fails safely without private body
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "上传"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">Failed to fetch 请尝试上传获授权的本地 MP4/MOV 文件。</p> aka getByText('Failed to fetch 请尝试上传获授权的本地')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      46 |     await page.getByLabel("选择视频").setInputFiles({ name: "bad.mov", mimeType: "video/quicktime", buffer: Buffer.from("bad") });
+      47 |     await page.getByRole("button", { name: "上传视频" }).click();
+    > 48 |     await expect(page.getByRole("alert", { name: "采集错误" })).toContainText("上传");
+         |                                           ^
+      49 |     await expect(page.getByText("视频已校验并保存在本机。")).toHaveCount(0);
+      50 |     await expect(page.getByText("private-secret")).toHaveCount(0);
+      51 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:48:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-network-fails-safely-without-private-body-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-network-fails-safely-without-private-body-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-network-fails-safely-without-private-body-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-network-fails-safely-without-private-body-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  18) [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:42:7 › invalid contract fails safely without private body
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "上传"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">采集服务暂不可用 请尝试上传获授权的本地 MP4/MOV 文件。</p> aka getByText('采集服务暂不可用 请尝试上传获授权的本地 MP4/MOV')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      46 |     await page.getByLabel("选择视频").setInputFiles({ name: "bad.mov", mimeType: "video/quicktime", buffer: Buffer.from("bad") });
+      47 |     await page.getByRole("button", { name: "上传视频" }).click();
+    > 48 |     await expect(page.getByRole("alert", { name: "采集错误" })).toContainText("上传");
+         |                                           ^
+      49 |     await expect(page.getByText("视频已校验并保存在本机。")).toHaveCount(0);
+      50 |     await expect(page.getByText("private-secret")).toHaveCount(0);
+      51 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:48:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-invalid-con-d1c3c-safely-without-private-body-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-invalid-con-d1c3c-safely-without-private-body-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-invalid-con-d1c3c-safely-without-private-body-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-invalid-con-d1c3c-safely-without-private-body-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  19) [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:42:7 › upload rejected fails safely without private body
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "上传"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">MEDIA_INVALID 请尝试上传获授权的本地 MP4/MOV 文件。</p> aka getByText('MEDIA_INVALID 请尝试上传获授权的本地 MP4')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      46 |     await page.getByLabel("选择视频").setInputFiles({ name: "bad.mov", mimeType: "video/quicktime", buffer: Buffer.from("bad") });
+      47 |     await page.getByRole("button", { name: "上传视频" }).click();
+    > 48 |     await expect(page.getByRole("alert", { name: "采集错误" })).toContainText("上传");
+         |                                           ^
+      49 |     await expect(page.getByText("视频已校验并保存在本机。")).toHaveCount(0);
+      50 |     await expect(page.getByText("private-secret")).toHaveCount(0);
+      51 |   });
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:48:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-upload-reje-a183a-safely-without-private-body-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-upload-reje-a183a-safely-without-private-body-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-upload-reje-a183a-safely-without-private-body-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-upload-reje-a183a-safely-without-private-body-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  20) [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:54:5 › poll timeout recovers and ignores late response
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "状态查询失败"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert">状态查询失败，请重新提交或上传本地文件。 请尝试上传获授权的本地 MP4/MOV 文件。</p> aka getByText('状态查询失败，请重新提交或上传本地文件。 请尝试上传获授权的本地 MP4/MOV 文件。')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 7000ms
+      - waiting for getByRole('alert')
+
+
+      71 |   await expect.poll(() => calls).toBe(1);
+      72 |   await page.clock.runFor(10_001);
+    > 73 |   await expect(page.getByRole("alert", { name: "采集错误" })).toContainText("状态查询失败");
+         |                                         ^
+      74 |   release();
+      75 |   await expect(page.getByText("视频已校验并保存在本机。")).toHaveCount(0);
+      76 |   await page.clock.runFor(2001);
+        at <repo>\frontend\tests\e2e\acquisition.ui.spec.ts:73:41
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-poll-timeou-a7e70-s-and-ignores-late-response-chromium-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.ui-poll-timeou-a7e70-s-and-ignores-late-response-chromium-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.ui-poll-timeou-a7e70-s-and-ignores-late-response-chromium-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.ui-poll-timeou-a7e70-s-and-ignores-late-response-chromium-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  21) [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:6:5 › acquisition proxy handles valid contract and scopes session
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 403
+
+       7 |   await request.post("http://127.0.0.1:17801/__control", { data: { payload: job } });
+       8 |   const response = await request.post("/api/acquisition/assets/resolve", { headers: origin, data: { text: "https://v.douyin.com/abc", authorized: true } });
+    >  9 |   expect(response.status()).toBe(200);
+         |                             ^
+      10 |   expect(await response.json()).toEqual(job);
+      11 |   expect(response.headers()["set-cookie"]).toContain("HttpOnly");
+      12 |   expect(response.headers()["cache-control"]).toBe("no-store");
+        at <repo>\frontend\tests\e2e\acquisition.proxy.spec.ts:9:29
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.proxy-acquisit-76e93-contract-and-scopes-session-next-proxy-contract\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.proxy-acquisit-76e93-contract-and-scopes-session-next-proxy-contract\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.proxy-acquisit-76e93-contract-and-scopes-session-next-proxy-contract\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  22) [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:27:5 › acquisition proxy refuses cross-site, arbitrary route and size
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 413
+    Received: 403
+
+      28 |   expect((await request.post("/api/acquisition/assets/resolve", { headers: { Origin: "https://evil.test" }, data: {} })).status()).toBe(403);
+      29 |   expect((await request.get("/api/acquisition/http://169.254.169.254")).status()).toBe(404);
+    > 30 |   expect((await request.post("/api/acquisition/assets/resolve", { headers: origin, data: "x".repeat(9000) })).status()).toBe(413);
+         |                                                                                                                         ^
+      31 | });
+      32 |
+        at <repo>\frontend\tests\e2e\acquisition.proxy.spec.ts:30:121
+
+    Error Context: ..\.artifacts\playwright\functional-results\acquisition.proxy-acquisit-d4248-te-arbitrary-route-and-size-next-proxy-contract\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\.artifacts\playwright\functional-results\acquisition.proxy-acquisit-d4248-te-arbitrary-route-and-size-next-proxy-contract\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\.artifacts\playwright\functional-results\acquisition.proxy-acquisit-d4248-te-arbitrary-route-and-size-next-proxy-contract\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  22 failed
+    [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_AUTH_REQUIRED provides upload fallback
+    [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_EXPIRED provides upload fallback
+    [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_RATE_LIMITED provides upload fallback
+    [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_TIMEOUT provides upload fallback
+    [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_INVALID provides upload fallback
+    [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_TOO_LARGE provides upload fallback
+    [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:42:7 › network fails safely without private body
+    [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:42:7 › invalid contract fails safely without private body
+    [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:42:7 › upload rejected fails safely without private body
+    [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:54:5 › poll timeout recovers and ignores late response
+    [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_AUTH_REQUIRED provides upload fallback
+    [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_EXPIRED provides upload fallback
+    [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_RATE_LIMITED provides upload fallback
+    [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_TIMEOUT provides upload fallback
+    [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_INVALID provides upload fallback
+    [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_TOO_LARGE provides upload fallback
+    [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:42:7 › network fails safely without private body
+    [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:42:7 › invalid contract fails safely without private body
+    [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:42:7 › upload rejected fails safely without private body
+    [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:54:5 › poll timeout recovers and ignores late response
+    [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:6:5 › acquisition proxy handles valid contract and scopes session
+    [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:27:5 › acquisition proxy refuses cross-site, arbitrary route and size
+  49 passed (2.4m)

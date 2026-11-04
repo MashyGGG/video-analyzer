@@ -1,0 +1,64 @@
+[
+  {
+    "name": "ruff",
+    "command": [
+      "uv",
+      "run",
+      "--frozen",
+      "ruff",
+      "check",
+      "app",
+      "migrations",
+      "tests",
+      "../scripts/acceptance_a02.py",
+      "../scripts/verify_a02_checks.py",
+      "../scripts/verify_a01_e2e.py"
+    ],
+    "exit_code": 0,
+    "counts": null
+  },
+  {
+    "name": "mypy",
+    "command": [
+      "uv",
+      "run",
+      "--frozen",
+      "mypy"
+    ],
+    "exit_code": 0,
+    "counts": null
+  },
+  {
+    "name": "pytest",
+    "command": [
+      "uv",
+      "run",
+      "--frozen",
+      "pytest",
+      "-q"
+    ],
+    "exit_code": 0,
+    "counts": {
+      "passed": 76,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "name": "frontend",
+    "command": [
+      "npm.cmd",
+      "run",
+      "verify"
+    ],
+    "exit_code": 0,
+    "counts": {
+      "startTime": "2026-11-04T08:23:41.086Z",
+      "duration": 88362.20499999999,
+      "expected": 72,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  }
+]

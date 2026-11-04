@@ -1,6 +1,7 @@
 from alembic import context
-from app.config import Settings
 from sqlalchemy import create_engine, pool
+
+from app.config import Settings
 
 
 def run_migrations() -> None:

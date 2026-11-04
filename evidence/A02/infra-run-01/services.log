@@ -1,0 +1,453 @@
+api-1       | INFO:     Started server process [7]
+api-1       | INFO:     Waiting for application startup.
+api-1       | INFO:     Application startup complete.
+api-1       | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+api-1       | {"event":"dependency_unavailable","dependency":"database"}
+api-1       | {"event":"dependency_unavailable","dependency":"database"}
+api-1       | {"event":"dependency_unavailable","dependency":"database"}
+api-1       | {"event":"dependency_unavailable","dependency":"redis"}
+api-1       | {"event":"dependency_unavailable","dependency":"redis"}
+api-1       | {"event":"dependency_unavailable","dependency":"redis"}
+api-1       | INFO:     Shutting down
+api-1       | INFO:     Waiting for application shutdown.
+api-1       | INFO:     Application shutdown complete.
+api-1       | INFO:     Finished server process [7]
+api-1       | INFO:     Started server process [7]
+api-1       | INFO:     Waiting for application startup.
+api-1       | INFO:     Application startup complete.
+api-1       | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+api-1       | {"event":"dependency_unavailable","dependency":"database"}
+api-1       | {"event":"dependency_unavailable","dependency":"database"}
+api-1       | {"event":"dependency_unavailable","dependency":"database"}
+api-1       | {"event":"dependency_unavailable","dependency":"database"}
+api-1       | {"event":"dependency_unavailable","dependency":"database"}
+api-1       | {"event":"dependency_unavailable","dependency":"redis"}
+api-1       | {"event":"dependency_unavailable","dependency":"redis"}
+api-1       | {"event":"dependency_unavailable","dependency":"redis"}
+api-1       | INFO:     Shutting down
+api-1       | INFO:     Waiting for application shutdown.
+api-1       | INFO:     Application shutdown complete.
+api-1       | INFO:     Finished server process [7]
+api-1       | INFO:     Started server process [7]
+api-1       | INFO:     Waiting for application startup.
+api-1       | INFO:     Application startup complete.
+api-1       | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+frontend-1  | ▲ Next.js 16.4.5
+frontend-1  | - Local:         http://localhost:3100
+frontend-1  | - Network:       http://0.0.0.0:3100
+frontend-1  | ✓ Ready in 0ms
+frontend-1  | ✓ Running next.config took 4ms
+worker-download-1  | Traceback (most recent call last):
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/retry.py", line 120, in call_with_retry
+worker-download-1  |     return do()
+worker-download-1  |            ^^^^
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1308, in <lambda>
+worker-download-1  |     lambda: command(*args, **kwargs),
+worker-download-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^
+worker-1           | Traceback (most recent call last):
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/retry.py", line 120, in call_with_retry
+worker-1           |     return do()
+worker-1           |            ^^^^
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1308, in <lambda>
+worker-1           |     lambda: command(*args, **kwargs),
+worker-1           |             ^^^^^^^^^^^^^^^^^^^^^^^^
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1395, in try_read
+worker-1           |     return conn.read_response(
+worker-1           |            ^^^^^^^^^^^^^^^^^^^
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1395, in try_read
+worker-download-1  |     return conn.read_response(
+worker-download-1  |            ^^^^^^^^^^^^^^^^^^^
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1407, in read_response
+worker-download-1  |     response = self._parser.read_response(
+worker-download-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py", line 40, in read_response
+worker-download-1  |     result = self._read_response(
+worker-download-1  |              ^^^^^^^^^^^^^^^^^^^^
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py", line 65, in _read_response
+worker-download-1  |     raw = self._buffer.readline(timeout=timeout)
+worker-download-1  |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/_parsers/socket.py", line 117, in readline
+worker-download-1  |     self._read_from_socket(timeout=timeout)
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/_parsers/socket.py", line 67, in _read_from_socket
+worker-download-1  |     raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+worker-download-1  | redis.exceptions.ConnectionError: Connection closed by server.
+worker-download-1  |
+worker-download-1  | During handling of the above exception, another exception occurred:
+worker-download-1  |
+worker-download-1  | Traceback (most recent call last):
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1055, in connect_check_health
+worker-download-1  |     sock = self._connect()
+worker-download-1  |            ^^^^^^^^^^^^^^^
+worker-media-1     | Traceback (most recent call last):
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/retry.py", line 120, in call_with_retry
+worker-media-1     |     return do()
+worker-media-1     |            ^^^^
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1308, in <lambda>
+worker-media-1     |     lambda: command(*args, **kwargs),
+worker-media-1     |             ^^^^^^^^^^^^^^^^^^^^^^^^
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1395, in try_read
+worker-media-1     |     return conn.read_response(
+worker-media-1     |            ^^^^^^^^^^^^^^^^^^^
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1407, in read_response
+worker-media-1     |     response = self._parser.read_response(
+worker-media-1     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py", line 40, in read_response
+worker-media-1     |     result = self._read_response(
+worker-media-1     |              ^^^^^^^^^^^^^^^^^^^^
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py", line 65, in _read_response
+worker-media-1     |     raw = self._buffer.readline(timeout=timeout)
+worker-media-1     |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/_parsers/socket.py", line 117, in readline
+worker-media-1     |     self._read_from_socket(timeout=timeout)
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/_parsers/socket.py", line 67, in _read_from_socket
+worker-media-1     |     raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+worker-media-1     | redis.exceptions.ConnectionError: Connection closed by server.
+worker-media-1     |
+worker-media-1     | During handling of the above exception, another exception occurred:
+worker-media-1     |
+worker-media-1     | Traceback (most recent call last):
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1407, in read_response
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1055, in connect_check_health
+worker-media-1     |     sock = self._connect()
+worker-media-1     |            ^^^^^^^^^^^^^^^
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1617, in _connect
+worker-media-1     |     raise err
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1601, in _connect
+worker-media-1     |     sock.connect(socket_address)
+worker-media-1     | ConnectionRefusedError: [Errno 111] Connection refused
+worker-media-1     |
+worker-media-1     | During handling of the above exception, another exception occurred:
+worker-media-1     |
+worker-media-1     | Traceback (most recent call last):
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py", line 346, in start
+worker-media-1     |     blueprint.start(self)
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/celery/bootsteps.py", line 116, in start
+worker-media-1     |     step.start(parent)
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py", line 788, in start
+worker-media-1     |     c.loop(*c.loop_args())
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/celery/worker/loops.py", line 97, in asynloop
+worker-media-1     |     next(loop)
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/kombu/asynchronous/hub.py", line 465, in create_loop
+worker-media-1     |     cb(*cbargs)
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py", line 2250, in on_readable
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1617, in _connect
+worker-download-1  |     raise err
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1601, in _connect
+worker-media-1     |     self.cycle.on_readable(fileno)
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py", line 863, in on_readable
+worker-media-1     |     chan.handlers[type]()
+worker-1           |     response = self._parser.read_response(
+worker-1           |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-download-1  |     sock.connect(socket_address)
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py", line 40, in read_response
+worker-1           |     result = self._read_response(
+worker-1           |              ^^^^^^^^^^^^^^^^^^^^
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py", line 65, in _read_response
+worker-1           |     raw = self._buffer.readline(timeout=timeout)
+worker-1           |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/_parsers/socket.py", line 117, in readline
+worker-1           |     self._read_from_socket(timeout=timeout)
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/_parsers/socket.py", line 67, in _read_from_socket
+worker-1           |     raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+worker-1           | redis.exceptions.ConnectionError: Connection closed by server.
+worker-1           |
+worker-1           | During handling of the above exception, another exception occurred:
+worker-1           |
+worker-1           | Traceback (most recent call last):
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1055, in connect_check_health
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py", line 1421, in _receive
+worker-media-1     |     ret.append(self._receive_one(c))
+worker-media-1     |                ^^^^^^^^^^^^^^^^^^^^
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py", line 1431, in _receive_one
+worker-media-1     |     response = c.parse_response()
+worker-media-1     |                ^^^^^^^^^^^^^^^^^^
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1399, in parse_response
+worker-media-1     |     response = self._execute(conn, try_read)
+worker-media-1     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-1           |     sock = self._connect()
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1307, in _execute
+worker-media-1     |     response = conn.retry.call_with_retry(
+worker-media-1     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/retry.py", line 127, in call_with_retry
+worker-media-1     |     fail(error, failures)
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1304, in failure_callback
+worker-download-1  | ConnectionRefusedError: [Errno 111] Connection refused
+worker-download-1  |
+worker-download-1  | During handling of the above exception, another exception occurred:
+worker-download-1  |
+worker-download-1  | Traceback (most recent call last):
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py", line 346, in start
+worker-download-1  |     blueprint.start(self)
+worker-1           |            ^^^^^^^^^^^^^^^
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1617, in _connect
+worker-1           |     raise err
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1601, in _connect
+worker-1           |     sock.connect(socket_address)
+worker-1           | ConnectionRefusedError: [Errno 111] Connection refused
+worker-1           |
+worker-1           | During handling of the above exception, another exception occurred:
+worker-1           |
+worker-1           | Traceback (most recent call last):
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py", line 346, in start
+worker-1           |     blueprint.start(self)
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/celery/bootsteps.py", line 116, in start
+worker-media-1     |     self._reconnect(conn, error, failure_count, start_time, command_name)
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1278, in _reconnect
+worker-1           |     step.start(parent)
+worker-media-1     |     conn.connect()
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1028, in connect
+worker-media-1     |     self.retry.call_with_retry(
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/retry.py", line 132, in call_with_retry
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/celery/bootsteps.py", line 116, in start
+worker-download-1  |     step.start(parent)
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py", line 788, in start
+worker-1           |     c.loop(*c.loop_args())
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/celery/worker/loops.py", line 97, in asynloop
+worker-1           |     next(loop)
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/kombu/asynchronous/hub.py", line 465, in create_loop
+worker-1           |     cb(*cbargs)
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py", line 2250, in on_readable
+worker-1           |     self.cycle.on_readable(fileno)
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py", line 863, in on_readable
+worker-1           |     chan.handlers[type]()
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py", line 1421, in _receive
+worker-1           |     ret.append(self._receive_one(c))
+worker-1           |                ^^^^^^^^^^^^^^^^^^^^
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py", line 1431, in _receive_one
+worker-1           |     response = c.parse_response()
+worker-1           |                ^^^^^^^^^^^^^^^^^^
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1399, in parse_response
+worker-1           |     response = self._execute(conn, try_read)
+worker-1           |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+postgres-1         |
+worker-media-1     |     raise error
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1307, in _execute
+worker-1           |     response = conn.retry.call_with_retry(
+worker-1           |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+postgres-1         | PostgreSQL Database directory appears to contain a database; Skipping initialization
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/retry.py", line 120, in call_with_retry
+worker-media-1     |     return do()
+worker-media-1     |            ^^^^
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/retry.py", line 127, in call_with_retry
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py", line 788, in start
+worker-download-1  |     c.loop(*c.loop_args())
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/celery/worker/loops.py", line 97, in asynloop
+worker-download-1  |     next(loop)
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/kombu/asynchronous/hub.py", line 465, in create_loop
+worker-download-1  |     cb(*cbargs)
+worker-1           |     fail(error, failures)
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1304, in failure_callback
+worker-1           |     self._reconnect(conn, error, failure_count, start_time, command_name)
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1278, in _reconnect
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1029, in <lambda>
+worker-1           |     conn.connect()
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1028, in connect
+worker-1           |     self.retry.call_with_retry(
+worker-media-1     |     lambda: self.connect_check_health(
+worker-media-1     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-media-1     |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1077, in connect_check_health
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py", line 2250, in on_readable
+postgres-1         |
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/retry.py", line 132, in call_with_retry
+worker-1           |     raise error
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/retry.py", line 120, in call_with_retry
+worker-1           |     return do()
+worker-1           |            ^^^^
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1029, in <lambda>
+worker-1           |     lambda: self.connect_check_health(
+worker-1           |             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-1           |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1077, in connect_check_health
+worker-1           |     raise e
+worker-1           | redis.exceptions.ConnectionError: Error 111 connecting to redis:6379. Connection refused.
+worker-download-1  |     self.cycle.on_readable(fileno)
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py", line 863, in on_readable
+worker-download-1  |     chan.handlers[type]()
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py", line 1421, in _receive
+worker-download-1  |     ret.append(self._receive_one(c))
+worker-download-1  |                ^^^^^^^^^^^^^^^^^^^^
+worker-1           | [2026-11-04 08:14:58,592: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:397: CPendingDeprecationWarning:
+worker-1           | In Celery 5.1 we introduced an optional breaking change which
+worker-1           | on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+worker-1           | These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered
+worker-media-1     |     raise e
+postgres-1         | 2026-11-04 08:12:10.584 UTC [1] LOG:  starting PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+worker-1           | back to the queue. You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss
+worker-1           | setting. In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py", line 1431, in _receive_one
+worker-download-1  |     response = c.parse_response()
+worker-download-1  |                ^^^^^^^^^^^^^^^^^^
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1399, in parse_response
+worker-download-1  |     response = self._execute(conn, try_read)
+worker-download-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1307, in _execute
+worker-download-1  |     response = conn.retry.call_with_retry(
+worker-download-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/retry.py", line 127, in call_with_retry
+worker-download-1  |     fail(error, failures)
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1304, in failure_callback
+worker-download-1  |     self._reconnect(conn, error, failure_count, start_time, command_name)
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/client.py", line 1278, in _reconnect
+worker-download-1  |     conn.connect()
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1028, in connect
+worker-download-1  |     self.retry.call_with_retry(
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/retry.py", line 132, in call_with_retry
+worker-download-1  |     raise error
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/retry.py", line 120, in call_with_retry
+worker-download-1  |     return do()
+worker-download-1  |            ^^^^
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1029, in <lambda>
+worker-download-1  |     lambda: self.connect_check_health(
+worker-1           |
+worker-1           |   warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+worker-1           |
+worker-download-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+worker-media-1     | redis.exceptions.ConnectionError: Error 111 connecting to redis:6379. Connection refused.
+worker-download-1  |   File "/usr/local/lib/python3.12/site-packages/redis/connection.py", line 1077, in connect_check_health
+worker-download-1  |     raise e
+postgres-1         | 2026-11-04 08:12:10.590 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1         | 2026-11-04 08:12:10.593 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+worker-1           | [2026-11-04 08:14:58,613: ERROR/MainProcess] consumer: Cannot connect to redis://:**@redis:6379/0: Error 111 connecting to redis:6379. Connection refused..
+worker-download-1  | redis.exceptions.ConnectionError: Error 111 connecting to redis:6379. Connection refused.
+worker-1           | Trying again in 2.00 seconds... (1/5)
+worker-media-1     | [2026-11-04 08:14:58,579: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:397: CPendingDeprecationWarning:
+worker-download-1  | [2026-11-04 08:14:58,589: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:397: CPendingDeprecationWarning:
+worker-download-1  | In Celery 5.1 we introduced an optional breaking change which
+worker-download-1  | on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+worker-download-1  | These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered
+worker-download-1  | back to the queue. You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss
+worker-download-1  | setting. In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+worker-download-1  |
+worker-download-1  |   warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+worker-1           |
+worker-media-1     | In Celery 5.1 we introduced an optional breaking change which
+worker-download-1  |
+postgres-1         | 2026-11-04 08:12:10.627 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+worker-download-1  | [2026-11-04 08:14:58,608: ERROR/MainProcess] consumer: Cannot connect to redis://:**@redis:6379/0: Error 111 connecting to redis:6379. Connection refused..
+worker-download-1  | Trying again in 2.00 seconds... (1/5)
+postgres-1         | 2026-11-04 08:12:10.664 UTC [29] LOG:  database system was shut down at 2026-11-04 08:11:46 UTC
+postgres-1         | 2026-11-04 08:12:10.721 UTC [1] LOG:  database system is ready to accept connections
+postgres-1         | 2026-11-04 08:13:04.193 UTC [1] LOG:  received fast shutdown request
+postgres-1         | 2026-11-04 08:13:04.201 UTC [1] LOG:  aborting any active transactions
+postgres-1         | 2026-11-04 08:13:04.201 UTC [85] FATAL:  terminating connection due to administrator command
+postgres-1         | 2026-11-04 08:13:04.208 UTC [1] LOG:  background worker "logical replication launcher" (PID 32) exited with exit code 1
+postgres-1         | 2026-11-04 08:13:04.209 UTC [27] LOG:  shutting down
+postgres-1         | 2026-11-04 08:13:04.216 UTC [27] LOG:  checkpoint starting: shutdown immediate
+postgres-1         | 2026-11-04 08:13:04.271 UTC [27] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.013 s, sync=0.011 s, total=0.061 s; sync files=3, longest=0.005 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/2664B08, redo lsn=0/2664B08
+postgres-1         | 2026-11-04 08:13:04.284 UTC [1] LOG:  database system is shut down
+postgres-1         |
+postgres-1         | PostgreSQL Database directory appears to contain a database; Skipping initialization
+postgres-1         |
+postgres-1         | 2026-11-04 08:13:09.273 UTC [1] LOG:  starting PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+worker-1           | [2026-11-04 08:15:00,621: ERROR/MainProcess] consumer: Cannot connect to redis://:**@redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+worker-1           | Trying again in 4.00 seconds... (2/5)
+worker-1           |
+worker-download-1  |
+worker-download-1  | [2026-11-04 08:15:00,616: ERROR/MainProcess] consumer: Cannot connect to redis://:**@redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+worker-download-1  | Trying again in 4.00 seconds... (2/5)
+worker-download-1  |
+worker-media-1     | on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+worker-media-1     | These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered
+worker-media-1     | back to the queue. You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss
+worker-media-1     | setting. In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+worker-media-1     |
+worker-media-1     |   warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+worker-media-1     |
+worker-media-1     | [2026-11-04 08:14:58,597: ERROR/MainProcess] consumer: Cannot connect to redis://:**@redis:6379/0: Error 111 connecting to redis:6379. Connection refused..
+worker-media-1     | Trying again in 2.00 seconds... (1/5)
+worker-media-1     |
+worker-media-1     | [2026-11-04 08:15:00,603: ERROR/MainProcess] consumer: Cannot connect to redis://:**@redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+worker-media-1     | Trying again in 4.00 seconds... (2/5)
+worker-media-1     |
+postgres-1         | 2026-11-04 08:13:09.274 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1         | 2026-11-04 08:13:09.274 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1         | 2026-11-04 08:13:09.288 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1         | 2026-11-04 08:13:09.313 UTC [29] LOG:  database system was shut down at 2026-11-04 08:13:04 UTC
+postgres-1         | 2026-11-04 08:13:09.334 UTC [1] LOG:  database system is ready to accept connections
+postgres-1         | 2026-11-04 08:14:51.333 UTC [1] LOG:  received fast shutdown request
+postgres-1         | 2026-11-04 08:14:51.341 UTC [1] LOG:  aborting any active transactions
+postgres-1         | 2026-11-04 08:14:51.342 UTC [78] FATAL:  terminating connection due to administrator command
+postgres-1         | 2026-11-04 08:14:51.342 UTC [142] FATAL:  terminating connection due to administrator command
+postgres-1         | 2026-11-04 08:14:51.342 UTC [159] FATAL:  terminating connection due to administrator command
+postgres-1         | 2026-11-04 08:14:51.342 UTC [79] FATAL:  terminating connection due to administrator command
+postgres-1         | 2026-11-04 08:14:51.357 UTC [1] LOG:  background worker "logical replication launcher" (PID 32) exited with exit code 1
+postgres-1         | 2026-11-04 08:14:51.360 UTC [27] LOG:  shutting down
+postgres-1         | 2026-11-04 08:14:51.389 UTC [27] LOG:  checkpoint starting: shutdown immediate
+postgres-1         | 2026-11-04 08:14:51.454 UTC [27] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.019 s, sync=0.010 s, total=0.093 s; sync files=5, longest=0.005 s, average=0.002 s; distance=5 kB, estimate=5 kB; lsn=0/26662F0, redo lsn=0/26662F0
+postgres-1         | 2026-11-04 08:14:51.474 UTC [1] LOG:  database system is shut down
+postgres-1         |
+postgres-1         | PostgreSQL Database directory appears to contain a database; Skipping initialization
+postgres-1         |
+postgres-1         | 2026-11-04 08:14:56.751 UTC [1] LOG:  starting PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+postgres-1         | 2026-11-04 08:14:56.753 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1         | 2026-11-04 08:14:56.753 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1         | 2026-11-04 08:14:56.769 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1         | 2026-11-04 08:14:56.795 UTC [29] LOG:  database system was shut down at 2026-11-04 08:14:51 UTC
+postgres-1         | 2026-11-04 08:14:56.832 UTC [1] LOG:  database system is ready to accept connections
+redis-1            | 1:C 04 Nov 2026 08:12:10.755 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1            | 1:C 04 Nov 2026 08:12:10.755 * Redis version=7.2.13, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1            | 1:C 04 Nov 2026 08:12:10.755 * Configuration loaded
+redis-1            | 1:M 04 Nov 2026 08:12:10.757 * monotonic clock: POSIX clock_gettime
+redis-1            | 1:M 04 Nov 2026 08:12:10.768 * Running mode=standalone, port=6379.
+redis-1            | 1:M 04 Nov 2026 08:12:10.773 * Server initialized
+redis-1            | 1:M 04 Nov 2026 08:12:10.778 * Reading RDB base file on AOF loading...
+redis-1            | 1:M 04 Nov 2026 08:12:10.780 * Loading RDB produced by version 7.2.13
+redis-1            | 1:M 04 Nov 2026 08:12:10.780 * RDB age 4019 seconds
+redis-1            | 1:M 04 Nov 2026 08:12:10.780 * RDB memory usage when created 0.83 Mb
+redis-1            | 1:M 04 Nov 2026 08:12:10.780 * RDB is base AOF
+redis-1            | 1:M 04 Nov 2026 08:12:10.780 * Done loading RDB, keys loaded: 0, keys expired: 0.
+redis-1            | 1:M 04 Nov 2026 08:12:10.780 * DB loaded from base file appendonly.aof.1.base.rdb: 0.003 seconds
+redis-1            | 1:M 04 Nov 2026 08:12:10.839 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.058 seconds
+redis-1            | 1:M 04 Nov 2026 08:12:10.839 * DB loaded from append only file: 0.062 seconds
+redis-1            | 1:M 04 Nov 2026 08:12:10.839 * Opening AOF incr file appendonly.aof.1.incr.aof on server start
+redis-1            | 1:M 04 Nov 2026 08:12:10.839 * Ready to accept connections tcp
+redis-1            | 1:signal-handler (1793779990) Received SIGTERM scheduling shutdown...
+redis-1            | 1:M 04 Nov 2026 08:13:10.693 * User requested shutdown...
+redis-1            | 1:M 04 Nov 2026 08:13:10.693 * Calling fsync() on the AOF file.
+redis-1            | 1:M 04 Nov 2026 08:13:10.694 * Saving the final RDB snapshot before exiting.
+redis-1            | 1:M 04 Nov 2026 08:13:10.722 * DB saved on disk
+redis-1            | 1:M 04 Nov 2026 08:13:10.722 # Redis is now ready to exit, bye bye...
+redis-1            | 1:C 04 Nov 2026 08:13:15.175 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1            | 1:C 04 Nov 2026 08:13:15.175 * Redis version=7.2.13, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1            | 1:C 04 Nov 2026 08:13:15.175 * Configuration loaded
+redis-1            | 1:M 04 Nov 2026 08:13:15.176 * monotonic clock: POSIX clock_gettime
+redis-1            | 1:M 04 Nov 2026 08:13:15.177 * Running mode=standalone, port=6379.
+redis-1            | 1:M 04 Nov 2026 08:13:15.179 * Server initialized
+redis-1            | 1:M 04 Nov 2026 08:13:15.179 * Reading RDB base file on AOF loading...
+redis-1            | 1:M 04 Nov 2026 08:13:15.180 * Loading RDB produced by version 7.2.13
+redis-1            | 1:M 04 Nov 2026 08:13:15.180 * RDB age 4084 seconds
+redis-1            | 1:M 04 Nov 2026 08:13:15.180 * RDB memory usage when created 0.83 Mb
+redis-1            | 1:M 04 Nov 2026 08:13:15.180 * RDB is base AOF
+redis-1            | 1:M 04 Nov 2026 08:13:15.180 * Done loading RDB, keys loaded: 0, keys expired: 0.
+redis-1            | 1:M 04 Nov 2026 08:13:15.180 * DB loaded from base file appendonly.aof.1.base.rdb: 0.001 seconds
+redis-1            | 1:M 04 Nov 2026 08:13:15.184 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.003 seconds
+redis-1            | 1:M 04 Nov 2026 08:13:15.184 * DB loaded from append only file: 0.005 seconds
+redis-1            | 1:M 04 Nov 2026 08:13:15.184 * Opening AOF incr file appendonly.aof.1.incr.aof on server start
+redis-1            | 1:M 04 Nov 2026 08:13:15.184 * Ready to accept connections tcp
+redis-1            | 1:M 04 Nov 2026 08:14:16.041 * 1 changes in 60 seconds. Saving...
+redis-1            | 1:M 04 Nov 2026 08:14:16.043 * Background saving started by pid 113
+redis-1            | 113:C 04 Nov 2026 08:14:16.058 * DB saved on disk
+redis-1            | 113:C 04 Nov 2026 08:14:16.059 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis-1            | 1:M 04 Nov 2026 08:14:16.144 * Background saving terminated with success
+redis-1            | 1:signal-handler (1793780098) Received SIGTERM scheduling shutdown...
+redis-1            | 1:M 04 Nov 2026 08:14:58.517 * User requested shutdown...
+redis-1            | 1:M 04 Nov 2026 08:14:58.517 * Calling fsync() on the AOF file.
+redis-1            | 1:M 04 Nov 2026 08:14:58.519 * Saving the final RDB snapshot before exiting.
+redis-1            | 1:M 04 Nov 2026 08:14:58.538 * DB saved on disk
+redis-1            | 1:M 04 Nov 2026 08:14:58.538 # Redis is now ready to exit, bye bye...
+redis-1            | 1:C 04 Nov 2026 08:15:03.222 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1            | 1:C 04 Nov 2026 08:15:03.222 * Redis version=7.2.13, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1            | 1:C 04 Nov 2026 08:15:03.222 * Configuration loaded
+redis-1            | 1:M 04 Nov 2026 08:15:03.223 * monotonic clock: POSIX clock_gettime
+redis-1            | 1:M 04 Nov 2026 08:15:03.225 * Running mode=standalone, port=6379.
+redis-1            | 1:M 04 Nov 2026 08:15:03.227 * Server initialized
+redis-1            | 1:M 04 Nov 2026 08:15:03.228 * Reading RDB base file on AOF loading...
+redis-1            | 1:M 04 Nov 2026 08:15:03.228 * Loading RDB produced by version 7.2.13
+redis-1            | 1:M 04 Nov 2026 08:15:03.228 * RDB age 4192 seconds
+redis-1            | 1:M 04 Nov 2026 08:15:03.228 * RDB memory usage when created 0.83 Mb
+redis-1            | 1:M 04 Nov 2026 08:15:03.228 * RDB is base AOF
+redis-1            | 1:M 04 Nov 2026 08:15:03.228 * Done loading RDB, keys loaded: 0, keys expired: 0.
+redis-1            | 1:M 04 Nov 2026 08:15:03.228 * DB loaded from base file appendonly.aof.1.base.rdb: 0.001 seconds
+redis-1            | 1:M 04 Nov 2026 08:15:03.234 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.006 seconds
+redis-1            | 1:M 04 Nov 2026 08:15:03.234 * DB loaded from append only file: 0.007 seconds
+redis-1            | 1:M 04 Nov 2026 08:15:03.234 * Opening AOF incr file appendonly.aof.1.incr.aof on server start
+redis-1            | 1:M 04 Nov 2026 08:15:03.235 * Ready to accept connections tcp

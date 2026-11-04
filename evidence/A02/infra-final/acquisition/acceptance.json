@@ -1,0 +1,122 @@
+{
+  "started": "2026-11-04T08:29:40.431056+00:00",
+  "checks": [
+    {
+      "name": "mp4_upload_accepted",
+      "pass": true
+    },
+    {
+      "name": "mp4_real_decode_sha256",
+      "pass": true
+    },
+    {
+      "name": "mp4_ownership",
+      "pass": true
+    },
+    {
+      "name": "mp4_cached_file",
+      "pass": true
+    },
+    {
+      "name": "mp4_restart_persistence",
+      "pass": true
+    },
+    {
+      "name": "mov_upload_accepted",
+      "pass": true
+    },
+    {
+      "name": "mov_real_decode_sha256",
+      "pass": true
+    },
+    {
+      "name": "mov_ownership",
+      "pass": true
+    },
+    {
+      "name": "mov_cached_file",
+      "pass": true
+    },
+    {
+      "name": "mov_restart_persistence",
+      "pass": true
+    },
+    {
+      "name": "fake_media_rejected",
+      "pass": true
+    },
+    {
+      "name": "failure_staging_cleaned",
+      "pass": true
+    },
+    {
+      "name": "unsafe_source_12",
+      "pass": true
+    },
+    {
+      "name": "unsafe_source_13",
+      "pass": true
+    },
+    {
+      "name": "unsafe_source_14",
+      "pass": true
+    },
+    {
+      "name": "download_queue_accepted",
+      "pass": true
+    },
+    {
+      "name": "real_download_task_failure_fallback",
+      "pass": true
+    },
+    {
+      "name": "worker-download_public_route_blocked",
+      "pass": true
+    },
+    {
+      "name": "worker-download_nonroot",
+      "pass": true
+    },
+    {
+      "name": "worker-media_public_route_blocked",
+      "pass": true
+    },
+    {
+      "name": "worker-media_nonroot",
+      "pass": true
+    },
+    {
+      "name": "gateway_rejects_127.0.0.1:443",
+      "pass": true
+    },
+    {
+      "name": "gateway_rejects_169.254.169.254:443",
+      "pass": true
+    },
+    {
+      "name": "gateway_rejects_douyin.com:80",
+      "pass": true
+    },
+    {
+      "name": "gateway_rejects_evil.test:443",
+      "pass": true
+    },
+    {
+      "name": "gateway_has_no_secrets",
+      "pass": true
+    }
+  ],
+  "platform_success": "BLOCKED: no authorized platform samples provided",
+  "fixture": "generated colour video; no third-party content",
+  "versions": {
+    "ffmpeg": "ffmpeg version 5.1.9-0+deb12u1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "ytdlp": "2026.10.26"
+  },
+  "ffmpeg_build": "ffmpeg version 5.1.9-0+deb12u1 Copyright (c) 2000-2026 the FFmpeg developers\n  built with gcc 12 (Debian 12.2.0-14+deb12u1)\n  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared\n  libavutil      57. 28.100 / 57. 28.100\n  libavcodec     59. 37.100 / 59. 37.100\n  libavformat    59. 27.100 / 59. 27.100\n  libavdevice    59.  7.100 / 59.  7.100\n  libavfilter     8. 44.100 /  8. 44.100\n  libswscale      6.  7.100 /  6.  7.100\n  libswresample   4.  7.100 /  4.  7.100\n  libpostproc    56.  6.100 / 56.  6.100\nffmpeg is free software; you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation; either version 2 of the License, or\n(at your option) any later version.\n\nffmpeg is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with ffmpeg; if not, write to the Free Software\nFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA",
+  "status": "PASS",
+  "counts": {
+    "passed": 26,
+    "failed": 0,
+    "skipped": 0
+  }
+}

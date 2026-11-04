@@ -12,7 +12,23 @@ def test_internal_data_network_loopback_ports_and_no_model_keys():
     assert config["services"]["frontend"]["networks"] == ["ingress"]
     assert config["services"]["worker"]["networks"] == ["backend"]
     assert config["services"]["api"]["networks"] == ["backend", "ingress"]
-    assert set(config["services"]) == {"api", "worker", "migrate", "frontend", "redis", "postgres"}
+    assert set(config["services"]) == {
+        "api",
+        "worker",
+        "migrate",
+        "frontend",
+        "redis",
+        "postgres",
+        "worker-download",
+        "worker-media",
+        "egress",
+    }
+    assert config["networks"]["acquisition"]["internal"] is True
+    assert config["services"]["worker-download"]["networks"] == ["backend", "acquisition"]
+    assert config["services"]["worker-media"]["networks"] == ["backend"]
+    assert config["services"]["egress"]["networks"] == ["acquisition", "outbound"]
+    assert config["services"]["egress"]["secrets"] == []
+    assert not config["services"]["egress"].get("volumes")
     for name, service in config["services"].items():
         assert all(mount.startswith("/") for mount in service.get("tmpfs", []))
         assert re.search(r"@sha256:[0-9a-f]{64}$", service["image"]) or service.get("build")

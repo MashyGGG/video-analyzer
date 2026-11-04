@@ -93,7 +93,7 @@ def main() -> int:
 
     owned = False
     result = dict(
-        scope="A01 real CPU infrastructure and browser acceptance; no health mocks, media or models",
+        scope="A01 CPU regression and A02 generated-media acquisition/browser/isolation; no model or platform-success claim",
         compose_project=PROJECT,
         started_at_utc=datetime.now(UTC).isoformat(),
         status="FAIL",
@@ -122,6 +122,8 @@ def main() -> int:
             timeout=420,
         )
         npm = "npm.cmd" if os.name == "nt" else "npm"
+        run([sys.executable, "scripts/acceptance_a02.py", "--compose-project", PROJECT,
+             "--api-port", "17811", "--output-dir", str(output / "acquisition")], timeout=420)
         report = ROOT / ".artifacts/playwright/infra.json"
         report.unlink(missing_ok=True)
         run([npm, "run", "test:e2e:infra"], cwd=ROOT / "frontend", timeout=420, check=False)

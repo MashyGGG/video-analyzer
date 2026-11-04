@@ -1,0 +1,47 @@
+[
+  {
+    "name": "ruff",
+    "command": [
+      "uv",
+      "run",
+      "--frozen",
+      "ruff",
+      "check",
+      "app",
+      "migrations",
+      "tests",
+      "../scripts/acceptance_a02.py",
+      "../scripts/verify_a02_checks.py",
+      "../scripts/verify_a01_e2e.py"
+    ],
+    "exit_code": 0,
+    "counts": null
+  },
+  {
+    "name": "mypy",
+    "command": [
+      "uv",
+      "run",
+      "--frozen",
+      "mypy"
+    ],
+    "exit_code": 0,
+    "counts": null
+  },
+  {
+    "name": "pytest",
+    "command": [
+      "uv",
+      "run",
+      "--frozen",
+      "pytest",
+      "-q"
+    ],
+    "exit_code": 0,
+    "counts": {
+      "passed": 81,
+      "failed": 0,
+      "skipped": 0
+    }
+  }
+]

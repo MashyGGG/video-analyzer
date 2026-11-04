@@ -1,0 +1,134 @@
+
+> video-analyzer-frontend@0.1.0 verify
+> npm run lint && npm run typecheck && npm run build && npm run test:e2e
+
+
+> video-analyzer-frontend@0.1.0 lint
+> eslint . --max-warnings=0
+
+
+> video-analyzer-frontend@0.1.0 typecheck
+> tsc --noEmit
+
+
+> video-analyzer-frontend@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.4.5 (webpack)
+✓ Running next.config.ts took 252ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 6.1s
+  Running TypeScript ...
+  Finished TypeScript in 6.5s ...
+  Collecting page data using 8 workers ...
+  Generating static pages using 8 workers (0/5) ...
+  Generating static pages using 8 workers (1/5)
+  Generating static pages using 8 workers (2/5)
+  Generating static pages using 8 workers (3/5)
+✓ Generating static pages using 8 workers (5/5) in 2.3s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/acquisition/[...path]
+├ ƒ /api/health
+├ ƒ /health/live
+└ ○ /import
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+> video-analyzer-frontend@0.1.0 test:e2e
+> playwright test
+
+[WebServer] (node:27192) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:11532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 71 tests using 1 worker
+
+(node:52856) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:7:5 › authorized upload, polling, persistence and responsive form (2.0s)
+  ok  2 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_AUTH_REQUIRED provides upload fallback (795ms)
+  ok  3 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_EXPIRED provides upload fallback (766ms)
+  ok  4 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_RATE_LIMITED provides upload fallback (720ms)
+  ok  5 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_TIMEOUT provides upload fallback (765ms)
+  ok  6 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_INVALID provides upload fallback (755ms)
+  ok  7 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_TOO_LARGE provides upload fallback (800ms)
+  ok  8 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:42:7 › network fails safely without private body (695ms)
+  ok  9 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:42:7 › invalid contract fails safely without private body (711ms)
+  ok 10 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:42:7 › upload rejected fails safely without private body (681ms)
+  ok 11 [chromium-desktop] › tests\e2e\acquisition.ui.spec.ts:54:5 › poll timeout recovers and ignores late response (898ms)
+  ok 12 [chromium-desktop] › tests\e2e\status.ui.spec.ts:3:5 › loading never claims healthy before first response (521ms)
+  ok 13 [chromium-desktop] › tests\e2e\status.ui.spec.ts:14:5 › healthy dashboard, navigation, refresh and responsive layout (926ms)
+  ok 14 [chromium-desktop] › tests\e2e\status.ui.spec.ts:31:7 › database failure keeps reachable API accurate (523ms)
+  ok 15 [chromium-desktop] › tests\e2e\status.ui.spec.ts:31:7 › redis failure keeps reachable API accurate (573ms)
+  ok 16 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: null (547ms)
+  ok 17 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: missing fields (611ms)
+  ok 18 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: wrong boolean (586ms)
+  ok 19 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: contradictory dependencies (582ms)
+  ok 20 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: unknown state (576ms)
+  ok 21 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: HTTP error disguised as ready (635ms)
+  ok 22 [chromium-desktop] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: API down disguised as ready (584ms)
+  ok 23 [chromium-desktop] › tests\e2e\status.ui.spec.ts:58:7 › network failure does not crash or expose response body (579ms)
+  ok 24 [chromium-desktop] › tests\e2e\status.ui.spec.ts:58:7 › invalid JSON failure does not crash or expose response body (541ms)
+  ok 25 [chromium-desktop] › tests\e2e\status.ui.spec.ts:66:5 › polls after 15 seconds and recovers without reload (678ms)
+  ok 26 [chromium-desktop] › tests\e2e\status.ui.spec.ts:80:5 › hung request times out, late response cannot restore stale green, next poll recovers (589ms)
+(node:54344) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 27 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:7:5 › authorized upload, polling, persistence and responsive form (1.5s)
+  ok 28 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_AUTH_REQUIRED provides upload fallback (947ms)
+  ok 29 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_EXPIRED provides upload fallback (789ms)
+  ok 30 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_RATE_LIMITED provides upload fallback (824ms)
+  ok 31 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task SOURCE_TIMEOUT provides upload fallback (837ms)
+  ok 32 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_INVALID provides upload fallback (898ms)
+  ok 33 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:27:7 › link task MEDIA_TOO_LARGE provides upload fallback (844ms)
+  ok 34 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:42:7 › network fails safely without private body (818ms)
+  ok 35 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:42:7 › invalid contract fails safely without private body (791ms)
+  ok 36 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:42:7 › upload rejected fails safely without private body (917ms)
+  ok 37 [chromium-mobile] › tests\e2e\acquisition.ui.spec.ts:54:5 › poll timeout recovers and ignores late response (1.0s)
+  ok 38 [chromium-mobile] › tests\e2e\status.ui.spec.ts:3:5 › loading never claims healthy before first response (756ms)
+  ok 39 [chromium-mobile] › tests\e2e\status.ui.spec.ts:14:5 › healthy dashboard, navigation, refresh and responsive layout (1.9s)
+  ok 40 [chromium-mobile] › tests\e2e\status.ui.spec.ts:31:7 › database failure keeps reachable API accurate (681ms)
+  ok 41 [chromium-mobile] › tests\e2e\status.ui.spec.ts:31:7 › redis failure keeps reachable API accurate (653ms)
+  ok 42 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: null (657ms)
+  ok 43 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: missing fields (679ms)
+  ok 44 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: wrong boolean (676ms)
+  ok 45 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: contradictory dependencies (638ms)
+  ok 46 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: unknown state (700ms)
+  ok 47 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: HTTP error disguised as ready (664ms)
+  ok 48 [chromium-mobile] › tests\e2e\status.ui.spec.ts:49:7 › invalid health response: API down disguised as ready (637ms)
+  ok 49 [chromium-mobile] › tests\e2e\status.ui.spec.ts:58:7 › network failure does not crash or expose response body (583ms)
+  ok 50 [chromium-mobile] › tests\e2e\status.ui.spec.ts:58:7 › invalid JSON failure does not crash or expose response body (636ms)
+  ok 51 [chromium-mobile] › tests\e2e\status.ui.spec.ts:66:5 › polls after 15 seconds and recovers without reload (699ms)
+  ok 52 [chromium-mobile] › tests\e2e\status.ui.spec.ts:80:5 › hung request times out, late response cannot restore stale green, next poll recovers (710ms)
+(node:25504) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 53 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:6:5 › acquisition proxy handles valid contract and scopes session (179ms)
+  ok 54 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:19:7 › acquisition proxy rejects null (50ms)
+  ok 55 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:19:7 › acquisition proxy rejects false success (41ms)
+  ok 56 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:19:7 › acquisition proxy rejects private error (51ms)
+  ok 57 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:19:7 › acquisition proxy rejects disconnect (54ms)
+  ok 58 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:19:7 › acquisition proxy rejects timeout (8.0s)
+  ok 59 [next-proxy-contract] › tests\e2e\acquisition.proxy.spec.ts:27:5 › acquisition proxy refuses cross-site, arbitrary route and size (57ms)
+  ok 60 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:6:5 › proxy forwards real-shaped upstream ready and live is independent (67ms)
+  ok 61 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:14:5 › proxy preserves valid 503 with API reachable (40ms)
+  ok 62 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects null without exposing upstream data (31ms)
+  ok 63 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects malformed JSON without exposing upstream data (42ms)
+  ok 64 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects unknown status without exposing upstream data (40ms)
+  ok 65 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects missing contract fields without exposing upstream data (32ms)
+  ok 66 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects contradictory ready without exposing upstream data (44ms)
+  ok 67 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects HTTP 500 with ready body without exposing upstream data (44ms)
+  ok 68 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects HTTP 200 with unavailable body without exposing upstream data (44ms)
+  ok 69 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects wrong boolean without exposing upstream data (32ms)
+  ok 70 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects connection reset without exposing upstream data (37ms)
+  ok 71 [next-proxy-contract] › tests\e2e\health.proxy.spec.ts:33:7 › proxy rejects upstream timeout without exposing upstream data (6.0s)
+
+  71 passed (1.3m)

@@ -1,0 +1,397 @@
+{
+  "started_at_utc": "2026-11-04T08:32:24.529333+00:00",
+  "scope": "A01 real CPU infrastructure; not model/platform/release acceptance",
+  "passed": 25,
+  "failed": 0,
+  "skipped": 0,
+  "checks": [
+    {
+      "name": "no_cloud_model_keys",
+      "status": "PASS"
+    },
+    {
+      "name": "data_ports_private",
+      "status": "PASS"
+    },
+    {
+      "name": "ready_without_model",
+      "status": "PASS"
+    },
+    {
+      "name": "frontend_page",
+      "status": "PASS"
+    },
+    {
+      "name": "frontend_live",
+      "status": "PASS"
+    },
+    {
+      "name": "frontend_api_proxy",
+      "status": "PASS"
+    },
+    {
+      "name": "real_celery_roundtrip",
+      "status": "PASS"
+    },
+    {
+      "name": "migration_replay",
+      "status": "PASS"
+    },
+    {
+      "name": "persistent_markers_created",
+      "status": "PASS"
+    },
+    {
+      "name": "database_identity_persisted",
+      "status": "PASS"
+    },
+    {
+      "name": "redis_data_persisted",
+      "status": "PASS"
+    },
+    {
+      "name": "work_files_persisted",
+      "status": "PASS"
+    },
+    {
+      "name": "postgres_failure_live_200",
+      "status": "PASS"
+    },
+    {
+      "name": "postgres_failure_ready_503",
+      "status": "PASS"
+    },
+    {
+      "name": "postgres_failure_proxy_503",
+      "status": "PASS"
+    },
+    {
+      "name": "postgres_recovered",
+      "status": "PASS"
+    },
+    {
+      "name": "redis_failure_live_200",
+      "status": "PASS"
+    },
+    {
+      "name": "redis_failure_ready_503",
+      "status": "PASS"
+    },
+    {
+      "name": "redis_failure_proxy_503",
+      "status": "PASS"
+    },
+    {
+      "name": "redis_recovered",
+      "status": "PASS"
+    },
+    {
+      "name": "queue_after_recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "frontend_up_when_api_down",
+      "status": "PASS"
+    },
+    {
+      "name": "frontend_reports_api_down",
+      "status": "PASS"
+    },
+    {
+      "name": "application_non_root",
+      "status": "PASS"
+    },
+    {
+      "name": "no_local_secrets_in_logs",
+      "status": "PASS"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "config",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.51,
+      "stdout": "{\n  \"name\": \"video-analyzer-e2e\",\n  \"networks\": {\n    \"acquisition\": {\n      \"name\": \"video-analyzer-e2e_acquisition\",\n      \"ipam\": {},\n      \"internal\": true\n    },\n    \"backend\": {\n      \"name\": \"video-analyzer-e2e_backend\",\n      \"ipam\": {},\n      \"internal\": true\n    },\n    \"ingress\": {\n      \"name\": \"video-analyzer-e2e_ingress\",\n      \"driver\": \"bridge\",\n      \"ipam\": {}\n    },\n    \"outbound\": {\n      \"name\": \"video-analyzer-e2e_outbound\",\n      \"driver\": \"bridge\",\n      \"ipam\": {}\n    }\n  },\n  \"secrets\": {\n    \"postgres_password\": {\n      \"name\": \"video-analyzer-e2e_postgres_password\",\n      \"file\": \"C:\\\\other-files\\\\video-analyzer\\\\.secrets\\\\postgres_password\"\n    },\n    \"redis_password\": {\n      \"name\": \"video-analyzer-e2e_redis_password\",\n      \"file\": \"C:\\\\other-files\\\\video-analyzer\\\\.secrets\\\\redis_password\"\n    }\n  },\n  \"services\": {\n    \"api\": {\n      \"restart\": \"unless-stopped\",\n      \"cap_drop\": [\n        \"ALL\"\n      ],\n      \"cpus\": 1,\n      \"command\": null,\n      \"entrypoint\": null,\n      \"image\": \"video-analyzer-backend:0.1.0\",\n      \"init\": true,\n      \"logging\": {\n        \"driver\": \"json-file\",\n        \"options\": {\n          \"max-file\": \"3\",\n          \"max-size\": \"10m\"\n        }\n      },\n      \"mem_limit\": \"536870912\",\n      \"networks\": {\n        \"backend\": null,\n        \"ingress\": null\n      },\n      \"pids_limit\": 128,\n      \"read_only\": true,\n      \"secrets\": [\n        {\n          \"source\": \"postgres_password\",\n          \"target\": \"/run/secrets/postgres_password\"\n        },\n        {\n          \"source\": \"redis_password\",\n          \"target\": \"/run/secrets/redis_password\"\n        }\n      ],\n      \"security_opt\": [\n        \"no-new-privileges:true\"\n      ],\n      \"tmpfs\": [\n        \"/tmp:size=64m,mode=1777\"\n      ],\n      \"user\": \"10001:10001\",\n      \"volumes\": [\n        {\n          \"type\": \"volume\",\n          \"source\": \"work_data\",\n          \"target\": \"/data\",\n          \"volume\": {}\n        }\n      ],\n      \"build\": {\n        \"context\": \"C:\\\\other-files\\\\video-analyzer\\\\backend\",\n        \"dockerfile\": \"Dockerfile\"\n      },\n      \"depends_on\": {\n        \"migrate\": {\n          \"condition\": \"service_completed_successfully\",\n          \"required\": true\n        },\n        \"redis\": {\n          \"condition\": \"service_healthy\",\n          \"required\": true\n        }\n      },\n      \"healthcheck\": {\n        \"test\": [\n          \"CMD\",\n          \"python\",\n          \"-c\",\n          \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health/ready', timeout=6)\"\n        ],\n        \"timeout\": \"8s\",\n        \"interval\": \"10s\",\n        \"retries\": 5,\n        \"start_period\": \"10s\"\n      },\n      \"ports\": [\n        {\n          \"mode\": \"ingress\",\n          \"host_ip\": \"127.0.0.1\",\n          \"target\": 8000,\n          \"published\": \"17811\",\n          \"protocol\": \"tcp\"\n        }\n      ]\n    },\n    \"egress\": {\n      \"restart\": \"unless-stopped\",\n      \"cap_drop\": [\n        \"ALL\"\n      ],\n      \"cpus\": 1,\n      \"command\": [\n        \"python\",\n        \"-m\",\n        \"app.services.sources.egress\"\n      ],\n      \"dns_opt\": [\n        \"timeout:2\",\n        \"attempts:1\"\n      ],\n      \"entrypoint\": null,\n      \"image\": \"video-analyzer-backend:0.1.0\",\n      \"init\": true,\n      \"logging\": {\n        \"driver\": \"json-file\",\n        \"options\": {\n          \"max-file\": \"3\",\n          \"max-size\": \"10m\"\n        }\n      },\n      \"mem_limit\": \"134217728\",\n      \"networks\": {\n        \"acquisition\": null,\n        \"outbound\": null\n      },\n      \"pids_limit\": 32,\n      \"read_only\": true,\n      \"security_opt\": [\n        \"no-new-privileges:true\"\n      ],\n      \"tmpfs\": [\n        \"/tmp:size=64m,mode=1777\"\n      ],\n      \"user\": \"10001:10001\",\n      \"build\": {\n        \"context\": \"C:\\\\other-files\\\\video-analyzer\\\\backend\",\n        \"dockerfile\": \"Dockerfile\"\n      }\n    },\n    \"frontend\": {\n      \"restart\": \"unless-stopped\",\n      \"cap_drop\": [\n        \"ALL\"\n      ],\n      \"cpus\": 1,\n      \"command\": null,\n      \"entrypoint\": null,\n      \"environment\": {\n        \"API_INTERNAL_URL\": \"http://api:8000\",\n        \"HOSTNAME\": \"0.0.0.0\",\n        \"NEXT_TELEMETRY_DISABLED\": \"1\",\n        \"PORT\": \"3100\"\n      },\n      \"image\": \"video-analyzer-frontend:0.1.0\",\n      \"init\": true,\n      \"logging\": {\n        \"driver\": \"json-file\",\n        \"options\": {\n          \"max-file\": \"3\",\n          \"max-size\": \"10m\"\n        }\n      },\n      \"mem_limit\": \"536870912\",\n      \"networks\": {\n        \"ingress\": null\n      },\n      \"pids_limit\": 128,\n      \"read_only\": true,\n      \"security_opt\": [\n        \"no-new-privileges:true\"\n      ],\n      \"tmpfs\": [\n        \"/tmp:size=64m,mode=1777\"\n      ],\n      \"user\": \"10001:10001\",\n      \"build\": {\n        \"context\": \"C:\\\\other-files\\\\video-analyzer\\\\frontend\",\n        \"dockerfile\": \"Dockerfile\"\n      },\n      \"depends_on\": {\n        \"api\": {\n          \"condition\": \"service_healthy\",\n          \"required\": true\n        }\n      },\n      \"healthcheck\": {\n        \"test\": [\n          \"CMD\",\n          \"node\",\n          \"-e\",\n          \"fetch('http://127.0.0.1:3100/health/live').then(r=\\u003eprocess.exit(r.ok?0:1)).catch(()=\\u003eprocess.exit(1))\"\n        ],\n        \"timeout\": \"5s\",\n        \"interval\": \"10s\",\n        \"retries\": 5\n      },\n      \"ports\": [\n        {\n          \"mode\": \"ingress\",\n          \"host_ip\": \"127.0.0.1\",\n          \"target\": 3100,\n          \"published\": \"17810\",\n          \"protocol\": \"tcp\"\n        }\n      ]\n    },\n    \"migrate\": {\n      \"restart\": \"no\",\n      \"cap_drop\": [\n        \"ALL\"\n      ],\n      \"cpus\": 1,\n      \"command\": [\n        \"alembic\",\n        \"upgrade\",\n        \"head\"\n      ],\n      \"entrypoint\": null,\n      \"image\": \"video-analyzer-backend:0.1.0\",\n      \"init\": true,\n      \"logging\": {\n        \"driver\": \"json-file\",\n        \"options\": {\n          \"max-file\": \"3\",\n          \"max-size\": \"10m\"\n        }\n      },\n      \"mem_limit\": \"536870912\",\n      \"networks\": {\n        \"backend\": null\n      },\n      \"pids_limit\": 128,\n      \"read_only\": true,\n      \"secrets\": [\n        {\n          \"source\": \"postgres_password\",\n          \"target\": \"/run/secrets/postgres_password\"\n        },\n        {\n          \"source\": \"redis_password\",\n          \"target\": \"/run/secrets/redis_password\"\n        }\n      ],\n      \"security_opt\": [\n        \"no-new-privileges:true\"\n      ],\n      \"tmpfs\": [\n        \"/tmp:size=64m,mode=1777\"\n      ],\n      \"user\": \"10001:10001\",\n      \"build\": {\n        \"context\": \"C:\\\\other-files\\\\video-analyzer\\\\backend\",\n        \"dockerfile\": \"Dockerfile\"\n      },\n      \"depends_on\": {\n        \"postgres\": {\n          \"condition\": \"service_healthy\",\n          \"required\": true\n        }\n      }\n    },\n    \"postgres\": {\n      \"restart\": \"unless-stopped\",\n      \"cpus\": 1,\n      \"command\": null,\n      \"entrypoint\": null,\n      \"environment\": {\n        \"POSTGRES_DB\": \"video_analyzer\",\n        \"POSTGRES_INITDB_ARGS\": \"--auth-host=scram-sha-256\",\n        \"POSTGRES_PASSWORD_FILE\": \"/run/secrets/postgres_password\",\n        \"POSTGRES_USER\": \"video_analyzer\"\n      },\n      \"image\": \"postgres:17.11-alpine@sha256:266d3c257594e195b309ae9d1805e54c788f1d7b375f56bf6c367aac6c917e7b\",\n      \"logging\": {\n        \"driver\": \"json-file\",\n        \"options\": {\n          \"max-file\": \"3\",\n          \"max-size\": \"10m\"\n        }\n      },\n      \"mem_limit\": \"536870912\",\n      \"networks\": {\n        \"backend\": null\n      },\n      \"pids_limit\": 128,\n      \"secrets\": [\n        {\n          \"source\": \"postgres_password\",\n          \"target\": \"/run/secrets/postgres_password\"\n        }\n      ],\n      \"security_opt\": [\n        \"no-new-privileges:true\"\n      ],\n      \"volumes\": [\n        {\n          \"type\": \"volume\",\n          \"source\": \"postgres_data\",\n          \"target\": \"/var/lib/postgresql/data\",\n          \"volume\": {}\n        }\n      ],\n      \"healthcheck\": {\n        \"test\": [\n          \"CMD-SHELL\",\n          \"pg_isready -U video_analyzer -d video_analyzer\"\n        ],\n        \"timeout\": \"3s\",\n        \"interval\": \"5s\",\n        \"retries\": 20\n      }\n    },\n    \"redis\": {\n      \"restart\": \"unless-stopped\",\n      \"cap_drop\": [\n        \"ALL\"\n      ],\n      \"cpus\": 0.5,\n      \"command\": null,\n      \"entrypoint\": [\n        \"/bin/sh\",\n        \"/opt/start.sh\"\n      ],\n      \"image\": \"redis:7.2.13-alpine@sha256:9907ac0c435717b4d95697cb4d0ce77d100b1d21269a01a0ce66f27335184c38\",\n      \"logging\": {\n        \"driver\": \"json-file\",\n        \"options\": {\n          \"max-file\": \"3\",\n          \"max-size\": \"10m\"\n        }\n      },\n      \"mem_limit\": \"268435456\",\n      \"networks\": {\n        \"backend\": null\n      },\n      \"pids_limit\": 64,\n      \"read_only\": true,\n      \"secrets\": [\n        {\n          \"source\": \"redis_password\",\n          \"target\": \"/run/secrets/redis_password\"\n        }\n      ],\n      \"security_opt\": [\n        \"no-new-privileges:true\"\n      ],\n      \"tmpfs\": [\n        \"/tmp:size=16m,mode=1777\"\n      ],\n      \"user\": \"redis\",\n      \"volumes\": [\n        {\n          \"type\": \"volume\",\n          \"source\": \"redis_data\",\n          \"target\": \"/data\",\n          \"volume\": {}\n        },\n        {\n          \"type\": \"bind\",\n          \"source\": \"C:\\\\other-files\\\\video-analyzer\\\\infra\\\\redis\\\\start.sh\",\n          \"target\": \"/opt/start.sh\",\n          \"read_only\": true,\n          \"bind\": {}\n        }\n      ],\n      \"healthcheck\": {\n        \"test\": [\n          \"CMD-SHELL\",\n          \"REDISCLI_AUTH=\\\"$$(cat /run/secrets/redis_password)\\\" redis-cli ping | grep -qx PONG\"\n        ],\n        \"timeout\": \"3s\",\n        \"interval\": \"5s\",\n        \"retries\": 20\n      }\n    },\n    \"worker\": {\n      \"restart\": \"unless-stopped\",\n      \"cap_drop\": [\n        \"ALL\"\n      ],\n      \"cpus\": 1,\n      \"command\": [\n        \"celery\",\n        \"-A\",\n        \"app.tasks.worker:celery_app\",\n        \"worker\",\n        \"--loglevel=WARNING\",\n        \"--concurrency=1\",\n        \"--hostname=infra@worker\"\n      ],\n      \"entrypoint\": null,\n      \"image\": \"video-analyzer-backend:0.1.0\",\n      \"init\": true,\n      \"logging\": {\n        \"driver\": \"json-file\",\n        \"options\": {\n          \"max-file\": \"3\",\n          \"max-size\": \"10m\"\n        }\n      },\n      \"mem_limit\": \"536870912\",\n      \"networks\": {\n        \"backend\": null\n      },\n      \"pids_limit\": 128,\n      \"read_only\": true,\n      \"secrets\": [\n        {\n          \"source\": \"postgres_password\",\n          \"target\": \"/run/secrets/postgres_password\"\n        },\n        {\n          \"source\": \"redis_password\",\n          \"target\": \"/run/secrets/redis_password\"\n        }\n      ],\n      \"security_opt\": [\n        \"no-new-privileges:true\"\n      ],\n      \"tmpfs\": [\n        \"/tmp:size=64m,mode=1777\"\n      ],\n      \"user\": \"10001:10001\",\n      \"volumes\": [\n        {\n          \"type\": \"volume\",\n          \"source\": \"work_data\",\n          \"target\": \"/data\",\n          \"volume\": {}\n        }\n      ],\n      \"build\": {\n        \"context\": \"C:\\\\other-files\\\\video-analyzer\\\\backend\",\n        \"dockerfile\": \"Dockerfile\"\n      },\n      \"depends_on\": {\n        \"migrate\": {\n          \"condition\": \"service_completed_successfully\",\n          \"required\": true\n        },\n        \"redis\": {\n          \"condition\": \"service_healthy\",\n          \"required\": true\n        }\n      },\n      \"healthcheck\": {\n        \"test\": [\n          \"CMD\",\n          \"celery\",\n          \"-A\",\n          \"app.tasks.worker:celery_app\",\n          \"inspect\",\n          \"ping\",\n          \"--destination=infra@worker\",\n          \"--timeout=3\"\n        ],\n        \"timeout\": \"8s\",\n        \"interval\": \"15s\",\n        \"retries\": 5,\n        \"start_period\": \"15s\"\n      }\n    },\n    \"worker-download\": {\n      \"restart\": \"unless-stopped\",\n      \"cap_drop\": [\n        \"ALL\"\n      ],\n      \"cpus\": 1,\n      \"command\": [\n        \"celery\",\n        \"-A\",\n        \"app.tasks.worker:celery_app\",\n        \"worker\",\n        \"-Q\",\n        \"download\",\n        \"--loglevel=WARNING\",\n        \"--concurrency=1\",\n        \"--hostname=download@worker\"\n      ],\n      \"entrypoint\": null,\n      \"image\": \"video-analyzer-backend:0.1.0\",\n      \"init\": true,\n      \"logging\": {\n        \"driver\": \"json-file\",\n        \"options\": {\n          \"max-file\": \"3\",\n          \"max-size\": \"10m\"\n        }\n      },\n      \"mem_limit\": \"805306368\",\n      \"networks\": {\n        \"acquisition\": null,\n        \"backend\": null\n      },\n      \"pids_limit\": 128,\n      \"read_only\": true,\n      \"secrets\": [\n        {\n          \"source\": \"postgres_password\",\n          \"target\": \"/run/secrets/postgres_password\"\n        },\n        {\n          \"source\": \"redis_password\",\n          \"target\": \"/run/secrets/redis_password\"\n        }\n      ],\n      \"security_opt\": [\n        \"no-new-privileges:true\"\n      ],\n      \"tmpfs\": [\n        \"/tmp:size=64m,mode=1777\"\n      ],\n      \"ulimits\": {\n        \"fsize\": {\n          \"soft\": 230686720,\n          \"hard\": 230686720\n        }\n      },\n      \"user\": \"10001:10001\",\n      \"volumes\": [\n        {\n          \"type\": \"volume\",\n          \"source\": \"work_data\",\n          \"target\": \"/data\",\n          \"volume\": {}\n        }\n      ],\n      \"build\": {\n        \"context\": \"C:\\\\other-files\\\\video-analyzer\\\\backend\",\n        \"dockerfile\": \"Dockerfile\"\n      },\n      \"depends_on\": {\n        \"egress\": {\n          \"condition\": \"service_started\",\n          \"required\": true\n        },\n        \"migrate\": {\n          \"condition\": \"service_completed_successfully\",\n          \"required\": true\n        },\n        \"redis\": {\n          \"condition\": \"service_healthy\",\n          \"required\": true\n        }\n      }\n    },\n    \"worker-media\": {\n      \"restart\": \"unless-stopped\",\n      \"cap_drop\": [\n        \"ALL\"\n      ],\n      \"cpus\": 1,\n      \"command\": [\n        \"celery\",\n        \"-A\",\n        \"app.tasks.worker:celery_app\",\n        \"worker\",\n        \"-Q\",\n        \"media\",\n        \"--loglevel=WARNING\",\n        \"--concurrency=1\",\n        \"--hostname=media@worker\"\n      ],\n      \"entrypoint\": null,\n      \"image\": \"video-analyzer-backend:0.1.0\",\n      \"init\": true,\n      \"logging\": {\n        \"driver\": \"json-file\",\n        \"options\": {\n          \"max-file\": \"3\",\n          \"max-size\": \"10m\"\n        }\n      },\n      \"mem_limit\": \"1073741824\",\n      \"networks\": {\n        \"backend\": null\n      },\n      \"pids_limit\": 128,\n      \"read_only\": true,\n      \"secrets\": [\n        {\n          \"source\": \"postgres_password\",\n          \"target\": \"/run/secrets/postgres_password\"\n        },\n        {\n          \"source\": \"redis_password\",\n          \"target\": \"/run/secrets/redis_password\"\n        }\n      ],\n      \"security_opt\": [\n        \"no-new-privileges:true\"\n      ],\n      \"tmpfs\": [\n        \"/tmp:size=64m,mode=1777\"\n      ],\n      \"ulimits\": {\n        \"fsize\": {\n          \"soft\": 230686720,\n          \"hard\": 230686720\n        }\n      },\n      \"user\": \"10001:10001\",\n      \"volumes\": [\n        {\n          \"type\": \"volume\",\n          \"source\": \"work_data\",\n          \"target\": \"/data\",\n          \"volume\": {}\n        }\n      ],\n      \"build\": {\n        \"context\": \"C:\\\\other-files\\\\video-analyzer\\\\backend\",\n        \"dockerfile\": \"Dockerfile\"\n      },\n      \"depends_on\": {\n        \"migrate\": {\n          \"condition\": \"service_completed_successfully\",\n          \"required\": true\n        },\n        \"redis\": {\n          \"condition\": \"service_healthy\",\n          \"required\": true\n        }\n      }\n    }\n  },\n  \"volumes\": {\n    \"postgres_data\": {\n      \"name\": \"video-analyzer-e2e_postgres_data\"\n    },\n    \"redis_data\": {\n      \"name\": \"video-analyzer-e2e_redis_data\"\n    },\n    \"work_data\": {\n      \"name\": \"video-analyzer-e2e_work_data\"\n    }\n  },\n  \"x-app\": {\n    \"build\": \"./backend\",\n    \"cap_drop\": [\n      \"ALL\"\n    ],\n    \"cpus\": 1,\n    \"image\": \"video-analyzer-backend:0.1.0\",\n    \"init\": true,\n    \"logging\": {\n      \"driver\": \"json-file\",\n      \"options\": {\n        \"max-file\": \"3\",\n        \"max-size\": \"10m\"\n      }\n    },\n    \"mem_limit\": \"512m\",\n    \"networks\": [\n      \"backend\"\n    ],\n    \"pids_limit\": 128,\n    \"read_only\": true,\n    \"secrets\": [\n      \"postgres_password\",\n      \"redis_password\"\n    ],\n    \"security_opt\": [\n      \"no-new-privileges:true\"\n    ],\n    \"tmpfs\": [\n      \"/tmp:size=64m,mode=1777\"\n    ],\n    \"user\": \"10001:10001\"\n  }\n}",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-m",
+        "app.infra_probe",
+        "queue"
+      ],
+      "exit_code": 0,
+      "seconds": 3.124,
+      "stdout": "{\"real_queue_roundtrip\": true}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-m",
+        "app.infra_probe",
+        "migrations"
+      ],
+      "exit_code": 0,
+      "seconds": 12.661,
+      "stdout": "{\"empty_upgrade\": true, \"idempotent_upgrade\": true, \"downgrade\": true, \"reupgrade\": true}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-m",
+        "app.infra_probe",
+        "write",
+        "--token",
+        "be81114fe2054acd9450495461c615cb"
+      ],
+      "exit_code": 0,
+      "seconds": 2.625,
+      "stdout": "{\"installation\": \"fba47ebf-ea69-4763-ae1a-6f1a98cc0cb2\", \"redis_persisted\": true, \"file_persisted\": true}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "up",
+        "-d",
+        "--force-recreate",
+        "--wait",
+        "--wait-timeout",
+        "120"
+      ],
+      "exit_code": 0,
+      "seconds": 37.27,
+      "stdout": "",
+      "stderr": " Container video-analyzer-e2e-egress-1 Recreate \n Container video-analyzer-e2e-postgres-1 Recreate \n Container video-analyzer-e2e-redis-1 Recreate \n Container video-analyzer-e2e-egress-1 Recreated \n Container video-analyzer-e2e-postgres-1 Recreated \n Container video-analyzer-e2e-migrate-1 Recreate \n Container video-analyzer-e2e-redis-1 Recreated \n Container video-analyzer-e2e-migrate-1 Recreated \n Container video-analyzer-e2e-api-1 Recreate \n Container video-analyzer-e2e-worker-download-1 Recreate \n Container video-analyzer-e2e-worker-media-1 Recreate \n Container video-analyzer-e2e-worker-1 Recreate \n Container video-analyzer-e2e-api-1 Recreated \n Container video-analyzer-e2e-frontend-1 Recreate \n Container video-analyzer-e2e-frontend-1 Recreated \n Container video-analyzer-e2e-worker-1 Recreated \n Container video-analyzer-e2e-worker-media-1 Recreated \n Container video-analyzer-e2e-worker-download-1 Recreated \n Container video-analyzer-e2e-egress-1 Starting \n Container video-analyzer-e2e-postgres-1 Starting \n Container video-analyzer-e2e-redis-1 Starting \n Container video-analyzer-e2e-egress-1 Started \n Container video-analyzer-e2e-postgres-1 Started \n Container video-analyzer-e2e-postgres-1 Waiting \n Container video-analyzer-e2e-redis-1 Started \n Container video-analyzer-e2e-postgres-1 Healthy \n Container video-analyzer-e2e-migrate-1 Starting \n Container video-analyzer-e2e-migrate-1 Started \n Container video-analyzer-e2e-redis-1 Waiting \n Container video-analyzer-e2e-migrate-1 Waiting \n Container video-analyzer-e2e-redis-1 Waiting \n Container video-analyzer-e2e-migrate-1 Waiting \n Container video-analyzer-e2e-redis-1 Waiting \n Container video-analyzer-e2e-migrate-1 Waiting \n Container video-analyzer-e2e-migrate-1 Waiting \n Container video-analyzer-e2e-redis-1 Waiting \n Container video-analyzer-e2e-redis-1 Healthy \n Container video-analyzer-e2e-redis-1 Healthy \n Container video-analyzer-e2e-redis-1 Healthy \n Container video-analyzer-e2e-redis-1 Healthy \n Container video-analyzer-e2e-migrate-1 Exited \n Container video-analyzer-e2e-worker-media-1 Starting \n Container video-analyzer-e2e-migrate-1 Exited \n Container video-analyzer-e2e-migrate-1 Exited \n Container video-analyzer-e2e-api-1 Starting \n Container video-analyzer-e2e-worker-download-1 Starting \n Container video-analyzer-e2e-migrate-1 Exited \n Container video-analyzer-e2e-worker-1 Starting \n Container video-analyzer-e2e-worker-media-1 Started \n Container video-analyzer-e2e-api-1 Started \n Container video-analyzer-e2e-api-1 Waiting \n Container video-analyzer-e2e-worker-download-1 Started \n Container video-analyzer-e2e-worker-1 Started \n Container video-analyzer-e2e-api-1 Healthy \n Container video-analyzer-e2e-frontend-1 Starting \n Container video-analyzer-e2e-frontend-1 Started \n Container video-analyzer-e2e-api-1 Waiting \n Container video-analyzer-e2e-postgres-1 Waiting \n Container video-analyzer-e2e-worker-download-1 Waiting \n Container video-analyzer-e2e-worker-1 Waiting \n Container video-analyzer-e2e-frontend-1 Waiting \n Container video-analyzer-e2e-redis-1 Waiting \n Container video-analyzer-e2e-migrate-1 Waiting \n Container video-analyzer-e2e-worker-media-1 Waiting \n Container video-analyzer-e2e-egress-1 Waiting \n Container video-analyzer-e2e-migrate-1 Exited \n Container video-analyzer-e2e-worker-media-1 Healthy \n Container video-analyzer-e2e-egress-1 Healthy \n Container video-analyzer-e2e-redis-1 Healthy \n Container video-analyzer-e2e-worker-download-1 Healthy \n Container video-analyzer-e2e-api-1 Healthy \n Container video-analyzer-e2e-postgres-1 Healthy \n Container video-analyzer-e2e-worker-1 Healthy \n Container video-analyzer-e2e-frontend-1 Healthy \n"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-m",
+        "app.infra_probe",
+        "read",
+        "--token",
+        "be81114fe2054acd9450495461c615cb"
+      ],
+      "exit_code": 0,
+      "seconds": 2.291,
+      "stdout": "{\"installation\": \"fba47ebf-ea69-4763-ae1a-6f1a98cc0cb2\", \"redis_persisted\": true, \"file_persisted\": true}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "stop",
+        "postgres"
+      ],
+      "exit_code": 0,
+      "seconds": 1.018,
+      "stdout": "",
+      "stderr": " Container video-analyzer-e2e-postgres-1 Stopping \n Container video-analyzer-e2e-postgres-1 Stopped \n"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "start",
+        "postgres"
+      ],
+      "exit_code": 0,
+      "seconds": 1.149,
+      "stdout": "",
+      "stderr": " Container video-analyzer-e2e-postgres-1 Starting \n Container video-analyzer-e2e-postgres-1 Started \n"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "stop",
+        "redis"
+      ],
+      "exit_code": 0,
+      "seconds": 0.933,
+      "stdout": "",
+      "stderr": " Container video-analyzer-e2e-redis-1 Stopping \n Container video-analyzer-e2e-redis-1 Stopped \n"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "start",
+        "redis"
+      ],
+      "exit_code": 0,
+      "seconds": 1.347,
+      "stdout": "",
+      "stderr": " Container video-analyzer-e2e-redis-1 Starting \n Container video-analyzer-e2e-redis-1 Started \n"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-m",
+        "app.infra_probe",
+        "queue"
+      ],
+      "exit_code": 0,
+      "seconds": 3.002,
+      "stdout": "{\"real_queue_roundtrip\": true}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "stop",
+        "api"
+      ],
+      "exit_code": 0,
+      "seconds": 1.342,
+      "stdout": "",
+      "stderr": " Container video-analyzer-e2e-api-1 Stopping \n Container video-analyzer-e2e-api-1 Stopped \n"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "start",
+        "api"
+      ],
+      "exit_code": 0,
+      "seconds": 5.737,
+      "stdout": "",
+      "stderr": " Container video-analyzer-e2e-postgres-1 Waiting \n Container video-analyzer-e2e-postgres-1 Healthy \n Container video-analyzer-e2e-migrate-1 Starting \n Container video-analyzer-e2e-migrate-1 Started \n Container video-analyzer-e2e-redis-1 Waiting \n Container video-analyzer-e2e-migrate-1 Waiting \n Container video-analyzer-e2e-redis-1 Healthy \n Container video-analyzer-e2e-migrate-1 Exited \n Container video-analyzer-e2e-api-1 Starting \n Container video-analyzer-e2e-api-1 Started \n"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "exec",
+        "-T",
+        "api",
+        "id",
+        "-u"
+      ],
+      "exit_code": 0,
+      "seconds": 0.682,
+      "stdout": "10001\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "logs",
+        "--no-color",
+        "--tail",
+        "300"
+      ],
+      "exit_code": 0,
+      "seconds": 0.631,
+      "stdout": "frontend-1      | ▲ Next.js 16.4.5\nfrontend-1      | - Local:         http://localhost:3100\nredis-1         | 1:C 04 Nov 2026 08:32:53.410 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo\nfrontend-1      | - Network:       http://0.0.0.0:3100\nfrontend-1      | ✓ Ready in 0ms\nfrontend-1      | ✓ Running next.config took 2ms\nworker-1        |  \nworker-1        |  -------------- infra@worker v5.6.3 (recovery)\nredis-1         | 1:C 04 Nov 2026 08:32:53.410 * Redis version=7.2.13, bits=64, commit=00000000, modified=0, pid=1, just started\nredis-1         | 1:C 04 Nov 2026 08:32:53.410 * Configuration loaded\nworker-1        | --- ***** ----- \nworker-1        | -- ******* ---- Linux-6.18.33.1-microsoft-standard-WSL2-x86_64-with-glibc2.36 2026-11-04 08:33:09\nworker-1        | - *** --- * --- \nworker-1        | - ** ---------- [config]\nworker-media-1  |  \napi-1           | INFO:     Started server process [7]\napi-1           | INFO:     Waiting for application startup.\napi-1           | INFO:     Application startup complete.\nworker-media-1  |  -------------- media@worker v5.6.3 (recovery)\nredis-1         | 1:M 04 Nov 2026 08:32:53.411 * monotonic clock: POSIX clock_gettime\nredis-1         | 1:M 04 Nov 2026 08:32:53.412 * Running mode=standalone, port=6379.\nredis-1         | 1:M 04 Nov 2026 08:32:53.414 * Server initialized\nredis-1         | 1:M 04 Nov 2026 08:32:53.414 * Reading RDB base file on AOF loading...\nredis-1         | 1:M 04 Nov 2026 08:32:53.414 * Loading RDB produced by version 7.2.13\nredis-1         | 1:M 04 Nov 2026 08:32:53.414 * RDB age 5262 seconds\nredis-1         | 1:M 04 Nov 2026 08:32:53.414 * RDB memory usage when created 0.83 Mb\nredis-1         | 1:M 04 Nov 2026 08:32:53.414 * RDB is base AOF\nredis-1         | 1:M 04 Nov 2026 08:32:53.414 * Done loading RDB, keys loaded: 0, keys expired: 0.\nredis-1         | 1:M 04 Nov 2026 08:32:53.414 * DB loaded from base file appendonly.aof.1.base.rdb: 0.000 seconds\nredis-1         | 1:M 04 Nov 2026 08:32:53.422 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.008 seconds\nredis-1         | 1:M 04 Nov 2026 08:32:53.422 * DB loaded from append only file: 0.008 seconds\nredis-1         | 1:M 04 Nov 2026 08:32:53.422 * Opening AOF incr file appendonly.aof.1.incr.aof on server start\nredis-1         | 1:M 04 Nov 2026 08:32:53.422 * Ready to accept connections tcp\nredis-1         | 1:signal-handler (1793781210) Received SIGTERM scheduling shutdown...\nredis-1         | 1:M 04 Nov 2026 08:33:30.034 * User requested shutdown...\nredis-1         | 1:M 04 Nov 2026 08:33:30.034 * Calling fsync() on the AOF file.\nredis-1         | 1:M 04 Nov 2026 08:33:30.036 * Saving the final RDB snapshot before exiting.\nredis-1         | 1:M 04 Nov 2026 08:33:30.050 * DB saved on disk\nredis-1         | 1:M 04 Nov 2026 08:33:30.050 # Redis is now ready to exit, bye bye...\napi-1           | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)\napi-1           | {\"event\":\"dependency_unavailable\",\"dependency\":\"database\"}\napi-1           | {\"event\":\"dependency_unavailable\",\"dependency\":\"database\"}\napi-1           | {\"event\":\"dependency_unavailable\",\"dependency\":\"database\"}\napi-1           | {\"event\":\"dependency_unavailable\",\"dependency\":\"redis\"}\napi-1           | {\"event\":\"dependency_unavailable\",\"dependency\":\"redis\"}\napi-1           | {\"event\":\"dependency_unavailable\",\"dependency\":\"redis\"}\nredis-1         | 1:C 04 Nov 2026 08:33:34.402 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo\napi-1           | INFO:     Shutting down\nworker-media-1  | --- ***** ----- \nworker-media-1  | -- ******* ---- Linux-6.18.33.1-microsoft-standard-WSL2-x86_64-with-glibc2.36 2026-11-04 08:33:07\nworker-media-1  | - *** --- * --- \nworker-media-1  | - ** ---------- [config]\nworker-media-1  | - ** ---------- .> app:         video_analyzer:0x703bc1f143b0\nworker-media-1  | - ** ---------- .> transport:   redis://:**@redis:6379/0\nworker-1        | - ** ---------- .> app:         video_analyzer:0x7005fea00380\nredis-1         | 1:C 04 Nov 2026 08:33:34.403 * Redis version=7.2.13, bits=64, commit=00000000, modified=0, pid=1, just started\nredis-1         | 1:C 04 Nov 2026 08:33:34.403 * Configuration loaded\nredis-1         | 1:M 04 Nov 2026 08:33:34.403 * monotonic clock: POSIX clock_gettime\nredis-1         | 1:M 04 Nov 2026 08:33:34.404 * Running mode=standalone, port=6379.\napi-1           | INFO:     Waiting for application shutdown.\napi-1           | INFO:     Application shutdown complete.\napi-1           | INFO:     Finished server process [7]\napi-1           | INFO:     Started server process [7]\napi-1           | INFO:     Waiting for application startup.\napi-1           | INFO:     Application startup complete.\napi-1           | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)\nworker-1        | - ** ---------- .> transport:   redis://:**@redis:6379/0\nworker-1        | - ** ---------- .> results:     redis://:**@redis:6379/1\nworker-1        | - *** --- * --- .> concurrency: 1 (prefork)\nworker-1        | -- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)\nworker-media-1  | - ** ---------- .> results:     redis://:**@redis:6379/1\nredis-1         | 1:M 04 Nov 2026 08:33:34.406 * Server initialized\nworker-media-1  | - *** --- * --- .> concurrency: 1 (prefork)\nworker-media-1  | -- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)\nredis-1         | 1:M 04 Nov 2026 08:33:34.407 * Reading RDB base file on AOF loading...\nredis-1         | 1:M 04 Nov 2026 08:33:34.407 * Loading RDB produced by version 7.2.13\nredis-1         | 1:M 04 Nov 2026 08:33:34.407 * RDB age 5303 seconds\nredis-1         | 1:M 04 Nov 2026 08:33:34.407 * RDB memory usage when created 0.83 Mb\nredis-1         | 1:M 04 Nov 2026 08:33:34.407 * RDB is base AOF\nredis-1         | 1:M 04 Nov 2026 08:33:34.407 * Done loading RDB, keys loaded: 0, keys expired: 0.\nredis-1         | 1:M 04 Nov 2026 08:33:34.407 * DB loaded from base file appendonly.aof.1.base.rdb: 0.000 seconds\nredis-1         | 1:M 04 Nov 2026 08:33:34.416 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.009 seconds\nredis-1         | 1:M 04 Nov 2026 08:33:34.416 * DB loaded from append only file: 0.009 seconds\nworker-1        | --- ***** ----- \nworker-1        |  -------------- [queues]\nworker-1        |                 .> infrastructure   exchange=infrastructure(direct) key=infrastructure\nworker-1        |                 \nworker-1        | \nredis-1         | 1:M 04 Nov 2026 08:33:34.416 * Opening AOF incr file appendonly.aof.1.incr.aof on server start\nredis-1         | 1:M 04 Nov 2026 08:33:34.416 * Ready to accept connections tcp\nworker-1        | [2026-11-04 08:33:30,058: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...\nworker-media-1  | --- ***** ----- \nworker-1        | Traceback (most recent call last):\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/retry.py\", line 120, in call_with_retry\nworker-1        |     return do()\nworker-1        |            ^^^^\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1308, in <lambda>\nworker-1        |     lambda: command(*args, **kwargs),\nworker-media-1  |  -------------- [queues]\nworker-media-1  |                 .> media            exchange=media(direct) key=media\nworker-media-1  |                 \nworker-media-1  | \nworker-media-1  | [2026-11-04 08:33:30,058: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...\nworker-media-1  | Traceback (most recent call last):\nworker-1        |             ^^^^^^^^^^^^^^^^^^^^^^^^\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1395, in try_read\nworker-1        |     return conn.read_response(\nworker-1        |            ^^^^^^^^^^^^^^^^^^^\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1407, in read_response\nworker-1        |     response = self._parser.read_response(\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/retry.py\", line 120, in call_with_retry\nworker-media-1  |     return do()\nworker-1        |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py\", line 40, in read_response\nworker-1        |     result = self._read_response(\nworker-1        |              ^^^^^^^^^^^^^^^^^^^^\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py\", line 65, in _read_response\nworker-1        |     raw = self._buffer.readline(timeout=timeout)\nworker-1        |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/_parsers/socket.py\", line 117, in readline\nworker-1        |     self._read_from_socket(timeout=timeout)\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/_parsers/socket.py\", line 67, in _read_from_socket\nworker-1        |     raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)\nworker-1        | redis.exceptions.ConnectionError: Connection closed by server.\nworker-1        | \nworker-1        | During handling of the above exception, another exception occurred:\nworker-1        | \nworker-1        | Traceback (most recent call last):\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1055, in connect_check_health\nworker-1        |     sock = self._connect()\nworker-1        |            ^^^^^^^^^^^^^^^\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1617, in _connect\nworker-media-1  |            ^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1308, in <lambda>\nworker-media-1  |     lambda: command(*args, **kwargs),\nworker-media-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1395, in try_read\nworker-1        |     raise err\nworker-media-1  |     return conn.read_response(\nworker-media-1  |            ^^^^^^^^^^^^^^^^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1407, in read_response\nworker-media-1  |     response = self._parser.read_response(\nworker-media-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py\", line 40, in read_response\nworker-media-1  |     result = self._read_response(\nworker-media-1  |              ^^^^^^^^^^^^^^^^^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py\", line 65, in _read_response\nworker-media-1  |     raw = self._buffer.readline(timeout=timeout)\nworker-media-1  |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/_parsers/socket.py\", line 117, in readline\nworker-media-1  |     self._read_from_socket(timeout=timeout)\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/_parsers/socket.py\", line 67, in _read_from_socket\nworker-media-1  |     raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)\nworker-media-1  | redis.exceptions.ConnectionError: Connection closed by server.\nworker-media-1  | \nworker-media-1  | During handling of the above exception, another exception occurred:\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1601, in _connect\nworker-1        |     sock.connect(socket_address)\nworker-1        | ConnectionRefusedError: [Errno 111] Connection refused\nworker-media-1  | \nworker-media-1  | Traceback (most recent call last):\nworker-1        | \nworker-1        | During handling of the above exception, another exception occurred:\nworker-1        | \nworker-1        | Traceback (most recent call last):\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py\", line 346, in start\nworker-1        |     blueprint.start(self)\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/celery/bootsteps.py\", line 116, in start\nworker-1        |     step.start(parent)\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py\", line 788, in start\nworker-1        |     c.loop(*c.loop_args())\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/celery/worker/loops.py\", line 97, in asynloop\nworker-1        |     next(loop)\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/kombu/asynchronous/hub.py\", line 465, in create_loop\nworker-1        |     cb(*cbargs)\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py\", line 2250, in on_readable\nworker-1        |     self.cycle.on_readable(fileno)\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py\", line 863, in on_readable\nworker-1        |     chan.handlers[type]()\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1055, in connect_check_health\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py\", line 1421, in _receive\nworker-1        |     ret.append(self._receive_one(c))\nworker-media-1  |     sock = self._connect()\nworker-media-1  |            ^^^^^^^^^^^^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1617, in _connect\nworker-media-1  |     raise err\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1601, in _connect\nworker-media-1  |     sock.connect(socket_address)\nworker-media-1  | ConnectionRefusedError: [Errno 111] Connection refused\nworker-media-1  | \nworker-media-1  | During handling of the above exception, another exception occurred:\nworker-media-1  | \nworker-media-1  | Traceback (most recent call last):\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py\", line 346, in start\nworker-media-1  |     blueprint.start(self)\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/celery/bootsteps.py\", line 116, in start\nworker-media-1  |     step.start(parent)\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py\", line 788, in start\nworker-media-1  |     c.loop(*c.loop_args())\nworker-1        |                ^^^^^^^^^^^^^^^^^^^^\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py\", line 1431, in _receive_one\nworker-1        |     response = c.parse_response()\nworker-1        |                ^^^^^^^^^^^^^^^^^^\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1399, in parse_response\nworker-1        |     response = self._execute(conn, try_read)\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/celery/worker/loops.py\", line 97, in asynloop\nworker-media-1  |     next(loop)\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/kombu/asynchronous/hub.py\", line 465, in create_loop\nworker-media-1  |     cb(*cbargs)\nworker-1        |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1307, in _execute\nworker-1        |     response = conn.retry.call_with_retry(\nworker-1        |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/retry.py\", line 127, in call_with_retry\nworker-1        |     fail(error, failures)\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1304, in failure_callback\nworker-1        |     self._reconnect(conn, error, failure_count, start_time, command_name)\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py\", line 2250, in on_readable\nworker-media-1  |     self.cycle.on_readable(fileno)\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py\", line 863, in on_readable\nworker-media-1  |     chan.handlers[type]()\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py\", line 1421, in _receive\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1278, in _reconnect\nworker-1        |     conn.connect()\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1028, in connect\nworker-1        |     self.retry.call_with_retry(\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/retry.py\", line 132, in call_with_retry\nworker-1        |     raise error\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/retry.py\", line 120, in call_with_retry\nworker-1        |     return do()\nworker-1        |            ^^^^\nworker-media-1  |     ret.append(self._receive_one(c))\nworker-media-1  |                ^^^^^^^^^^^^^^^^^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py\", line 1431, in _receive_one\nworker-media-1  |     response = c.parse_response()\nworker-media-1  |                ^^^^^^^^^^^^^^^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1399, in parse_response\nworker-media-1  |     response = self._execute(conn, try_read)\nworker-media-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1307, in _execute\nworker-media-1  |     response = conn.retry.call_with_retry(\nworker-media-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/retry.py\", line 127, in call_with_retry\nworker-media-1  |     fail(error, failures)\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1304, in failure_callback\nworker-media-1  |     self._reconnect(conn, error, failure_count, start_time, command_name)\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1278, in _reconnect\nworker-media-1  |     conn.connect()\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1028, in connect\nworker-media-1  |     self.retry.call_with_retry(\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/retry.py\", line 132, in call_with_retry\nworker-media-1  |     raise error\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/retry.py\", line 120, in call_with_retry\nworker-media-1  |     return do()\nworker-media-1  |            ^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1029, in <lambda>\nworker-media-1  |     lambda: self.connect_check_health(\nworker-media-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-media-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1077, in connect_check_health\nworker-media-1  |     raise e\nworker-media-1  | redis.exceptions.ConnectionError: Error 111 connecting to redis:6379. Connection refused.\nworker-media-1  | [2026-11-04 08:33:30,070: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:397: CPendingDeprecationWarning: \nworker-media-1  | In Celery 5.1 we introduced an optional breaking change which\nworker-media-1  | on connection loss cancels all currently executed tasks with late acknowledgement enabled.\nworker-media-1  | These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered\nworker-media-1  | back to the queue. You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss\nworker-media-1  | setting. In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.\nworker-media-1  | \nworker-media-1  |   warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)\nworker-media-1  | \nworker-media-1  | [2026-11-04 08:33:30,094: ERROR/MainProcess] consumer: Cannot connect to redis://:**@redis:6379/0: Error 111 connecting to redis:6379. Connection refused..\nworker-media-1  | Trying again in 2.00 seconds... (1/5)\nworker-media-1  | \nworker-media-1  | [2026-11-04 08:33:32,099: ERROR/MainProcess] consumer: Cannot connect to redis://:**@redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..\nworker-media-1  | Trying again in 4.00 seconds... (2/5)\nworker-media-1  | \nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1029, in <lambda>\nworker-1        |     lambda: self.connect_check_health(\nworker-1        |             ^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-1        |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1077, in connect_check_health\nworker-1        |     raise e\nworker-1        | redis.exceptions.ConnectionError: Error 111 connecting to redis:6379. Connection refused.\nworker-1        | [2026-11-04 08:33:30,071: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:397: CPendingDeprecationWarning: \nworker-1        | In Celery 5.1 we introduced an optional breaking change which\nworker-1        | on connection loss cancels all currently executed tasks with late acknowledgement enabled.\nworker-1        | These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered\nworker-1        | back to the queue. You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss\nworker-1        | setting. In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.\nworker-1        | \nworker-1        |   warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)\nworker-1        | \nworker-1        | [2026-11-04 08:33:30,080: ERROR/MainProcess] consumer: Cannot connect to redis://:**@redis:6379/0: Error 111 connecting to redis:6379. Connection refused..\nworker-1        | Trying again in 2.00 seconds... (1/5)\nworker-1        | \nworker-1        | [2026-11-04 08:33:32,086: ERROR/MainProcess] consumer: Cannot connect to redis://:**@redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..\nworker-1        | Trying again in 4.00 seconds... (2/5)\nworker-1        | \npostgres-1      | \npostgres-1      | PostgreSQL Database directory appears to contain a database; Skipping initialization\npostgres-1      | \npostgres-1      | 2026-11-04 08:32:53.030 UTC [1] LOG:  starting PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit\npostgres-1      | 2026-11-04 08:32:53.030 UTC [1] LOG:  listening on IPv4 address \"0.0.0.0\", port 5432\npostgres-1      | 2026-11-04 08:32:53.030 UTC [1] LOG:  listening on IPv6 address \"::\", port 5432\npostgres-1      | 2026-11-04 08:32:53.042 UTC [1] LOG:  listening on Unix socket \"/var/run/postgresql/.s.PGSQL.5432\"\npostgres-1      | 2026-11-04 08:32:53.056 UTC [29] LOG:  database system was shut down at 2026-11-04 08:32:45 UTC\npostgres-1      | 2026-11-04 08:32:53.071 UTC [1] LOG:  database system is ready to accept connections\npostgres-1      | 2026-11-04 08:33:24.011 UTC [1] LOG:  received fast shutdown request\npostgres-1      | 2026-11-04 08:33:24.018 UTC [1] LOG:  aborting any active transactions\npostgres-1      | 2026-11-04 08:33:24.018 UTC [55] FATAL:  terminating connection due to administrator command\npostgres-1      | 2026-11-04 08:33:24.025 UTC [1] LOG:  background worker \"logical replication launcher\" (PID 32) exited with exit code 1\npostgres-1      | 2026-11-04 08:33:24.028 UTC [27] LOG:  shutting down\npostgres-1      | 2026-11-04 08:33:24.035 UTC [27] LOG:  checkpoint starting: shutdown immediate\npostgres-1      | 2026-11-04 08:33:24.082 UTC [27] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.010 s, sync=0.012 s, total=0.055 s; sync files=3, longest=0.006 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/334A908, redo lsn=0/334A908\npostgres-1      | 2026-11-04 08:33:24.094 UTC [1] LOG:  database system is shut down\npostgres-1      | \npostgres-1      | PostgreSQL Database directory appears to contain a database; Skipping initialization\npostgres-1      | \npostgres-1      | 2026-11-04 08:33:28.448 UTC [1] LOG:  starting PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit\npostgres-1      | 2026-11-04 08:33:28.448 UTC [1] LOG:  listening on IPv4 address \"0.0.0.0\", port 5432\npostgres-1      | 2026-11-04 08:33:28.448 UTC [1] LOG:  listening on IPv6 address \"::\", port 5432\npostgres-1      | 2026-11-04 08:33:28.463 UTC [1] LOG:  listening on Unix socket \"/var/run/postgresql/.s.PGSQL.5432\"\npostgres-1      | 2026-11-04 08:33:28.480 UTC [29] LOG:  database system was shut down at 2026-11-04 08:33:24 UTC\npostgres-1      | 2026-11-04 08:33:28.497 UTC [1] LOG:  database system is ready to accept connections\nworker-download-1  |  \nworker-download-1  |  -------------- download@worker v5.6.3 (recovery)\nworker-download-1  | --- ***** ----- \nworker-download-1  | -- ******* ---- Linux-6.18.33.1-microsoft-standard-WSL2-x86_64-with-glibc2.36 2026-11-04 08:33:09\nworker-download-1  | - *** --- * --- \nworker-download-1  | - ** ---------- [config]\nworker-download-1  | - ** ---------- .> app:         video_analyzer:0x7e1733502510\nworker-download-1  | - ** ---------- .> transport:   redis://:**@redis:6379/0\nworker-download-1  | - ** ---------- .> results:     redis://:**@redis:6379/1\nworker-download-1  | - *** --- * --- .> concurrency: 1 (prefork)\nworker-download-1  | -- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)\nworker-download-1  | --- ***** ----- \nworker-download-1  |  -------------- [queues]\nworker-download-1  |                 .> download         exchange=download(direct) key=download\nworker-download-1  |                 \nworker-download-1  | \nworker-download-1  | [2026-11-04 08:33:30,058: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...\nworker-download-1  | Traceback (most recent call last):\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/retry.py\", line 120, in call_with_retry\nworker-download-1  |     return do()\nworker-download-1  |            ^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1308, in <lambda>\nworker-download-1  |     lambda: command(*args, **kwargs),\nworker-download-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1395, in try_read\nworker-download-1  |     return conn.read_response(\nworker-download-1  |            ^^^^^^^^^^^^^^^^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1407, in read_response\nworker-download-1  |     response = self._parser.read_response(\nworker-download-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py\", line 40, in read_response\nworker-download-1  |     result = self._read_response(\nworker-download-1  |              ^^^^^^^^^^^^^^^^^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py\", line 65, in _read_response\nworker-download-1  |     raw = self._buffer.readline(timeout=timeout)\nworker-download-1  |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/_parsers/socket.py\", line 117, in readline\nworker-download-1  |     self._read_from_socket(timeout=timeout)\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/_parsers/socket.py\", line 67, in _read_from_socket\nworker-download-1  |     raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)\nworker-download-1  | redis.exceptions.ConnectionError: Connection closed by server.\nworker-download-1  | \nworker-download-1  | During handling of the above exception, another exception occurred:\nworker-download-1  | \nworker-download-1  | Traceback (most recent call last):\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1055, in connect_check_health\nworker-download-1  |     sock = self._connect()\nworker-download-1  |            ^^^^^^^^^^^^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1617, in _connect\nworker-download-1  |     raise err\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1601, in _connect\nworker-download-1  |     sock.connect(socket_address)\nworker-download-1  | ConnectionRefusedError: [Errno 111] Connection refused\nworker-download-1  | \nworker-download-1  | During handling of the above exception, another exception occurred:\nworker-download-1  | \nworker-download-1  | Traceback (most recent call last):\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py\", line 346, in start\nworker-download-1  |     blueprint.start(self)\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/celery/bootsteps.py\", line 116, in start\nworker-download-1  |     step.start(parent)\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py\", line 788, in start\nworker-download-1  |     c.loop(*c.loop_args())\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/celery/worker/loops.py\", line 97, in asynloop\nworker-download-1  |     next(loop)\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/kombu/asynchronous/hub.py\", line 465, in create_loop\nworker-download-1  |     cb(*cbargs)\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py\", line 2250, in on_readable\nworker-download-1  |     self.cycle.on_readable(fileno)\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py\", line 863, in on_readable\nworker-download-1  |     chan.handlers[type]()\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py\", line 1421, in _receive\nworker-download-1  |     ret.append(self._receive_one(c))\nworker-download-1  |                ^^^^^^^^^^^^^^^^^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/kombu/transport/redis.py\", line 1431, in _receive_one\nworker-download-1  |     response = c.parse_response()\nworker-download-1  |                ^^^^^^^^^^^^^^^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1399, in parse_response\nworker-download-1  |     response = self._execute(conn, try_read)\nworker-download-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1307, in _execute\nworker-download-1  |     response = conn.retry.call_with_retry(\nworker-download-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/retry.py\", line 127, in call_with_retry\nworker-download-1  |     fail(error, failures)\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1304, in failure_callback\nworker-download-1  |     self._reconnect(conn, error, failure_count, start_time, command_name)\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/client.py\", line 1278, in _reconnect\nworker-download-1  |     conn.connect()\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1028, in connect\nworker-download-1  |     self.retry.call_with_retry(\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/retry.py\", line 132, in call_with_retry\nworker-download-1  |     raise error\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/retry.py\", line 120, in call_with_retry\nworker-download-1  |     return do()\nworker-download-1  |            ^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1029, in <lambda>\nworker-download-1  |     lambda: self.connect_check_health(\nworker-download-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^\nworker-download-1  |   File \"/usr/local/lib/python3.12/site-packages/redis/connection.py\", line 1077, in connect_check_health\nworker-download-1  |     raise e\nworker-download-1  | redis.exceptions.ConnectionError: Error 111 connecting to redis:6379. Connection refused.\nworker-download-1  | [2026-11-04 08:33:30,070: WARNING/MainProcess] /usr/local/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:397: CPendingDeprecationWarning: \nworker-download-1  | In Celery 5.1 we introduced an optional breaking change which\nworker-download-1  | on connection loss cancels all currently executed tasks with late acknowledgement enabled.\nworker-download-1  | These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered\nworker-download-1  | back to the queue. You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss\nworker-download-1  | setting. In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.\nworker-download-1  | \nworker-download-1  |   warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)\nworker-download-1  | \nworker-download-1  | [2026-11-04 08:33:30,083: ERROR/MainProcess] consumer: Cannot connect to redis://:**@redis:6379/0: Error 111 connecting to redis:6379. Connection refused..\nworker-download-1  | Trying again in 2.00 seconds... (1/5)\nworker-download-1  | \nworker-download-1  | [2026-11-04 08:33:32,088: ERROR/MainProcess] consumer: Cannot connect to redis://:**@redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..\nworker-download-1  | Trying again in 4.00 seconds... (2/5)\nworker-download-1  | \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "start",
+        "postgres",
+        "redis",
+        "api"
+      ],
+      "exit_code": 0,
+      "seconds": 5.202,
+      "stdout": "",
+      "stderr": " Container video-analyzer-e2e-postgres-1 Waiting \n Container video-analyzer-e2e-postgres-1 Healthy \n Container video-analyzer-e2e-migrate-1 Starting \n Container video-analyzer-e2e-migrate-1 Started \n Container video-analyzer-e2e-redis-1 Waiting \n Container video-analyzer-e2e-migrate-1 Waiting \n Container video-analyzer-e2e-redis-1 Healthy \n Container video-analyzer-e2e-migrate-1 Exited \n"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "video-analyzer-e2e",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-m",
+        "app.infra_probe",
+        "clean",
+        "--token",
+        "be81114fe2054acd9450495461c615cb"
+      ],
+      "exit_code": 0,
+      "seconds": 2.483,
+      "stdout": "{\"cleaned\": true}\n",
+      "stderr": ""
+    }
+  ]
+}

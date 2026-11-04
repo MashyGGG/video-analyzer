@@ -16,6 +16,7 @@ def read_secret(path: Path) -> str:
 
 
 class Settings(BaseSettings):
+    data_root: Path = Path("/data")
     model_config = SettingsConfigDict(env_prefix="VA_", extra="ignore")
     postgres_host: str = "postgres"
     postgres_port: int = 5432

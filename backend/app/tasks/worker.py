@@ -20,6 +20,7 @@ celery_app.conf.update(
     task_soft_time_limit=10,
     task_time_limit=15,
     worker_hijack_root_logger=False,
+    imports=("app.tasks.acquire",),
 )
 
 

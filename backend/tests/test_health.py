@@ -1,6 +1,7 @@
 import pytest
-from app.main import create_app
 from fastapi.testclient import TestClient
+
+from app.main import create_app
 
 
 @pytest.mark.parametrize(
@@ -28,10 +29,11 @@ def test_dependency_exception_is_not_disclosed():
     assert "sensitive" not in response.text
 
 
-def test_no_business_write_endpoints_or_api_keys_needed(monkeypatch):
+def test_acquisition_contract_and_health_need_no_model_keys(monkeypatch):
     monkeypatch.setenv("OPENAI_API_KEY", "unused-fake-value")
     client = TestClient(create_app(lambda: {"database": True, "redis": True}))
     spec = client.get("/openapi.json").json()
     assert spec["info"]["version"] == "0.1.0"
-    assert all(method == "get" for path in spec["paths"].values() for method in path)
-    assert client.post("/api/v1/assets/upload").status_code == 404
+    assert "post" in spec["paths"]["/api/v1/assets/upload"]
+    assert client.post("/api/v1/assets/upload").status_code == 401
+    assert client.get("/api/v1/health/live").status_code == 200

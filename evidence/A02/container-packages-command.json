@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--entrypoint",
+    "dpkg-query",
+    "video-analyzer-backend:0.1.0",
+    "-W"
+  ],
+  "exit_code": 0
+}

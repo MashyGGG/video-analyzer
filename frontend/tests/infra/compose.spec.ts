@@ -37,6 +37,28 @@ test("real browser -> Next -> FastAPI -> database/Redis, models remain unavailab
   await testInfo.attach("real-infrastructure-desktop", { body: await page.screenshot({ fullPage: true }), contentType: "image/png" });
 });
 
+test("real browser upload validates generated media and persists after reload", async ({ page }) => {
+  const { stdout } = await exec("docker", ["compose", "-p", "video-analyzer-e2e", "exec", "-T", "worker-media", "python", "-c", "import subprocess,base64,pathlib; p='/tmp/browser-a02.mp4'; subprocess.run(['ffmpeg','-y','-v','error','-f','lavfi','-i','color=c=green:s=64x64:r=5','-t','1','-c:v','mpeg4',p],check=True); print(base64.b64encode(pathlib.Path(p).read_bytes()).decode()); pathlib.Path(p).unlink()"], { cwd: root, timeout: 30_000 });
+  await page.goto("/import");
+  await page.getByLabel("我确认有权处理此视频").check();
+  await page.getByLabel("选择视频").setInputFiles({ name: "generated.mp4", mimeType: "video/mp4", buffer: Buffer.from(stdout.trim(), "base64") });
+  await page.getByRole("button", { name: "上传视频" }).click();
+  await expect.poll(async () => { await page.clock.runFor(2001); return await page.getByText("视频已校验并保存在本机。").count(); }, { timeout: 30_000 }).toBe(1);
+  await page.reload();
+  await page.clock.runFor(1);
+  await expect(page.getByText("视频已校验并保存在本机。")).toBeVisible();
+});
+
+test("real browser fake media fails with upload fallback", async ({ page }) => {
+  await page.goto("/import");
+  await page.getByLabel("我确认有权处理此视频").check();
+  await page.getByLabel("选择视频").setInputFiles({ name: "fake.mp4", mimeType: "video/mp4", buffer: Buffer.from("<html>fake</html>") });
+  await page.getByRole("button", { name: "上传视频" }).click();
+  await expect.poll(async () => { await page.clock.runFor(2001); return await page.getByRole("alert", { name: "采集错误" }).count(); }, { timeout: 30_000 }).toBe(1);
+  await expect(page.getByRole("alert", { name: "采集错误" })).toContainText("MEDIA_INVALID");
+  await expect(page.getByRole("alert", { name: "采集错误" })).toContainText("请上传");
+});
+
 for (const service of ["postgres", "redis", "api"] as const) {
   test(`actual ${service} outage appears in browser and recovers on polling`, async ({ page, request }, testInfo) => {
     await page.goto("/");

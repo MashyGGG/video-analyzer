@@ -1,10 +1,10 @@
 # Video Analyzer
 
-本地视频拆解与复刻系统。目前完成 A00 审计与 A01 基础设施；**尚未实现上传、下载、视频分析或脚本生成**。完整需求见 [PROJECT_SPEC](docs/PROJECT_SPEC.md)，底座决策见 [ADR-002](docs/decisions/ADR-002-A01-foundation-acceptance.md)。不使用 Vercel 或第三方付费模型 API。
+本地视频拆解与复刻系统。已有 A00 审计、A01 基础设施与 A02 视频上传/采集实现；平台真实成功下载需授权样例单独验收，**视频分析和脚本生成尚未实现**。完整需求见 [PROJECT_SPEC](docs/PROJECT_SPEC.md)，底座决策见 [ADR-002](docs/decisions/ADR-002-A01-foundation-acceptance.md)。不使用 Vercel 或第三方付费模型 API。
 
 ## 启动
 
-需要 Docker Engine + Compose v2.30+（建议当前受支持版本）、Python 3.12+；首次构建需要访问 Docker Hub、PyPI、npm。推荐 Ubuntu；开发验证环境为 Windows 11 + Docker Desktop 的 Linux 容器。CPU 基础服务不需要 NVIDIA GPU。
+需要 Docker Engine + Compose v2.30+（建议当前受支持版本）、Python 3.12+；首次构建需要访问 Docker Hub、PyPI、npm 和 Debian 包源。推荐 Ubuntu；开发验证环境为 Windows 11 + Docker Desktop 的 Linux 容器。CPU 基础服务与 A02 采集不需要 NVIDIA GPU。
 
 ```bash
 python3 scripts/init_local.py
@@ -20,7 +20,7 @@ PowerShell 使用 `python` 替换 `python3`；无需修改命令中的 Compose �
 - 就绪：`GET /api/v1/health/ready`，真实检查 PostgreSQL、迁移版本和 Redis。就绪为 200，不就绪为 503；`models: not_configured` 不影响 A01。
 - Worker：Compose healthcheck 用真实 Celery inspect ping；页面的 Redis 卡片只表示 Redis 连接，不代表 Worker 或模型验收通过。
 
-所有发布端口仅绑定本机。Postgres/Redis/Worker 不发布端口；前端仅连接 ingress 网络，不能直接连接内部数据层。API 连接 ingress 与内部 backend 网络，Worker/数据层仅内部网络。当前尚未提供业务认证，不要通过反向代理或修改监听地址将其公开给其他用户。正式模型与离线网络验收属于 A05/A09。
+所有发布端口仅绑定本机。Postgres/Redis/Worker 不发布端口；前端仅连接 ingress 网络，不能直接连接内部数据层。API 连接 ingress 与内部 backend 网络，Worker/数据层仅内部网络；下载器通过独立 egress 网关受控访问公网。A02 有会话能力令牌的所有权隔离，尚无完整账号登录，不要直接公开到互联网。正式模型与离线网络验收属于 A05/A09。
 
 ## 数据与凭据
 
@@ -37,7 +37,7 @@ docker compose stop
 docker compose start
 ```
 
-迁移服务成功后 API/Worker 才启动。正常升级：先按 [迁移运行手册](docs/runbooks/A01-infrastructure.md)备份，再运行 `docker compose run --rm migrate`。初始迁移创建 installation 标识，不创建后续业务表，不调用 `create_all`。
+迁移服务成功后 API/Worker 才启动。正常升级：先按 [迁移运行手册](docs/runbooks/A01-infrastructure.md)备份，再运行 `docker compose run --rm migrate`。0001 创建 installation，0002 新增 acquisition；A02 降级/恢复按 [采集手册](docs/runbooks/A02-acquisition.md)执行，不调用 `create_all`。
 
 ## 开发与验证
 
@@ -66,9 +66,9 @@ cd ..
 python3 scripts/verify_a01_e2e.py
 ```
 
-`verify` 顺序执行 lint、TypeScript、生产构建、Chromium 桌面/移动视口 E2E 和 Next 健康代理合同测试。使用独立的 17800/17801 端口，并拒绝复用未知服务。Ubuntu 首次安装浏览器可用 `npx playwright install --with-deps chromium`。测试输出位于被忽略的 `.artifacts/playwright/`，HTML 报告可用 `npx playwright show-report ../.artifacts/playwright/functional-report`（frontend 目录）。失败保留截图与 trace；重跑会替换原始报告，重要失败请先保存并脱敏。
+`verify` 顺序执行 lint、TypeScript、生产构建、Chromium 桌面/移动视口 E2E 和 Next 健康/采集代理合同测试（当前72项）。使用独立的 17800/17801 端口，并拒绝复用未知服务。Ubuntu 首次安装浏览器可用 `npx playwright install --with-deps chromium`。测试输出位于被忽略的 `.artifacts/playwright/`，HTML 报告可用 `npx playwright show-report ../.artifacts/playwright/functional-report`（frontend 目录）。失败保留截图与 trace；重跑会替换原始报告，重要失败请先保存并脱敏。
 
-`verify_a01_e2e.py` 创建独立 `video-analyzer-e2e` Compose 项目，使用 17810/17811 端口、独立命名卷，执行原有 25 项基础设施验收和真实浏览器故障恢复测试。会停止本次测试实例的服务；不会停止日常 3100/8000 实例。结束后清理测试容器/网络，保留卷；逐次证据保存在 `evidence/A01-e2e/runs/<UTC时间>/`，已有项目容器时拒绝抢占。证据/截图要在提交前检查，不提交 Cookie、客户素材或模型权重。
+`verify_a01_e2e.py` 创建独立 `video-analyzer-e2e` Compose 项目，使用 17810/17811 端口、独立命名卷，执行原有25项基础设施、新增26项 A02 采集/隔离验收和7项真实浏览器测试。会停止本次测试实例的服务；不会停止日常3100/8000实例。结束后清理测试容器/网络，保留卷；默认逐次证据保存在 `evidence/A01-e2e/runs/<UTC时间>/`，A02 使用 `--output-dir evidence/A02/<新的独立目录>`。已有项目容器时拒绝抢占。证据/截图要在提交前检查，不提交 Cookie、客户素材或模型权重。
 
 GitHub Actions 的 `Frontend and A01 E2E` 在 push/PR 时运行相同门禁。未配置远端分支保护时，workflow 本身不能阻止有直接写权限的人跳过本地测试；应将 `frontend-e2e` 设置为 required check。CI 是否实际通过以对应 run 为准。场景覆盖及本次复验集中记录在 [A01 E2E 验收报告](docs/audit/A01-e2e-acceptance.md)，不宣称 100% 代码行覆盖率或真实模型通过。
 
@@ -93,4 +93,10 @@ docker compose -f compose.yaml -f compose.gpu.yaml --profile gpu-check run --rm 
 
 ## 阶段记录
 
-[A00 基线](docs/audit/baseline.md)保留原始审计状态；后续 Go 决策另存 ADR-002，不改写历史证据。[A01 计划](docs/plans/A01.md)在实现前写入，[A01 验收](docs/audit/A01-acceptance.md)记录实际结果和限制。下一任务为 A02，需单独授权开始。
+[A00 基线](docs/audit/baseline.md)保留原始审计状态；后续 Go 决策另存 ADR-002，不改写历史证据。[A01 计划](docs/plans/A01.md)在实现前写入，[A01 验收](docs/audit/A01-acceptance.md)记录实际结果和限制。
+
+## A02 视频采集
+
+本地前端默认 **http://127.0.0.1:3100**，从首页“导入视频”进入上传/链接采集。上传 MP4/MOV 经真实格式与视频解码校验后缓存；平台限制会显示明确错误并回退上传。抖音优先，TikTok/B站/YouTube 为条件接入，真实平台成功需要单独授权样例验收；本卡不提供视频分析/切镜。
+
+运行、API、平台范围、安全限制、迁移/恢复与验收命令见 [A02 采集手册](docs/runbooks/A02-acquisition.md)，集中验收见 [A02 报告](docs/audit/A02-acceptance.md)。

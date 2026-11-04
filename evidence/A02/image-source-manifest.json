@@ -1,0 +1,27 @@
+{
+  "exit_code": 0,
+  "image_source_sha256": {
+    "backend/app/config.py": "e9cc25199e7e18aabe18ba04bf41cf810959e6596b07e852fb03a8e813669317",
+    "backend/app/health.py": "016a5f28d914604bf8b30c4d4f1eb82d2c35c3216ff97bb9df4c5d037ac25917",
+    "backend/app/main.py": "37670af2d50c7f3a9ddcb0a674a200f6b940f46b22e94b70106786fdf3d02a3f",
+    "backend/app/limits.py": "1d6f1e47d2a8e3351fe3cd05397b5bcdd5f692a234d637eef9862e93402b810e",
+    "backend/app/database.py": "d39db6bb5fb91894f0f783f6cfc7266bedd3fb2031b0b034451b2475edf67531",
+    "backend/app/acquisition.py": "1a976eb4a8c5fe093af14972d6ff3ef2fcb8188b2faf5ffd5ccdf76b2a25e90c",
+    "backend/app/infra_probe.py": "2a983c47807b14a43d0840b1555208a31bf94e2ff3d957af0a2f86055cb73e39",
+    "backend/app/__init__.py": "6b168cc4d5e9b87be0a54b97502cc053e2e835aa5d012e9d5cfec5a3518c2ce9",
+    "backend/app/tasks/acquire.py": "c579834dd0e246da3501009218052fea3f6baacbb1c3f11d0b7279fa5429b933",
+    "backend/app/tasks/__init__.py": "ff4cca8e14341d0692fa48ddc5fa9057583534545af349e8d6e944505b550f97",
+    "backend/app/tasks/worker.py": "370eb2df88684a347381537c4963b3c283680c6cf700d870f8570635a129b168",
+    "backend/app/services/sources/cleanup.py": "0e615073422ddd840b0146f43e19b864c9ad154e98978b1b6ef76543831fa673",
+    "backend/app/services/sources/download_cli.py": "3cd3d9fe2dbb5b6c1bf776363e7df41a64f7199c3ccf006e22d6a2ed4166947e",
+    "backend/app/services/sources/adapters.py": "b793bc31bbc640832083b42f60483ddccb9a27ed910b1df8e9648c33a6911273",
+    "backend/app/services/sources/egress.py": "84b4b43870af5c926348706e8619c4ac9b7d0c4edc02e1c293f5891a478f492f",
+    "backend/app/services/sources/media.py": "953b7925e0b5379364958554b30ce68f1db6380ea79fbe0492ce47cd386ae68f",
+    "backend/app/services/sources/__init__.py": "3f2b5d143cda37183b1b97b26fbd0f876a0b4ef681cc11ba6f038c409c0dec12",
+    "backend/app/services/sources/security.py": "50552f940b46eefcb2ed394de322c2c41c2682e80f71207cb55e8874acb953c5",
+    "backend/migrations/env.py": "996214beb57a6dcfeccd1cf0237ef27739ce731127c8c278451f3cd478f57303",
+    "backend/migrations/versions/0001_installation.py": "197ac863789e6d087c79638c382068bc8cf4eba011cb7c725de11fc656bb2f5e",
+    "backend/migrations/versions/0002_acquisition.py": "9902acbec6ef919a34263047604cc2d72682ce0f30d31d5f208acf309d8baff1"
+  },
+  "mismatches": []
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "A01 real CPU infrastructure and browser acceptance; no health mocks, media or models",
+  "compose_project": "video-analyzer-e2e",
+  "started_at_utc": "2026-11-04T08:06:36.474361+00:00",
+  "status": "FAIL",
+  "browser_counts": {
+    "expected": 7,
+    "unexpected": 0,
+    "flaky": 0,
+    "skipped": 0
+  },
+  "error": "RuntimeError: Command failed: <user>\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe scripts/doctor.py --services --compose-project video-analyzer-e2e --api-port 17811 --web-port 17810"
+}

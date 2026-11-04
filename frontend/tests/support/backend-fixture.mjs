@@ -17,7 +17,8 @@ const server = http.createServer(async (request, response) => {
     catch { response.writeHead(400).end(); }
     return;
   }
-  if (request.url !== "/api/v1/health/ready") { response.writeHead(404).end(); return; }
+  if (request.url !== "/api/v1/health/ready" && !request.url.startsWith("/api/v1/assets/") && !request.url.startsWith("/api/v1/acquisition/")) { response.writeHead(404).end(); return; }
+  if (request.method === "POST") for await (const chunk of request) { void chunk; }
   const current = { ...scenario };
   if (current.disconnect) { request.socket.destroy(); return; }
   if (current.delay) await new Promise(resolve => setTimeout(resolve, current.delay));

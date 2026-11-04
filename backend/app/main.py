@@ -3,10 +3,15 @@ from collections.abc import AsyncIterator, Callable
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
+from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
+from sqlalchemy.exc import SQLAlchemyError
 
+from app.acquisition import ErrorBody, error_response, router
 from app.health import check_dependencies
+from app.limits import AcquisitionLimits
+from app.services.sources.security import SourceError
 
 
 class Readiness(BaseModel):
@@ -23,6 +28,17 @@ def create_app(checker: Callable[[], dict[str, bool]] = check_dependencies) -> F
         yield
 
     application = FastAPI(title="Video-analyzer", version="0.1.0", lifespan=lifespan)
+    application.include_router(router)
+    application.add_middleware(AcquisitionLimits)
+    application.add_exception_handler(SourceError, error_response)
+
+    @application.exception_handler(RequestValidationError)
+    async def invalid_request(request: object, error: RequestValidationError) -> JSONResponse:
+        return JSONResponse(ErrorBody(code="REQUEST_INVALID").model_dump(), status_code=422)
+
+    @application.exception_handler(SQLAlchemyError)
+    async def storage_error(request: object, error: SQLAlchemyError) -> JSONResponse:
+        return JSONResponse(ErrorBody(code="STORAGE_UNAVAILABLE").model_dump(), status_code=503)
 
     @application.get("/api/v1/health/live")
     def live() -> dict[str, str]:

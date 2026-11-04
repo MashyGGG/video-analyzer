@@ -38,11 +38,11 @@ def test_frontend_exact_versions_match_lock():
 
 def test_readiness_schema_revision_matches_only_migration_head():
     files = list((ROOT / "backend/migrations/versions").glob("*.py"))
-    assert len(files) == 1
+    assert len(files) == 2
     assignments = {
         node.targets[0].id: ast.literal_eval(node.value)
-        for node in ast.parse(files[0].read_text()).body
+        for node in ast.parse(next(p for p in files if p.name.startswith("0002")).read_text()).body
         if isinstance(node, ast.Assign)
     }
     assert assignments["revision"] == SCHEMA_REVISION
-    assert assignments["down_revision"] is None
+    assert assignments["down_revision"] == "0001_installation"

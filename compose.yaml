@@ -132,7 +132,46 @@ services:
     restart: unless-stopped
     logging: *logging
 
+  worker-download:
+    <<: *app
+    command: [celery, -A, app.tasks.worker:celery_app, worker, -Q, download, --loglevel=WARNING, --concurrency=1, --hostname=download@worker]
+    volumes: [work_data:/data]
+    networks: [backend, acquisition]
+    mem_limit: 768m
+    ulimits:
+      fsize: {soft: 230686720, hard: 230686720}
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+      egress: {condition: service_started}
+    restart: unless-stopped
+
+  worker-media:
+    <<: *app
+    command: [celery, -A, app.tasks.worker:celery_app, worker, -Q, media, --loglevel=WARNING, --concurrency=1, --hostname=media@worker]
+    volumes: [work_data:/data]
+    mem_limit: 1024m
+    ulimits:
+      fsize: {soft: 230686720, hard: 230686720}
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+    restart: unless-stopped
+
+  egress:
+    <<: *app
+    command: [python, -m, app.services.sources.egress]
+    secrets: []
+    networks: [acquisition, outbound]
+    mem_limit: 128m
+    pids_limit: 32
+    dns_opt: ["timeout:2", "attempts:1"]
+    restart: unless-stopped
+
 networks:
+  acquisition: {internal: true}
+  outbound:
+    driver: bridge
   backend: {internal: true}
   ingress:
     driver: bridge
