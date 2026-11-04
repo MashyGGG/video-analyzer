@@ -1,25 +1,37 @@
 "use client";
 import { useEffect, useState } from "react";
-
-type Health = {status: string; api_available: boolean; dependencies: {database: boolean; redis: boolean}; models: string};
+import { parseBrowserHealth, unavailableHealth, type Health } from "../lib/health";
 
 export default function StatusPanel() {
   const [health, setHealth] = useState<Health | null>(null);
   const [checked, setChecked] = useState(false);
   useEffect(() => {
-    const controller = new AbortController();
+    let disposed = false;
+    let inFlight = false;
+    let controller: AbortController | null = null;
     async function refresh() {
+      if (disposed || inFlight) return;
+      inFlight = true;
+      const requestController = new AbortController();
+      controller = requestController;
+      const timeout = setTimeout(() => requestController.abort(), 8000);
       try {
-        const response = await fetch("/api/health", {cache: "no-store", signal: controller.signal});
+        const response = await fetch("/api/health", {cache: "no-store", signal: requestController.signal});
         const data = await response.json();
-        if (!controller.signal.aborted) setHealth(data);
+        if (requestController.signal.aborted) throw new Error("Health request timed out");
+        if (!disposed) setHealth(parseBrowserHealth(data, response.status) ?? unavailableHealth);
       } catch {
-        if (!controller.signal.aborted) setHealth(null);
-      } finally { if (!controller.signal.aborted) setChecked(true); }
+        if (!disposed) setHealth(unavailableHealth);
+      } finally {
+        clearTimeout(timeout);
+        inFlight = false;
+        controller = null;
+        if (!disposed) setChecked(true);
+      }
     }
     void refresh();
     const timer = setInterval(() => void refresh(), 15000);
-    return () => {controller.abort(); clearInterval(timer);};
+    return () => {disposed = true; clearInterval(timer); controller?.abort();};
   }, []);
   const ready = health?.status === "ready";
   const items = [

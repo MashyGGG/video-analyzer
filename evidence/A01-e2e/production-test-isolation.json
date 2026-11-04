@@ -1,0 +1,22 @@
+{
+  "started_at_utc": "2026-11-04T07:11:55.501417+00:00",
+  "duration_seconds": 0.74,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "compose",
+    "-p",
+    "video-analyzer",
+    "exec",
+    "-T",
+    "frontend",
+    "node",
+    "-e",
+    "let found=false; try {require.resolve(\"@playwright/test\");found=true;} catch {} if(found)process.exit(1); console.log(\"No Playwright test runtime in production standalone image\")"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "No Playwright test runtime in production standalone image\n",
+  "stderr": ""
+}

@@ -1,0 +1,26 @@
+{
+  "created_at_utc": "2026-11-04T07:14:16.768934+00:00",
+  "scope": "Evidence integrity and sanitized staged deliverables; independent from product/model/release acceptance",
+  "checks": {
+    "no_secrets": true,
+    "no_forbidden_assets": true,
+    "functional_42_no_fail_skip_flaky": true,
+    "real_browser_4_no_fail_skip_flaky": true,
+    "infrastructure_25_0_0": true,
+    "real_run_PASS": true,
+    "backend_21_passed": true,
+    "frontend_full_gate_exit0": true,
+    "negative_policy_blocks_bypass": true,
+    "license_notice_hashes": true,
+    "local_links_exist": true,
+    "no_historical_evidence_changed": true,
+    "production_no_playwright": true,
+    "durable_frontend_rule": true
+  },
+  "passed": 14,
+  "failed": 0,
+  "credential_findings": [],
+  "forbidden_files": [],
+  "notice_hash_errors": [],
+  "broken_links": []
+}

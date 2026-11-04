@@ -18,8 +18,10 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--api-port", type=int, default=8000)
     parser.add_argument("--web-port", type=int, default=3000)
+    parser.add_argument("--compose-project", default=None)
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "evidence/A01")
     args = parser.parse_args()
-    evidence = ROOT / "evidence/A01"
+    evidence = args.output_dir.resolve()
     evidence.mkdir(parents=True, exist_ok=True)
     records, checks = [], []
     env = os.environ.copy()
@@ -62,7 +64,8 @@ def main() -> int:
         return result.stdout
 
     def compose(*argv: str, timeout: int = 90) -> str:
-        return run(["docker", "compose", *argv], timeout)
+        project = ["-p", args.compose_project] if args.compose_project else []
+        return run(["docker", "compose", *project, *argv], timeout)
 
     def probe(action: str, token: str = "") -> dict:
         argv = ["exec", "-T", "api", "python", "-m", "app.infra_probe", action]

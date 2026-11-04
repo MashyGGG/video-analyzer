@@ -1,0 +1,20 @@
+[
+  {
+    "name": "actions/checkout",
+    "tag": "v7.0.1",
+    "commit": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "source": "https://github.com/actions/checkout/releases/tag/v7.0.1"
+  },
+  {
+    "name": "actions/setup-node",
+    "tag": "v7.1.0",
+    "commit": "949feb2413d6458794dcd2491c4babbbce0c15c1",
+    "source": "https://github.com/actions/setup-node/releases/tag/v7.1.0"
+  },
+  {
+    "name": "actions/upload-artifact",
+    "tag": "v7.0.2",
+    "commit": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+    "source": "https://github.com/actions/upload-artifact/releases/tag/v7.0.2"
+  }
+]

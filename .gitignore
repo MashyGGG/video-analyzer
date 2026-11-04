@@ -22,3 +22,8 @@ node_modules/
 *.tsbuildinfo
 .coverage
 htmlcov/
+
+# Browser outputs may contain page/network data; only reviewed evidence is committed.
+.artifacts/
+playwright-report/
+test-results/

@@ -1,0 +1,56 @@
+[
+  {
+    "package": "node_modules/@playwright/test",
+    "version": "1.64.1",
+    "license": "Apache-2.0",
+    "file": "evidence/A01-e2e/dependencies/@playwright__test__LICENSE",
+    "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+    "resolved": "https://registry.npmjs.org/@playwright/test/-/test-1.64.1.tgz",
+    "integrity": "sha512-IaYGml/nSOiZWROfPtuIL7neuu9qDOZ3TNvNljUIrhDMxiGTgPjzj/g9p9RxpS2tSepPDRY+UwAaEeiKtUvIAg=="
+  },
+  {
+    "package": "node_modules/@playwright/test",
+    "version": "1.64.1",
+    "license": "Apache-2.0",
+    "file": "evidence/A01-e2e/dependencies/@playwright__test__NOTICE",
+    "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d",
+    "resolved": "https://registry.npmjs.org/@playwright/test/-/test-1.64.1.tgz",
+    "integrity": "sha512-IaYGml/nSOiZWROfPtuIL7neuu9qDOZ3TNvNljUIrhDMxiGTgPjzj/g9p9RxpS2tSepPDRY+UwAaEeiKtUvIAg=="
+  },
+  {
+    "package": "node_modules/playwright",
+    "version": "1.64.1",
+    "license": "Apache-2.0",
+    "file": "evidence/A01-e2e/dependencies/playwright__LICENSE",
+    "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+    "resolved": "https://registry.npmjs.org/playwright/-/playwright-1.64.1.tgz",
+    "integrity": "sha512-HCrVhHr5QQuwYoswEUGTb7gGp522yflbv/ST8nF4sFWGuLjQCt17Q/EubpGGSNKYn1tsTCPZxqHhHCfVURu7UA=="
+  },
+  {
+    "package": "node_modules/playwright",
+    "version": "1.64.1",
+    "license": "Apache-2.0",
+    "file": "evidence/A01-e2e/dependencies/playwright__NOTICE",
+    "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d",
+    "resolved": "https://registry.npmjs.org/playwright/-/playwright-1.64.1.tgz",
+    "integrity": "sha512-HCrVhHr5QQuwYoswEUGTb7gGp522yflbv/ST8nF4sFWGuLjQCt17Q/EubpGGSNKYn1tsTCPZxqHhHCfVURu7UA=="
+  },
+  {
+    "package": "node_modules/playwright-core",
+    "version": "1.64.1",
+    "license": "Apache-2.0",
+    "file": "evidence/A01-e2e/dependencies/playwright-core__LICENSE",
+    "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+    "resolved": "https://registry.npmjs.org/playwright-core/-/playwright-core-1.64.1.tgz",
+    "integrity": "sha512-BC4s8y6SEVA6Q1rSxZTto8hI1KUI3xXlHGZgvGqP4IqPdI/a6FX9H29IDNz7vKo9l21b6LfYosScPL6M3xxyDQ=="
+  },
+  {
+    "package": "node_modules/playwright-core",
+    "version": "1.64.1",
+    "license": "Apache-2.0",
+    "file": "evidence/A01-e2e/dependencies/playwright-core__NOTICE",
+    "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d",
+    "resolved": "https://registry.npmjs.org/playwright-core/-/playwright-core-1.64.1.tgz",
+    "integrity": "sha512-BC4s8y6SEVA6Q1rSxZTto8hI1KUI3xXlHGZgvGqP4IqPdI/a6FX9H29IDNz7vKo9l21b6LfYosScPL6M3xxyDQ=="
+  }
+]

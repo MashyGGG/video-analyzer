@@ -1,0 +1,16 @@
+{
+  "started_at_utc": "2026-11-04T07:11:53.776589+00:00",
+  "scope": "Intentional lint policy negative probe via stdin; no source files modified",
+  "argv": [
+    "npx.cmd",
+    "eslint",
+    "--stdin",
+    "--stdin-filename",
+    "tests/e2e/policy-probe.ts"
+  ],
+  "exit_code": 1,
+  "expected_exit_code": 1,
+  "policy_blocks_skip_only_fixed_sleep": true,
+  "stdout": "\n<workspace>\\frontend\\tests\\e2e\\policy-probe.ts\n  2:1   error  E2E must not be skipped, focused, or marked fixme                               no-restricted-syntax\n  2:49  error  Use web-first assertions, polling, or Playwright Clock instead of fixed sleeps  no-restricted-syntax\n  3:1   error  E2E must not be skipped, focused, or marked fixme                               no-restricted-syntax\n\n\u2716 3 problems (3 errors, 0 warnings)\n\n",
+  "stderr": ""
+}

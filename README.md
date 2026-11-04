@@ -56,11 +56,29 @@ npm run typecheck
 npm run build
 ```
 
-真实基础设施验收（会短暂停止和重建本项目容器；仅在独立开发/验收实例执行）：
+前端每次更新都必须补充/调整对应的成功与失败用例，并执行以下统一门禁；具体要求已写入 AGENTS.md：
+
+```bash
+cd frontend
+npx playwright install chromium
+npm run verify
+cd ..
+python3 scripts/verify_a01_e2e.py
+```
+
+`verify` 顺序执行 lint、TypeScript、生产构建、Chromium 桌面/移动视口 E2E 和 Next 健康代理合同测试。使用独立的 17800/17801 端口，并拒绝复用未知服务。Ubuntu 首次安装浏览器可用 `npx playwright install --with-deps chromium`。测试输出位于被忽略的 `.artifacts/playwright/`，HTML 报告可用 `npx playwright show-report ../.artifacts/playwright/functional-report`（frontend 目录）。失败保留截图与 trace；重跑会替换原始报告，重要失败请先保存并脱敏。
+
+`verify_a01_e2e.py` 创建独立 `video-analyzer-e2e` Compose 项目，使用 17810/17811 端口、独立命名卷，执行原有 25 项基础设施验收和真实浏览器故障恢复测试。会停止本次测试实例的服务；不会停止日常 3000/8000 实例。结束后清理测试容器/网络，保留卷；逐次证据保存在 `evidence/A01-e2e/runs/<UTC时间>/`，已有项目容器时拒绝抢占。证据/截图要在提交前检查，不提交 Cookie、客户素材或模型权重。
+
+GitHub Actions 的 `Frontend and A01 E2E` 在 push/PR 时运行相同门禁。未配置远端分支保护时，workflow 本身不能阻止有直接写权限的人跳过本地测试；应将 `frontend-e2e` 设置为 required check。CI 是否实际通过以对应 run 为准。场景覆盖及本次复验集中记录在 [A01 E2E 验收报告](docs/audit/A01-e2e-acceptance.md)，不宣称 100% 代码行覆盖率或真实模型通过。
+
+原始基础设施验收也保留兼容入口（会短暂停止和重建所选项目容器；仅在独立开发/验收实例执行）：
 
 ```bash
 python3 scripts/acceptance_a01.py
 ```
+
+可使用 `--compose-project <项目名> --api-port <端口> --web-port <端口> --output-dir <新证据目录>` 避免覆盖历史记录。日常复验优先使用上面的隔离脚本。
 
 脚本验证真实 Celery 往返、单独临时数据库中的迁移降级/重放、重建后的三类持久化、数据层断开后的 503 与恢复。不会删除持久卷；只删除本次生成的探针和 `a01_accept_<随机 UUID>` 临时数据库。报告写入 `evidence/A01/acceptance.json`。不能把这些基础设施结果当成视频/模型验收。
 

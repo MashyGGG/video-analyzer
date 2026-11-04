@@ -1,0 +1,17 @@
+{
+  "started_at_utc": "2026-11-04T07:09:15.236487+00:00",
+  "duration_seconds": 4.24,
+  "cwd": "<workspace>",
+  "argv": [
+    "python",
+    "scripts/doctor.py",
+    "--services",
+    "--compose-project",
+    "video-analyzer"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\n  \"host\": {\n    \"os\": \"Windows\",\n    \"release\": \"11\",\n    \"architecture\": \"AMD64\",\n    \"python\": \"3.14.6\"\n  },\n  \"checks\": [\n    {\n      \"name\": \"docker\",\n      \"status\": \"PASS\",\n      \"detail\": \"29.9.1\"\n    },\n    {\n      \"name\": \"compose\",\n      \"status\": \"PASS\",\n      \"detail\": \"5.6.0\"\n    },\n    {\n      \"name\": \"compose_config\",\n      \"status\": \"PASS\",\n      \"detail\": \"6 base services\"\n    },\n    {\n      \"name\": \"local_secrets\",\n      \"status\": \"PASS\",\n      \"detail\": \"Present and valid; values hidden\"\n    },\n    {\n      \"name\": \"nvidia_gpu\",\n      \"status\": \"BLOCKED\",\n      \"detail\": \"No NVIDIA GPU/driver evidence; CPU services may run\"\n    },\n    {\n      \"name\": \"api\",\n      \"status\": \"PASS\",\n      \"detail\": \"HTTP ready\"\n    },\n    {\n      \"name\": \"frontend\",\n      \"status\": \"PASS\",\n      \"detail\": \"HTTP ready\"\n    },\n    {\n      \"name\": \"worker\",\n      \"status\": \"PASS\",\n      \"detail\": \"Celery inspect ping healthcheck\"\n    }\n  ],\n  \"gpu_inference_tested\": false,\n  \"base_status\": \"PASS\"\n}\n",
+  "stderr": ""
+}

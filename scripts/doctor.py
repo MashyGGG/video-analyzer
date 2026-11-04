@@ -33,7 +33,9 @@ def main() -> int:
     parser.add_argument("--services", action="store_true")
     parser.add_argument("--api-port", type=int, default=8000)
     parser.add_argument("--web-port", type=int, default=3000)
+    parser.add_argument("--compose-project", default=None)
     args = parser.parse_args()
+    compose = ["docker", "compose"] + (["-p", args.compose_project] if args.compose_project else [])
     checks = []
 
     def add(name: str, status: str, detail: str) -> None:
@@ -49,7 +51,7 @@ def main() -> int:
             "PASS" if code == 0 else "FAIL",
             output if code == 0 else "Tool/daemon unavailable",
         )
-    code, output = command(["docker", "compose", "config", "--format", "json"])
+    code, output = command([*compose, "config", "--format", "json"])
     try:
         config = json.loads(output) if code == 0 else {}
         valid = len(config["services"]) == 6
@@ -107,7 +109,7 @@ def main() -> int:
                 "PASS" if success else "FAIL",
                 "HTTP ready" if success else "Unavailable",
             )
-        code, output = command(["docker", "compose", "ps", "--all", "--format", "json"])
+        code, output = command([*compose, "ps", "--all", "--format", "json"])
         try:
             rows = [json.loads(line) for line in output.splitlines() if line.strip()]
             worker = next(row for row in rows if row["Service"] == "worker")
