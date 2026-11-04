@@ -1,0 +1,13 @@
+{
+  "started_at_utc": "2026-11-04T04:17:52.858908+00:00",
+  "duration_seconds": 0.005,
+  "cwd": "<workspace>",
+  "argv": [
+    "nvidia-smi"
+  ],
+  "exit_code": 127,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": "[WinError 2] The system cannot find the file specified"
+}

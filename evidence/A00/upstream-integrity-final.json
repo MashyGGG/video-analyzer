@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-11-04T04:26:56.424865+00:00",
+  "duration_seconds": 0.244,
+  "cwd": "<workspace>\\.audit-cache\\parse_video",
+  "argv": [
+    "git",
+    "status",
+    "--porcelain"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": ""
+}

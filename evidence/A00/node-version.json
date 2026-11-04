@@ -1,0 +1,14 @@
+{
+  "started_at_utc": "2026-11-04T04:17:53.735492+00:00",
+  "duration_seconds": 0.182,
+  "cwd": "<workspace>",
+  "argv": [
+    "node",
+    "--version"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "v22.23.1\n",
+  "stderr": ""
+}

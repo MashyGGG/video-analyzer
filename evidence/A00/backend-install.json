@@ -1,0 +1,18 @@
+{
+  "started_at_utc": "2026-11-04T04:19:41.154920+00:00",
+  "duration_seconds": 18.567,
+  "cwd": "<workspace>",
+  "argv": [
+    "uv",
+    "pip",
+    "install",
+    "--python",
+    ".audit-cache/venv/Scripts/python.exe",
+    ".audit-cache/parse_video/backend"
+  ],
+  "exit_code": 1,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": "Using Python 3.12.13 environment at: .audit-cache\\venv\n  × Failed to build `parse-video @\n  │ file:///<workspace>/.audit-cache/parse_video/backend`\n  ├─▶ Project `parse-video @ .audit-cache\\parse_video\\backend` has malformed\n  │   dependency groups\n  ├─▶ Failed to parse entry in group `dev`: `httpx2=2.7.0`\n  ╰─▶ no such comparison operator \"=\", must be one of ~= == != <= >= < > ===\n      httpx2=2.7.0\n            ^^^^^^\n"
+}

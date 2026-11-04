@@ -1,0 +1,14 @@
+{
+  "started_at_utc": "2026-11-04T04:40:52.961248+00:00",
+  "duration_seconds": 1.347,
+  "cwd": "<workspace>",
+  "argv": [
+    "python",
+    "scripts/audit/validate_a00.py"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\n  \"scope\": \"A00 deliverable integrity only; not upstream, model, platform, or product acceptance\",\n  \"checks\": [\n    {\n      \"name\": \"three_requested_deliverables\",\n      \"status\": \"PASS\",\n      \"details\": \"\"\n    },\n    {\n      \"name\": \"plan_and_reproduction_entrypoints\",\n      \"status\": \"PASS\",\n      \"details\": \"\"\n    },\n    {\n      \"name\": \"pinned_upstream_revision\",\n      \"status\": \"PASS\",\n      \"details\": \"\"\n    },\n    {\n      \"name\": \"upstream_worktree_unchanged\",\n      \"status\": \"PASS\",\n      \"details\": \"\"\n    },\n    {\n      \"name\": \"tracked_source_hashes\",\n      \"status\": \"PASS\",\n      \"details\": \"176 files; mismatches: []\"\n    },\n    {\n      \"name\": \"license_csv_parses_and_has_provenance\",\n      \"status\": \"PASS\",\n      \"details\": \"563 entries\"\n    },\n    {\n      \"name\": \"all_direct_backend_declarations_listed\",\n      \"status\": \"PASS\",\n      \"details\": \"\"\n    },\n    {\n      \"name\": \"frontend_lock_entries_covered\",\n      \"status\": \"PASS\",\n      \"details\": \"\"\n    },\n    {\n      \"name\": \"candidate_revisions_are_exact\",\n      \"status\": \"PASS\",\n      \"details\": \"\"\n    },\n    {\n      \"name\": \"models_not_misrepresented_as_tested\",\n      \"status\": \"PASS\",\n      \"details\": \"\"\n    },\n    {\n      \"name\": \"public_license_and_card_hashes\",\n      \"status\": \"PASS\",\n      \"details\": \"[]\"\n    },\n    {\n      \"name\": \"source_line_and_local_link_targets_exist\",\n      \"status\": \"PASS\",\n      \"details\": \"[]\"\n    },\n    {\n      \"name\": \"negative_probe_counts_preserved\",\n      \"status\": \"PASS\",\n      \"details\": \"\"\n    },\n    {\n      \"name\": \"original_pytest_blocker_preserved\",\n      \"status\": \"PASS\",\n      \"details\": \"\"\n    },\n    {\n      \"name\": \"reported_command_exit_codes_match\",\n      \"status\": \"PASS\",\n      \"details\": \"\"\n    },\n    {\n      \"name\": \"no_private_media_weights_or_secret_files\",\n      \"status\": \"PASS\",\n      \"details\": \"[]\"\n    },\n    {\n      \"name\": \"temporary_local_credentials_not_in_deliverables\",\n      \"status\": \"PASS\",\n      \"details\": \"[]\"\n    },\n    {\n      \"name\": \"audit_python_syntax\",\n      \"status\": \"PASS\",\n      \"details\": \"[]\"\n    },\n    {\n      \"name\": \"unmet_gates_and_unapproved_decision_explicit\",\n      \"status\": \"PASS\",\n      \"details\": \"\"\n    }\n  ],\n  \"passed\": 19,\n  \"failed\": 0,\n  \"skipped\": 0\n}\n",
+  "stderr": ""
+}

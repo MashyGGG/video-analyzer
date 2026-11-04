@@ -1,0 +1,31 @@
+{
+  "kind": "model",
+  "repository": "funasr/paraformer-zh",
+  "observed_at_utc": "2026-11-04T04:19:55.234138+00:00",
+  "weights_downloaded": false,
+  "inference_tested": false,
+  "revision": "d7811ee3ac581fbcfdeb37c98c6ba674028433dc",
+  "card_license": "apache-2.0",
+  "card_license_link": null,
+  "gated": false,
+  "files": [
+    {
+      "url": "https://huggingface.co/funasr/paraformer-zh/resolve/d7811ee3ac581fbcfdeb37c98c6ba674028433dc/README.md",
+      "file": "evidence/A00/sources/funasr__paraformer-zh/README.md",
+      "sha256": "513555aa084cc8a00e7bf1c916e659dfa9f70166ce6aaf6fe281c537bd6f1053"
+    }
+  ],
+  "repository_files": [
+    ".gitattributes",
+    "README.md",
+    "am.mvn",
+    "config.yaml",
+    "configuration.json",
+    "example/asr_example.wav",
+    "fig/struct.png",
+    "model.pt",
+    "seg_dict",
+    "tokens.json"
+  ],
+  "status": "FETCHED"
+}

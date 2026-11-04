@@ -1,0 +1,37 @@
+{
+  "kind": "source",
+  "repository": "Breakthrough/PySceneDetect",
+  "observed_at_utc": "2026-11-04T04:19:41.320950+00:00",
+  "revision": "c5ce29c73751e77139e838bd9ce9ab66a8e71a23",
+  "root_entries": [
+    ".dockerignore",
+    ".github",
+    ".gitignore",
+    "CITATION.cff",
+    "Dockerfile",
+    "LICENSE",
+    "MANIFEST.in",
+    "README.md",
+    "RELEASE-PLAN.md",
+    "THIRD-PARTY.md",
+    "appveyor.yml",
+    "benchmark",
+    "dist",
+    "docs",
+    "packaging",
+    "pyproject.toml",
+    "scenedetect.cfg",
+    "scenedetect",
+    "scripts",
+    "tests",
+    "website"
+  ],
+  "license_files": [
+    {
+      "url": "https://raw.githubusercontent.com/Breakthrough/PySceneDetect/c5ce29c73751e77139e838bd9ce9ab66a8e71a23/LICENSE",
+      "file": "evidence/A00/sources/Breakthrough__PySceneDetect/LICENSE",
+      "sha256": "e855ca89e457a7d0b6b7c92ad475d1120a9a5b5bf4e5048c706b1b3889fbc349"
+    }
+  ],
+  "status": "FETCHED"
+}

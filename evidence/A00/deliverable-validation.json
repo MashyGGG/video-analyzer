@@ -1,0 +1,103 @@
+{
+  "scope": "A00 deliverable integrity only; not upstream, model, platform, or product acceptance",
+  "checks": [
+    {
+      "name": "three_requested_deliverables",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "plan_and_reproduction_entrypoints",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "pinned_upstream_revision",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "upstream_worktree_unchanged",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "tracked_source_hashes",
+      "status": "PASS",
+      "details": "176 files; mismatches: []"
+    },
+    {
+      "name": "license_csv_parses_and_has_provenance",
+      "status": "PASS",
+      "details": "563 entries"
+    },
+    {
+      "name": "all_direct_backend_declarations_listed",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "frontend_lock_entries_covered",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "candidate_revisions_are_exact",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "models_not_misrepresented_as_tested",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "public_license_and_card_hashes",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "source_line_and_local_link_targets_exist",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "negative_probe_counts_preserved",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "original_pytest_blocker_preserved",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "reported_command_exit_codes_match",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "no_private_media_weights_or_secret_files",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "temporary_local_credentials_not_in_deliverables",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "audit_python_syntax",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "unmet_gates_and_unapproved_decision_explicit",
+      "status": "PASS",
+      "details": ""
+    }
+  ],
+  "passed": 19,
+  "failed": 0,
+  "skipped": 0
+}

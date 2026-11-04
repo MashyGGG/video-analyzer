@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-11-04T04:24:06.821337+00:00",
+  "duration_seconds": 113.973,
+  "cwd": "<workspace>\\.audit-cache\\parse_video\\frontend",
+  "argv": [
+    "npm.cmd",
+    "run",
+    "build"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "\n> parse-video-frontend@0.1.0 build\n> next build\n\n⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache\n  ▲ Next.js 14.2.30\n\n   Creating an optimized production build ...\n ✓ Compiled successfully\n   Linting and checking validity of types ...\n   Collecting page data ...\n   Generating static pages (0/7) ...\n   Generating static pages (1/7) \n   Generating static pages (3/7) \n   Generating static pages (5/7) \n ✓ Generating static pages (7/7)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                              Size     First Load JS\n┌ ○ /                                    31.9 kB         142 kB\n├ ○ /_not-found                          873 B          88.1 kB\n├ ○ /icon.png                            0 B                0 B\n├ ○ /login                               2.44 kB         113 kB\n└ ○ /register                            2.65 kB         113 kB\n+ First Load JS shared by all            87.2 kB\n  ├ chunks/117-a010bf15918600f9.js       31.6 kB\n  ├ chunks/fd9d1056-0a73e5988bda9cb2.js  53.6 kB\n  └ other shared chunks (total)          1.95 kB\n\n\nƒ Middleware                             26.5 kB\n\n○  (Static)  prerendered as static content\n\n",
+  "stderr": "Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:\n  npx update-browserslist-db@latest\n  Why you should do it regularly: https://github.com/browserslist/update-db#readme\nBrowserslist: caniuse-lite is outdated. Please run:\n  npx update-browserslist-db@latest\n  Why you should do it regularly: https://github.com/browserslist/update-db#readme\n"
+}

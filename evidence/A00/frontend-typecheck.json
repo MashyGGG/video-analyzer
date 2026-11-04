@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-11-04T04:24:07.729920+00:00",
+  "duration_seconds": 15.421,
+  "cwd": "<workspace>\\.audit-cache\\parse_video\\frontend",
+  "argv": [
+    "node",
+    "node_modules/typescript/bin/tsc",
+    "--noEmit"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": ""
+}

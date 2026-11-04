@@ -1,0 +1,14 @@
+# A00 upstream snapshots, environments, and local caches
+.audit-cache/
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Local secrets and non-distributable assets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+cookies*.txt
+model-weights/

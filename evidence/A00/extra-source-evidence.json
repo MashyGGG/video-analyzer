@@ -1,0 +1,1672 @@
+{
+  "rea_license_search": {
+    "url": "https://api.github.com/repos/JuneYaooo/rea-video/git/trees/1c2a51471d9f454ea6e6c77fe161204317385b8c?recursive=1",
+    "truncated": false,
+    "matches": []
+  },
+  "rea_pyproject.toml": {
+    "url": "https://raw.githubusercontent.com/JuneYaooo/rea-video/1c2a51471d9f454ea6e6c77fe161204317385b8c/pyproject.toml",
+    "sha256": "25260d835ae69260bec84b5e9e8c2589ba366d284b3be1f31709ebad06b1a6f1",
+    "licensing_lines": [
+      {
+        "line": 11,
+        "text": "license = { text = \"MIT\" }"
+      }
+    ]
+  },
+  "rea_README.md": {
+    "url": "https://raw.githubusercontent.com/JuneYaooo/rea-video/1c2a51471d9f454ea6e6c77fe161204317385b8c/README.md",
+    "sha256": "ba1b52bc4b174f79790b50ed676cfc837cb8539bf3714d28aa6b4f3940905b7e",
+    "licensing_lines": []
+  },
+  "sdk_endpoints": [
+    {
+      "url": "https://raw.githubusercontent.com/volcengine/volcengine-python-sdk/5df619842a949fc59975cc22c84b482744280c27/volcenginesdkcore/configuration.py",
+      "sha256": "108f8f811dbd751dbef742c6194754a828ee744d4ef82536ae428f8a154ed481",
+      "lines": [
+        {
+          "line": 14,
+          "text": "from volcenginesdkcore.endpoint import DefaultEndpointProvider"
+        },
+        {
+          "line": 68,
+          "text": "self.host = None"
+        },
+        {
+          "line": 73,
+          "text": "# use dual stack endpoint rule"
+        },
+        {
+          "line": 146,
+          "text": "self.endpoint_provider = DefaultEndpointProvider()"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/volcengine/volcengine-python-sdk/5df619842a949fc59975cc22c84b482744280c27/volcenginesdkcore/endpoint/providers/default_provider.py",
+      "sha256": "6f094d4cad0dc0adfe7c86b983e95113a162479ad09db1acf93ec48d20bc3319",
+      "lines": [
+        {
+          "line": 5,
+          "text": "from volcenginesdkcore.endpoint.endpoint_provider import EndpointProvider, ResolvedEndpoint"
+        },
+        {
+          "line": 9,
+          "text": "endpoint_suffix = '.volcengineapi.com'"
+        },
+        {
+          "line": 10,
+          "text": "dualstack_endpoint_suffix = '.volcengine-api.com'"
+        },
+        {
+          "line": 11,
+          "text": "fallback_endpoint = open_prefix + endpoint_suffix"
+        },
+        {
+          "line": 20,
+          "text": "def __init__(self, service, is_global, global_endpoint,"
+        },
+        {
+          "line": 21,
+          "text": "region_endpoint_map, fallback_endpoint=fallback_endpoint):"
+        },
+        {
+          "line": 24,
+          "text": "self.global_endpoint = global_endpoint"
+        },
+        {
+          "line": 25,
+          "text": "self.region_endpoint_map = region_endpoint_map"
+        },
+        {
+          "line": 26,
+          "text": "self.fallback_endpoint = fallback_endpoint"
+        },
+        {
+          "line": 32,
+          "text": "def get_endpoint_for(self, region, suffix=endpoint_suffix):"
+        },
+        {
+          "line": 33,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 34,
+          "text": "\"get_endpoint_for start: service=%s, region=%s, suffix=%s\","
+        },
+        {
+          "line": 38,
+          "text": "if self.global_endpoint:"
+        },
+        {
+          "line": 39,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 40,
+          "text": "\"use global endpoint: service=%s, endpoint=%s\","
+        },
+        {
+          "line": 41,
+          "text": "self.service, self.global_endpoint"
+        },
+        {
+          "line": 43,
+          "text": "return self.global_endpoint"
+        },
+        {
+          "line": 45,
+          "text": "endpoint = self.__standardize_domain_service_code + suffix"
+        },
+        {
+          "line": 46,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 47,
+          "text": "\"build global endpoint from service code: %s\", endpoint"
+        },
+        {
+          "line": 49,
+          "text": "return endpoint"
+        },
+        {
+          "line": 50,
+          "text": "if region in self.region_endpoint_map:"
+        },
+        {
+          "line": 51,
+          "text": "endpoint = self.region_endpoint_map[region]"
+        },
+        {
+          "line": 52,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 53,
+          "text": "\"use region endpoint from map: service=%s, region=%s, endpoint=%s\","
+        },
+        {
+          "line": 54,
+          "text": "self.service, region, endpoint"
+        },
+        {
+          "line": 56,
+          "text": "return endpoint"
+        },
+        {
+          "line": 58,
+          "text": "endpoint = self.__standardize_domain_service_code + '.' + region + suffix"
+        },
+        {
+          "line": 59,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 60,
+          "text": "\"build region endpoint by default rule: %s\", endpoint"
+        },
+        {
+          "line": 62,
+          "text": "return endpoint"
+        },
+        {
+          "line": 65,
+          "text": "default_endpoint = {"
+        },
+        {
+          "line": 67,
+          "text": "service='ecs',"
+        },
+        {
+          "line": 69,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 70,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 73,
+          "text": "service='billing',"
+        },
+        {
+          "line": 75,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 76,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 79,
+          "text": "service='advdefence',"
+        },
+        {
+          "line": 81,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 82,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 85,
+          "text": "service='alb',"
+        },
+        {
+          "line": 87,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 88,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 91,
+          "text": "service='auto_scaling',"
+        },
+        {
+          "line": 93,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 94,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 97,
+          "text": "service='bio',"
+        },
+        {
+          "line": 99,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 100,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 103,
+          "text": "service='vedbm',"
+        },
+        {
+          "line": 105,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 106,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 109,
+          "text": "service='pca',"
+        },
+        {
+          "line": 111,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 112,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 115,
+          "text": "service='cloud_trail',"
+        },
+        {
+          "line": 117,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 118,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 121,
+          "text": "service='nta',"
+        },
+        {
+          "line": 123,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 124,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 127,
+          "text": "service='kms',"
+        },
+        {
+          "line": 129,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 130,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 133,
+          "text": "service='tis',"
+        },
+        {
+          "line": 135,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 136,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 139,
+          "text": "service='vei_api',"
+        },
+        {
+          "line": 141,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 142,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 145,
+          "text": "service='rocketmq',"
+        },
+        {
+          "line": 147,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 148,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 151,
+          "text": "service='emr',"
+        },
+        {
+          "line": 153,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 154,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 157,
+          "text": "service='iam',"
+        },
+        {
+          "line": 159,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 160,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 163,
+          "text": "service='volc_observe',"
+        },
+        {
+          "line": 165,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 166,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 169,
+          "text": "service='vmp',"
+        },
+        {
+          "line": 171,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 172,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 175,
+          "text": "service='cen',"
+        },
+        {
+          "line": 177,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 178,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 181,
+          "text": "service='escloud',"
+        },
+        {
+          "line": 183,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 184,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 187,
+          "text": "service='ml_platform',"
+        },
+        {
+          "line": 189,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 190,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 193,
+          "text": "service='vepfs',"
+        },
+        {
+          "line": 195,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 196,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 199,
+          "text": "service='redis',"
+        },
+        {
+          "line": 201,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 202,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 205,
+          "text": "service='filenas',"
+        },
+        {
+          "line": 207,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 208,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 211,
+          "text": "service='vefaas',"
+        },
+        {
+          "line": 213,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 214,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 217,
+          "text": "service='vpn',"
+        },
+        {
+          "line": 219,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 220,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 223,
+          "text": "service='vod',"
+        },
+        {
+          "line": 225,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 226,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 229,
+          "text": "service='fw_center',"
+        },
+        {
+          "line": 231,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 232,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 235,
+          "text": "service='privatelink',"
+        },
+        {
+          "line": 237,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 238,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 241,
+          "text": "service='rds_mssql',"
+        },
+        {
+          "line": 243,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 244,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 247,
+          "text": "service='waf',"
+        },
+        {
+          "line": 249,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 250,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 253,
+          "text": "service='mongodb',"
+        },
+        {
+          "line": 255,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 256,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 259,
+          "text": "service='smc',"
+        },
+        {
+          "line": 261,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 262,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 265,
+          "text": "service='rds_mysql',"
+        },
+        {
+          "line": 267,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 268,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 271,
+          "text": "service='seccenter',"
+        },
+        {
+          "line": 273,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 274,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 277,
+          "text": "service='mcdn',"
+        },
+        {
+          "line": 279,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 280,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 283,
+          "text": "service='dataleap',"
+        },
+        {
+          "line": 285,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 286,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 289,
+          "text": "service='edx',"
+        },
+        {
+          "line": 291,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 292,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 295,
+          "text": "service='natgateway',"
+        },
+        {
+          "line": 297,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 298,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 301,
+          "text": "service='rabbitmq',"
+        },
+        {
+          "line": 303,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 304,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 307,
+          "text": "service='httpdns',"
+        },
+        {
+          "line": 309,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 310,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 313,
+          "text": "service='translate',"
+        },
+        {
+          "line": 315,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 316,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 319,
+          "text": "service='cr',"
+        },
+        {
+          "line": 321,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 322,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 325,
+          "text": "service='spark',"
+        },
+        {
+          "line": 327,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 328,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 331,
+          "text": "service='cdn',"
+        },
+        {
+          "line": 333,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 334,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 337,
+          "text": "service='clb',"
+        },
+        {
+          "line": 339,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 340,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 343,
+          "text": "service='cv',"
+        },
+        {
+          "line": 345,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 346,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 349,
+          "text": "service='tag',"
+        },
+        {
+          "line": 351,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 352,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 355,
+          "text": "service='vke',"
+        },
+        {
+          "line": 357,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 358,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 361,
+          "text": "service='mcs',"
+        },
+        {
+          "line": 363,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 364,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 367,
+          "text": "service='flink',"
+        },
+        {
+          "line": 369,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 370,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 373,
+          "text": "service='kafka',"
+        },
+        {
+          "line": 375,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 376,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 379,
+          "text": "service='rds_postgresql',"
+        },
+        {
+          "line": 381,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 382,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 385,
+          "text": "service='sts',"
+        },
+        {
+          "line": 387,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 388,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 391,
+          "text": "service='ark',"
+        },
+        {
+          "line": 393,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 394,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 397,
+          "text": "service='transitrouter',"
+        },
+        {
+          "line": 399,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 400,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 403,
+          "text": "service='cloud_detect',"
+        },
+        {
+          "line": 405,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 406,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 409,
+          "text": "service='vpc',"
+        },
+        {
+          "line": 411,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 412,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 415,
+          "text": "service='certificate_service',"
+        },
+        {
+          "line": 417,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 418,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 421,
+          "text": "service='dms',"
+        },
+        {
+          "line": 423,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 424,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 427,
+          "text": "service='dns',"
+        },
+        {
+          "line": 429,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 430,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 433,
+          "text": "service='directconnect',"
+        },
+        {
+          "line": 435,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 436,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 439,
+          "text": "service='storage_ebs',"
+        },
+        {
+          "line": 441,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 442,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 445,
+          "text": "service='quota',"
+        },
+        {
+          "line": 447,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 448,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 451,
+          "text": "service='fasttrack',"
+        },
+        {
+          "line": 453,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 454,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 457,
+          "text": "service='acep',"
+        },
+        {
+          "line": 459,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 460,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 463,
+          "text": "service='private_zone',"
+        },
+        {
+          "line": 465,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 466,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 469,
+          "text": "service='sqs',"
+        },
+        {
+          "line": 471,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 472,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 475,
+          "text": "service='resourcecenter',"
+        },
+        {
+          "line": 477,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 478,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 481,
+          "text": "service='cfs',"
+        },
+        {
+          "line": 483,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 484,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 487,
+          "text": "service='cloudidentity',"
+        },
+        {
+          "line": 489,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 490,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 493,
+          "text": "service='livesaas',"
+        },
+        {
+          "line": 495,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 496,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 499,
+          "text": "service='insight',"
+        },
+        {
+          "line": 501,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 502,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 505,
+          "text": "service='aidap',"
+        },
+        {
+          "line": 507,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 508,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 511,
+          "text": "service='gtm',"
+        },
+        {
+          "line": 513,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 514,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 517,
+          "text": "service='cloudmonitor',"
+        },
+        {
+          "line": 519,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 520,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 524,
+          "text": "service='cbr',"
+        },
+        {
+          "line": 526,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 527,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 531,
+          "text": "service='arkclaw',"
+        },
+        {
+          "line": 533,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 534,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 538,
+          "text": "service='i18n_openapi',"
+        },
+        {
+          "line": 540,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 541,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 544,
+          "text": "service='config',"
+        },
+        {
+          "line": 546,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 547,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 550,
+          "text": "service='organization',"
+        },
+        {
+          "line": 552,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 553,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 556,
+          "text": "service='milvus',"
+        },
+        {
+          "line": 558,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 559,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 562,
+          "text": "service='dramart',"
+        },
+        {
+          "line": 564,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 565,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 568,
+          "text": "service='partner',"
+        },
+        {
+          "line": 570,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 571,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 574,
+          "text": "service='na',"
+        },
+        {
+          "line": 576,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 577,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 580,
+          "text": "service='clawsentry',"
+        },
+        {
+          "line": 582,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 583,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 586,
+          "text": "service='ga',"
+        },
+        {
+          "line": 588,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 589,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 592,
+          "text": "service='cpaas',"
+        },
+        {
+          "line": 594,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 595,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 598,
+          "text": "service='efs',"
+        },
+        {
+          "line": 600,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 601,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 604,
+          "text": "service='veenedge',"
+        },
+        {
+          "line": 606,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 607,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 610,
+          "text": "service='cloudcontrol',"
+        },
+        {
+          "line": 612,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 613,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 616,
+          "text": "service='vikingdb',"
+        },
+        {
+          "line": 618,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 619,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 622,
+          "text": "service='apig',"
+        },
+        {
+          "line": 624,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 625,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 628,
+          "text": "service='volcsms',"
+        },
+        {
+          "line": 630,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 631,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 634,
+          "text": "service='id',"
+        },
+        {
+          "line": 636,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 637,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 640,
+          "text": "service='tidb',"
+        },
+        {
+          "line": 642,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 643,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 646,
+          "text": "service='origin_defence',"
+        },
+        {
+          "line": 648,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 649,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 652,
+          "text": "service='inframanager',"
+        },
+        {
+          "line": 654,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 655,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 658,
+          "text": "service='dbw',"
+        },
+        {
+          "line": 660,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 661,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 664,
+          "text": "service='speech_saas_prod',"
+        },
+        {
+          "line": 666,
+          "text": "global_endpoint='',"
+        },
+        {
+          "line": 667,
+          "text": "region_endpoint_map={},"
+        },
+        {
+          "line": 682,
+          "text": "def __init__(self, custom_endpoints=None):"
+        },
+        {
+          "line": 683,
+          "text": "self.custom_endpoints = custom_endpoints or {}"
+        },
+        {
+          "line": 685,
+          "text": "def get_default_endpoint(self, service, region, suffix=endpoint_suffix):"
+        },
+        {
+          "line": 686,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 687,
+          "text": "\"get_default_endpoint: service=%s, region=%s, suffix=%s\","
+        },
+        {
+          "line": 690,
+          "text": "if service in default_endpoint:"
+        },
+        {
+          "line": 691,
+          "text": "e = default_endpoint[service]"
+        },
+        {
+          "line": 692,
+          "text": "endpoint = e.get_endpoint_for(region, suffix)"
+        },
+        {
+          "line": 693,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 694,
+          "text": "\"resolved default endpoint: service=%s, endpoint=%s\","
+        },
+        {
+          "line": 695,
+          "text": "service, endpoint"
+        },
+        {
+          "line": 697,
+          "text": "return endpoint"
+        },
+        {
+          "line": 698,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 699,
+          "text": "\"service not found in default_endpoint, use fallback=%s\", fallback_endpoint"
+        },
+        {
+          "line": 701,
+          "text": "return fallback_endpoint"
+        },
+        {
+          "line": 739,
+          "text": "def endpoint_for(self, service, region, custom_bootstrap_region=None, use_dual_stack=None, **kwargs):"
+        },
+        {
+          "line": 740,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 741,
+          "text": "\"endpoint_for called: service=%s, region=%s, custom_bootstrap_region=%s, use_dual_stack=%s\","
+        },
+        {
+          "line": 744,
+          "text": "if service in self.custom_endpoints:"
+        },
+        {
+          "line": 745,
+          "text": "conf = self.custom_endpoints[service]"
+        },
+        {
+          "line": 746,
+          "text": "host = conf.get_endpoint_for(region)"
+        },
+        {
+          "line": 747,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 748,
+          "text": "\"use custom endpoint: service=%s, region=%s, host=%s\","
+        },
+        {
+          "line": 757,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 759,
+          "text": "region, fallback_endpoint"
+        },
+        {
+          "line": 761,
+          "text": "return ResolvedEndpoint(fallback_endpoint)"
+        },
+        {
+          "line": 763,
+          "text": "suffix = dualstack_endpoint_suffix if self.__has_enabled_dualstack(use_dual_stack) else endpoint_suffix"
+        },
+        {
+          "line": 764,
+          "text": "host = self.get_default_endpoint(service=service, region=region, suffix=suffix)"
+        },
+        {
+          "line": 766,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 767,
+          "text": "\"final resolved endpoint: service=%s, region=%s, host=%s\","
+        },
+        {
+          "line": 775,
+          "text": "self.host = host"
+        },
+        {
+          "line": 777,
+          "text": "def endpoint_for(self, service, region, **kwargs):"
+        },
+        {
+          "line": 778,
+          "text": "sdk_core_logger.debug_endpoint("
+        },
+        {
+          "line": 779,
+          "text": "\"HostEndpointProvider.endpoint_for: service=%s, region=%s, host=%s\","
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/volcengine/volcengine-python-sdk/5df619842a949fc59975cc22c84b482744280c27/volcenginesdkcore/endpoint/providers/standard_provider.py",
+      "sha256": "8bb8a1e6fe9f4dc2b540d40681ca1fc5ab95f674c62f45a8991a2725d8552b18",
+      "lines": [
+        {
+          "line": 4,
+          "text": "from volcenginesdkcore.endpoint.endpoint_provider import EndpointProvider, ResolvedEndpoint"
+        },
+        {
+          "line": 23,
+          "text": "SITE_STACK_VOLC_IPV4 = \"volcengineapi\""
+        },
+        {
+          "line": 289,
+          "text": "def endpoint_for(self, service, region, custom_bootstrap_region=None, use_dual_stack=None, **kwargs):"
+        },
+        {
+          "line": 294,
+          "text": "\"invalid region %s for standard endpoint resolver, \""
+        },
+        {
+          "line": 295,
+          "text": "\"please upgrade the sdk endpoint resolver to the latest version\" % region"
+        },
+        {
+          "line": 311,
+          "text": "\"please upgrade the sdk endpoint resolver to the latest version\" % service"
+        },
+        {
+          "line": 347,
+          "text": "ep = r.endpoint_for("
+        },
+        {
+          "line": 348,
+          "text": "service=\"vpc\","
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/volcengine/volcengine-python-sdk/5df619842a949fc59975cc22c84b482744280c27/volcenginesdkspeechsaasprod/api/speech_saas_prod_api.py",
+      "sha256": "282e882ff0c3f4b04ab4cbf0007df845658ecc74a3c38720f9fcf54a74100837",
+      "lines": [
+        {
+          "line": 715,
+          "text": "def list_speakers(self, body, **kwargs):  # noqa: E501"
+        },
+        {
+          "line": 716,
+          "text": "\"\"\"list_speakers  # noqa: E501"
+        },
+        {
+          "line": 720,
+          "text": ">>> thread = api.list_speakers(body, async_req=True)"
+        },
+        {
+          "line": 724,
+          "text": ":param ListSpeakersRequest body: (required)"
+        },
+        {
+          "line": 725,
+          "text": ":return: ListSpeakersResponse"
+        },
+        {
+          "line": 731,
+          "text": "return self.list_speakers_with_http_info(body, **kwargs)  # noqa: E501"
+        },
+        {
+          "line": 733,
+          "text": "(data) = self.list_speakers_with_http_info(body, **kwargs)  # noqa: E501"
+        },
+        {
+          "line": 736,
+          "text": "def list_speakers_with_http_info(self, body, **kwargs):  # noqa: E501"
+        },
+        {
+          "line": 737,
+          "text": "\"\"\"list_speakers  # noqa: E501"
+        },
+        {
+          "line": 741,
+          "text": ">>> thread = api.list_speakers_with_http_info(body, async_req=True)"
+        },
+        {
+          "line": 745,
+          "text": ":param ListSpeakersRequest body: (required)"
+        },
+        {
+          "line": 746,
+          "text": ":return: ListSpeakersResponse"
+        },
+        {
+          "line": 762,
+          "text": "\" to method list_speakers\" % key"
+        },
+        {
+          "line": 769,
+          "text": "raise ValueError(\"Missing the required parameter `body` when calling `list_speakers`\")  # noqa: E501"
+        },
+        {
+          "line": 797,
+          "text": "'/ListSpeakers/2025-05-20/speech_saas_prod/post/application_json/', 'POST',"
+        },
+        {
+          "line": 804,
+          "text": "response_type='ListSpeakersResponse',  # noqa: E501"
+        }
+      ]
+    }
+  ],
+  "package_licenses": [
+    {
+      "package": "videofetch",
+      "version": "0.9.1",
+      "metadata_license": "PolyForm-Noncommercial-1.0.0",
+      "url": "https://files.pythonhosted.org/packages/cb/c6/97194aedb307a1bb1a2d1f178048457b7d3a9667dabe1ae46dd9caa363d2/videofetch-0.9.1-py3-none-any.whl",
+      "sha256": "9f2fac00557992df79008ee6dfcf1ea9a3c1f42394e13d84898a096b90ca0d38",
+      "files": [
+        {
+          "package_path": "videofetch-0.9.1.dist-info/licenses/LICENSE",
+          "file": "evidence/A00/sources/pypi__videofetch__0.9.1/LICENSE",
+          "sha256": "475063e49ffa895893eeccb563071f76a09d7cae5e4d94258413c2bc60704664"
+        }
+      ],
+      "top_level_modules": [
+        "videodl"
+      ]
+    },
+    {
+      "package": "responses-validator",
+      "version": "0.3.0",
+      "metadata_license": null,
+      "url": "https://files.pythonhosted.org/packages/fc/12/ee32e1b7932ca8f77418a7ddc2d2c0ea8c681b7654f95367a5e67a596852/responses_validator-0.3.0-cp312-cp312-macosx_10_13_x86_64.whl",
+      "sha256": "2988128a6e3775aa75feeb128f1e24ef847178a373b7f8dacff464bbd3466fe7",
+      "files": [],
+      "top_level_modules": [
+        "responses_validator"
+      ]
+    }
+  ],
+  "container_source_licenses": [
+    {
+      "repository": "redis/redis",
+      "ref": "7.4.10",
+      "revision": "f103d127b9747965e28f20615ef790332661fc68",
+      "url": "https://raw.githubusercontent.com/redis/redis/f103d127b9747965e28f20615ef790332661fc68/LICENSE.txt",
+      "file": "evidence/A00/sources/redis__redis__7.4.10/LICENSE.txt",
+      "sha256": "abffee3703161c0a6a0cd7f635b2c1ebb3b81bd199e9d18ea89652d678ae4287"
+    },
+    {
+      "repository": "postgres/postgres",
+      "ref": "REL_15_19",
+      "revision": "2ff1375b5dd8bf09d8cb0e795974528180fd75ca",
+      "url": "https://raw.githubusercontent.com/postgres/postgres/2ff1375b5dd8bf09d8cb0e795974528180fd75ca/COPYRIGHT",
+      "file": "evidence/A00/sources/postgres__postgres__REL_15_19/COPYRIGHT",
+      "sha256": "3d6af92ff8a4c2cdf69afb1cf44edea727922f5cd0cf8b5f72b11cdecac8fdfd"
+    }
+  ]
+}

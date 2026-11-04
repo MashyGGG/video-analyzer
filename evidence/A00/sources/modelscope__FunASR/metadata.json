@@ -1,0 +1,49 @@
+{
+  "kind": "source",
+  "repository": "modelscope/FunASR",
+  "observed_at_utc": "2026-11-04T04:19:41.389512+00:00",
+  "revision": "1125860d49a7c0c3ce3675f7641374b1d403070e",
+  "root_entries": [
+    ".github",
+    ".gitignore",
+    ".pre-commit-config.yaml",
+    "Acknowledge.md",
+    "CONTRIBUTING.md",
+    "Contribution.md",
+    "LICENSE",
+    "MODEL_LICENSE",
+    "MinMo_gitlab",
+    "README.md",
+    "README_ja.md",
+    "README_ko.md",
+    "README_zh.md",
+    "SECURITY.md",
+    "benchmark_vllm.py",
+    "benchmarks",
+    "data",
+    "docs",
+    "examples",
+    "fun_text_processing",
+    "funasr",
+    "gh-pages-output",
+    "glama.json",
+    "integrations",
+    "model_zoo",
+    "pyproject.toml",
+    "runtime",
+    "scripts",
+    "setup.py",
+    "tests",
+    "tests_models",
+    "training.html",
+    "web-pages"
+  ],
+  "license_files": [
+    {
+      "url": "https://raw.githubusercontent.com/modelscope/FunASR/1125860d49a7c0c3ce3675f7641374b1d403070e/LICENSE",
+      "file": "evidence/A00/sources/modelscope__FunASR/LICENSE",
+      "sha256": "f382b62dcc61fc566b9215b1e3b604b539bfd96ed52ae1eeff5090f6dc176057"
+    }
+  ],
+  "status": "FETCHED"
+}

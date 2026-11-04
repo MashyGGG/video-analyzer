@@ -1,0 +1,14 @@
+{
+  "started_at_utc": "2026-11-04T04:24:42.303611+00:00",
+  "duration_seconds": 3.097,
+  "cwd": "<workspace>",
+  "argv": [
+    "python",
+    "scripts/audit/scan_upstream.py"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\n  \"files\": 176,\n  \"tables\": 14,\n  \"migrations\": 20,\n  \"test_functions\": 44,\n  \"network_calls\": 60,\n  \"literal_urls\": 7,\n  \"syntax_errors\": 0\n}\n",
+  "stderr": "<unknown>:30: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n"
+}

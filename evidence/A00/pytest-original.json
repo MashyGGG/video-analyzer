@@ -1,0 +1,16 @@
+{
+  "started_at_utc": "2026-11-04T04:22:39.024554+00:00",
+  "duration_seconds": 6.722,
+  "cwd": "<workspace>\\.audit-cache\\parse_video\\backend",
+  "argv": [
+    "<workspace>\\.audit-cache\\venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "exit_code": 4,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": "ImportError while loading conftest '<workspace>\\.audit-cache\\parse_video\\backend\\tests\\conftest.py'.\ntests\\conftest.py:6: in <module>\n    from httpx import ASGITransport, AsyncClient\nE   ModuleNotFoundError: No module named 'httpx'\n"
+}

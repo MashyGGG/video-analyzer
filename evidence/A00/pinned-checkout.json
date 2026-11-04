@@ -1,0 +1,16 @@
+{
+  "started_at_utc": "2026-11-04T04:32:10.446749+00:00",
+  "duration_seconds": 0.269,
+  "cwd": "<workspace>\\.audit-cache\\parse_video",
+  "argv": [
+    "git",
+    "checkout",
+    "--detach",
+    "adc13afb47a112f0def0435231e691a5307e5b49"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": "HEAD is now at adc13af Merge pull request #8 from XztCloud/claude_main_baseline\n"
+}

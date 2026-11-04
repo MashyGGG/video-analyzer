@@ -1,0 +1,14 @@
+{
+  "started_at_utc": "2026-11-04T04:17:55.252259+00:00",
+  "duration_seconds": 0.255,
+  "cwd": "<workspace>",
+  "argv": [
+    "uv",
+    "--version"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "uv 0.11.28 (ebf0f43d7 2026-07-07 x86_64-pc-windows-msvc)\n",
+  "stderr": ""
+}

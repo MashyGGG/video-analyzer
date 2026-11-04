@@ -1,0 +1,27 @@
+{
+  "kind": "model",
+  "repository": "PaddlePaddle/PP-OCRv5_server_det",
+  "observed_at_utc": "2026-11-04T04:19:55.233165+00:00",
+  "weights_downloaded": false,
+  "inference_tested": false,
+  "revision": "ca867c897ecbca8873081573a802ad70d499cb94",
+  "card_license": "apache-2.0",
+  "card_license_link": null,
+  "gated": false,
+  "files": [
+    {
+      "url": "https://huggingface.co/PaddlePaddle/PP-OCRv5_server_det/resolve/ca867c897ecbca8873081573a802ad70d499cb94/README.md",
+      "file": "evidence/A00/sources/PaddlePaddle__PP-OCRv5_server_det/README.md",
+      "sha256": "4fd4cf7c6fc3239ede7274c3877e7a0c4424ffa7f56b2775e4e7961c24b1f107"
+    }
+  ],
+  "repository_files": [
+    ".gitattributes",
+    "README.md",
+    "config.json",
+    "inference.json",
+    "inference.pdiparams",
+    "inference.yml"
+  ],
+  "status": "FETCHED"
+}

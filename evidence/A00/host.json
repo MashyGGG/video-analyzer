@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-11-04T04:18:15.756324+00:00",
+  "duration_seconds": 0.974,
+  "cwd": "<workspace>",
+  "argv": [
+    "python",
+    "-c",
+    "import json,platform; print(json.dumps(dict(os=platform.system(),release=platform.release(),machine=platform.machine(),python=platform.python_version())))"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\"os\": \"Windows\", \"release\": \"11\", \"machine\": \"AMD64\", \"python\": \"3.14.6\"}\n",
+  "stderr": ""
+}

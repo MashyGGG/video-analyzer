@@ -1,0 +1,17 @@
+{
+  "started_at_utc": "2026-11-04T04:19:33.167925+00:00",
+  "duration_seconds": 5.378,
+  "cwd": "<workspace>",
+  "argv": [
+    "uv",
+    "venv",
+    "--python",
+    "3.12",
+    ".audit-cache/venv"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": "Using CPython 3.12.13\nCreating virtual environment at: .audit-cache/venv\nActivate with: .audit-cache\\venv\\Scripts\\activate\n"
+}

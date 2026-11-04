@@ -1,0 +1,16 @@
+{
+  "started_at_utc": "2026-11-04T04:26:57.931592+00:00",
+  "duration_seconds": 2.45,
+  "cwd": "<workspace>",
+  "argv": [
+    "pwsh",
+    "-NoProfile",
+    "-Command",
+    "Get-CimInstance Win32_Processor | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors | ConvertTo-Json; Get-CimInstance Win32_ComputerSystem | Select-Object TotalPhysicalMemory | ConvertTo-Json; Get-CimInstance Win32_VideoController | Select-Object Name,DriverVersion | ConvertTo-Json"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\n  \"Name\": \"AMD Ryzen AI 9 365 w/ Radeon 880M              \",\n  \"NumberOfCores\": 10,\n  \"NumberOfLogicalProcessors\": 20\n}\n{\n  \"TotalPhysicalMemory\": 31989297152\n}\n{\n  \"Name\": \"AMD Radeon(TM) 880M Graphics\",\n  \"DriverVersion\": \"32.0.21030.11004\"\n}\n",
+  "stderr": ""
+}

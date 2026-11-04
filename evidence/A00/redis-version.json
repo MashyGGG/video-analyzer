@@ -1,0 +1,25 @@
+{
+  "started_at_utc": "2026-11-04T04:27:30.691089+00:00",
+  "duration_seconds": 1.911,
+  "cwd": "<workspace>",
+  "argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--cap-drop",
+    "ALL",
+    "--user",
+    "redis",
+    "redis:7-alpine",
+    "redis-server",
+    "--version"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "Redis server v=7.4.10 sha=00000000:0 malloc=jemalloc-5.3.0 bits=64 build=d70b7db78d693e15\n",
+  "stderr": ""
+}

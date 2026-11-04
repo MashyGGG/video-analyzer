@@ -1,0 +1,47 @@
+{
+  "kind": "source",
+  "repository": "Evil0ctal/Douyin_TikTok_Download_API",
+  "observed_at_utc": "2026-11-04T04:19:32.745970+00:00",
+  "revision": "5aa03528d2e974a0de23faf86597b5af3420df55",
+  "root_entries": [
+    ".dockerignore",
+    ".env.example",
+    ".gitattributes",
+    ".github",
+    ".gitignore",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "Makefile",
+    "NOTICE",
+    "README.md",
+    "README.zh-CN.md",
+    "SECURITY.md",
+    "alembic.ini",
+    "docker",
+    "documents",
+    "install",
+    "llms.txt",
+    "logo",
+    "pyproject.toml",
+    "screenshots",
+    "scripts",
+    "src",
+    "tests",
+    "uv.lock",
+    "web"
+  ],
+  "license_files": [
+    {
+      "url": "https://raw.githubusercontent.com/Evil0ctal/Douyin_TikTok_Download_API/5aa03528d2e974a0de23faf86597b5af3420df55/LICENSE",
+      "file": "evidence/A00/sources/Evil0ctal__Douyin_TikTok_Download_API/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Evil0ctal/Douyin_TikTok_Download_API/5aa03528d2e974a0de23faf86597b5af3420df55/NOTICE",
+      "file": "evidence/A00/sources/Evil0ctal__Douyin_TikTok_Download_API/NOTICE",
+      "sha256": "9e921ad560e79091156551f033d336e8e9580f39ea883d9e51678284a76cf6ba"
+    }
+  ],
+  "status": "FETCHED"
+}

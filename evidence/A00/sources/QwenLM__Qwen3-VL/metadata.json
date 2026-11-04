@@ -1,0 +1,25 @@
+{
+  "kind": "source",
+  "repository": "QwenLM/Qwen3-VL",
+  "observed_at_utc": "2026-11-04T04:19:46.094327+00:00",
+  "revision": "96588727e44c78b25ba03ea03b8e12f7e64fd0da",
+  "root_entries": [
+    "LICENSE",
+    "README.md",
+    "cookbooks",
+    "docker",
+    "evaluation",
+    "qwen-vl-finetune",
+    "qwen-vl-utils",
+    "requirements_web_demo.txt",
+    "web_demo_mm.py"
+  ],
+  "license_files": [
+    {
+      "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/96588727e44c78b25ba03ea03b8e12f7e64fd0da/LICENSE",
+      "file": "evidence/A00/sources/QwenLM__Qwen3-VL/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ],
+  "status": "FETCHED"
+}

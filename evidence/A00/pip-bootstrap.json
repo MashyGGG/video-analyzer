@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-11-04T04:21:57.330025+00:00",
+  "duration_seconds": 44.455,
+  "cwd": "<workspace>",
+  "argv": [
+    ".audit-cache/venv/Scripts/python.exe",
+    "-m",
+    "ensurepip"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "Looking in links: <user>\\AppData\\Local\\Temp\\tmph_n8r34k\nProcessing <user>\\appdata\\local\\temp\\tmph_n8r34k\\pip-25.0.1-py3-none-any.whl\nInstalling collected packages: pip\nSuccessfully installed pip-25.0.1\n",
+  "stderr": ""
+}

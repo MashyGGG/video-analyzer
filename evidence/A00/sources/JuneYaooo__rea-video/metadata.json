@@ -1,0 +1,23 @@
+{
+  "kind": "source",
+  "repository": "JuneYaooo/rea-video",
+  "observed_at_utc": "2026-11-04T04:19:32.744725+00:00",
+  "revision": "1c2a51471d9f454ea6e6c77fe161204317385b8c",
+  "root_entries": [
+    ".claude-plugin",
+    ".gitignore",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "README.md",
+    "README_en.md",
+    "docs",
+    "eval",
+    "pyproject.toml",
+    "rea_video",
+    "scripts",
+    "skills",
+    "tests"
+  ],
+  "license_files": [],
+  "status": "FETCHED"
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "model",
+  "repository": "Qwen/Qwen3-VL-8B-Instruct",
+  "observed_at_utc": "2026-11-04T04:19:55.231716+00:00",
+  "weights_downloaded": false,
+  "inference_tested": false,
+  "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "card_license": "apache-2.0",
+  "card_license_link": null,
+  "gated": false,
+  "files": [
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/README.md",
+      "file": "evidence/A00/sources/Qwen__Qwen3-VL-8B-Instruct/README.md",
+      "sha256": "6d5d06e0c3f069097002445d30dce9ee107db3afaf15563f09e6df49b8dcb4d7"
+    }
+  ],
+  "repository_files": [
+    ".gitattributes",
+    "README.md",
+    "chat_template.json",
+    "config.json",
+    "generation_config.json",
+    "merges.txt",
+    "model-00001-of-00004.safetensors",
+    "model-00002-of-00004.safetensors",
+    "model-00003-of-00004.safetensors",
+    "model-00004-of-00004.safetensors",
+    "model.safetensors.index.json",
+    "preprocessor_config.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "video_preprocessor_config.json",
+    "vocab.json"
+  ],
+  "status": "FETCHED"
+}

@@ -1,0 +1,14 @@
+{
+  "started_at_utc": "2026-11-04T04:31:29.402847+00:00",
+  "duration_seconds": 0.808,
+  "cwd": "<workspace>",
+  "argv": [
+    "python",
+    "scripts/audit/build_license_inventory.py"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "Wrote 563 evidence-scoped entries to docs/audit/licenses.csv\n",
+  "stderr": ""
+}

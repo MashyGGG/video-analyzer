@@ -1,0 +1,18 @@
+{
+  "started_at_utc": "2026-11-04T04:19:34.102211+00:00",
+  "duration_seconds": 5.615,
+  "cwd": "<workspace>\\.audit-cache\\parse_video",
+  "argv": [
+    "docker",
+    "compose",
+    "-p",
+    "video-analyzer-a00",
+    "config",
+    "--quiet"
+  ],
+  "exit_code": 1,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": "time=\"2026-11-04T12:19:38+08:00\" level=warning msg=\"The \\\"POSTGRES_DB\\\" variable is not set. Defaulting to a blank string.\"\ntime=\"2026-11-04T12:19:38+08:00\" level=warning msg=\"The \\\"POSTGRES_USER\\\" variable is not set. Defaulting to a blank string.\"\ntime=\"2026-11-04T12:19:38+08:00\" level=warning msg=\"The \\\"POSTGRES_PASSWORD\\\" variable is not set. Defaulting to a blank string.\"\ntime=\"2026-11-04T12:19:38+08:00\" level=warning msg=\"<workspace>\\\\.audit-cache\\\\parse_video\\\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion\"\nenv file <workspace>\\.audit-cache\\parse_video\\.env not found: GetFileAttributesEx <workspace>\\.audit-cache\\parse_video\\.env: The system cannot find the file specified.\n"
+}

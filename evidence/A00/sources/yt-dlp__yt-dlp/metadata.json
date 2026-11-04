@@ -1,0 +1,41 @@
+{
+  "kind": "source",
+  "repository": "yt-dlp/yt-dlp",
+  "observed_at_utc": "2026-11-04T04:19:32.747407+00:00",
+  "revision": "b3b18f8fc606e782ee7c82b0780a40c67b829072",
+  "root_entries": [
+    ".NO_AI",
+    ".editorconfig",
+    ".gitattributes",
+    ".github",
+    ".gitignore",
+    ".pre-commit-config.yaml",
+    ".pre-commit-hatch.yaml",
+    "CONTRIBUTING.md",
+    "CONTRIBUTORS",
+    "Changelog.md",
+    "LICENSE",
+    "Maintainers.md",
+    "Makefile",
+    "README.md",
+    "THIRD_PARTY_LICENSES.txt",
+    "bundle",
+    "devscripts",
+    "public.key",
+    "pyproject.toml",
+    "supportedsites.md",
+    "test",
+    "uv.lock",
+    "yt-dlp.cmd",
+    "yt-dlp.sh",
+    "yt_dlp"
+  ],
+  "license_files": [
+    {
+      "url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/b3b18f8fc606e782ee7c82b0780a40c67b829072/LICENSE",
+      "file": "evidence/A00/sources/yt-dlp__yt-dlp/LICENSE",
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+    }
+  ],
+  "status": "FETCHED"
+}

@@ -1,0 +1,50 @@
+{
+  "scope": "Reviewed AST function only; no HTTP, DNS, database, model, or API integration",
+  "results": [
+    {
+      "case": "valid-platform-url",
+      "expected_accept": true,
+      "actual_accept": true,
+      "status": "PASS"
+    },
+    {
+      "case": "reject-loopback-literal",
+      "expected_accept": false,
+      "actual_accept": false,
+      "status": "PASS"
+    },
+    {
+      "case": "reject-file-scheme",
+      "expected_accept": false,
+      "actual_accept": false,
+      "status": "PASS"
+    },
+    {
+      "case": "reject-suffix-confusion",
+      "expected_accept": false,
+      "actual_accept": true,
+      "status": "FAIL"
+    },
+    {
+      "case": "reject-unexpected-port",
+      "expected_accept": false,
+      "actual_accept": true,
+      "status": "FAIL"
+    },
+    {
+      "case": "reject-userinfo",
+      "expected_accept": false,
+      "actual_accept": true,
+      "status": "FAIL"
+    },
+    {
+      "case": "extract-share-text-before-validation",
+      "expected_accept": true,
+      "actual_accept": false,
+      "status": "FAIL"
+    }
+  ],
+  "passed": 3,
+  "failed": 4,
+  "skipped": 0
+}

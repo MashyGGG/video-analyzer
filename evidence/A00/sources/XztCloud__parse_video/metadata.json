@@ -1,0 +1,30 @@
+{
+  "kind": "source",
+  "repository": "XztCloud/parse_video",
+  "observed_at_utc": "2026-11-04T04:19:32.743945+00:00",
+  "revision": "adc13afb47a112f0def0435231e691a5307e5b49",
+  "root_entries": [
+    ".claude",
+    ".env.example",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "backend",
+    "deploy",
+    "docker-compose.yml",
+    "docs",
+    "frontend",
+    "start.sh",
+    "stop.sh",
+    "tts_model_zh_female_mizai_uranus_bigtts.pkl",
+    "tts_model_zh_male_guanggaojieshuo_uranus_bigtts.pkl"
+  ],
+  "license_files": [
+    {
+      "url": "https://raw.githubusercontent.com/XztCloud/parse_video/adc13afb47a112f0def0435231e691a5307e5b49/LICENSE",
+      "file": "evidence/A00/sources/XztCloud__parse_video/LICENSE",
+      "sha256": "717aac35c2eee778e7394d9bdad7a20ddd94fce314e63308b5ed70861ccabb7b"
+    }
+  ],
+  "status": "FETCHED"
+}

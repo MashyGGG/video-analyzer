@@ -1,0 +1,18 @@
+{
+  "started_at_utc": "2026-11-04T04:21:58.769853+00:00",
+  "duration_seconds": 9.21,
+  "cwd": "<workspace>",
+  "argv": [
+    "uv",
+    "pip",
+    "install",
+    "--python",
+    ".audit-cache/venv/Scripts/python.exe",
+    "pytest==8.4.2"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": "Using Python 3.12.13 environment at: .audit-cache\\venv\nResolved 6 packages in 1.04s\nPrepared 1 package in 491ms\nInstalled 6 packages in 2.04s\n + colorama==0.4.6\n + iniconfig==2.3.1\n + packaging==26.3\n + pluggy==1.7.0\n + pygments==2.21.0\n + pytest==8.4.2\n"
+}

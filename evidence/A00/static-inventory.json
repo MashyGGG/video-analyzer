@@ -1,0 +1,2786 @@
+{
+  "commit": "adc13afb47a112f0def0435231e691a5307e5b49",
+  "files": [
+    {
+      "path": ".claude/launch.json",
+      "bytes": 368,
+      "sha256": "bc8d66221ca38c12eeabb3df2446c11a0b5acdfbc69bc0c49a4737cb5e65aa6f"
+    },
+    {
+      "path": ".claude/preview-frontend.sh",
+      "bytes": 405,
+      "sha256": "971910a4589e55ad163b33caee3b4e2716e2c9d05484da3a365d88352d2a63ed"
+    },
+    {
+      "path": ".claude/settings.local.json",
+      "bytes": 15644,
+      "sha256": "40e2ab967d27457fe97cbe5fc3efb0d166f7564b511ad9f522accda69b4f6684"
+    },
+    {
+      "path": ".env.example",
+      "bytes": 1790,
+      "sha256": "edc1ec4ac968705923d1b6edd596bf84669c295d04f94bc2df0b16ff6ec841de"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 832,
+      "sha256": "606e535ebdfa7158cdb5d2610dd77ac96dc077d95d1d4bf869add395d35122ea"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1090,
+      "sha256": "6d8ce9e6715e70d09cb992df91a2102dac50b7849a6217f9d4732a6641494ed7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 22638,
+      "sha256": "d43602c6281b1a29890253c83c204562ec562318272a048ba4d9592b6c4b491b"
+    },
+    {
+      "path": "backend/.dockerignore",
+      "bytes": 356,
+      "sha256": "be9a5fd9e4ae3bb86b9aef3524c6ad0880a0dd97f7879972501db9c474a6cf2f"
+    },
+    {
+      "path": "backend/Dockerfile",
+      "bytes": 1064,
+      "sha256": "2a1d8d8255166bff5591a6d72db587a2f340293d995e93d2842323a7d050c7c8"
+    },
+    {
+      "path": "backend/alembic.ini",
+      "bytes": 3719,
+      "sha256": "70c7d4b4231a9366978cec6aa0ce4e9753e570a5b0a17b138153816ce889070b"
+    },
+    {
+      "path": "backend/alembic/README",
+      "bytes": 38,
+      "sha256": "31595cf53626af9ed16e15c44fa43183209cc163fbc3ebcb904b22ac436a8884"
+    },
+    {
+      "path": "backend/alembic/env.py",
+      "bytes": 2708,
+      "sha256": "ed899eed4864bca21ec352d02cec7830b21a4f361cf4b90ea34888f32a83bc3f"
+    },
+    {
+      "path": "backend/alembic/script.py.mako",
+      "bytes": 661,
+      "sha256": "8deb5f094438977523c1467f84cf17cb007e8ba48ea44a902a13295237dbffe4"
+    },
+    {
+      "path": "backend/alembic/versions/1b7ce5112992_add_cascade.py",
+      "bytes": 3364,
+      "sha256": "5c992c573446793e88988641813f580da8707ea0e8fe8521dde1ac83e2d04594"
+    },
+    {
+      "path": "backend/alembic/versions/24bd50e6afee_add_image_prompt.py",
+      "bytes": 835,
+      "sha256": "bf9165c11e536357854856532bc88ea6d8661b4aaebe44b934fccee97c0f34af"
+    },
+    {
+      "path": "backend/alembic/versions/497ec58be36f_add_zeed_in_cloneimage.py",
+      "bytes": 1210,
+      "sha256": "660ca101eb5d90d50527b3f4effd448aee975c18fcac2068fb3895356e4511d4"
+    },
+    {
+      "path": "backend/alembic/versions/546c6d44092d_add_status_in_cloneimage.py",
+      "bytes": 4592,
+      "sha256": "01f33e3c8fc85666f362de00a25bbd076349f0d450cf60130c9d91c0b6037b79"
+    },
+    {
+      "path": "backend/alembic/versions/6be585a63cee_add_faceless_to_clone_role_images.py",
+      "bytes": 866,
+      "sha256": "ba318315669d520a0608ab276b4727cecc2eea7ec97bfb7102a1eb98fbd02163"
+    },
+    {
+      "path": "backend/alembic/versions/90ca846aba78_add_table_clone_segment_video.py",
+      "bytes": 2322,
+      "sha256": "7563d47276e77f988b523c519b1cf9d0947502a2b0c51a7bd0098a9ec4f1e5a6"
+    },
+    {
+      "path": "backend/alembic/versions/99c90f70710a_baseline_version_0709.py",
+      "bytes": 710,
+      "sha256": "7f631220429b8fdb3b945ba22bcf6f656ce7d73d3b003a1c7c9edee34a1d3ca5"
+    },
+    {
+      "path": "backend/alembic/versions/a1b2c3d4e5f6_add_video_category_and_shot_features.py",
+      "bytes": 1103,
+      "sha256": "27626ca3f8396429ff1fed261d31b60cce759a2ada5fff2fb4fdba666228e388"
+    },
+    {
+      "path": "backend/alembic/versions/b2c1d3e4f5a6_add_source_type_to_clone_scripts.py",
+      "bytes": 791,
+      "sha256": "8d3bf118ebdd12f9cd2db975a37988c15144514e9fa7d0ee4642cf38d2e6ad24"
+    },
+    {
+      "path": "backend/alembic/versions/b2c3d4e5f6a7_change_parse_pointer_to_json.py",
+      "bytes": 1093,
+      "sha256": "a7e9038b210722246e4f723d0e24f6f1e2595a164b4eef6d46dc1e96b6f96288"
+    },
+    {
+      "path": "backend/alembic/versions/b6491053b60f_image_details.py",
+      "bytes": 4610,
+      "sha256": "fbc5815f7bd84d3bcde96b03d889b6b285dada7804d160fefc65681a2f1e3b09"
+    },
+    {
+      "path": "backend/alembic/versions/be40a92bfaaf_add_version_to_imagebase.py",
+      "bytes": 1635,
+      "sha256": "e8a763637cc4d522b3866a8d441fa4a62132cb1c9fea070fbfadcfdb868807a2"
+    },
+    {
+      "path": "backend/alembic/versions/be8282e0f046_add_new_status.py",
+      "bytes": 5044,
+      "sha256": "b44aeba39089f02260a67acdbe8d19f48f0a95b25b18976bcf936ab4f1755470"
+    },
+    {
+      "path": "backend/alembic/versions/c443ac8b8734_add_info_to_clone_videos.py",
+      "bytes": 2055,
+      "sha256": "531ca15f1ef292c2afb4710cd0e44794518a73beba6f70ad0eba925e33b7434e"
+    },
+    {
+      "path": "backend/alembic/versions/cb69ce16e987_add_role_view_in_segments_table.py",
+      "bytes": 3117,
+      "sha256": "a4a9b21df959165ec26ae3d34d5790be462cd5a9221add728aefb1080bb14f40"
+    },
+    {
+      "path": "backend/alembic/versions/d4e5f6a7b8c9_split_clone_parse_pointer.py",
+      "bytes": 2287,
+      "sha256": "1cd1fd431368eec8be4fe9bef7eac4a77b174bcefb225e4eafd80267dc35a1b4"
+    },
+    {
+      "path": "backend/alembic/versions/e5f6a7b8c9d0_add_novels_table.py",
+      "bytes": 2626,
+      "sha256": "0c29edf54e1d30463da0cfdc05d6e12295f3438da70d3187bea672cfae319a43"
+    },
+    {
+      "path": "backend/alembic/versions/e8cb23ac5dac_add_is_novel_to_clone_scripts.py",
+      "bytes": 2935,
+      "sha256": "d0e393737c9a1523778e24ab897230225d709f16ac5b232dc7029eb903202ea1"
+    },
+    {
+      "path": "backend/alembic/versions/ebbd4c00f32c_add_name_comfy.py",
+      "bytes": 1391,
+      "sha256": "2c7a90e57c3e67581e8e8a78722739ce075a7f144365dfe74724e44034d39981"
+    },
+    {
+      "path": "backend/alembic/versions/f0e1d2c3b4a5_add_asset_ownership.py",
+      "bytes": 3452,
+      "sha256": "e8d08171af95571135837c844b031e3e138602b976ce9bf12889d3e5d90d5341"
+    },
+    {
+      "path": "backend/app/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/api/__init__.py",
+      "bytes": 25,
+      "sha256": "59f29411bc51817c0ae0400a270950151647fa7bb7fef0a037cf6f12bbffa74c"
+    },
+    {
+      "path": "backend/app/api/deps.py",
+      "bytes": 4208,
+      "sha256": "867adb2f8ae84c1d22b98e8036c0ea7db8d10db2bb9410d723da45e32517e695"
+    },
+    {
+      "path": "backend/app/api/router/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "bytes": 21264,
+      "sha256": "ee8b942ae6e0fe1b61a7e236147b74ccb5f99838fdb8f6e7b3c37ed7ebba6335"
+    },
+    {
+      "path": "backend/app/api/router/login.py",
+      "bytes": 3366,
+      "sha256": "f675ea826be57d3c407b57904efb8ea293c0122fc909ef636fbce76bd1cf15c0"
+    },
+    {
+      "path": "backend/app/api/router/novel.py",
+      "bytes": 11214,
+      "sha256": "2efb1beb5d217cbd4ada647070bc8a585f6acb8504d36d6a5d457915dffd8c01"
+    },
+    {
+      "path": "backend/app/api/router/render.py",
+      "bytes": 2127,
+      "sha256": "57d2c737acdacfbd21dfa7cecabfacf134a579d84f8781277c11dd329dc86326"
+    },
+    {
+      "path": "backend/app/api/router/scripts.py",
+      "bytes": 4491,
+      "sha256": "856e20e3726b1cd0e97142452a9cdb0a3163e544b00e5f38ac1cda602c075d55"
+    },
+    {
+      "path": "backend/app/api/router/user.py",
+      "bytes": 5048,
+      "sha256": "4c1aa596b6e3947d54a86dc385981661e4c077d233fc146479826042f79d1277"
+    },
+    {
+      "path": "backend/app/api/router/videos.py",
+      "bytes": 6771,
+      "sha256": "6abe0e0233c3a031965ed3aefd260bf2557c7db0a991495340c39ad8daa6887b"
+    },
+    {
+      "path": "backend/app/api/router_main.py",
+      "bytes": 737,
+      "sha256": "4e418b7cb7cdf9d4f0f17e96e94cde32edc8e89ae99bd4839e02e542294720b6"
+    },
+    {
+      "path": "backend/app/api/security.py",
+      "bytes": 954,
+      "sha256": "efbe1249d881b5428141be750bfb35b96801253718d2a15679cffd71f8830ac3"
+    },
+    {
+      "path": "backend/app/celery_app.py",
+      "bytes": 2646,
+      "sha256": "501c91342231218f77316b6eaec1184aba376774751a56260a9275f8f7e0c134"
+    },
+    {
+      "path": "backend/app/config.py",
+      "bytes": 4313,
+      "sha256": "5bca8085ea83b4a07e78d1e11babfcc8672fb2c6c5b34392104b05f3068452a8"
+    },
+    {
+      "path": "backend/app/database.py",
+      "bytes": 1104,
+      "sha256": "7addb8690cf6d4631a53b27e9c82f54c64e36f9573e643ad7d08e2263389afba"
+    },
+    {
+      "path": "backend/app/main.py",
+      "bytes": 3314,
+      "sha256": "1ccc162d37b81d3442f52969f481bf0caacccd92aced2bfe46fb23b850df0f81"
+    },
+    {
+      "path": "backend/app/models/__init__.py",
+      "bytes": 102,
+      "sha256": "b16b35cd2aeb4ebedb2a31951e0edc5eae0c68d75e6ce57a03f299a32466a532"
+    },
+    {
+      "path": "backend/app/models/novel.py",
+      "bytes": 1495,
+      "sha256": "4ebb5e36b445798cf0686ac28dfae2f3d9e24a52227ff2b1eaa91b7db85bd54f"
+    },
+    {
+      "path": "backend/app/models/script.py",
+      "bytes": 11765,
+      "sha256": "48c1d433492f2166c2ad65eb5f30a166196a03baf926cfcd1271de6e4551005e"
+    },
+    {
+      "path": "backend/app/models/user.py",
+      "bytes": 980,
+      "sha256": "f040505ac13c95196d6eee4c4dc9a24ef933a4c1e0f540c0050c48067f29b88f"
+    },
+    {
+      "path": "backend/app/models/video.py",
+      "bytes": 1680,
+      "sha256": "4a34b15ede85e65f929115b47c83aa4dfd11a653b3d928b2de97eb4518b49465"
+    },
+    {
+      "path": "backend/app/models/voice.py",
+      "bytes": 627,
+      "sha256": "e8dd09a7375738a01a55312cb6bf030d2be224827c27beca408ab0f4fc5525ce"
+    },
+    {
+      "path": "backend/app/prestart/create_admin.py",
+      "bytes": 2453,
+      "sha256": "e09d540dac21ee814f19dfb920ebe742c89edea9294edf00eb2ffd313012a291"
+    },
+    {
+      "path": "backend/app/prestart/prestart.py",
+      "bytes": 1467,
+      "sha256": "83e640c334b10ca3b435094dfe3d24b14b39ff5f472e9309c5d31ab2a8bf459a"
+    },
+    {
+      "path": "backend/app/schemas/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/schemas/script.py",
+      "bytes": 797,
+      "sha256": "5b27516cc1cf6ac0e99b32eeab9e6e873b7a60f192fa1089e2b8b0acb57bd000"
+    },
+    {
+      "path": "backend/app/schemas/video.py",
+      "bytes": 475,
+      "sha256": "82bf6e9057635fa4ef7a8134c1dcf7f1dc9c413fb8a223767dafb97d4b5343a4"
+    },
+    {
+      "path": "backend/app/services/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/services/asr_service.py",
+      "bytes": 5732,
+      "sha256": "25c734c94c93e83d7f1122e0a04ee85e9ef3bf57b28c7bdae712d58ca3ef9f64"
+    },
+    {
+      "path": "backend/app/services/clone.py",
+      "bytes": 10658,
+      "sha256": "9d19f48b838df3182c1c76a2423d4f11daaba6f6de7892bf38f9b18a6fd9aabf"
+    },
+    {
+      "path": "backend/app/services/clone_frame.py",
+      "bytes": 18788,
+      "sha256": "3190df61fe9619ff0a6c5586fe5efafaf9427af64805ada46cee964e2fd90583"
+    },
+    {
+      "path": "backend/app/services/clone_image.py",
+      "bytes": 23316,
+      "sha256": "e892e93b5206a36aa8f6fddb54d2e95d3a9ab0d090f481e7d36604f6516eea4e"
+    },
+    {
+      "path": "backend/app/services/clone_merge_video.py",
+      "bytes": 18034,
+      "sha256": "a26b0893efca94908a5d9b09e9eb3eaf59b840dfeb1f66338c016cfacfabfb2c"
+    },
+    {
+      "path": "backend/app/services/clone_plot.py",
+      "bytes": 19443,
+      "sha256": "d42ed10e0b855fe7bed83f5ad8ff4edb36f29c2da1b7601cb63184a4f5b0c282"
+    },
+    {
+      "path": "backend/app/services/clone_segment_video.py",
+      "bytes": 33675,
+      "sha256": "85591a0a3850f2ff62a98adb591e6b23d9916c4e770e6a1d52994cb5cfafd906"
+    },
+    {
+      "path": "backend/app/services/clone_service.py",
+      "bytes": 24833,
+      "sha256": "056a0f3cb5e807337030b19f3003fe5e65515e986923d17106c74cb5f33809a2"
+    },
+    {
+      "path": "backend/app/services/clone_storyboard.py",
+      "bytes": 19276,
+      "sha256": "0669f6e460bb17bca0bdf02e6edf0b13fb786c41c460d98e142688d4ce5218db"
+    },
+    {
+      "path": "backend/app/services/clone_voice.py",
+      "bytes": 21756,
+      "sha256": "3146b824ac2244959f264fbe79479302382c77eb1d6380bad0fd73b4126d29d0"
+    },
+    {
+      "path": "backend/app/services/comfy/api_comfy.py",
+      "bytes": 9315,
+      "sha256": "5b1b6655799a3e43c2b316f7d55dc3dbaf4fca93eb6411831fed74c238a18359"
+    },
+    {
+      "path": "backend/app/services/comfy/resource/images/female_portrait.png",
+      "bytes": 1586915,
+      "sha256": "8a1d63b332ce28bb0073a1fb2e0ccb3736f96d677ca3891727a3966e45027d49"
+    },
+    {
+      "path": "backend/app/services/comfy/resource/images/male_portrait.png",
+      "bytes": 1633020,
+      "sha256": "c5ccc20d6a6367e1e5b146c08fcb9c0d34a120c627ec49f19caad1f8ec57f924"
+    },
+    {
+      "path": "backend/app/services/comfy/resource/workflow/generate_portrait.json",
+      "bytes": 5650,
+      "sha256": "d2e504258b0133f9a81614106d9b6e5c6ecff53047071e8299fe7378ee00ba36"
+    },
+    {
+      "path": "backend/app/services/comfy/resource/workflow/test_get_video.json",
+      "bytes": 463,
+      "sha256": "ecce22a5b7ba09cba4e9e44842768457823042baf4052e75eafb3f789ff72010"
+    },
+    {
+      "path": "backend/app/services/comfy/resource/workflow/worker_krea2_t2i.json",
+      "bytes": 3642,
+      "sha256": "57c5b338047ca9dd2ec44b2856dd2dfa385ae8568c36e2305bb24dc58711ba9a"
+    },
+    {
+      "path": "backend/app/services/comfy/resource/workflow/worker_krea2_四视图.json",
+      "bytes": 6806,
+      "sha256": "71b347218426247dc0ccaceca15697d8b2b32aa7f781aeb1cfd63f9235a37b9e"
+    },
+    {
+      "path": "backend/app/services/comfy/resource/workflow/worker_ltx23_ai2v.json",
+      "bytes": 12182,
+      "sha256": "8181676b50db3b11df9f82150863d285956add8fffb935be74aa7d264507a188"
+    },
+    {
+      "path": "backend/app/services/comfy/resource/workflow/worker_minimax_h3_8lora_refi2v.json",
+      "bytes": 5482,
+      "sha256": "78bf259287f21b6539deee69211fbe9a3ab861fa7c67dabadb2ff015764dcdd9"
+    },
+    {
+      "path": "backend/app/services/comfy/resource/workflow/worker_minimax_h3_refi2v.json",
+      "bytes": 7679,
+      "sha256": "234b6bd5e6fdab7869aaa4d953efa02e5d1cca2769aebd3b0b4d9f471a46dbcc"
+    },
+    {
+      "path": "backend/app/services/comfy/resource/workflow/worker_multiImageFusion.json",
+      "bytes": 3815,
+      "sha256": "6f1bbf3b6600cb5db4d91b3a5aee0516ae79990a9262432cd82e6b4725be93cf"
+    },
+    {
+      "path": "backend/app/services/comfy/resource/workflow/worker_textToImage.json",
+      "bytes": 2605,
+      "sha256": "bb928e45fb21904aa773b9ac162acc842f7e7787969c2d4b1afca5eed237f1a1"
+    },
+    {
+      "path": "backend/app/services/comfy/wrap_comfy.py",
+      "bytes": 2635,
+      "sha256": "dedfb25684e1258d58d387df2392e99bcb7c47d114d59db090a553f2932f8331"
+    },
+    {
+      "path": "backend/app/services/douyin_parser.py",
+      "bytes": 3899,
+      "sha256": "7541e3d0a34a7c3c2996ed88a181016e07d452170deef214a950d177771a33c2"
+    },
+    {
+      "path": "backend/app/services/gen_image.py",
+      "bytes": 46172,
+      "sha256": "e7055a492df582a7b11df61a2f0210e428c68aa721ffea7f3c1f72057c09354d"
+    },
+    {
+      "path": "backend/app/services/gen_voice.py",
+      "bytes": 17740,
+      "sha256": "3244c949a63fbc5b5f97936009c9f2d94be24b39d2241fe25808a13cfc2717be"
+    },
+    {
+      "path": "backend/app/services/h3_prompt_optimizer.py",
+      "bytes": 24959,
+      "sha256": "4c312b6b32635959767ea3a1c9d862a62efd534192bb7fb32bad7dfb4c2945fc"
+    },
+    {
+      "path": "backend/app/services/llm.py",
+      "bytes": 37274,
+      "sha256": "9eb5e2001f639108166506fdf9af0275e66204719512a49ae354105f3effe44d"
+    },
+    {
+      "path": "backend/app/services/novel_analysis.py",
+      "bytes": 12380,
+      "sha256": "7a4f8741eea94d1d6d5ab9381f7cbcddca9492c90b2ee7351ffcb98b0b8fea63"
+    },
+    {
+      "path": "backend/app/services/novel_parser.py",
+      "bytes": 6014,
+      "sha256": "0e60b68072d989d25b1d2d6a638c8abddf99176abb38fca052f77db935319227"
+    },
+    {
+      "path": "backend/app/services/novel_script_generator.py",
+      "bytes": 11554,
+      "sha256": "933e47127e399252058e7d68c154712274e303a40c568c27155137d0555c188a"
+    },
+    {
+      "path": "backend/app/services/ownership.py",
+      "bytes": 5454,
+      "sha256": "7993bafbe461478a81a8bfbeb52f9af8f72b13b707e40c9d0b9bcc16109799ff"
+    },
+    {
+      "path": "backend/app/services/predict/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/services/predict/predict_voice_duration.py",
+      "bytes": 4610,
+      "sha256": "7cd63143f8b14dda9402bb69bc87429d1ef905cf237843d1b5d5e53ab047ff83"
+    },
+    {
+      "path": "backend/app/services/script_generator.py",
+      "bytes": 36085,
+      "sha256": "c00de456b5d897df36a49c9ad73b8036d67900db3ef607c04da5393029ed9e4a"
+    },
+    {
+      "path": "backend/app/services/video_processor.py",
+      "bytes": 5626,
+      "sha256": "b738da6213462a066093693078744efc7476063cc4047df1ac81d6403f9e7cbc"
+    },
+    {
+      "path": "backend/app/services/video_service.py",
+      "bytes": 2209,
+      "sha256": "bfeb64495f8f4c9cfdee37506639890669a43661d7d8210d6cab3b5623b9d9c4"
+    },
+    {
+      "path": "backend/app/services/visual_service.py",
+      "bytes": 7766,
+      "sha256": "fb82709393645c013d58cdf1f88f0832e1efd013ad909e38c54fd6f8649cc4ab"
+    },
+    {
+      "path": "backend/app/tasks/__init__.py",
+      "bytes": 68,
+      "sha256": "ebb5709ea5269e290156dd17f62936340200fc230644983df26c1f4a193a5dc3"
+    },
+    {
+      "path": "backend/app/tasks/parse_video.py",
+      "bytes": 9341,
+      "sha256": "7f614896acd241abdba00af2ec3b319538162d7df30d4bd02488152e002ddfb7"
+    },
+    {
+      "path": "backend/app/tasks/process_loop_manager.py",
+      "bytes": 2258,
+      "sha256": "d6769cbe610f21f5dde44a600cd89e9aa269f16a1a625680d982be23810101b3"
+    },
+    {
+      "path": "backend/app/util.py",
+      "bytes": 19293,
+      "sha256": "ce19d3554ddaea7916cfa77f5b5895e94ffae088da5870d2f4a1c031529ce46f"
+    },
+    {
+      "path": "backend/prestart.sh",
+      "bytes": 158,
+      "sha256": "8a5ab4b96414ffe57fb11df6d3cc10c23747891175866dc870ef0f53e6158a0d"
+    },
+    {
+      "path": "backend/pyproject.toml",
+      "bytes": 2887,
+      "sha256": "7088803ed1df1dc9e80d2044c22da66dc358185f13ce0679972b1727a64bb0e1"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "bytes": 10833,
+      "sha256": "c8ea3530b0e6f66f4c287caf1dcd9a352bdfe5204e77a18846d554fe71cf4f1a"
+    },
+    {
+      "path": "backend/tests/commons/extra_utils.py",
+      "bytes": 603,
+      "sha256": "147afcd82fb41fb8087433caa5d686a6951e34a83c1b4e5e9f2cca1b90b15203"
+    },
+    {
+      "path": "backend/tests/commons/runner_utils.py",
+      "bytes": 10953,
+      "sha256": "e361ff4d55ab9cf17c3441900a8bfc722c6d7ca6075cb7105985b22c4b89321e"
+    },
+    {
+      "path": "backend/tests/commons/utils.py",
+      "bytes": 4584,
+      "sha256": "d6e1f65ea6a624190255d1390d616df02b03a046877a79486aec52356e5fcc68"
+    },
+    {
+      "path": "backend/tests/commons/yaml_utils.py",
+      "bytes": 1101,
+      "sha256": "fc476d8ba1f81b5e25a25983e52db23e38796fe1cb40bb1af672c61417059cc3"
+    },
+    {
+      "path": "backend/tests/conftest.py",
+      "bytes": 2303,
+      "sha256": "f5b6313bc3b53961a8baa946d00b3be3e8f83822ba8fee8e5da008245f68ed99"
+    },
+    {
+      "path": "backend/tests/tests/api/router/auth.yaml",
+      "bytes": 1684,
+      "sha256": "b4bcf0673b5044592ba3b8b498927180bf0bdfcccabbce868888c733d92486cd"
+    },
+    {
+      "path": "backend/tests/tests/api/router/clone.yaml",
+      "bytes": 1054,
+      "sha256": "64521b2922e63d75c6b1b210c3cacb9d1fee9f6e749308db0ce46ed08e078982"
+    },
+    {
+      "path": "backend/tests/tests/api/router/scripts.yaml",
+      "bytes": 2886,
+      "sha256": "610a24f5d1fd0e2e3bfdeec2c3d8920bcbf53cb11e9839388cc4c8c23307a4c2"
+    },
+    {
+      "path": "backend/tests/tests/api/router/test_auth.py",
+      "bytes": 817,
+      "sha256": "2034fc44172e1c9c15770fffa6416616462842ccdb14cb6a8fb9e8f24079b3af"
+    },
+    {
+      "path": "backend/tests/tests/api/router/test_clone.py",
+      "bytes": 837,
+      "sha256": "416bf6a41690fb17abfdeec9bc2bf90ee5b2a58b5e94a7c357ae41c851900a08"
+    },
+    {
+      "path": "backend/tests/tests/api/router/test_scripts.py",
+      "bytes": 671,
+      "sha256": "613dee855e8b3ef9e30a1910b2d1218dfe0ce5d620e6278343e439af4dc3e51a"
+    },
+    {
+      "path": "backend/tests/tests/api/router/test_video.py",
+      "bytes": 856,
+      "sha256": "425c6600c91c2dd8c21a93e51d54909c0e7023a4e3b8f5a0a95d5cb05b9d3268"
+    },
+    {
+      "path": "backend/tests/tests/api/router/video.yaml",
+      "bytes": 3646,
+      "sha256": "70bf0ab931c4f558f11f6cc2dbf3d0fa1d91799f01cc7ca8d5caa6da5df65cb4"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_merge_cross_sentence.py",
+      "bytes": 4447,
+      "sha256": "30d5ae1c468f4fb65e3aea8f5338982cc42c7334b2c5c41510e8071a6b9ab52b"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_segment_video_audio.py",
+      "bytes": 7579,
+      "sha256": "3538c787e48f9b51bf52c669d8dbd1a4a288be5353dfbafdc17a06aab3e33e56"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "bytes": 16281,
+      "sha256": "9d18bbba03573ba2930a6529b1908b01c0044c30981524a1b5f89bc98fc86576"
+    },
+    {
+      "path": "deploy/nginx/parse_video.conf.template",
+      "bytes": 2342,
+      "sha256": "2ec018042256c172ad464b7fb872ed561e4221cde58923ceba7baa14efdee2f1"
+    },
+    {
+      "path": "deploy/nginx/parse_video_proxy.conf",
+      "bytes": 935,
+      "sha256": "9861198557903e95741537dbecf2e875a81c2c51e84034d1fd5ee25938e034ae"
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 2573,
+      "sha256": "44729ca6b441a51cab09e87ca1a0d5548a5e4d50a96cf950a1a553156b712e35"
+    },
+    {
+      "path": "docs/deploy-nginx-https.md",
+      "bytes": 7014,
+      "sha256": "b4ddf292db2fae53ce3ea6e0a3b6ff65a9b5285351cd12c8eb2d441e3935cf4e"
+    },
+    {
+      "path": "docs/h3_prompt_optimize.md",
+      "bytes": 12338,
+      "sha256": "948f5c28a82294802cb28ada5bfdb36637f23e26b85f760cab27d2f2dfc6b0b8"
+    },
+    {
+      "path": "docs/h3_results_script55.json",
+      "bytes": 16173,
+      "sha256": "e180bf3e9a54dbb141ddf61349abb925268bfae451038ca4ee1a44dc10181831"
+    },
+    {
+      "path": "docs/novel_api_test_guide.md",
+      "bytes": 7455,
+      "sha256": "65666527e89683b37395958329463522c5b234040ad543f9f79946db97414c83"
+    },
+    {
+      "path": "docs/novel_to_script_test_results.md",
+      "bytes": 4835,
+      "sha256": "18a891ba7cd67940f25dc277f6d0ea66c54b2be9b0ed04fa6c7d9dc0cfb96057"
+    },
+    {
+      "path": "docs/screenshots/detail-plot.jpg",
+      "bytes": 156701,
+      "sha256": "c3ca6639f12ec847133a78a2cf446f23932a1e3024725dbf292eeb32f38975b2"
+    },
+    {
+      "path": "docs/screenshots/detail-storyboard.jpg",
+      "bytes": 212874,
+      "sha256": "325cb476d7f9c1e985fbd06bfc5b874f0609355b7a6e271e4fb9e1d22e494b9f"
+    },
+    {
+      "path": "docs/screenshots/detail-task.jpg",
+      "bytes": 133131,
+      "sha256": "4f2d7cda37385e343cbc4b8a21e95a145be73d161e7b357b7bd963c3e67777cb"
+    },
+    {
+      "path": "docs/screenshots/login.jpg",
+      "bytes": 27682,
+      "sha256": "08f8dbf2bc34c6e1929a7c49719f8d3abd379c04e4c4b7d64039e925d3dad4ea"
+    },
+    {
+      "path": "docs/screenshots/workbench-admin.jpg",
+      "bytes": 60739,
+      "sha256": "f2ce0db9b1b5b7233120f997b2c643f8ca162756629e9a57c3e5a8228e55f1a3"
+    },
+    {
+      "path": "docs/screenshots/workbench-copy.jpg",
+      "bytes": 153795,
+      "sha256": "4215e29cab46100eeebef56b05aab98b1e3224b37c5665dfbe10b92b630358b5"
+    },
+    {
+      "path": "docs/screenshots/workbench-generate.jpg",
+      "bytes": 129890,
+      "sha256": "4ff9656e7779cbb34bb068b13af5898c085897a354fc74307e67a9a784a172a9"
+    },
+    {
+      "path": "docs/screenshots/workbench-novel.jpg",
+      "bytes": 84352,
+      "sha256": "8640b1e33909a9bd865d6348f2b6b50771e9781218085617a1e2ea460aa54d50"
+    },
+    {
+      "path": "docs/screenshots/workbench-parse.jpg",
+      "bytes": 166727,
+      "sha256": "57b98a146eceb627e9e429b15c613ce4556343bad8a24bd13a2417b9ada423ee"
+    },
+    {
+      "path": "docs/summary_test_output/parse_video.md",
+      "bytes": 2880,
+      "sha256": "0f2d297ded154794b7ad8e8de9c5853fe00b0f877b0b01b4a4e9580d4ad95ac3"
+    },
+    {
+      "path": "docs/summary_test_output/summary_result.json",
+      "bytes": 9554,
+      "sha256": "3b77802d3b5a6d5332710b4d25de9aeba64b45d2cb16d856f350fcb2abbc6b30"
+    },
+    {
+      "path": "frontend/.dockerignore",
+      "bytes": 313,
+      "sha256": "3a6d055659c75d754bf27e19839ff79d915436ff20fad99fe233d20d08a871ae"
+    },
+    {
+      "path": "frontend/Dockerfile",
+      "bytes": 344,
+      "sha256": "054e5a515934fe7a8ede86bbdd0852c94eeda4ab20bdb5079b4677132c093c0f"
+    },
+    {
+      "path": "frontend/next-env.d.ts",
+      "bytes": 233,
+      "sha256": "e462a655754db9df18b4a657454a7b6a88717ffded4e89403b2b3a47c6603fc3"
+    },
+    {
+      "path": "frontend/next.config.js",
+      "bytes": 267,
+      "sha256": "50a658190059b35f9a9d285d936d1c6196ecfff1721f7d7c4a981c8c091ddbd6"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 268006,
+      "sha256": "631a0e7d610b8e343c77643d1f1bab2f7adac23cb942b45f94c83bd1da4acdca"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 866,
+      "sha256": "dc410ffd3d9416649d25633ce111ca5b63703a870edb317d567e17503de1146b"
+    },
+    {
+      "path": "frontend/postcss.config.js",
+      "bytes": 87,
+      "sha256": "d53cc7a39618f570f19c5f055340a4c99bcd53d9eb733cee876eefc47f399105"
+    },
+    {
+      "path": "frontend/src/app/globals.css",
+      "bytes": 5172,
+      "sha256": "bb07d6db3d68f64744d090aa9d46178b3f398ac96b74c73714753a2f6305efed"
+    },
+    {
+      "path": "frontend/src/app/icon.png",
+      "bytes": 1112085,
+      "sha256": "8ed34ac9d9802e427515584b3a8ab39923289010f50db73de41f91eb2b926177"
+    },
+    {
+      "path": "frontend/src/app/layout.tsx",
+      "bytes": 506,
+      "sha256": "2a490333c88c69b8b1d0ac69192bb00bebe9c08f6f91d4964fd49643a7bef763"
+    },
+    {
+      "path": "frontend/src/app/login/page.tsx",
+      "bytes": 4164,
+      "sha256": "5f2ef08a21b84975c57ce80ddc8ee1a7622e7762778ce116026650034ca56578"
+    },
+    {
+      "path": "frontend/src/app/page.tsx",
+      "bytes": 137,
+      "sha256": "83208620137083b2c10feda4785c23a063c51ff6210d3d7071050f4c521e34a1"
+    },
+    {
+      "path": "frontend/src/app/register/page.tsx",
+      "bytes": 5023,
+      "sha256": "0c140ec29c72b1bc3a40b8a42ae137fdcb682fd46627c86c89e5bab7b5c2dcbd"
+    },
+    {
+      "path": "frontend/src/components/video-studio/AdminUsersTab.tsx",
+      "bytes": 6718,
+      "sha256": "f1f0df3bc58e2dc840223938f73af2a8eb2faa50fd84679d9489af47eec6c1b2"
+    },
+    {
+      "path": "frontend/src/components/video-studio/CopyScriptTab.tsx",
+      "bytes": 28771,
+      "sha256": "619a40ef820d4a885aab0bd06ddec82b79f872cb8edaf13e834e9407fc3c7cd6"
+    },
+    {
+      "path": "frontend/src/components/video-studio/DetailModal.tsx",
+      "bytes": 27010,
+      "sha256": "02a108c30dc229d777ab9c000d2d0e80d1eb9b26091b93bf03081e6f2e225029"
+    },
+    {
+      "path": "frontend/src/components/video-studio/GenerateDetailModal.tsx",
+      "bytes": 34427,
+      "sha256": "f96b6f430b92b4a7698430a7f17c6dec5ee0eb646f9b18609a96c433bce85ed8"
+    },
+    {
+      "path": "frontend/src/components/video-studio/GenerateVideoTab.tsx",
+      "bytes": 28606,
+      "sha256": "e2b323a0a166d7ddf54092a0d75dcc045b6b7cbd0d390b006408e23af90f0ba1"
+    },
+    {
+      "path": "frontend/src/components/video-studio/Header.tsx",
+      "bytes": 2505,
+      "sha256": "d7cef495d5f50ee04fb894b0ef4bcad9a08bfb53d208f5212203af383e7e2ce5"
+    },
+    {
+      "path": "frontend/src/components/video-studio/NovelScriptTab.tsx",
+      "bytes": 38691,
+      "sha256": "3d1d1d09a5c3109a40b13c1018a5986f5ca427a6e69e0e12c004a1b4a849dc79"
+    },
+    {
+      "path": "frontend/src/components/video-studio/ParseVideoTab.tsx",
+      "bytes": 18822,
+      "sha256": "5a63a0907bfb779d82e53570f738d1267a185414317cf796493a31bc0bf00372"
+    },
+    {
+      "path": "frontend/src/components/video-studio/Sidebar.tsx",
+      "bytes": 13207,
+      "sha256": "fd4255b17addea8bedad551b673c99ae1c3277ff4bb6e48af86b143a2ec41ef5"
+    },
+    {
+      "path": "frontend/src/components/video-studio/data.ts",
+      "bytes": 4609,
+      "sha256": "4a47a19335f92d489a847606f7db4e4f3aff8fbf71755aa48382165343dc0aaf"
+    },
+    {
+      "path": "frontend/src/components/video-studio/index.tsx",
+      "bytes": 16629,
+      "sha256": "3cfa074f34170b4476bb7dc6397b27b6663d23da9a763370b02de8d549c87625"
+    },
+    {
+      "path": "frontend/src/lib/api.ts",
+      "bytes": 14669,
+      "sha256": "e6eb6866229d5bce6c2953870e34e67aeebbba687f290e3e87334df495ceea44"
+    },
+    {
+      "path": "frontend/src/lib/exportUtils.ts",
+      "bytes": 1604,
+      "sha256": "53d34e7b611bc65bf21b12b489efb3998e5e66e42d6fb54ef4743094f88ed0bc"
+    },
+    {
+      "path": "frontend/src/lib/utils.ts",
+      "bytes": 175,
+      "sha256": "9e45d6d21e0d57bf85930ba2bf6fdd9f5f0175d1129844356081a6050975deb1"
+    },
+    {
+      "path": "frontend/src/middleware.ts",
+      "bytes": 423,
+      "sha256": "f62bd0005c3f4819034544aa7527baf16e61f736227d25b6962d057e621b55df"
+    },
+    {
+      "path": "frontend/tailwind.config.ts",
+      "bytes": 352,
+      "sha256": "85da1886dc976f4efc6b3834e8df307e687806b70fad981c7cff84724df49072"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "bytes": 624,
+      "sha256": "c3b2c11165ec87b0376f6800d4899cbb9c88e15756021cf60431cc27f21fe7f6"
+    },
+    {
+      "path": "start.sh",
+      "bytes": 1710,
+      "sha256": "348b37701a9bb9422cbd94f5c5c14f06aaca7f9ce7238580ba8b1273aa4f2184"
+    },
+    {
+      "path": "stop.sh",
+      "bytes": 1074,
+      "sha256": "fbe8de3905dec94ec630355d416acf9bec5ff8d70b6fe406148fc69906f15567"
+    },
+    {
+      "path": "tts_model_zh_female_mizai_uranus_bigtts.pkl",
+      "bytes": 919,
+      "sha256": "1e281aab8d28fe9e20dd99af010b659bf78a0d7dde5550cb540386e430f762f8"
+    },
+    {
+      "path": "tts_model_zh_male_guanggaojieshuo_uranus_bigtts.pkl",
+      "bytes": 919,
+      "sha256": "12c8c8e563d6a5ec223326d11c8dae50b2817707ab249dd80d39c7b373f0bd8e"
+    }
+  ],
+  "imports": {
+    "PIL": [
+      "backend/app/util.py"
+    ],
+    "aiofiles": [
+      "backend/app/api/router/videos.py"
+    ],
+    "aiohttp": [
+      "backend/app/services/comfy/api_comfy.py"
+    ],
+    "alembic": [
+      "backend/alembic/env.py",
+      "backend/alembic/versions/1b7ce5112992_add_cascade.py",
+      "backend/alembic/versions/24bd50e6afee_add_image_prompt.py",
+      "backend/alembic/versions/497ec58be36f_add_zeed_in_cloneimage.py",
+      "backend/alembic/versions/546c6d44092d_add_status_in_cloneimage.py",
+      "backend/alembic/versions/6be585a63cee_add_faceless_to_clone_role_images.py",
+      "backend/alembic/versions/90ca846aba78_add_table_clone_segment_video.py",
+      "backend/alembic/versions/99c90f70710a_baseline_version_0709.py",
+      "backend/alembic/versions/a1b2c3d4e5f6_add_video_category_and_shot_features.py",
+      "backend/alembic/versions/b2c1d3e4f5a6_add_source_type_to_clone_scripts.py",
+      "backend/alembic/versions/b2c3d4e5f6a7_change_parse_pointer_to_json.py",
+      "backend/alembic/versions/b6491053b60f_image_details.py",
+      "backend/alembic/versions/be40a92bfaaf_add_version_to_imagebase.py",
+      "backend/alembic/versions/be8282e0f046_add_new_status.py",
+      "backend/alembic/versions/c443ac8b8734_add_info_to_clone_videos.py",
+      "backend/alembic/versions/cb69ce16e987_add_role_view_in_segments_table.py",
+      "backend/alembic/versions/d4e5f6a7b8c9_split_clone_parse_pointer.py",
+      "backend/alembic/versions/e5f6a7b8c9d0_add_novels_table.py",
+      "backend/alembic/versions/e8cb23ac5dac_add_is_novel_to_clone_scripts.py",
+      "backend/alembic/versions/ebbd4c00f32c_add_name_comfy.py",
+      "backend/alembic/versions/f0e1d2c3b4a5_add_asset_ownership.py"
+    ],
+    "asyncpg": [
+      "backend/app/database.py"
+    ],
+    "celery": [
+      "backend/app/celery_app.py",
+      "backend/app/services/clone.py",
+      "backend/app/services/clone_frame.py",
+      "backend/app/services/clone_image.py",
+      "backend/app/services/clone_merge_video.py",
+      "backend/app/services/clone_plot.py",
+      "backend/app/services/clone_segment_video.py",
+      "backend/app/services/clone_storyboard.py",
+      "backend/app/services/clone_voice.py",
+      "backend/app/services/comfy/api_comfy.py",
+      "backend/app/services/comfy/wrap_comfy.py",
+      "backend/app/services/gen_image.py",
+      "backend/app/services/gen_voice.py",
+      "backend/app/services/llm.py",
+      "backend/app/services/novel_analysis.py",
+      "backend/app/services/novel_parser.py",
+      "backend/app/services/novel_script_generator.py",
+      "backend/app/services/video_processor.py",
+      "backend/app/tasks/parse_video.py"
+    ],
+    "config": [
+      "backend/app/api/router/videos.py",
+      "backend/app/database.py",
+      "backend/app/main.py",
+      "backend/app/services/asr_service.py",
+      "backend/app/services/douyin_parser.py",
+      "backend/app/services/script_generator.py",
+      "backend/app/services/visual_service.py",
+      "backend/app/tasks/parse_video.py"
+    ],
+    "database": [
+      "backend/app/main.py",
+      "backend/app/models/novel.py",
+      "backend/app/models/script.py",
+      "backend/app/models/video.py"
+    ],
+    "fastapi": [
+      "backend/app/api/deps.py",
+      "backend/app/api/router/clone.py",
+      "backend/app/api/router/login.py",
+      "backend/app/api/router/novel.py",
+      "backend/app/api/router/render.py",
+      "backend/app/api/router/scripts.py",
+      "backend/app/api/router/user.py",
+      "backend/app/api/router/videos.py",
+      "backend/app/api/router_main.py",
+      "backend/app/main.py",
+      "backend/app/services/clone_service.py",
+      "backend/app/services/ownership.py",
+      "backend/tests/commons/runner_utils.py",
+      "backend/tests/commons/utils.py"
+    ],
+    "ffmpeg": [
+      "backend/app/services/clone_merge_video.py",
+      "backend/app/util.py"
+    ],
+    "func_timeout": [
+      "backend/app/services/douyin_parser.py"
+    ],
+    "httpx": [
+      "backend/app/services/clone_storyboard.py",
+      "backend/app/services/gen_image.py",
+      "backend/app/util.py",
+      "backend/tests/commons/runner_utils.py",
+      "backend/tests/commons/utils.py",
+      "backend/tests/conftest.py",
+      "backend/tests/tests/api/router/test_auth.py",
+      "backend/tests/tests/api/router/test_clone.py",
+      "backend/tests/tests/api/router/test_scripts.py",
+      "backend/tests/tests/api/router/test_video.py"
+    ],
+    "joblib": [
+      "backend/app/services/predict/predict_voice_duration.py"
+    ],
+    "jsonpath": [
+      "backend/tests/commons/extra_utils.py"
+    ],
+    "jwt": [
+      "backend/app/api/deps.py",
+      "backend/app/api/security.py"
+    ],
+    "langchain": [
+      "backend/app/services/clone_image.py",
+      "backend/app/services/clone_plot.py",
+      "backend/app/services/clone_storyboard.py",
+      "backend/app/services/clone_voice.py",
+      "backend/app/services/gen_voice.py",
+      "backend/app/services/llm.py"
+    ],
+    "langchain_core": [
+      "backend/app/services/clone_plot.py",
+      "backend/app/services/clone_storyboard.py",
+      "backend/app/services/clone_voice.py",
+      "backend/app/services/h3_prompt_optimizer.py",
+      "backend/app/services/novel_analysis.py",
+      "backend/app/services/script_generator.py",
+      "backend/app/services/visual_service.py"
+    ],
+    "langchain_openai": [
+      "backend/app/services/script_generator.py",
+      "backend/app/services/visual_service.py"
+    ],
+    "langgraph": [
+      "backend/app/services/clone.py",
+      "backend/app/services/clone_image.py",
+      "backend/app/services/clone_plot.py",
+      "backend/app/services/clone_storyboard.py",
+      "backend/app/services/clone_voice.py"
+    ],
+    "models": [
+      "backend/app/api/router/scripts.py",
+      "backend/app/api/router/videos.py"
+    ],
+    "mutagen": [
+      "backend/app/services/gen_voice.py"
+    ],
+    "novel": [
+      "backend/app/models/__init__.py"
+    ],
+    "openai": [
+      "backend/app/services/clone_frame.py",
+      "backend/app/services/comfy/wrap_comfy.py"
+    ],
+    "pandas": [
+      "backend/app/services/clone_plot.py",
+      "backend/app/services/predict/predict_voice_duration.py",
+      "backend/app/services/script_generator.py"
+    ],
+    "parse_video": [
+      "backend/app/tasks/__init__.py"
+    ],
+    "psycopg2": [
+      "backend/app/services/predict/predict_voice_duration.py"
+    ],
+    "pwdlib": [
+      "backend/app/api/security.py",
+      "backend/tests/commons/runner_utils.py"
+    ],
+    "pydantic": [
+      "backend/app/api/deps.py",
+      "backend/app/api/router/clone.py",
+      "backend/app/api/router/novel.py",
+      "backend/app/api/router/render.py",
+      "backend/app/api/router/user.py",
+      "backend/app/api/router/videos.py",
+      "backend/app/config.py",
+      "backend/app/models/user.py",
+      "backend/app/models/voice.py",
+      "backend/app/schemas/script.py",
+      "backend/app/schemas/video.py",
+      "backend/app/services/clone_image.py",
+      "backend/app/services/clone_plot.py",
+      "backend/app/services/clone_storyboard.py",
+      "backend/app/services/clone_voice.py",
+      "backend/app/services/gen_image.py",
+      "backend/app/services/gen_voice.py",
+      "backend/app/services/llm.py",
+      "backend/app/services/script_generator.py",
+      "backend/app/tasks/parse_video.py",
+      "backend/app/util.py"
+    ],
+    "pydantic_settings": [
+      "backend/app/config.py"
+    ],
+    "pydub": [
+      "backend/app/services/clone_segment_video.py",
+      "backend/app/services/clone_storyboard.py",
+      "backend/app/services/clone_voice.py",
+      "backend/tests/tests/services/test_clone_segment_video_audio.py"
+    ],
+    "pytest": [
+      "backend/tests/conftest.py",
+      "backend/tests/tests/api/router/test_auth.py",
+      "backend/tests/tests/api/router/test_clone.py",
+      "backend/tests/tests/api/router/test_scripts.py",
+      "backend/tests/tests/api/router/test_video.py",
+      "backend/tests/tests/services/test_clone_segment_video_audio.py",
+      "backend/tests/tests/services/test_h3_prompt_optimizer.py"
+    ],
+    "redis": [
+      "backend/app/tasks/process_loop_manager.py",
+      "backend/app/util.py"
+    ],
+    "requests": [
+      "backend/app/services/asr_service.py",
+      "backend/app/services/clone_frame.py",
+      "backend/app/services/clone_image.py",
+      "backend/app/services/clone_segment_video.py",
+      "backend/app/services/comfy/api_comfy.py",
+      "backend/app/services/gen_voice.py",
+      "backend/test_novel_api.py"
+    ],
+    "responses_validator": [
+      "backend/tests/commons/runner_utils.py"
+    ],
+    "scenedetect": [
+      "backend/app/services/video_processor.py"
+    ],
+    "script": [
+      "backend/app/models/__init__.py"
+    ],
+    "services": [
+      "backend/app/api/router/videos.py"
+    ],
+    "sklearn": [
+      "backend/app/services/predict/predict_voice_duration.py"
+    ],
+    "slowapi": [
+      "backend/app/api/deps.py",
+      "backend/app/main.py"
+    ],
+    "sqlalchemy": [
+      "backend/alembic/env.py",
+      "backend/alembic/versions/1b7ce5112992_add_cascade.py",
+      "backend/alembic/versions/24bd50e6afee_add_image_prompt.py",
+      "backend/alembic/versions/497ec58be36f_add_zeed_in_cloneimage.py",
+      "backend/alembic/versions/546c6d44092d_add_status_in_cloneimage.py",
+      "backend/alembic/versions/6be585a63cee_add_faceless_to_clone_role_images.py",
+      "backend/alembic/versions/90ca846aba78_add_table_clone_segment_video.py",
+      "backend/alembic/versions/99c90f70710a_baseline_version_0709.py",
+      "backend/alembic/versions/a1b2c3d4e5f6_add_video_category_and_shot_features.py",
+      "backend/alembic/versions/b2c1d3e4f5a6_add_source_type_to_clone_scripts.py",
+      "backend/alembic/versions/b2c3d4e5f6a7_change_parse_pointer_to_json.py",
+      "backend/alembic/versions/b6491053b60f_image_details.py",
+      "backend/alembic/versions/be40a92bfaaf_add_version_to_imagebase.py",
+      "backend/alembic/versions/be8282e0f046_add_new_status.py",
+      "backend/alembic/versions/c443ac8b8734_add_info_to_clone_videos.py",
+      "backend/alembic/versions/cb69ce16e987_add_role_view_in_segments_table.py",
+      "backend/alembic/versions/d4e5f6a7b8c9_split_clone_parse_pointer.py",
+      "backend/alembic/versions/e5f6a7b8c9d0_add_novels_table.py",
+      "backend/alembic/versions/e8cb23ac5dac_add_is_novel_to_clone_scripts.py",
+      "backend/alembic/versions/ebbd4c00f32c_add_name_comfy.py",
+      "backend/alembic/versions/f0e1d2c3b4a5_add_asset_ownership.py",
+      "backend/app/api/deps.py",
+      "backend/app/api/router/clone.py",
+      "backend/app/api/router/login.py",
+      "backend/app/api/router/novel.py",
+      "backend/app/api/router/scripts.py",
+      "backend/app/api/router/user.py",
+      "backend/app/database.py",
+      "backend/app/models/novel.py",
+      "backend/app/models/script.py",
+      "backend/app/models/user.py",
+      "backend/app/models/video.py",
+      "backend/app/models/voice.py",
+      "backend/app/prestart/create_admin.py",
+      "backend/app/prestart/prestart.py",
+      "backend/app/services/clone.py",
+      "backend/app/services/clone_frame.py",
+      "backend/app/services/clone_image.py",
+      "backend/app/services/clone_merge_video.py",
+      "backend/app/services/clone_plot.py",
+      "backend/app/services/clone_segment_video.py",
+      "backend/app/services/clone_service.py",
+      "backend/app/services/clone_storyboard.py",
+      "backend/app/services/clone_voice.py",
+      "backend/app/services/h3_prompt_optimizer.py",
+      "backend/app/services/novel_script_generator.py",
+      "backend/app/services/ownership.py",
+      "backend/app/services/predict/predict_voice_duration.py",
+      "backend/app/services/video_service.py",
+      "backend/app/tasks/process_loop_manager.py",
+      "backend/test_novel_api.py",
+      "backend/tests/commons/runner_utils.py",
+      "backend/tests/conftest.py",
+      "backend/tests/tests/api/router/test_auth.py",
+      "backend/tests/tests/api/router/test_clone.py",
+      "backend/tests/tests/api/router/test_scripts.py",
+      "backend/tests/tests/api/router/test_video.py"
+    ],
+    "tasks": [
+      "backend/app/api/router/videos.py"
+    ],
+    "tenacity": [
+      "backend/app/prestart/prestart.py"
+    ],
+    "user": [
+      "backend/app/models/__init__.py"
+    ],
+    "uvicorn": [
+      "backend/app/main.py"
+    ],
+    "video": [
+      "backend/app/models/__init__.py"
+    ],
+    "videodl": [
+      "backend/app/services/douyin_parser.py"
+    ],
+    "volcenginesdkcore": [
+      "backend/app/services/gen_voice.py"
+    ],
+    "volcenginesdkspeechsaasprod": [
+      "backend/app/services/gen_voice.py"
+    ],
+    "websockets": [
+      "backend/app/services/comfy/api_comfy.py"
+    ],
+    "yaml": [
+      "backend/tests/commons/yaml_utils.py"
+    ],
+    "yt_dlp": [
+      "backend/app/services/douyin_parser.py"
+    ]
+  },
+  "network_calls": [
+    {
+      "path": "backend/app/api/deps.py",
+      "line": 73,
+      "function": "session.get",
+      "first_argument": "User"
+    },
+    {
+      "path": "backend/app/services/asr_service.py",
+      "line": 75,
+      "function": "requests.post",
+      "first_argument": "submit_url"
+    },
+    {
+      "path": "backend/app/services/asr_service.py",
+      "line": 98,
+      "function": "requests.post",
+      "first_argument": "query_url"
+    },
+    {
+      "path": "backend/app/services/clone.py",
+      "line": 60,
+      "function": "clone_plot_graph.ainvoke",
+      "first_argument": "initial_input"
+    },
+    {
+      "path": "backend/app/services/clone.py",
+      "line": 84,
+      "function": "clone_voice_graph.ainvoke",
+      "first_argument": "initial_input"
+    },
+    {
+      "path": "backend/app/services/clone.py",
+      "line": 111,
+      "function": "clone_storyboard_graph.ainvoke",
+      "first_argument": "initial_input"
+    },
+    {
+      "path": "backend/app/services/clone.py",
+      "line": 133,
+      "function": "clone_image_graph.ainvoke",
+      "first_argument": "input_data"
+    },
+    {
+      "path": "backend/app/services/clone.py",
+      "line": 291,
+      "function": "clone_graph.ainvoke",
+      "first_argument": "initial_input"
+    },
+    {
+      "path": "backend/app/services/clone_frame.py",
+      "line": 166,
+      "function": "requests.post",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/app/services/clone_image.py",
+      "line": 531,
+      "function": "requests.post",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/app/services/clone_segment_video.py",
+      "line": 409,
+      "function": "requests.post",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/app/services/comfy/api_comfy.py",
+      "line": 57,
+      "function": "websockets.connect",
+      "first_argument": null
+    },
+    {
+      "path": "backend/app/services/comfy/api_comfy.py",
+      "line": 38,
+      "function": "session.post",
+      "first_argument": "target_url"
+    },
+    {
+      "path": "backend/app/services/comfy/api_comfy.py",
+      "line": 126,
+      "function": "session.get",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/app/services/comfy/api_comfy.py",
+      "line": 160,
+      "function": "session.get",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/app/services/douyin_parser.py",
+      "line": 42,
+      "function": "yt_dlp.YoutubeDL",
+      "first_argument": "info_opts"
+    },
+    {
+      "path": "backend/app/services/douyin_parser.py",
+      "line": 43,
+      "function": "ydl.extract_info",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/app/services/douyin_parser.py",
+      "line": 59,
+      "function": "yt_dlp.YoutubeDL",
+      "first_argument": "ydl_opts"
+    },
+    {
+      "path": "backend/app/services/douyin_parser.py",
+      "line": 60,
+      "function": "ydl.extract_info",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/app/services/douyin_parser.py",
+      "line": 84,
+      "function": "videodl.VideoClient",
+      "first_argument": null
+    },
+    {
+      "path": "backend/app/services/douyin_parser.py",
+      "line": 87,
+      "function": "video_client.parsefromurl",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/app/services/douyin_parser.py",
+      "line": 93,
+      "function": "video_client.download",
+      "first_argument": "video_infos"
+    },
+    {
+      "path": "backend/app/services/gen_image.py",
+      "line": 193,
+      "function": "client.post",
+      "first_argument": "self.workflow_url + app_id"
+    },
+    {
+      "path": "backend/app/services/gen_image.py",
+      "line": 200,
+      "function": "client.post",
+      "first_argument": "self.query_url"
+    },
+    {
+      "path": "backend/app/services/gen_image.py",
+      "line": 252,
+      "function": "client.stream",
+      "first_argument": "'GET'"
+    },
+    {
+      "path": "backend/app/services/gen_image.py",
+      "line": 275,
+      "function": "client.post",
+      "first_argument": "upload_url"
+    },
+    {
+      "path": "backend/app/services/gen_image.py",
+      "line": 508,
+      "function": "client.request",
+      "first_argument": "'POST'"
+    },
+    {
+      "path": "backend/app/services/gen_image.py",
+      "line": 540,
+      "function": "client.stream",
+      "first_argument": "'GET'"
+    },
+    {
+      "path": "backend/app/services/gen_voice.py",
+      "line": 97,
+      "function": "session.post",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/app/services/h3_prompt_optimizer.py",
+      "line": 372,
+      "function": "model.ainvoke",
+      "first_argument": "messages"
+    },
+    {
+      "path": "backend/app/services/llm.py",
+      "line": 11,
+      "function": "init_chat_model",
+      "first_argument": "settings.LLM_NAME"
+    },
+    {
+      "path": "backend/app/services/llm.py",
+      "line": 401,
+      "function": "storyboard_model.ainvoke",
+      "first_argument": "messages"
+    },
+    {
+      "path": "backend/app/services/llm.py",
+      "line": 505,
+      "function": "producer_model.ainvoke",
+      "first_argument": "messages"
+    },
+    {
+      "path": "backend/app/services/llm.py",
+      "line": 561,
+      "function": "structured_model.ainvoke",
+      "first_argument": "messages"
+    },
+    {
+      "path": "backend/app/services/llm.py",
+      "line": 404,
+      "function": "model.ainvoke",
+      "first_argument": "messages"
+    },
+    {
+      "path": "backend/app/services/llm.py",
+      "line": 508,
+      "function": "model.ainvoke",
+      "first_argument": "messages"
+    },
+    {
+      "path": "backend/app/services/llm.py",
+      "line": 565,
+      "function": "model.ainvoke",
+      "first_argument": "messages"
+    },
+    {
+      "path": "backend/app/services/novel_script_generator.py",
+      "line": 256,
+      "function": "clone_storyboard_graph.ainvoke",
+      "first_argument": "state"
+    },
+    {
+      "path": "backend/app/services/script_generator.py",
+      "line": 365,
+      "function": "ChatOpenAI",
+      "first_argument": null
+    },
+    {
+      "path": "backend/app/services/script_generator.py",
+      "line": 493,
+      "function": "ChatOpenAI",
+      "first_argument": null
+    },
+    {
+      "path": "backend/app/services/script_generator.py",
+      "line": 543,
+      "function": "ChatOpenAI",
+      "first_argument": null
+    },
+    {
+      "path": "backend/app/services/script_generator.py",
+      "line": 689,
+      "function": "ChatOpenAI",
+      "first_argument": null
+    },
+    {
+      "path": "backend/app/services/script_generator.py",
+      "line": 751,
+      "function": "ChatOpenAI",
+      "first_argument": null
+    },
+    {
+      "path": "backend/app/services/script_generator.py",
+      "line": 379,
+      "function": "llm.invoke",
+      "first_argument": "messages"
+    },
+    {
+      "path": "backend/app/services/script_generator.py",
+      "line": 569,
+      "function": "focus_model.invoke",
+      "first_argument": "[SystemMessage(content=focus_system), HumanMessage(content=focus_query)]"
+    },
+    {
+      "path": "backend/app/services/script_generator.py",
+      "line": 604,
+      "function": "plot_model.invoke",
+      "first_argument": "[SystemMessage(content=plot_system), HumanMessage(content=plot_query)]"
+    },
+    {
+      "path": "backend/app/services/script_generator.py",
+      "line": 448,
+      "function": "llm.ainvoke",
+      "first_argument": "[SystemMessage(content=prompt)]"
+    },
+    {
+      "path": "backend/app/services/script_generator.py",
+      "line": 699,
+      "function": "llm.invoke",
+      "first_argument": "[HumanMessage(content=user_prompt)]"
+    },
+    {
+      "path": "backend/app/services/script_generator.py",
+      "line": 768,
+      "function": "llm.invoke",
+      "first_argument": "[HumanMessage(content=user_prompt)]"
+    },
+    {
+      "path": "backend/app/services/visual_service.py",
+      "line": 106,
+      "function": "ChatOpenAI",
+      "first_argument": null
+    },
+    {
+      "path": "backend/app/services/visual_service.py",
+      "line": 131,
+      "function": "self.llm.invoke",
+      "first_argument": "messages"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 30,
+      "function": "requests.post",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 67,
+      "function": "requests.post",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 80,
+      "function": "requests.get",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 93,
+      "function": "requests.get",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 106,
+      "function": "requests.get",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 46,
+      "function": "requests.post",
+      "first_argument": "url"
+    },
+    {
+      "path": "backend/tests/commons/runner_utils.py",
+      "line": 190,
+      "function": "client.request",
+      "first_argument": null
+    },
+    {
+      "path": "backend/tests/commons/runner_utils.py",
+      "line": 194,
+      "function": "client.request",
+      "first_argument": null
+    },
+    {
+      "path": "backend/tests/commons/utils.py",
+      "line": 22,
+      "function": "client.post",
+      "first_argument": "f'api/v1/login/access-token'"
+    }
+  ],
+  "literal_urls": [
+    {
+      "path": "backend/app/services/asr_service.py",
+      "line": 23,
+      "url": "https://openspeech-direct.zijieapi.com/api/v3/auc/bigmodel/submit"
+    },
+    {
+      "path": "backend/app/services/asr_service.py",
+      "line": 88,
+      "url": "https://openspeech-direct.zijieapi.com/api/v3/auc/bigmodel/query"
+    },
+    {
+      "path": "backend/app/services/gen_image.py",
+      "line": 135,
+      "url": "https://www.runninghub.cn/openapi/v2/run/ai-app/"
+    },
+    {
+      "path": "backend/app/services/gen_image.py",
+      "line": 136,
+      "url": "https://www.runninghub.cn/openapi/v2/query"
+    },
+    {
+      "path": "backend/app/services/gen_image.py",
+      "line": 270,
+      "url": "https://www.runninghub.cn/openapi/v2/media/upload/binary"
+    },
+    {
+      "path": "backend/app/services/gen_voice.py",
+      "line": 35,
+      "url": "https://openspeech.bytedance.com/api/v3/tts/unidirectional/sse"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 16,
+      "url": "http://localhost:8000"
+    }
+  ],
+  "tables": [
+    {
+      "path": "backend/app/models/novel.py",
+      "line": 11,
+      "name": "novels"
+    },
+    {
+      "path": "backend/app/models/script.py",
+      "line": 47,
+      "name": "scripts"
+    },
+    {
+      "path": "backend/app/models/script.py",
+      "line": 64,
+      "name": "script_segments"
+    },
+    {
+      "path": "backend/app/models/script.py",
+      "line": 76,
+      "name": "clone_scripts"
+    },
+    {
+      "path": "backend/app/models/script.py",
+      "line": 102,
+      "name": "clone_voices"
+    },
+    {
+      "path": "backend/app/models/script.py",
+      "line": 143,
+      "name": "clone_role_images"
+    },
+    {
+      "path": "backend/app/models/script.py",
+      "line": 150,
+      "name": "clone_scene_images"
+    },
+    {
+      "path": "backend/app/models/script.py",
+      "line": 156,
+      "name": "clone_script_segments"
+    },
+    {
+      "path": "backend/app/models/script.py",
+      "line": 175,
+      "name": "clone_segment_images"
+    },
+    {
+      "path": "backend/app/models/script.py",
+      "line": 184,
+      "name": "clone_segment_video"
+    },
+    {
+      "path": "backend/app/models/script.py",
+      "line": 206,
+      "name": "clone_videos"
+    },
+    {
+      "path": "backend/app/models/user.py",
+      "line": 13,
+      "name": "users"
+    },
+    {
+      "path": "backend/app/models/video.py",
+      "line": 19,
+      "name": "videos"
+    },
+    {
+      "path": "backend/app/models/voice.py",
+      "line": 10,
+      "name": "voice"
+    }
+  ],
+  "migrations": [
+    {
+      "revision": "1b7ce5112992",
+      "down_revision": "24bd50e6afee",
+      "path": "backend/alembic/versions/1b7ce5112992_add_cascade.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "24bd50e6afee",
+      "down_revision": "99c90f70710a",
+      "path": "backend/alembic/versions/24bd50e6afee_add_image_prompt.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "497ec58be36f",
+      "down_revision": "546c6d44092d",
+      "path": "backend/alembic/versions/497ec58be36f_add_zeed_in_cloneimage.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "546c6d44092d",
+      "down_revision": "b6491053b60f",
+      "path": "backend/alembic/versions/546c6d44092d_add_status_in_cloneimage.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "6be585a63cee",
+      "down_revision": "c443ac8b8734",
+      "path": "backend/alembic/versions/6be585a63cee_add_faceless_to_clone_role_images.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "90ca846aba78",
+      "down_revision": "ebbd4c00f32c",
+      "path": "backend/alembic/versions/90ca846aba78_add_table_clone_segment_video.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "99c90f70710a",
+      "down_revision": null,
+      "path": "backend/alembic/versions/99c90f70710a_baseline_version_0709.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "a1b2c3d4e5f6",
+      "down_revision": "b2c1d3e4f5a6",
+      "path": "backend/alembic/versions/a1b2c3d4e5f6_add_video_category_and_shot_features.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "b2c1d3e4f5a6",
+      "down_revision": "6be585a63cee",
+      "path": "backend/alembic/versions/b2c1d3e4f5a6_add_source_type_to_clone_scripts.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "b2c3d4e5f6a7",
+      "down_revision": "a1b2c3d4e5f6",
+      "path": "backend/alembic/versions/b2c3d4e5f6a7_change_parse_pointer_to_json.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "b6491053b60f",
+      "down_revision": "cb69ce16e987",
+      "path": "backend/alembic/versions/b6491053b60f_image_details.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "be40a92bfaaf",
+      "down_revision": "497ec58be36f",
+      "path": "backend/alembic/versions/be40a92bfaaf_add_version_to_imagebase.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "be8282e0f046",
+      "down_revision": "e8cb23ac5dac",
+      "path": "backend/alembic/versions/be8282e0f046_add_new_status.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "c443ac8b8734",
+      "down_revision": "90ca846aba78",
+      "path": "backend/alembic/versions/c443ac8b8734_add_info_to_clone_videos.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "cb69ce16e987",
+      "down_revision": "1b7ce5112992",
+      "path": "backend/alembic/versions/cb69ce16e987_add_role_view_in_segments_table.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "d4e5f6a7b8c9",
+      "down_revision": "b2c3d4e5f6a7",
+      "path": "backend/alembic/versions/d4e5f6a7b8c9_split_clone_parse_pointer.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "e5f6a7b8c9d0",
+      "down_revision": "d4e5f6a7b8c9",
+      "path": "backend/alembic/versions/e5f6a7b8c9d0_add_novels_table.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "e8cb23ac5dac",
+      "down_revision": "e5f6a7b8c9d0",
+      "path": "backend/alembic/versions/e8cb23ac5dac_add_is_novel_to_clone_scripts.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "ebbd4c00f32c",
+      "down_revision": "be40a92bfaaf",
+      "path": "backend/alembic/versions/ebbd4c00f32c_add_name_comfy.py",
+      "downgrade_defined": true
+    },
+    {
+      "revision": "f0e1d2c3b4a5",
+      "down_revision": "be8282e0f046",
+      "path": "backend/alembic/versions/f0e1d2c3b4a5_add_asset_ownership.py",
+      "downgrade_defined": true
+    }
+  ],
+  "test_functions": [
+    {
+      "path": "backend/app/api/router/login.py",
+      "line": 96,
+      "name": "test_token"
+    },
+    {
+      "path": "backend/app/services/gen_image.py",
+      "line": 779,
+      "name": "test_get_video"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 142,
+      "name": "test_segments"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 194,
+      "name": "test_upload"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 214,
+      "name": "test_generate"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 229,
+      "name": "test_status"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 250,
+      "name": "test_scripts"
+    },
+    {
+      "path": "backend/test_novel_api.py",
+      "line": 270,
+      "name": "test_list_all"
+    },
+    {
+      "path": "backend/tests/tests/api/router/test_auth.py",
+      "line": 17,
+      "name": "test_auth_yaml"
+    },
+    {
+      "path": "backend/tests/tests/api/router/test_clone.py",
+      "line": 15,
+      "name": "test_clone_yaml"
+    },
+    {
+      "path": "backend/tests/tests/api/router/test_scripts.py",
+      "line": 10,
+      "name": "test_scripts_yaml"
+    },
+    {
+      "path": "backend/tests/tests/api/router/test_video.py",
+      "line": 17,
+      "name": "test_video_yaml"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_merge_cross_sentence.py",
+      "line": 21,
+      "name": "test_sentence_across_multiple_shots_detected"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_merge_cross_sentence.py",
+      "line": 40,
+      "name": "test_sentence_within_single_shot_not_detected"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_merge_cross_sentence.py",
+      "line": 52,
+      "name": "test_single_shot_all_line_not_detected"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_merge_cross_sentence.py",
+      "line": 60,
+      "name": "test_narration_not_detected"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_merge_cross_sentence.py",
+      "line": 72,
+      "name": "test_multiple_sentences_detected"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_segment_video_audio.py",
+      "line": 36,
+      "name": "test_long_sentence_across_shots_slices_each_shot"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_segment_video_audio.py",
+      "line": 52,
+      "name": "test_head_shot_ends_before_sentence_finishes_continues"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_segment_video_audio.py",
+      "line": 68,
+      "name": "test_narration_excluded_from_ref_and_collected_for_overlay"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_segment_video_audio.py",
+      "line": 85,
+      "name": "test_multi_lip_line_merged_to_single_file"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_segment_video_audio.py",
+      "line": 101,
+      "name": "test_narration_only_group_uses_narration_as_ref"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_segment_video_audio.py",
+      "line": 115,
+      "name": "test_no_dialogue_group_gets_quiet_noise_bed"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_segment_video_audio.py",
+      "line": 132,
+      "name": "test_overlay_preserves_video_duration"
+    },
+    {
+      "path": "backend/tests/tests/services/test_clone_segment_video_audio.py",
+      "line": 151,
+      "name": "test_empty_overlay_copies"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 36,
+      "name": "test_script55_like_durations_produce_3_groups"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 61,
+      "name": "test_single_segment_over_threshold_own_group"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 69,
+      "name": "test_empty_input"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 72,
+      "name": "test_one_segment"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 85,
+      "name": "test_image_cap_splits_group"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 101,
+      "name": "test_image_cap_overrides_duration"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 115,
+      "name": "test_same_asset_not_counted_twice"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 128,
+      "name": "test_single_segment_over_image_cap_own_group"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 137,
+      "name": "test_scene_images_count_with_flag"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 178,
+      "name": "test_merge_true_uses_merge_logic"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 190,
+      "name": "test_merge_false_each_segment_own_group"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 199,
+      "name": "test_merge_false_empty_input"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 233,
+      "name": "test_picture_dedup_and_relative_time"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 263,
+      "name": "test_role_state_dedup"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 275,
+      "name": "test_use_scene_image_false_default_excludes_scene"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 293,
+      "name": "test_use_scene_image_true_includes_scene"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 312,
+      "name": "test_dialogue_all_kept"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 320,
+      "name": "test_off_screen_role_not_in_role_view"
+    },
+    {
+      "path": "backend/tests/tests/services/test_h3_prompt_optimizer.py",
+      "line": 328,
+      "name": "test_dialogue_carries_audio_timeline_fields"
+    }
+  ],
+  "routes": [
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 76,
+      "method": "POST",
+      "path_fragment": "/plot",
+      "function": "clone_plot"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 116,
+      "method": "POST",
+      "path_fragment": "/re_plot",
+      "function": "re_clone_plot"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 145,
+      "method": "GET",
+      "path_fragment": "/{clone_script_id}/status",
+      "function": "get_clone_status"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 166,
+      "method": "GET",
+      "path_fragment": "/list_all",
+      "function": "list_all_clone_scripts"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 176,
+      "method": "GET",
+      "path_fragment": "/{script_id}/list_clone_scripts",
+      "function": "list_clone_scripts"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 202,
+      "method": "GET",
+      "path_fragment": "/capabilities",
+      "function": "clone_capabilities"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 217,
+      "method": "GET",
+      "path_fragment": "/{clone_script_id}",
+      "function": "get_clone_script_detail"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 232,
+      "method": "GET",
+      "path_fragment": "/voice/{voice_id}",
+      "function": "export_voice"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 263,
+      "method": "GET",
+      "path_fragment": "/{clone_script_id}/export/plot",
+      "function": "export_clone_script"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 294,
+      "method": "GET",
+      "path_fragment": "/image/{category}/{image_id}",
+      "function": "export_image"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 322,
+      "method": "GET",
+      "path_fragment": "/video/{category}/{video_id}",
+      "function": "export_video"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 352,
+      "method": "PATCH",
+      "path_fragment": "/{category}/{id}/regenerate",
+      "function": "regenerate_image"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 409,
+      "method": "GET",
+      "path_fragment": "/{category}/{id}/regenerate",
+      "function": "regenerate_image_status"
+    },
+    {
+      "path": "backend/app/api/router/clone.py",
+      "line": 433,
+      "method": "POST",
+      "path_fragment": "/phase",
+      "function": "clone_phase"
+    },
+    {
+      "path": "backend/app/api/router/login.py",
+      "line": 44,
+      "method": "POST",
+      "path_fragment": "/access-token",
+      "function": "login_access_token"
+    },
+    {
+      "path": "backend/app/api/router/login.py",
+      "line": 82,
+      "method": "POST",
+      "path_fragment": "/logout",
+      "function": "logout"
+    },
+    {
+      "path": "backend/app/api/router/login.py",
+      "line": 96,
+      "method": "POST",
+      "path_fragment": "/test-token",
+      "function": "test_token"
+    },
+    {
+      "path": "backend/app/api/router/novel.py",
+      "line": 106,
+      "method": "POST",
+      "path_fragment": "/upload",
+      "function": "upload_novel"
+    },
+    {
+      "path": "backend/app/api/router/novel.py",
+      "line": 175,
+      "method": "POST",
+      "path_fragment": "/create",
+      "function": "create_novel_from_text"
+    },
+    {
+      "path": "backend/app/api/router/novel.py",
+      "line": 230,
+      "method": "POST",
+      "path_fragment": "/generate",
+      "function": "generate_novel_scripts"
+    },
+    {
+      "path": "backend/app/api/router/novel.py",
+      "line": 288,
+      "method": "GET",
+      "path_fragment": "/{novel_id}/status",
+      "function": "get_novel_status"
+    },
+    {
+      "path": "backend/app/api/router/novel.py",
+      "line": 325,
+      "method": "GET",
+      "path_fragment": "/{novel_id}/scripts",
+      "function": "get_novel_scripts"
+    },
+    {
+      "path": "backend/app/api/router/novel.py",
+      "line": 371,
+      "method": "GET",
+      "path_fragment": "/list_all",
+      "function": "list_all_novels"
+    },
+    {
+      "path": "backend/app/api/router/render.py",
+      "line": 26,
+      "method": "POST",
+      "path_fragment": "/from-script",
+      "function": "render_from_script"
+    },
+    {
+      "path": "backend/app/api/router/scripts.py",
+      "line": 15,
+      "method": "GET",
+      "path_fragment": "/{video_id}",
+      "function": "get_script"
+    },
+    {
+      "path": "backend/app/api/router/scripts.py",
+      "line": 67,
+      "method": "GET",
+      "path_fragment": "/{video_id}/export",
+      "function": "export_script"
+    },
+    {
+      "path": "backend/app/api/router/user.py",
+      "line": 60,
+      "method": "POST",
+      "path_fragment": "",
+      "function": "create_user"
+    },
+    {
+      "path": "backend/app/api/router/user.py",
+      "line": 84,
+      "method": "GET",
+      "path_fragment": "/me",
+      "function": "read_user_me"
+    },
+    {
+      "path": "backend/app/api/router/user.py",
+      "line": 93,
+      "method": "GET",
+      "path_fragment": "",
+      "function": "list_users"
+    },
+    {
+      "path": "backend/app/api/router/user.py",
+      "line": 100,
+      "method": "PATCH",
+      "path_fragment": "/{user_id}/active",
+      "function": "update_user_active"
+    },
+    {
+      "path": "backend/app/api/router/user.py",
+      "line": 118,
+      "method": "DELETE",
+      "path_fragment": "/{user_id}",
+      "function": "delete_user"
+    },
+    {
+      "path": "backend/app/api/router/videos.py",
+      "line": 53,
+      "method": "POST",
+      "path_fragment": "/upload",
+      "function": "upload_video"
+    },
+    {
+      "path": "backend/app/api/router/videos.py",
+      "line": 119,
+      "method": "POST",
+      "path_fragment": "/douyin",
+      "function": "parse_douyin"
+    },
+    {
+      "path": "backend/app/api/router/videos.py",
+      "line": 139,
+      "method": "GET",
+      "path_fragment": "",
+      "function": "list_videos"
+    },
+    {
+      "path": "backend/app/api/router/videos.py",
+      "line": 148,
+      "method": "GET",
+      "path_fragment": "/{video_id}/status",
+      "function": "get_video_status"
+    }
+  ],
+  "syntax_errors": [],
+  "backend_dependencies": [
+    "fastapi==0.139.0",
+    "uvicorn==0.51.0",
+    "sqlalchemy==2.0.23",
+    "alembic==1.13.0",
+    "psycopg2-binary==2.9.9",
+    "celery==5.3.6",
+    "redis==8.0.1",
+    "python-multipart==0.0.6",
+    "httpx==0.25.2",
+    "pydantic[email]>=2.7.0,<3.0",
+    "pydantic-settings==2.1.0",
+    "python-dotenv==1.0.0",
+    "yt-dlp==2026.7.4",
+    "langchain==1.3.4",
+    "langchain-protocol==0.0.16",
+    "langchain_openai==1.2.2",
+    "langchain_core==1.4.0",
+    "scenedetect==0.7",
+    "pandas==3.0.3",
+    "tabulate==0.10.0",
+    "volcengine-python-sdk>=5.0.34",
+    "mutagen==1.47.0",
+    "pydub==0.25.1",
+    "joblib==1.5.3",
+    "scikit-learn==1.9.0",
+    "videofetch==0.9.1",
+    "pillow==12.3.0",
+    "asyncpg==0.31.0",
+    "pwdlib[argon2,bcrypt]==0.3.0",
+    "PyJWT==2.13.0",
+    "func_timeout==4.3.5",
+    "slowapi==0.1.10",
+    "aiohttp>=3.9.0",
+    "ffmpeg-python==0.2.0",
+    "aiofiles==25.1.0"
+  ],
+  "backend_dev_dependencies": [
+    "pytest<10.0.0,>=7.4.3",
+    "responses-validator==0.3.0",
+    "allure-pytest==2.16.0",
+    "httpx2=2.7.0"
+  ],
+  "frontend_package": {
+    "name": "parse-video-frontend",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "dev": "next dev -H 0.0.0.0",
+      "build": "next build",
+      "start": "next start -H 0.0.0.0",
+      "lint": "next lint"
+    },
+    "dependencies": {
+      "@heroicons/react": "^2.2.0",
+      "@tailwindcss/typography": "^0.5.19",
+      "axios": "^1.6.2",
+      "clsx": "^2.0.0",
+      "lucide-react": "^0.294.0",
+      "next": "^14.2.30",
+      "react": "^18",
+      "react-dom": "^18",
+      "react-markdown": "^10.1.0",
+      "remark-gfm": "^4.0.1",
+      "tailwind-merge": "^2.2.0"
+    },
+    "devDependencies": {
+      "@types/node": "^20",
+      "@types/react": "^18",
+      "@types/react-dom": "^18",
+      "autoprefixer": "^10.0.1",
+      "eslint": "^8",
+      "eslint-config-next": "14.0.4",
+      "postcss": "^8",
+      "tailwindcss": "^3.3.0",
+      "typescript": "^5"
+    }
+  },
+  "frontend_lock": {
+    "lockfileVersion": 3,
+    "package_count": 502,
+    "direct_packages": {
+      "@heroicons/react": {
+        "version": "2.2.0",
+        "resolved": "https://registry.npmjs.org/@heroicons/react/-/react-2.2.0.tgz",
+        "integrity": "sha512-LMcepvRaS9LYHJGsF0zzmgKCUim/X3N/DQKc4jepAXJ7l8QxJ1PmxJzqplF2Z3FE4PqBAIGyJAQ/w4B5dsqbtQ==",
+        "license": "MIT",
+        "peerDependencies": {
+          "react": ">= 16 || ^19.0.0-rc"
+        }
+      },
+      "@tailwindcss/typography": {
+        "version": "0.5.19",
+        "resolved": "https://registry.npmjs.org/@tailwindcss/typography/-/typography-0.5.19.tgz",
+        "integrity": "sha512-w31dd8HOx3k9vPtcQh5QHP9GwKcgbMp87j58qi6xgiBnFFtKEAgCWnDw4qUT8aHwkCp8bKvb/KGKWWHedP0AAg==",
+        "license": "MIT",
+        "dependencies": {
+          "postcss-selector-parser": "6.0.10"
+        },
+        "peerDependencies": {
+          "tailwindcss": ">=3.0.0 || insiders || >=4.0.0-alpha.20 || >=4.0.0-beta.1"
+        }
+      },
+      "axios": {
+        "version": "1.16.0",
+        "resolved": "https://registry.npmjs.org/axios/-/axios-1.16.0.tgz",
+        "integrity": "sha512-6hp5CwvTPlN2A31g5dxnwAX0orzM7pmCRDLnZSX772mv8WDqICwFjowHuPs04Mc8deIld1+ejhtaMn5vp6b+1w==",
+        "license": "MIT",
+        "dependencies": {
+          "follow-redirects": "^1.16.0",
+          "form-data": "^4.0.5",
+          "proxy-from-env": "^2.1.0"
+        }
+      },
+      "clsx": {
+        "version": "2.1.1",
+        "resolved": "https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz",
+        "integrity": "sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==",
+        "license": "MIT",
+        "engines": {
+          "node": ">=6"
+        }
+      },
+      "lucide-react": {
+        "version": "0.294.0",
+        "resolved": "https://registry.npmjs.org/lucide-react/-/lucide-react-0.294.0.tgz",
+        "integrity": "sha512-V7o0/VECSGbLHn3/1O67FUgBwWB+hmzshrgDVRJQhMh8uj5D3HBuIvhuAmQTtlupILSplwIZg5FTc4tTKMA2SA==",
+        "license": "ISC",
+        "peerDependencies": {
+          "react": "^16.5.1 || ^17.0.0 || ^18.0.0"
+        }
+      },
+      "next": {
+        "version": "14.2.30",
+        "resolved": "https://registry.npmmirror.com/next/-/next-14.2.30.tgz",
+        "integrity": "sha512-+COdu6HQrHHFQ1S/8BBsCag61jZacmvbuL2avHvQFbWa2Ox7bE+d8FyNgxRLjXQ5wtPyQwEmk85js/AuaG2Sbg==",
+        "license": "MIT",
+        "dependencies": {
+          "@next/env": "14.2.30",
+          "@swc/helpers": "0.5.5",
+          "busboy": "1.6.0",
+          "caniuse-lite": "^1.0.30001579",
+          "graceful-fs": "^4.2.11",
+          "postcss": "8.4.31",
+          "styled-jsx": "5.1.1"
+        },
+        "bin": {
+          "next": "dist/bin/next"
+        },
+        "engines": {
+          "node": ">=18.17.0"
+        },
+        "optionalDependencies": {
+          "@next/swc-darwin-arm64": "14.2.30",
+          "@next/swc-darwin-x64": "14.2.30",
+          "@next/swc-linux-arm64-gnu": "14.2.30",
+          "@next/swc-linux-arm64-musl": "14.2.30",
+          "@next/swc-linux-x64-gnu": "14.2.30",
+          "@next/swc-linux-x64-musl": "14.2.30",
+          "@next/swc-win32-arm64-msvc": "14.2.30",
+          "@next/swc-win32-ia32-msvc": "14.2.30",
+          "@next/swc-win32-x64-msvc": "14.2.30"
+        },
+        "peerDependencies": {
+          "@opentelemetry/api": "^1.1.0",
+          "@playwright/test": "^1.41.2",
+          "react": "^18.2.0",
+          "react-dom": "^18.2.0",
+          "sass": "^1.3.0"
+        },
+        "peerDependenciesMeta": {
+          "@opentelemetry/api": {
+            "optional": true
+          },
+          "@playwright/test": {
+            "optional": true
+          },
+          "sass": {
+            "optional": true
+          }
+        }
+      },
+      "react": {
+        "version": "18.3.1",
+        "resolved": "https://registry.npmjs.org/react/-/react-18.3.1.tgz",
+        "integrity": "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==",
+        "license": "MIT",
+        "dependencies": {
+          "loose-envify": "^1.1.0"
+        },
+        "engines": {
+          "node": ">=0.10.0"
+        }
+      },
+      "react-dom": {
+        "version": "18.3.1",
+        "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz",
+        "integrity": "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==",
+        "license": "MIT",
+        "dependencies": {
+          "loose-envify": "^1.1.0",
+          "scheduler": "^0.23.2"
+        },
+        "peerDependencies": {
+          "react": "^18.3.1"
+        }
+      },
+      "react-markdown": {
+        "version": "10.1.0",
+        "resolved": "https://registry.npmjs.org/react-markdown/-/react-markdown-10.1.0.tgz",
+        "integrity": "sha512-qKxVopLT/TyA6BX3Ue5NwabOsAzm0Q7kAPwq6L+wWDwisYs7R8vZ0nRXqq6rkueboxpkjvLGU9fWifiX/ZZFxQ==",
+        "license": "MIT",
+        "dependencies": {
+          "@types/hast": "^3.0.0",
+          "@types/mdast": "^4.0.0",
+          "devlop": "^1.0.0",
+          "hast-util-to-jsx-runtime": "^2.0.0",
+          "html-url-attributes": "^3.0.0",
+          "mdast-util-to-hast": "^13.0.0",
+          "remark-parse": "^11.0.0",
+          "remark-rehype": "^11.0.0",
+          "unified": "^11.0.0",
+          "unist-util-visit": "^5.0.0",
+          "vfile": "^6.0.0"
+        },
+        "funding": {
+          "type": "opencollective",
+          "url": "https://opencollective.com/unified"
+        },
+        "peerDependencies": {
+          "@types/react": ">=18",
+          "react": ">=18"
+        }
+      },
+      "remark-gfm": {
+        "version": "4.0.1",
+        "resolved": "https://registry.npmjs.org/remark-gfm/-/remark-gfm-4.0.1.tgz",
+        "integrity": "sha512-1quofZ2RQ9EWdeN34S79+KExV1764+wCUGop5CPL1WGdD0ocPpu91lzPGbwWMECpEpd42kJGQwzRfyov9j4yNg==",
+        "license": "MIT",
+        "dependencies": {
+          "@types/mdast": "^4.0.0",
+          "mdast-util-gfm": "^3.0.0",
+          "micromark-extension-gfm": "^3.0.0",
+          "remark-parse": "^11.0.0",
+          "remark-stringify": "^11.0.0",
+          "unified": "^11.0.0"
+        },
+        "funding": {
+          "type": "opencollective",
+          "url": "https://opencollective.com/unified"
+        }
+      },
+      "tailwind-merge": {
+        "version": "2.6.1",
+        "resolved": "https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-2.6.1.tgz",
+        "integrity": "sha512-Oo6tHdpZsGpkKG88HJ8RR1rg/RdnEkQEfMoEk2x1XRI3F1AxeU+ijRXpiVUF4UbLfcxxRGw6TbUINKYdWVsQTQ==",
+        "license": "MIT",
+        "funding": {
+          "type": "github",
+          "url": "https://github.com/sponsors/dcastil"
+        }
+      },
+      "@types/node": {
+        "version": "20.19.39",
+        "resolved": "https://registry.npmjs.org/@types/node/-/node-20.19.39.tgz",
+        "integrity": "sha512-orrrD74MBUyK8jOAD/r0+lfa1I2MO6I+vAkmAWzMYbCcgrN4lCrmK52gRFQq/JRxfYPfonkr4b0jcY7Olqdqbw==",
+        "dev": true,
+        "license": "MIT",
+        "dependencies": {
+          "undici-types": "~6.21.0"
+        }
+      },
+      "@types/react": {
+        "version": "18.3.28",
+        "resolved": "https://registry.npmjs.org/@types/react/-/react-18.3.28.tgz",
+        "integrity": "sha512-z9VXpC7MWrhfWipitjNdgCauoMLRdIILQsAEV+ZesIzBq/oUlxk0m3ApZuMFCXdnS4U7KrI+l3WRUEGQ8K1QKw==",
+        "license": "MIT",
+        "dependencies": {
+          "@types/prop-types": "*",
+          "csstype": "^3.2.2"
+        }
+      },
+      "@types/react-dom": {
+        "version": "18.3.7",
+        "resolved": "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.3.7.tgz",
+        "integrity": "sha512-MEe3UeoENYVFXzoXEWsvcpg6ZvlrFNlOQ7EOsvhI3CfAXwzPfO8Qwuxd40nepsYKqyyVQnTdEfv68q91yLcKrQ==",
+        "dev": true,
+        "license": "MIT",
+        "peerDependencies": {
+          "@types/react": "^18.0.0"
+        }
+      },
+      "autoprefixer": {
+        "version": "10.5.0",
+        "resolved": "https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.5.0.tgz",
+        "integrity": "sha512-FMhOoZV4+qR6aTUALKX2rEqGG+oyATvwBt9IIzVR5rMa2HRWPkxf+P+PAJLD1I/H5/II+HuZcBJYEFBpq39ong==",
+        "dev": true,
+        "funding": [
+          {
+            "type": "opencollective",
+            "url": "https://opencollective.com/postcss/"
+          },
+          {
+            "type": "tidelift",
+            "url": "https://tidelift.com/funding/github/npm/autoprefixer"
+          },
+          {
+            "type": "github",
+            "url": "https://github.com/sponsors/ai"
+          }
+        ],
+        "license": "MIT",
+        "dependencies": {
+          "browserslist": "^4.28.2",
+          "caniuse-lite": "^1.0.30001787",
+          "fraction.js": "^5.3.4",
+          "picocolors": "^1.1.1",
+          "postcss-value-parser": "^4.2.0"
+        },
+        "bin": {
+          "autoprefixer": "bin/autoprefixer"
+        },
+        "engines": {
+          "node": "^10 || ^12 || >=14"
+        },
+        "peerDependencies": {
+          "postcss": "^8.1.0"
+        }
+      },
+      "eslint": {
+        "version": "8.57.1",
+        "resolved": "https://registry.npmjs.org/eslint/-/eslint-8.57.1.tgz",
+        "integrity": "sha512-ypowyDxpVSYpkXr9WPv2PAZCtNip1Mv5KTW0SCurXv/9iOpcrH9PaqUElksqEB6pChqHGDRCFTyrZlGhnLNGiA==",
+        "deprecated": "This version is no longer supported. Please see https://eslint.org/version-support for other options.",
+        "dev": true,
+        "license": "MIT",
+        "dependencies": {
+          "@eslint-community/eslint-utils": "^4.2.0",
+          "@eslint-community/regexpp": "^4.6.1",
+          "@eslint/eslintrc": "^2.1.4",
+          "@eslint/js": "8.57.1",
+          "@humanwhocodes/config-array": "^0.13.0",
+          "@humanwhocodes/module-importer": "^1.0.1",
+          "@nodelib/fs.walk": "^1.2.8",
+          "@ungap/structured-clone": "^1.2.0",
+          "ajv": "^6.12.4",
+          "chalk": "^4.0.0",
+          "cross-spawn": "^7.0.2",
+          "debug": "^4.3.2",
+          "doctrine": "^3.0.0",
+          "escape-string-regexp": "^4.0.0",
+          "eslint-scope": "^7.2.2",
+          "eslint-visitor-keys": "^3.4.3",
+          "espree": "^9.6.1",
+          "esquery": "^1.4.2",
+          "esutils": "^2.0.2",
+          "fast-deep-equal": "^3.1.3",
+          "file-entry-cache": "^6.0.1",
+          "find-up": "^5.0.0",
+          "glob-parent": "^6.0.2",
+          "globals": "^13.19.0",
+          "graphemer": "^1.4.0",
+          "ignore": "^5.2.0",
+          "imurmurhash": "^0.1.4",
+          "is-glob": "^4.0.0",
+          "is-path-inside": "^3.0.3",
+          "js-yaml": "^4.1.0",
+          "json-stable-stringify-without-jsonify": "^1.0.1",
+          "levn": "^0.4.1",
+          "lodash.merge": "^4.6.2",
+          "minimatch": "^3.1.2",
+          "natural-compare": "^1.4.0",
+          "optionator": "^0.9.3",
+          "strip-ansi": "^6.0.1",
+          "text-table": "^0.2.0"
+        },
+        "bin": {
+          "eslint": "bin/eslint.js"
+        },
+        "engines": {
+          "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+        },
+        "funding": {
+          "url": "https://opencollective.com/eslint"
+        }
+      },
+      "eslint-config-next": {
+        "version": "14.0.4",
+        "resolved": "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-14.0.4.tgz",
+        "integrity": "sha512-9/xbOHEQOmQtqvQ1UsTQZpnA7SlDMBtuKJ//S4JnoyK3oGLhILKXdBgu/UO7lQo/2xOykQULS1qQ6p2+EpHgAQ==",
+        "dev": true,
+        "license": "MIT",
+        "dependencies": {
+          "@next/eslint-plugin-next": "14.0.4",
+          "@rushstack/eslint-patch": "^1.3.3",
+          "@typescript-eslint/parser": "^5.4.2 || ^6.0.0",
+          "eslint-import-resolver-node": "^0.3.6",
+          "eslint-import-resolver-typescript": "^3.5.2",
+          "eslint-plugin-import": "^2.28.1",
+          "eslint-plugin-jsx-a11y": "^6.7.1",
+          "eslint-plugin-react": "^7.33.2",
+          "eslint-plugin-react-hooks": "^4.5.0 || 5.0.0-canary-7118f5dd7-20230705"
+        },
+        "peerDependencies": {
+          "eslint": "^7.23.0 || ^8.0.0",
+          "typescript": ">=3.3.1"
+        },
+        "peerDependenciesMeta": {
+          "typescript": {
+            "optional": true
+          }
+        }
+      },
+      "postcss": {
+        "version": "8.5.13",
+        "resolved": "https://registry.npmjs.org/postcss/-/postcss-8.5.13.tgz",
+        "integrity": "sha512-qif0+jGGZoLWdHey3UFHHWP0H7Gbmsk8T5VEqyYFbWqPr1XqvLGBbk/sl8V5exGmcYJklJOhOQq1pV9IcsiFag==",
+        "funding": [
+          {
+            "type": "opencollective",
+            "url": "https://opencollective.com/postcss/"
+          },
+          {
+            "type": "tidelift",
+            "url": "https://tidelift.com/funding/github/npm/postcss"
+          },
+          {
+            "type": "github",
+            "url": "https://github.com/sponsors/ai"
+          }
+        ],
+        "license": "MIT",
+        "dependencies": {
+          "nanoid": "^3.3.11",
+          "picocolors": "^1.1.1",
+          "source-map-js": "^1.2.1"
+        },
+        "engines": {
+          "node": "^10 || ^12 || >=14"
+        }
+      },
+      "tailwindcss": {
+        "version": "3.4.19",
+        "resolved": "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.19.tgz",
+        "integrity": "sha512-3ofp+LL8E+pK/JuPLPggVAIaEuhvIz4qNcf3nA1Xn2o/7fb7s/TYpHhwGDv1ZU3PkBluUVaF8PyCHcm48cKLWQ==",
+        "license": "MIT",
+        "dependencies": {
+          "@alloc/quick-lru": "^5.2.0",
+          "arg": "^5.0.2",
+          "chokidar": "^3.6.0",
+          "didyoumean": "^1.2.2",
+          "dlv": "^1.1.3",
+          "fast-glob": "^3.3.2",
+          "glob-parent": "^6.0.2",
+          "is-glob": "^4.0.3",
+          "jiti": "^1.21.7",
+          "lilconfig": "^3.1.3",
+          "micromatch": "^4.0.8",
+          "normalize-path": "^3.0.0",
+          "object-hash": "^3.0.0",
+          "picocolors": "^1.1.1",
+          "postcss": "^8.4.47",
+          "postcss-import": "^15.1.0",
+          "postcss-js": "^4.0.1",
+          "postcss-load-config": "^4.0.2 || ^5.0 || ^6.0",
+          "postcss-nested": "^6.2.0",
+          "postcss-selector-parser": "^6.1.2",
+          "resolve": "^1.22.8",
+          "sucrase": "^3.35.0"
+        },
+        "bin": {
+          "tailwind": "lib/cli.js",
+          "tailwindcss": "lib/cli.js"
+        },
+        "engines": {
+          "node": ">=14.0.0"
+        }
+      },
+      "typescript": {
+        "version": "5.9.3",
+        "resolved": "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz",
+        "integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==",
+        "dev": true,
+        "license": "Apache-2.0",
+        "bin": {
+          "tsc": "bin/tsc",
+          "tsserver": "bin/tsserver"
+        },
+        "engines": {
+          "node": ">=14.17"
+        }
+      }
+    }
+  },
+  "license_notice_paths": [
+    "LICENSE"
+  ]
+}

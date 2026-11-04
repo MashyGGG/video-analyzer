@@ -1,0 +1,14 @@
+{
+  "started_at_utc": "2026-11-04T04:22:17.609020+00:00",
+  "duration_seconds": 0.749,
+  "cwd": "<workspace>",
+  "argv": [
+    "python",
+    "scripts/audit/probe_url_validator.py"
+  ],
+  "exit_code": 1,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "{\n  \"scope\": \"Reviewed AST function only; no HTTP, DNS, database, model, or API integration\",\n  \"results\": [\n    {\n      \"case\": \"valid-platform-url\",\n      \"expected_accept\": true,\n      \"actual_accept\": true,\n      \"status\": \"PASS\"\n    },\n    {\n      \"case\": \"reject-loopback-literal\",\n      \"expected_accept\": false,\n      \"actual_accept\": false,\n      \"status\": \"PASS\"\n    },\n    {\n      \"case\": \"reject-file-scheme\",\n      \"expected_accept\": false,\n      \"actual_accept\": false,\n      \"status\": \"PASS\"\n    },\n    {\n      \"case\": \"reject-suffix-confusion\",\n      \"expected_accept\": false,\n      \"actual_accept\": true,\n      \"status\": \"FAIL\"\n    },\n    {\n      \"case\": \"reject-unexpected-port\",\n      \"expected_accept\": false,\n      \"actual_accept\": true,\n      \"status\": \"FAIL\"\n    },\n    {\n      \"case\": \"reject-userinfo\",\n      \"expected_accept\": false,\n      \"actual_accept\": true,\n      \"status\": \"FAIL\"\n    },\n    {\n      \"case\": \"extract-share-text-before-validation\",\n      \"expected_accept\": true,\n      \"actual_accept\": false,\n      \"status\": \"FAIL\"\n    }\n  ],\n  \"passed\": 3,\n  \"failed\": 4,\n  \"skipped\": 0\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-11-04T04:24:24.542186+00:00",
+  "duration_seconds": 3.598,
+  "cwd": "<workspace>\\.audit-cache\\parse_video\\frontend",
+  "argv": [
+    "npm.cmd",
+    "run",
+    "lint"
+  ],
+  "exit_code": 1,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "\n> parse-video-frontend@0.1.0 lint\n> next lint\n\n? How would you like to configure ESLint? https://nextjs.org/docs/basic-features/eslint\n\u001b[?25l❯  Strict (recommended)\n   Base\n   Cancel",
+  "stderr": " ⚠ If you set up ESLint yourself, we recommend adding the Next.js ESLint plugin. See https://nextjs.org/docs/basic-features/eslint#migrating-existing-config\n"
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "source",
+  "repository": "vllm-project/vllm",
+  "observed_at_utc": "2026-11-04T04:19:46.426824+00:00",
+  "revision": "173d063acdb499ec2980b3d9561a6fbff0fd3701",
+  "root_entries": [
+    ".agents",
+    ".buildkite",
+    ".clang-format",
+    ".claude",
+    ".dockerignore",
+    ".git-blame-ignore-revs",
+    ".github",
+    ".gitignore",
+    ".pre-commit-config.yaml",
+    ".readthedocs.yaml",
+    "AGENTS.md",
+    "CMakeLists.txt",
+    "DCO",
+    "LICENSE",
+    "MANIFEST.in",
+    "README.md",
+    "SECURITY.md",
+    "benchmarks",
+    "cmake",
+    "csrc",
+    "docker",
+    "docs",
+    "examples",
+    "mkdocs.yaml",
+    "pyproject.toml",
+    "recipes",
+    "requirements",
+    "rust-toolchain.toml",
+    "rust",
+    "setup.py",
+    "tests",
+    "tools",
+    "vllm"
+  ],
+  "license_files": [
+    {
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/173d063acdb499ec2980b3d9561a6fbff0fd3701/LICENSE",
+      "file": "evidence/A00/sources/vllm-project__vllm/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ],
+  "status": "FETCHED"
+}

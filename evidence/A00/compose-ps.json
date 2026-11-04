@@ -1,0 +1,24 @@
+{
+  "started_at_utc": "2026-11-04T04:26:53.292049+00:00",
+  "duration_seconds": 0.488,
+  "cwd": "<workspace>\\.audit-cache\\parse_video",
+  "argv": [
+    "docker",
+    "compose",
+    "-p",
+    "video-analyzer-a00",
+    "-f",
+    "docker-compose.yml",
+    "-f",
+    "../compose.audit.yaml",
+    "ps",
+    "--all",
+    "--format",
+    "json"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": "time=\"2026-11-04T12:26:53+08:00\" level=warning msg=\"<workspace>\\\\.audit-cache\\\\parse_video\\\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion\"\n"
+}

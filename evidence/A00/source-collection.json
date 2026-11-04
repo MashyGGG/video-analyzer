@@ -1,0 +1,14 @@
+{
+  "started_at_utc": "2026-11-04T04:24:05.908500+00:00",
+  "duration_seconds": 8.005,
+  "cwd": "<workspace>",
+  "argv": [
+    "python",
+    "scripts/audit/collect_sources.py"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "XztCloud/parse_video adc13afb47a112f0def0435231e691a5307e5b49 FETCHED  \nJuneYaooo/rea-video 1c2a51471d9f454ea6e6c77fe161204317385b8c FETCHED  \nEvil0ctal/Douyin_TikTok_Download_API 5aa03528d2e974a0de23faf86597b5af3420df55 FETCHED  \nyt-dlp/yt-dlp b3b18f8fc606e782ee7c82b0780a40c67b829072 FETCHED  \nFFmpeg/FFmpeg 39ccb3ca120c0815c62c7f145a1aa1354f335680 FETCHED  \nBreakthrough/PySceneDetect c5ce29c73751e77139e838bd9ce9ab66a8e71a23 FETCHED  \nmodelscope/FunASR 1125860d49a7c0c3ce3675f7641374b1d403070e FETCHED  \nPaddlePaddle/PaddleOCR dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf FETCHED  \nQwenLM/Qwen3-VL 96588727e44c78b25ba03ea03b8e12f7e64fd0da FETCHED  \nvllm-project/vllm 173d063acdb499ec2980b3d9561a6fbff0fd3701 FETCHED  \nvolcengine/volcengine-python-sdk 5df619842a949fc59975cc22c84b482744280c27 FETCHED  \nQwen/Qwen3-VL-8B-Instruct 0c351dd01ed87e9c1b53cbc748cba10e6187ff3b FETCHED apache-2.0 \nfunasr/paraformer-zh d7811ee3ac581fbcfdeb37c98c6ba674028433dc FETCHED apache-2.0 \nPaddlePaddle/PP-OCRv5_server_det ca867c897ecbca8873081573a802ad70d499cb94 FETCHED apache-2.0 \nPaddlePaddle/PP-OCRv5_server_rec b26c3587fda8da3c8ec0ce357214b4d661ff1558 FETCHED apache-2.0 \n",
+  "stderr": ""
+}

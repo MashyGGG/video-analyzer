@@ -1,0 +1,69 @@
+{
+  "kind": "source",
+  "repository": "FFmpeg/FFmpeg",
+  "observed_at_utc": "2026-11-04T04:19:41.004769+00:00",
+  "revision": "39ccb3ca120c0815c62c7f145a1aa1354f335680",
+  "root_entries": [
+    ".forgejo",
+    ".gitattributes",
+    ".gitignore",
+    ".mailmap",
+    "CONTRIBUTING.md",
+    "COPYING.GPLv2",
+    "COPYING.GPLv3",
+    "COPYING.LGPLv2.1",
+    "COPYING.LGPLv3",
+    "CREDITS",
+    "Changelog",
+    "FUNDING.json",
+    "INSTALL.md",
+    "LICENSE.md",
+    "MAINTAINERS",
+    "Makefile",
+    "README.md",
+    "RELEASE",
+    "compat",
+    "configure",
+    "doc",
+    "ffbuild",
+    "fftools",
+    "libavcodec",
+    "libavdevice",
+    "libavfilter",
+    "libavformat",
+    "libavutil",
+    "libswresample",
+    "libswscale",
+    "presets",
+    "tests",
+    "tools"
+  ],
+  "license_files": [
+    {
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/39ccb3ca120c0815c62c7f145a1aa1354f335680/COPYING.GPLv2",
+      "file": "evidence/A00/sources/FFmpeg__FFmpeg/COPYING.GPLv2",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/39ccb3ca120c0815c62c7f145a1aa1354f335680/COPYING.GPLv3",
+      "file": "evidence/A00/sources/FFmpeg__FFmpeg/COPYING.GPLv3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/39ccb3ca120c0815c62c7f145a1aa1354f335680/COPYING.LGPLv2.1",
+      "file": "evidence/A00/sources/FFmpeg__FFmpeg/COPYING.LGPLv2.1",
+      "sha256": "246041b6ecf9bc32d718a62c57877c78b5eb397b6467e74ed7ae2626ab189c30"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/39ccb3ca120c0815c62c7f145a1aa1354f335680/COPYING.LGPLv3",
+      "file": "evidence/A00/sources/FFmpeg__FFmpeg/COPYING.LGPLv3",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/39ccb3ca120c0815c62c7f145a1aa1354f335680/LICENSE.md",
+      "file": "evidence/A00/sources/FFmpeg__FFmpeg/LICENSE.md",
+      "sha256": "e6dc72d5665a1ebd6dcc841de59278dad4ca77ecc47b03f1064a55c3e9ea8bb8"
+    }
+  ],
+  "status": "FETCHED"
+}

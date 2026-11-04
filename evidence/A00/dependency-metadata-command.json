@@ -1,0 +1,14 @@
+{
+  "started_at_utc": "2026-11-04T04:24:15.960109+00:00",
+  "duration_seconds": 8.813,
+  "cwd": "<workspace>",
+  "argv": [
+    "python",
+    "scripts/audit/collect_dependency_metadata.py"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "fastapi==0.139.0 METADATA_FETCHED MIT\nuvicorn==0.51.0 METADATA_FETCHED BSD-3-Clause\nsqlalchemy==2.0.23 METADATA_FETCHED License :: OSI Approved :: MIT License\nalembic==1.13.0 METADATA_FETCHED License :: OSI Approved :: MIT License\npsycopg2-binary==2.9.9 METADATA_FETCHED License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)\ncelery==5.3.6 METADATA_FETCHED License :: OSI Approved :: BSD License\nredis==8.0.1 METADATA_FETCHED MIT\npython-multipart==0.0.6 METADATA_FETCHED License :: OSI Approved :: Apache Software License\nhttpx==0.25.2 METADATA_FETCHED License :: OSI Approved :: BSD License\npydantic[email]>=2.7.0,<3.0 UNRESOLVED_RANGE_OR_INVALID UNKNOWN\npydantic-settings==2.1.0 METADATA_FETCHED License :: OSI Approved :: MIT License\npython-dotenv==1.0.0 METADATA_FETCHED License :: OSI Approved :: BSD License\nyt-dlp==2026.7.4 METADATA_FETCHED Unlicense\nlangchain==1.3.4 METADATA_FETCHED License :: OSI Approved :: MIT License\nlangchain-protocol==0.0.16 METADATA_FETCHED License :: OSI Approved :: MIT License\nlangchain_openai==1.2.2 METADATA_FETCHED License :: OSI Approved :: MIT License\nlangchain_core==1.4.0 METADATA_FETCHED License :: OSI Approved :: MIT License\nscenedetect==0.7 METADATA_FETCHED BSD-3-Clause\npandas==3.0.3 METADATA_FETCHED License :: OSI Approved :: BSD License\ntabulate==0.10.0 METADATA_FETCHED MIT\nvolcengine-python-sdk>=5.0.34 UNRESOLVED_RANGE_OR_INVALID UNKNOWN\nmutagen==1.47.0 METADATA_FETCHED License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)\npydub==0.25.1 METADATA_FETCHED License :: OSI Approved :: MIT License\njoblib==1.5.3 METADATA_FETCHED BSD-3-Clause\nscikit-learn==1.9.0 METADATA_FETCHED BSD-3-Clause\nvideofetch==0.9.1 METADATA_FETCHED License :: Free for non-commercial use\npillow==12.3.0 METADATA_FETCHED MIT-CMU\nasyncpg==0.31.0 METADATA_FETCHED Apache-2.0\npwdlib[argon2,bcrypt]==0.3.0 METADATA_FETCHED License :: OSI Approved :: MIT License\nPyJWT==2.13.0 METADATA_FETCHED MIT\nfunc_timeout==4.3.5 METADATA_FETCHED License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)\nslowapi==0.1.10 METADATA_FETCHED License :: OSI Approved :: MIT License\naiohttp>=3.9.0 UNRESOLVED_RANGE_OR_INVALID UNKNOWN\nffmpeg-python==0.2.0 METADATA_FETCHED License :: OSI Approved :: Apache Software License\naiofiles==25.1.0 METADATA_FETCHED License :: OSI Approved :: Apache Software License\npytest<10.0.0,>=7.4.3 UNRESOLVED_RANGE_OR_INVALID UNKNOWN\nresponses-validator==0.3.0 METADATA_FETCHED None\nallure-pytest==2.16.0 METADATA_FETCHED License :: OSI Approved :: Apache Software License\nhttpx2=2.7.0 UNRESOLVED_RANGE_OR_INVALID UNKNOWN\n",
+  "stderr": ""
+}
