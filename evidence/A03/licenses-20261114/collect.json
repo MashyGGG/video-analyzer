@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-11-14T03:01:14.942460+00:00",
+  "duration_seconds": 0.922,
+  "cwd": "<workspace>",
+  "argv": [
+    "<workspace>/backend/.venv/Scripts/python.exe",
+    "scripts/collect_a03_licenses.py",
+    "evidence/A03/licenses-20261114/packages.json"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "Recorded 6 package metadata and license records in evidence\\A03\\licenses-20261114\\packages.json\n",
+  "stderr": ""
+}

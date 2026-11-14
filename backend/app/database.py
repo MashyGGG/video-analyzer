@@ -4,7 +4,7 @@ from sqlalchemy import Engine, create_engine
 
 from app.config import Settings
 
-SCHEMA_REVISION = "0002_acquisition"
+SCHEMA_REVISION = "0003_media_timeline"
 
 
 @lru_cache

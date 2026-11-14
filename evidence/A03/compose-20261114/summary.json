@@ -1,0 +1,44 @@
+{
+  "scope": "A03 real Compose, generated local video; not real-video F1 acceptance",
+  "started_utc": "2026-11-14T02:57:31.516128+00:00",
+  "checks": [
+    {
+      "name": "upload_accepted",
+      "pass": true
+    },
+    {
+      "name": "real_media_queue_acquired",
+      "pass": true
+    },
+    {
+      "name": "timeline_request_accepted",
+      "pass": true
+    },
+    {
+      "name": "real_timeline_queue_succeeded",
+      "pass": true
+    },
+    {
+      "name": "two_shots_with_expected_cut",
+      "pass": true
+    },
+    {
+      "name": "timestamps_and_no_audio",
+      "pass": true
+    },
+    {
+      "name": "reference_shot_0001",
+      "pass": true
+    },
+    {
+      "name": "reference_shot_0002",
+      "pass": true
+    },
+    {
+      "name": "other_owner_denied",
+      "pass": true
+    }
+  ],
+  "status": "PASS",
+  "finished_utc": "2026-11-14T02:58:06.151903+00:00"
+}

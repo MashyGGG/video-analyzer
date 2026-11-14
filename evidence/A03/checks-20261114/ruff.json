@@ -1,0 +1,18 @@
+{
+  "started_at_utc": "2026-11-14T02:56:28.442594+00:00",
+  "duration_seconds": 0.0,
+  "cwd": "<workspace>\\backend",
+  "argv": [
+    ".venv/Scripts/ruff.exe",
+    "check",
+    "app",
+    "migrations",
+    "tests",
+    "../scripts/acceptance_a03.py"
+  ],
+  "exit_code": 127,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "",
+  "stderr": "[WinError 2] 系统找不到指定的文件。"
+}

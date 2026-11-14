@@ -1,0 +1,13 @@
+{
+  "started_at_utc": "2026-11-14T02:56:37.013770+00:00",
+  "duration_seconds": 0.688,
+  "cwd": "<workspace>\\backend",
+  "argv": [
+    "<workspace>/backend/.venv/Scripts/mypy.exe"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "Success: no issues found in 26 source files\n",
+  "stderr": ""
+}

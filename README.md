@@ -100,3 +100,7 @@ docker compose -f compose.yaml -f compose.gpu.yaml --profile gpu-check run --rm 
 本地前端默认 **http://127.0.0.1:3100**，从首页“导入视频”进入上传/链接采集。上传 MP4/MOV 经真实格式与视频解码校验后缓存；平台限制会显示明确错误并回退上传。抖音优先，TikTok/B站/YouTube 为条件接入，真实平台成功需要单独授权样例验收；本卡不提供视频分析/切镜。
 
 运行、API、平台范围、安全限制、迁移/恢复与验收命令见 [A02 采集手册](docs/runbooks/A02-acquisition.md)，集中验收见 [A02 报告](docs/audit/A02-acceptance.md)。
+
+## A03 媒体时间轴
+
+已采集资源可通过 API 异步生成物理镜头、时间戳、参考帧和缩略图；用法与限制见 [A03 媒体时间轴手册](docs/runbooks/A03-media-timeline.md)。真实标注视频上的切镜质量验收仍待完成。

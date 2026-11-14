@@ -1,0 +1,20 @@
+{
+  "started_at_utc": "2026-11-14T03:03:38.909631+00:00",
+  "duration_seconds": 0.015,
+  "cwd": "<workspace>\\backend",
+  "argv": [
+    "<workspace>/backend/.venv/Scripts/ruff.exe",
+    "check",
+    "app",
+    "migrations",
+    "tests",
+    "../scripts/acceptance_a03.py",
+    "../scripts/collect_a03_licenses.py",
+    "../scripts/eval_shot_boundaries.py"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "credentials_removed": true,
+  "stdout": "All checks passed!\n",
+  "stderr": ""
+}

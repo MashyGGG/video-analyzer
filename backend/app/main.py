@@ -12,6 +12,7 @@ from app.acquisition import ErrorBody, error_response, router
 from app.health import check_dependencies
 from app.limits import AcquisitionLimits
 from app.services.sources.security import SourceError
+from app.timeline_jobs import router as timeline_router
 
 
 class Readiness(BaseModel):
@@ -29,6 +30,7 @@ def create_app(checker: Callable[[], dict[str, bool]] = check_dependencies) -> F
 
     application = FastAPI(title="Video-analyzer", version="0.1.0", lifespan=lifespan)
     application.include_router(router)
+    application.include_router(timeline_router)
     application.add_middleware(AcquisitionLimits)
     application.add_exception_handler(SourceError, error_response)
 
